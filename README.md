@@ -14,7 +14,7 @@
 
 *TODO*
 
-## Comparison: `f vs g`
+## Compare: `f vs g`
 
 *TODO*
 
