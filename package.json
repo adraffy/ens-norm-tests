@@ -1,0 +1,7 @@
+{
+	"type": "module",
+	"dependencies": {
+		"@adraffy/ens-norm-ref-impl.js": "^0.0.1",
+		"@ensdomains/eth-ens-namehash": "^2.0.15"
+	}
+}
