@@ -1,0 +1,994 @@
+
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>ENS0 (0.0.2) vs eth-ens-namehash (2.0.15) [1315869 labels] @ 2022-07-22T03:57:57.963Z</title>
+		<style>
+			body { margin: 1rem; }
+			table { border-collapse: collapse; width: 100%; }
+			td { border: 1px solid #aaa; line-break: anywhere; }
+			thead td { background: #ccc; font-weight: bold; }
+			tbody tr:nth-child(odd) { background: #eee; }
+			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			tbody td.name { background: #ffc; }
+			tbody td.error { background: #fcc; }
+			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			#overall td { text-align: right; }
+		</style>
+		</head>
+		<body>
+		<h1>ENS0 (0.0.2) vs eth-ens-namehash (2.0.15) [1315869 labels] @ 2022-07-22T03:57:57.963Z</h1>
+	
+		<table id="overall">
+		<thead>
+		<tr>
+		<td>Type</td>
+		<td>#</td>
+		<td>%</td>
+		</tr>
+		</thead>
+		<tbody>
+	<tr><td style="background-color: #cfc; font-weight: bold">Same</td><td>1315713</td><td>99.988%</td></tr><tr><td style="background-color: #fcc; font-weight: bold">Different</td><td>156</td><td>0.012%</td></tr><tr><td><a href="#b-error">eth-ens-namehash-error</a></td><td>49</td><td>0.004%</td></tr><tr><td><a href="#both-error">both-error</a></td><td>107</td><td>0.008%</td></tr></tbody></table>
+			<a name="b-error"><h2>eth-ens-namehash-error (49)</h2></a>
+			<table id="b-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Label</td>
+			<td>Escaped</td>
+			<td>ENS0</td>
+			<td>eth-ens-namehash</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>&#129401&#129401&#129401</div></td>
+			<td><div>{1F979}{1F979}{1F979}</div></td>
+			<td><div>{1F979}{1F979}{1F979}</div></td>
+			<td class="error">Illegal char 🥹</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>&#129484&#129484&#129484</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td class="error">Illegal char 🧌</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>&#129484&#129484&#129484&#129484</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td class="error">Illegal char 🧌</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>&#129484&#129484&#129484&#129484&#129484</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td class="error">Illegal char 🧌</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>&#129484&#129484&#129484&#129484&#129484&#129484</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td class="error">Illegal char 🧌</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>&#129484&#129484&#129484&#129484&#129484&#129484&#129484</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td><div>{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}{1F9CC}</div></td>
+			<td class="error">Illegal char 🧌</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>&#129705&#129705&#129705</div></td>
+			<td><div>{1FAA9}{1FAA9}{1FAA9}</div></td>
+			<td><div>{1FAA9}{1FAA9}{1FAA9}</div></td>
+			<td class="error">Illegal char 🪩</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>&#129706&#129706&#129706</div></td>
+			<td><div>{1FAAA}{1FAAA}{1FAAA}</div></td>
+			<td><div>{1FAAA}{1FAAA}{1FAAA}</div></td>
+			<td class="error">Illegal char 🪪</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>&#129707&#129707&#129707</div></td>
+			<td><div>{1FAAB}{1FAAB}{1FAAB}</div></td>
+			<td><div>{1FAAB}{1FAAB}{1FAAB}</div></td>
+			<td class="error">Illegal char 🪫</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>&#129708&#129708&#129708</div></td>
+			<td><div>{1FAAC}{1FAAC}{1FAAC}</div></td>
+			<td><div>{1FAAC}{1FAAC}{1FAAC}</div></td>
+			<td class="error">Illegal char 🪬</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>&#129719&#129719&#129719</div></td>
+			<td><div>{1FAB7}{1FAB7}{1FAB7}</div></td>
+			<td><div>{1FAB7}{1FAB7}{1FAB7}</div></td>
+			<td class="error">Illegal char 🪷</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>&#129719&#129719&#129719&#129719&#129719</div></td>
+			<td><div>{1FAB7}{1FAB7}{1FAB7}{1FAB7}{1FAB7}</div></td>
+			<td><div>{1FAB7}{1FAB7}{1FAB7}{1FAB7}{1FAB7}</div></td>
+			<td class="error">Illegal char 🪷</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>&#129721&#129721&#129721</div></td>
+			<td><div>{1FAB9}{1FAB9}{1FAB9}</div></td>
+			<td><div>{1FAB9}{1FAB9}{1FAB9}</div></td>
+			<td class="error">Illegal char 🪹</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>&#129722&#129722&#129722</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}</div></td>
+			<td class="error">Illegal char 🪺</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>&#129722&#129722&#129722&#129722</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td class="error">Illegal char 🪺</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>&#129722&#129722&#129722&#129722&#129722</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td class="error">Illegal char 🪺</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>&#129722&#129722&#129722&#129722&#129722&#129722</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td><div>{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}{1FABA}</div></td>
+			<td class="error">Illegal char 🪺</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>&#129731&#129731&#129731</div></td>
+			<td><div>{1FAC3}{1FAC3}{1FAC3}</div></td>
+			<td><div>{1FAC3}{1FAC3}{1FAC3}</div></td>
+			<td class="error">Illegal char 🫃</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>&#129733&#129733&#129733</div></td>
+			<td><div>{1FAC5}{1FAC5}{1FAC5}</div></td>
+			<td><div>{1FAC5}{1FAC5}{1FAC5}</div></td>
+			<td class="error">Illegal char 🫅</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>&#129752&#129752&#129752</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td class="error">Illegal char 🫘</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>&#129752&#129752&#129752&#129752</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td class="error">Illegal char 🫘</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>&#129752&#129752&#129752&#129752&#129752</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td class="error">Illegal char 🫘</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>&#129752&#129752&#129752&#129752&#129752&#129752</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td><div>{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}{1FAD8}</div></td>
+			<td class="error">Illegal char 🫘</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>&#129760&#129760&#129760</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td class="error">Illegal char 🫠</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>&#129760&#129760&#129760&#129760</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td class="error">Illegal char 🫠</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>&#129760&#129760&#129760&#129760&#129760</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td><div>{1FAE0}{1FAE0}{1FAE0}{1FAE0}{1FAE0}</div></td>
+			<td class="error">Illegal char 🫠</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>&#129761&#129761&#129761</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td class="error">Illegal char 🫡</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>&#129761&#129761&#129761&#129761</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td class="error">Illegal char 🫡</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>&#129761&#129761&#129761&#129761&#129761</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td class="error">Illegal char 🫡</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>&#129761&#129761&#129761&#129761&#129761&#129761</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td class="error">Illegal char 🫡</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>&#129761&#129761&#129761&#129761&#129761&#129761&#129761</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td><div>{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}{1FAE1}</div></td>
+			<td class="error">Illegal char 🫡</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>&#129762&#129762&#129762</div></td>
+			<td><div>{1FAE2}{1FAE2}{1FAE2}</div></td>
+			<td><div>{1FAE2}{1FAE2}{1FAE2}</div></td>
+			<td class="error">Illegal char 🫢</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>&#129763&#129763&#129763</div></td>
+			<td><div>{1FAE3}{1FAE3}{1FAE3}</div></td>
+			<td><div>{1FAE3}{1FAE3}{1FAE3}</div></td>
+			<td class="error">Illegal char 🫣</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>&#129763&#129763&#129763&#129763</div></td>
+			<td><div>{1FAE3}{1FAE3}{1FAE3}{1FAE3}</div></td>
+			<td><div>{1FAE3}{1FAE3}{1FAE3}{1FAE3}</div></td>
+			<td class="error">Illegal char 🫣</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>&#129764&#129764&#129764</div></td>
+			<td><div>{1FAE4}{1FAE4}{1FAE4}</div></td>
+			<td><div>{1FAE4}{1FAE4}{1FAE4}</div></td>
+			<td class="error">Illegal char 🫤</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>&#129765&#129765&#129765</div></td>
+			<td><div>{1FAE5}{1FAE5}{1FAE5}</div></td>
+			<td><div>{1FAE5}{1FAE5}{1FAE5}</div></td>
+			<td class="error">Illegal char 🫥</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>&#129765&#129765&#129765&#129765&#129765</div></td>
+			<td><div>{1FAE5}{1FAE5}{1FAE5}{1FAE5}{1FAE5}</div></td>
+			<td><div>{1FAE5}{1FAE5}{1FAE5}{1FAE5}{1FAE5}</div></td>
+			<td class="error">Illegal char 🫥</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>&#129766&#129766&#129766</div></td>
+			<td><div>{1FAE6}{1FAE6}{1FAE6}</div></td>
+			<td><div>{1FAE6}{1FAE6}{1FAE6}</div></td>
+			<td class="error">Illegal char 🫦</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>&#129767&#129767&#129767</div></td>
+			<td><div>{1FAE7}{1FAE7}{1FAE7}</div></td>
+			<td><div>{1FAE7}{1FAE7}{1FAE7}</div></td>
+			<td class="error">Illegal char 🫧</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>&#129767&#129767&#129767&#129767&#129767</div></td>
+			<td><div>{1FAE7}{1FAE7}{1FAE7}{1FAE7}{1FAE7}</div></td>
+			<td><div>{1FAE7}{1FAE7}{1FAE7}{1FAE7}{1FAE7}</div></td>
+			<td class="error">Illegal char 🫧</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>&#129776&#129776&#129776</div></td>
+			<td><div>{1FAF0}{1FAF0}{1FAF0}</div></td>
+			<td><div>{1FAF0}{1FAF0}{1FAF0}</div></td>
+			<td class="error">Illegal char 🫰</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>&#129776&#129776&#129776&#129776&#129776</div></td>
+			<td><div>{1FAF0}{1FAF0}{1FAF0}{1FAF0}{1FAF0}</div></td>
+			<td><div>{1FAF0}{1FAF0}{1FAF0}{1FAF0}{1FAF0}</div></td>
+			<td class="error">Illegal char 🫰</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>&#129777&#129777&#129777</div></td>
+			<td><div>{1FAF1}{1FAF1}{1FAF1}</div></td>
+			<td><div>{1FAF1}{1FAF1}{1FAF1}</div></td>
+			<td class="error">Illegal char 🫱</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>&#129780&#129780&#129780</div></td>
+			<td><div>{1FAF4}{1FAF4}{1FAF4}</div></td>
+			<td><div>{1FAF4}{1FAF4}{1FAF4}</div></td>
+			<td class="error">Illegal char 🫴</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>&#129781&#129781&#129781</div></td>
+			<td><div>{1FAF5}{1FAF5}{1FAF5}</div></td>
+			<td><div>{1FAF5}{1FAF5}{1FAF5}</div></td>
+			<td class="error">Illegal char 🫵</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>&#129782&#129782&#129782</div></td>
+			<td><div>{1FAF6}{1FAF6}{1FAF6}</div></td>
+			<td><div>{1FAF6}{1FAF6}{1FAF6}</div></td>
+			<td class="error">Illegal char 🫶</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>&#129782&#129782&#129782&#129782</div></td>
+			<td><div>{1FAF6}{1FAF6}{1FAF6}{1FAF6}</div></td>
+			<td><div>{1FAF6}{1FAF6}{1FAF6}{1FAF6}</div></td>
+			<td class="error">Illegal char 🫶</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>&#128734&#128734&#128734</div></td>
+			<td><div>{1F6DE}{1F6DE}{1F6DE}</div></td>
+			<td><div>{1F6DE}{1F6DE}{1F6DE}</div></td>
+			<td class="error">Illegal char 🛞</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>&#65039&#84190&#65039&#8419</div></td>
+			<td><div>{FE0F}{20E3}0{FE0F}{20E3}</div></td>
+			<td><div>{20E3}0{20E3}</div></td>
+			<td class="error">Label contains illegal character: 8419</td>
+		</tr></tbody></table>
+			<a name="both-error"><h2>both-error (107)</h2></a>
+			<table id="both-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Label</td>
+			<td>Escaped</td>
+			<td>ENS0</td>
+			<td>eth-ens-namehash</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>{2028}{2028}8</div></td>
+			<td><div>{2028}{2028}8</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>{20}{20}{20}</div></td>
+			<td><div>{20}{20}{20}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>{20}{20}{20}{20}{20}{20}{20}76{A}6.16{20}10</div></td>
+			<td><div>{20}{20}{20}{20}{20}{20}{20}76{A}6.16{20}10</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>{20}{20}{20}{20}{20}{20}29{A}2.2{20}10</div></td>
+			<td><div>{20}{20}{20}{20}{20}{20}29{A}2.2{20}10</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>{2001}{2001}420</div></td>
+			<td><div>{2001}{2001}420</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>{20}&#127477&#127479henry</div></td>
+			<td><div>{20}{1F1F5}{1F1F7}henry</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>___</div></td>
+			<td><div>___</div></td>
+			<td class="error">Disallowed codepoint: "_"</td>
+			<td class="error">Illegal char _</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>---</div></td>
+			<td><div>---</div></td>
+			<td class="error">CheckHyphens: leading hyphen in "---"</td>
+			<td class="error">Failed to validate ---</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>;-)</div></td>
+			<td><div>;-)</div></td>
+			<td class="error">Disallowed codepoint: ";"</td>
+			<td class="error">Illegal char ;</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>;-).eth</div></td>
+			<td><div>;-).eth</div></td>
+			<td class="error">Disallowed codepoint: ";"</td>
+			<td class="error">Illegal char ;</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>:-)</div></td>
+			<td><div>:-)</div></td>
+			<td class="error">Disallowed codepoint: ":"</td>
+			<td class="error">Illegal char :</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>:-o</div></td>
+			<td><div>:-o</div></td>
+			<td class="error">Disallowed codepoint: ":"</td>
+			<td class="error">Illegal char :</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>:-p</div></td>
+			<td><div>:-p</div></td>
+			<td class="error">Disallowed codepoint: ":"</td>
+			<td class="error">Illegal char :</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>!!!</div></td>
+			<td><div>!!!</div></td>
+			<td class="error">Disallowed codepoint: "!"</td>
+			<td class="error">Illegal char !</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>&#8252&#65039&#8252&#65039</div></td>
+			<td><div>{203C}{FE0F}{203C}{FE0F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ‼</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>&#8252&#65039&#8252&#65039&#8252&#65039</div></td>
+			<td><div>{203C}{FE0F}{203C}{FE0F}{203C}{FE0F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ‼</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>&#8265&#65039&#8265&#65039&#8265&#65039</div></td>
+			<td><div>{2049}{FE0F}{2049}{FE0F}{2049}{FE0F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ⁉</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>???</div></td>
+			<td><div>???</div></td>
+			<td class="error">Disallowed codepoint: "?"</td>
+			<td class="error">Illegal char ?</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>?????</div></td>
+			<td><div>?????</div></td>
+			<td class="error">Disallowed codepoint: "?"</td>
+			<td class="error">Illegal char ?</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>'"&#62&#60img{20}src=x{20}onerror=alert(1)&#62</div></td>
+			<td><div>'{22}&#62&#60img{20}src=x{20}onerror=alert(1)&#62</div></td>
+			<td class="error">Disallowed codepoint: "'"</td>
+			<td class="error">Illegal char '</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>[0000000000000000000000000000000000000000000000000000000000000000]</div></td>
+			<td><div>[0000000000000000000000000000000000000000000000000000000000000000]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>[01626f5a5c7a2123527dce0a49a04d319c7961b20c7727286d8fd15f43f5508f]</div></td>
+			<td><div>[01626f5a5c7a2123527dce0a49a04d319c7961b20c7727286d8fd15f43f5508f]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>[018339ce02149f75ecc0a3ef9d794dc80fb7226f1470a914732783fd52dbc5a8]</div></td>
+			<td><div>[018339ce02149f75ecc0a3ef9d794dc80fb7226f1470a914732783fd52dbc5a8]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>[021cf935dbd31b6824d617240579dd5d943b7a6e2fe19576b0a87683f66c5255]</div></td>
+			<td><div>[021cf935dbd31b6824d617240579dd5d943b7a6e2fe19576b0a87683f66c5255]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>[035d61312cd20dafbf47374f75d9987b445b2a8533f377ba1f0569889dbf0a21]</div></td>
+			<td><div>[035d61312cd20dafbf47374f75d9987b445b2a8533f377ba1f0569889dbf0a21]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>[0418cda423bf231c73e68b475d6ca2b4306279eef66e899a8b24d76efaa0b2d7]</div></td>
+			<td><div>[0418cda423bf231c73e68b475d6ca2b4306279eef66e899a8b24d76efaa0b2d7]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>[04de7dfdc500d631e5438c8d5e350789c6423bf8dda3dcb2b05acf1b635d3490]</div></td>
+			<td><div>[04de7dfdc500d631e5438c8d5e350789c6423bf8dda3dcb2b05acf1b635d3490]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>[1220bab8d21e1619549d0e92f7f9100059d1a8717877ba82348bf61c06bacb46]</div></td>
+			<td><div>[1220bab8d21e1619549d0e92f7f9100059d1a8717877ba82348bf61c06bacb46]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>[17b7d2bcf3a9a21b8c13ea2f80455c2e5725593527788ea42b4deac1b327b620]</div></td>
+			<td><div>[17b7d2bcf3a9a21b8c13ea2f80455c2e5725593527788ea42b4deac1b327b620]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>[2d7cc7e081d400fc0498ed1fba9e39182d4e09a9b305d1a67f69fbd98112e908]</div></td>
+			<td><div>[2d7cc7e081d400fc0498ed1fba9e39182d4e09a9b305d1a67f69fbd98112e908]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>[3d2377a4fcc2720201db95334c05ee49b987c658a0763c1df119daf8ff24179a]</div></td>
+			<td><div>[3d2377a4fcc2720201db95334c05ee49b987c658a0763c1df119daf8ff24179a]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>[41ff1915eef2bf5841388d748bfcd23bd49ff5521ca4200c20bc0978b136c3cb]</div></td>
+			<td><div>[41ff1915eef2bf5841388d748bfcd23bd49ff5521ca4200c20bc0978b136c3cb]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>[81d6e9625484997e42a1cf458efe84c4c7e6b6ff3fbeda57bb9d9341ffbddc9b]</div></td>
+			<td><div>[81d6e9625484997e42a1cf458efe84c4c7e6b6ff3fbeda57bb9d9341ffbddc9b]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>[84d2c8a6179aea69271f1d500bbef7322d7619341512c07cc9d088f792ac1779]</div></td>
+			<td><div>[84d2c8a6179aea69271f1d500bbef7322d7619341512c07cc9d088f792ac1779]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>[ba967c160905ade030f84952644a963994eeaed3881a6b8a4e9c8cbe452ad7a2]</div></td>
+			<td><div>[ba967c160905ade030f84952644a963994eeaed3881a6b8a4e9c8cbe452ad7a2]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>[bf8a4ca5000e9f97776a38f8c3b4c18effc15ebb896f911f2a8378955863731c]</div></td>
+			<td><div>[bf8a4ca5000e9f97776a38f8c3b4c18effc15ebb896f911f2a8378955863731c]</div></td>
+			<td class="error">Disallowed codepoint: "["</td>
+			<td class="error">Illegal char [</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>@@@</div></td>
+			<td><div>@@@</div></td>
+			<td class="error">Disallowed codepoint: "@"</td>
+			<td class="error">Illegal char @</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>@gmail</div></td>
+			<td><div>@gmail</div></td>
+			<td class="error">Disallowed codepoint: "@"</td>
+			<td class="error">Illegal char @</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>*&#65039&#8419</div></td>
+			<td><div>*{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "*"</td>
+			<td class="error">Illegal char *</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>***</div></td>
+			<td><div>***</div></td>
+			<td class="error">Disallowed codepoint: "*"</td>
+			<td class="error">Illegal char *</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>*****</div></td>
+			<td><div>*****</div></td>
+			<td class="error">Disallowed codepoint: "*"</td>
+			<td class="error">Illegal char *</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>///</div></td>
+			<td><div>///</div></td>
+			<td class="error">Disallowed codepoint: "/"</td>
+			<td class="error">Illegal char /</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>&#38&#38&#38</div></td>
+			<td><div>&#38&#38&#38</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>#&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>###</div></td>
+			<td><div>###</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>#&#65039#&#65039#&#65039</div></td>
+			<td><div>#{FE0F}#{FE0F}#{FE0F}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>#&#65039&#84190&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}0{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>#&#65039&#84190&#65039&#84190&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}0{FE0F}{20E3}0{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>#&#84190&#84190&#84191&#8419</div></td>
+			<td><div>#{20E3}0{20E3}0{20E3}1{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>#&#65039&#84191&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}1{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>#&#84191&#84190&#8419</div></td>
+			<td><div>#{20E3}1{20E3}0{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>#&#84191&#84191&#8419</div></td>
+			<td><div>#{20E3}1{20E3}1{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>#&#65039&#84192&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}2{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>#&#65039&#84193&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}3{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>#&#65039&#84194&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}4{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>#&#65039&#84195&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}5{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>#&#65039&#84196&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}6{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>#&#65039&#84197&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}7{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>#&#65039&#84198&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}8{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>#&#65039&#84198&#65039&#84198&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}8{FE0F}{20E3}8{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>#&#65039&#84198&#65039&#84198&#65039&#8419,{20}#&#65039&#84198&#65039&#84198&#65039&#84198&#65039&#8419,{20}#&#65039&#84190&#65039&#84190&#65039&#8419,{20}#&#65039&#84190&#65039&#84190&#65039&#84190&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}8{FE0F}{20E3}8{FE0F}{20E3},{20}#{FE0F}{20E3}8{FE0F}{20E3}8{FE0F}{20E3}8{FE0F}{20E3},{20}#{FE0F}{20E3}0{FE0F}{20E3}0{FE0F}{20E3},{20}#{FE0F}{20E3}0{FE0F}{20E3}0{FE0F}{20E3}0{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>#&#65039&#84199&#65039&#8419</div></td>
+			<td><div>#{FE0F}{20E3}9{FE0F}{20E3}</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>%%%</div></td>
+			<td><div>%%%</div></td>
+			<td class="error">Disallowed codepoint: "%"</td>
+			<td class="error">Illegal char %</td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>&#175_(&#12484)_/&#175</div></td>
+			<td><div>{AF}_({30C4})_/{AF}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ¯</td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>&#60span&#62test&#60/span&#62</div></td>
+			<td><div>&#60span&#62test&#60/span&#62</div></td>
+			<td class="error">Disallowed codepoint: "<"</td>
+			<td class="error">Illegal char <</td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>===</div></td>
+			<td><div>===</div></td>
+			<td class="error">Disallowed codepoint: "="</td>
+			<td class="error">Illegal char =</td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>&#127987%EF%B8%8F%E2%80%8D&#127752</div></td>
+			<td><div>{1F3F3}%EF%B8%8F%E2%80%8D{1F308}</div></td>
+			<td class="error">Disallowed codepoint: "%"</td>
+			<td class="error">Illegal char %</td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>&#127988{E0067}{E0062}{E0077}{E006C}{E0073}{E007F}</div></td>
+			<td><div>{1F3F4}{E0067}{E0062}{E0077}{E006C}{E0073}{E007F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 󠁧</td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>&#127988{E0067}{E0062}{E0065}{E006E}{E0067}{E007F}</div></td>
+			<td><div>{1F3F4}{E0067}{E0062}{E0065}{E006E}{E0067}{E007F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 󠁧</td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>&#127988{E0067}{E0062}{E0073}{E0063}{E0074}{E007F}</div></td>
+			<td><div>{1F3F4}{E0067}{E0062}{E0073}{E0063}{E0074}{E007F}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 󠁧</td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>$$$</div></td>
+			<td><div>$$$</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>$$$$</div></td>
+			<td><div>$$$$</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>$ex</div></td>
+			<td><div>$ex</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>$upreme</div></td>
+			<td><div>$upreme</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>$wag</div></td>
+			<td><div>$wag</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>&#165&#8364$</div></td>
+			<td><div>{A5}{20AC}$</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>AT&#38T</div></td>
+			<td><div>AT&#38T</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>bancocomerc{20}ial{20}decriptos</div></td>
+			<td><div>bancocomerc{20}ial{20}decriptos</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>ben&#38jerry&#8217s</div></td>
+			<td><div>ben&#38jerry{2019}s</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>CryptoPunk#1000</div></td>
+			<td><div>CryptoPunk#1000</div></td>
+			<td class="error">Disallowed codepoint: "#"</td>
+			<td class="error">Illegal char #</td>
+		</tr><tr>
+			<td class="index">81</td>
+			<td class="name"><div>dolce&#38gabbana</div></td>
+			<td><div>dolce&#38gabbana</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">82</td>
+			<td class="name"><div>E1f{20}</div></td>
+			<td><div>E1f{20}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">83</td>
+			<td class="name"><div>Farfetch'd</div></td>
+			<td><div>Farfetch'd</div></td>
+			<td class="error">Disallowed codepoint: "'"</td>
+			<td class="error">Illegal char '</td>
+		</tr><tr>
+			<td class="index">84</td>
+			<td class="name"><div>Hello{20}world</div></td>
+			<td><div>Hello{20}world</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">85</td>
+			<td class="name"><div>https://</div></td>
+			<td><div>https://</div></td>
+			<td class="error">Disallowed codepoint: ":"</td>
+			<td class="error">Illegal char :</td>
+		</tr><tr>
+			<td class="index">86</td>
+			<td class="name"><div>i&#129655u</div></td>
+			<td><div>i{1FA77}u</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩷</td>
+		</tr><tr>
+			<td class="index">87</td>
+			<td class="name"><div>johnson&#38johnson</div></td>
+			<td><div>johnson&#38johnson</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">88</td>
+			<td class="name"><div>m&#38m&#8217s</div></td>
+			<td><div>m&#38m{2019}s</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">89</td>
+			<td class="name"><div>s&#38p500</div></td>
+			<td><div>s&#38p500</div></td>
+			<td class="error">Disallowed codepoint: "&"</td>
+			<td class="error">Illegal char &</td>
+		</tr><tr>
+			<td class="index">90</td>
+			<td class="name"><div>&#8207spacex</div></td>
+			<td><div>{200F}spacex</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ‏</td>
+		</tr><tr>
+			<td class="index">91</td>
+			<td class="name"><div>tastethe:rainbow:</div></td>
+			<td><div>tastethe:rainbow:</div></td>
+			<td class="error">Disallowed codepoint: ":"</td>
+			<td class="error">Illegal char :</td>
+		</tr><tr>
+			<td class="index">92</td>
+			<td class="name"><div>te$la</div></td>
+			<td><div>te$la</div></td>
+			<td class="error">Disallowed codepoint: "$"</td>
+			<td class="error">Illegal char $</td>
+		</tr><tr>
+			<td class="index">93</td>
+			<td class="name"><div>tencentcloud{0}{0}{0}{0}{0}{0}</div></td>
+			<td><div>tencentcloud{0}{0}{0}{0}{0}{0}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">94</td>
+			<td class="name"><div>tencentclub{0}{0}{0}{0}{0}{0}</div></td>
+			<td><div>tencentclub{0}{0}{0}{0}{0}{0}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">95</td>
+			<td class="name"><div>tencentnews{0}{0}{0}{0}{0}{0}</div></td>
+			<td><div>tencentnews{0}{0}{0}{0}{0}{0}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">96</td>
+			<td class="name"><div>Vitalik{20}Buterin</div></td>
+			<td><div>Vitalik{20}Buterin</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">97</td>
+			<td class="name"><div>worthless{20}</div></td>
+			<td><div>worthless{20}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char  </td>
+		</tr><tr>
+			<td class="index">98</td>
+			<td class="name"><div>&#8207&#1601&#1585&#1581&#1577</div></td>
+			<td><div>{200F}{641}{631}{62D}{629}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char ‏</td>
+		</tr><tr>
+			<td class="index">99</td>
+			<td class="name"><div>&#129653&#129653&#129653</div></td>
+			<td><div>{1FA75}{1FA75}{1FA75}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩵</td>
+		</tr><tr>
+			<td class="index">100</td>
+			<td class="name"><div>&#129653&#129653&#129653&#129653&#129653</div></td>
+			<td><div>{1FA75}{1FA75}{1FA75}{1FA75}{1FA75}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩵</td>
+		</tr><tr>
+			<td class="index">101</td>
+			<td class="name"><div>&#129654&#129654&#129654</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩶</td>
+		</tr><tr>
+			<td class="index">102</td>
+			<td class="name"><div>&#129654&#129654&#129654&#129654</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩶</td>
+		</tr><tr>
+			<td class="index">103</td>
+			<td class="name"><div>&#129654&#129654&#129654&#129654&#129654</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩶</td>
+		</tr><tr>
+			<td class="index">104</td>
+			<td class="name"><div>&#129655&#129655&#129655</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩷</td>
+		</tr><tr>
+			<td class="index">105</td>
+			<td class="name"><div>&#129655&#129655&#129655&#129655&#129655</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩷</td>
+		</tr><tr>
+			<td class="index">106</td>
+			<td class="name"><div>&#129655&#129655&#129655&#129655&#129655&#129655&#129655&#129655</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🩷</td>
+		</tr><tr>
+			<td class="index">107</td>
+			<td class="name"><div>&#129768&#129768&#129768</div></td>
+			<td><div>{1FAE8}{1FAE8}{1FAE8}</div></td>
+			<td class="error">x.codePointAt(...).toUpperCase is not a function</td>
+			<td class="error">Illegal char 🫨</td>
+		</tr></tbody></table></body></html>

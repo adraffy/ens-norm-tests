@@ -1,8 +1,33 @@
 {
+	"name": "@adraffy/ens-norm-tests",
+	"version": "0.0.1",
+	"description": "ENS Name Normalization Tests",
+	"keywords": [
+		"ENS",
+		"Ethereum",
+		"UTS-46",
+		"UTS-51",
+		"IDNA"
+	],
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adraffy/ens-norm-tests.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/adraffy/ens-norm-tests/issues"
+	},
+	"homepage": "https://github.com/adraffy/ens-norm-tests#readme",
+	"author": {
+		"name": "raffy.eth",
+		"email": "raffy@me.com",
+		"url": "http://raffy.antistupid.com"
+	},
 	"dependencies": {
-		"@adraffy/ens-norm-ref-impl.js": "^0.0.1",
-		"@adraffy/ensip-norm": "^0.0.1",
+		"@adraffy/ens-norm-ref-impl.js": "^0.0.2",
+		"@adraffy/ens-norm-uts46.js": "^0.0.2",
+		"@adraffy/ensip-norm": "^0.0.2",
 		"@ensdomains/eth-ens-namehash": "^2.0.15"
 	}
 }
