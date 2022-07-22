@@ -96,7 +96,6 @@ function create_html_report(A, B) {
 			thead td { background: #ccc; font-weight: bold; }
 			tbody tr:nth-child(odd) { background: #eee; }
 			td.index { background: #ccc; text-align: center; white-space: pre; } 
-			tbody td.name { background: #ffc; }
 			tbody td.error { background: #fcc; }
 			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
 			#overall td { text-align: right; }
@@ -143,7 +142,7 @@ function create_html_report(A, B) {
 			<thead>
 			<tr>
 			<td class="index">#</td>
-			<td class="name">Label</td>
+			<td class="name">Name</td>
 			<td>Escaped</td>
 			<td>${A.name}</td>
 			<td>${B.name}</td>

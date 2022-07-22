@@ -1,5 +1,5 @@
 import {IMPLS} from '../impls.js';
-import {escape_for_html} from '../utils.js';
+import {escape_for_html, escape_unicode} from '../utils.js';
 import {run_tests} from '@adraffy/ensip-norm';
 import {mkdir, writeFile, readdir} from 'node:fs/promises';
 
@@ -43,18 +43,18 @@ function error_tds(error) {
 	switch (error.fail) {
 		case 'unexpected error': 
 			return `
-				<td class="expect">${escape_name(error.norm ?? error.name)}</td>
+				<td class="expect">${escape_name(escape_unicode(error.norm ?? error.name))}</td>
 				<td class="result error">${error.result}</td>
 			`;
 		case 'expected error': 
 			return `
 				<td class="expect error"></td>
-				<td class="result">${escape_name(error.result)}</td>
+				<td class="result">${escape_name(escape_unicode(error.result))}</td>
 			`;
 		case 'wrong norm': 
 			return `
-				<td class="expect">${escape_name(error.norm ?? error.name)}</td>
-				<td class="result">${escape_name(error.result)}</td>
+				<td class="expect">${escape_name(escape_unicode(error.norm ?? error.name))}</td>
+				<td class="result">${escape_name(escape_unicode(error.result))}</td>
 			`;
 		default: throw new TypeError('wtf');
 	}
@@ -71,6 +71,7 @@ function create_html_report({name, fn, version, slug}) {
 			<td class="index">${i+1}</td>
 			<td class="type">${x.fail}</td>
 			<td class="name">${escape_name(x.name)}</td>
+			<td class="escaped">${escape_name(escape_unicode(x.name))}</td>
 			${error_tds(x)}
 			<td class="comment">${x.comment ?? ''}</td>
 			</tr>
@@ -83,6 +84,7 @@ function create_html_report({name, fn, version, slug}) {
 			<td class="index">#</td>
 			<td class="type">Type</td>
 			<td class="name">Name</td>
+			<td class="escaped">Escaped</td>
 			<td class="expect">Expect</td>
 			<td class="result">Result</td>
 			<td class="comment">Comment</td>

@@ -26,7 +26,7 @@
 	},
 	"dependencies": {
 		"@adraffy/ens-norm-ref-impl.js": "^0.0.2",
-		"@adraffy/ens-norm-uts46.js": "^0.0.2",
+		"@adraffy/ens-norm-uts46.js": "^0.0.3",
 		"@adraffy/ensip-norm": "^0.0.2",
 		"@ensdomains/eth-ens-namehash": "^2.0.15"
 	}
