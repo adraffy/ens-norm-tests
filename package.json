@@ -25,6 +25,7 @@
 		"url": "http://raffy.antistupid.com"
 	},
 	"scripts": {
+		"impls": "node impls.js",
 		"valid-quick": "node test-validation/quick.js",
 		"valid-report": "node test-validation/report.js",
 		"compare-report": "node test-compare/report.js"
