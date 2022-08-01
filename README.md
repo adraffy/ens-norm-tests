@@ -17,9 +17,11 @@
 
 * [Validation](./test-validation/output/) &mdash; validation test errors for each implementation
 * [Compare: `f vs g`](./test-comparison/output/) &mdash; side-by-side errors for each pair of implementations
-* Composition: `f(g(x)) vs f(x)`
 
 ## Commands
 
+* `npm run impls` print normalization function lineup
+* `npm run idempotence` check if `f(f(x)) = f(x)`
+* `npm run uts46` determine where `ens_normalize(uts46(x)) = ens_normalize(x)` fails
 * `npm run valid-report` generate HTML reports for validation tests
 * `npm run compare-report` generate pair-wise HTML reports for registered labels

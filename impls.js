@@ -23,7 +23,8 @@ export {reference};
 IMPLS.push({
 	name: 'Reference', 
 	fn: reference, 
-	version: read_package_version(`@adraffy/ens-norm-ref-impl`)
+	version: read_package_version(`@adraffy/ens-norm-ref-impl`),
+	primary: true
 });
 
 // ********************************************************************************
@@ -33,7 +34,8 @@ export {ens_normalize};
 IMPLS.push({
 	name: 'ens_normalize', 
 	fn: ens_normalize, 
-	version: read_package_version(`@adraffy/ens-normalize`)
+	version: read_package_version(`@adraffy/ens-normalize`),
+	primary: true
 });
 
 // ********************************************************************************

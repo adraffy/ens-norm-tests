@@ -26,6 +26,8 @@
 	},
 	"scripts": {
 		"impls": "node impls.js",
+		"idempotence": "node test-misc/idempotence.js",
+		"uts46": "node test-misc/uts46.js",
 		"valid-quick": "node test-validation/quick.js",
 		"valid-report": "node test-validation/report.js",
 		"compare-report": "node test-compare/report.js"
