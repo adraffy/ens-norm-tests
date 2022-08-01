@@ -1,6 +1,6 @@
 {
 	"name": "@adraffy/ens-norm-tests",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"description": "ENS Name Normalization Tests",
 	"keywords": [
 		"ENS",
@@ -24,10 +24,16 @@
 		"email": "raffy@me.com",
 		"url": "http://raffy.antistupid.com"
 	},
+	"scripts": {
+		"valid-quick": "node test-validation/quick.js",
+		"valid-report": "node test-validation/report.js",
+		"compare-report": "node test-compare/report.js"
+	},
 	"dependencies": {
-		"@adraffy/ens-norm-ref-impl.js": "^0.0.2",
-		"@adraffy/ens-norm-uts46.js": "^0.0.3",
-		"@adraffy/ensip-norm": "^0.0.2",
+		"@adraffy/ens-norm-ref-impl": "^0.0.4",
+		"@adraffy/ens-norm-uts46": "^0.0.5",
+		"@adraffy/ens-normalize": "^1.5.0",
+		"@adraffy/ensip-norm": "^0.0.3",
 		"@ensdomains/eth-ens-namehash": "^2.0.15"
 	}
 }

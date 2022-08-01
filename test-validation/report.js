@@ -1,6 +1,6 @@
 import {IMPLS} from '../impls.js';
 import {escape_for_html, escape_unicode} from '../utils.js';
-import {run_tests} from '@adraffy/ensip-norm';
+import {run_tests} from './validate.js';
 import {mkdir, writeFile, readdir} from 'node:fs/promises';
 
 let out_dir = new URL('./output/', import.meta.url);
