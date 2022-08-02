@@ -23,7 +23,7 @@ for (let label of LABELS) {
 			let norm = reference(label);
 			let v = tally[norm];
 			if (!v) tally[norm] = v = [];
-			v.push(escaped);
+			v.push([mapped, escaped]);
 			if (mapped) valid.push(escaped);
 		} catch (err) {
 			if (mapped) invalid.push(escaped);
@@ -31,7 +31,11 @@ for (let label of LABELS) {
 	}
 }
 
-let both = Object.entries(tally).map(x => x[1]).filter(x => x.length > 1).sort((a, b) => b.length - a.length);
+let both = Object.entries(tally)
+	.map(x => x[1]) // forget norm
+	.filter(v => v.length > 1 && v.some(x => x[0])) // require one mapped
+	.map(v => v.map(x => x[1])) // drop mapped bool
+	.sort((a, b) => b.length - a.length); // sort by freq
 
 console.log({
 	valid: valid.length,
