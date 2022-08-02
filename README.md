@@ -13,15 +13,10 @@
 
 * [`eth-labels/db.json`](./eth-labels/db.json) &mdash; `1,413,868` registered labels as of `2022-08-01`
 
-## Generated Reports
-
-* [Validation](./test-validation/output/) &mdash; validation test errors for each implementation
-* [Compare: `f vs g`](./test-comparison/output/) &mdash; side-by-side errors for each pair of implementations
-
 ## Commands
 
 * `npm run impls` print normalization function lineup
-* `npm run idempotence` check if `f(f(x)) = f(x)`
-* `npm run uts46` determine where `ens_normalize(uts46(x)) = ens_normalize(x)` fails
-* `npm run valid-report` generate HTML reports for validation tests
-* `npm run compare-report` generate pair-wise HTML reports for registered labels
+* `npm run idempotence` check if `f(f(x)) == f(x)`
+* `npm run uts46` determine where `f(uts46(x)) != f(x)` &rarr; [json](./test-misc/output/uts46.json)
+* `npm run valid-report` generate HTML reports for validation tests &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-validation/output/)
+* `npm run compare-report` generate pair-wise HTML reports for registered labels &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-compare/output/)
