@@ -2,7 +2,7 @@
 
 import LABELS from '../eth-labels/db.js';
 import {reference} from '../impls.js';
-import {escape_unicode} from '@adraffy/ens-norm-uts46';
+import {escape_unicode} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);
@@ -14,13 +14,34 @@ for (let label of LABELS) {
 		let norm = reference(label);
 		let v = tally[norm];
 		if (!v) tally[norm] = v = [];
-		v.push(escape_unicode(label));
+		v.push(label);
 	} catch (err) {
 	}
 }
 
-tally = Object.fromEntries(Object.entries(tally).filter(x => x[1].length > 1));
+const AN = /^[\u{6F0}-\u{6F9}\u{660}-\u{669}]+$/u;
 
-console.log({count: Object.keys(tally).length});
+tally = Object.entries(tally).filter(x => x[1].length > 1);
 
-writeFileSync(new URL('./collisions.json', out_dir), JSON.stringify(tally, null, '\t'));
+let trivial = [];
+let pure_an = [];
+let non_trivial = [];
+for (let [norm, v] of tally) {
+	if (new Set(v.map(x => x.toLowerCase())).size == 1) {
+		trivial.push(v);
+	} else if (v.every(x => AN.test(x))) {
+		pure_an.push([norm, v.map(escape_unicode)]);
+	} else {
+		non_trivial.push([norm, v.map(escape_unicode)]);
+	}
+}
+
+console.log({
+	count: tally.length,
+	trivial: trivial.length,
+	pure_an: pure_an.length,
+	non_trivial: non_trivial.length
+});
+
+
+writeFileSync(new URL('./collisions.json', out_dir), JSON.stringify({trivial, pure_an, non_trivial}, null, '\t'));
