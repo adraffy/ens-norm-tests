@@ -3,10 +3,32 @@
 import LABELS from '../eth-labels/db.js';
 import {escape_unicode} from '@adraffy/ens-norm-uts46';
 import {ens_normalize, ens_tokenize} from '@adraffy/ens-normalize';
-import {mkdirSync, writeFileSync} from 'node:fs';
+import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
+
+/*
+let emojiData = JSON.parse(readFileSync(new URL('../../ens-normalize.js-old/build/unicode-json/emoji-data.json', import.meta.url)));
+
+function parse_range(s) {
+	let pos = s.indexOf('..');
+	if (pos >= 0) {
+		let lo = parseInt(s.slice(0, pos), 16);
+		let hi = parseInt(s.slice(pos + 2), 16);
+		return Array(1 + hi - lo).fill().map((_, i) => lo + i);
+	} else {
+		return parseInt(s, 16);
+	}
+}
+
+let picto = emojiData.Extended_Pictographic.flatMap(parse_range);
+let pres = emojiData.Emoji_Presentation.flatMap(parse_range);
+*/
+
+//console.log(picto);
+//throw 1;
+
 
 const BASIC = /^[a-z0-9.-]+$/;
 //const BASIC = /^_*[a-z0-9.-]+$/;

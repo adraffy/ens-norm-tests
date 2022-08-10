@@ -1,7 +1,7 @@
 // find f(x) = f(y)
 
 import LABELS from '../eth-labels/db.js';
-import {reference} from '../impls.js';
+import {ens_normalize} from '@adraffy/ens-normalize';
 import {escape_unicode} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
@@ -11,7 +11,7 @@ mkdirSync(out_dir, {recursive: true});
 let tally = {};
 for (let label of LABELS) {
 	try {
-		let norm = reference(label);
+		let norm = ens_normalize(label);
 		let v = tally[norm];
 		if (!v) tally[norm] = v = [];
 		v.push(label);
