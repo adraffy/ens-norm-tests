@@ -20,12 +20,12 @@ function test(fn) {
 		let norm;
 		try {
 			norm = fn(label);
-		} catch (err) {           
+		} catch (err) {
 			continue; 
 		}
 		if (fn(norm) !== norm) {
 			errors.push(label);
-		}        
+		}
 	}
 	return errors;
 }

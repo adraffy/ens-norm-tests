@@ -1,7 +1,7 @@
-// find where f(uts46(x)) != f(x)
+// find where arabic digit names are impacted by mapping
 
-import {reference} from '../impls.js';
 import LABELS from '../eth-labels/db.js';
+import {ens_normalize} from '@adraffy/ens-normalize';
 import {mkdirSync, writeFileSync} from 'node:fs';
 import {escape_unicode} from '../utils.js';
 
@@ -20,7 +20,7 @@ for (let label of LABELS) {
 	if (mapped || proper) {
 		let escaped = escape_unicode(label);
 		try {
-			let norm = reference(label);
+			let norm = ens_normalize(label);
 			let v = tally[norm];
 			if (!v) tally[norm] = v = [];
 			v.push([mapped, escaped]);
