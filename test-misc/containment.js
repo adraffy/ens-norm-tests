@@ -5,23 +5,45 @@
 // * ignored is empty string
 
 import {CHARS} from '@adraffy/ensip-norm';
-import {ens_normalize} from '@adraffy/ens-normalize';
+import {IMPLS} from '../impls.js';
 
-for (let cp of CHARS.valid) {
-	if (!is_normalized(String.fromCodePoint(cp))) throw new Error(`wtf valid ${cp}`);
-}
-for (let [cp, cps] of CHARS.mapped) {
-	if (is_normalized(String.fromCodePoint(cp))) throw new Error(`wtf mapped input ${cp}`);
-	if (!is_normalized(String.fromCodePoint(...cps))) throw new Error(`wtf mapped output ${cps}`); 
-}
-for (let cp of CHARS.ignored) {
-	if (ens_normalize(String.fromCodePoint(cp)) !== '') throw new Error(`wtf ignored ${cp}`);
+for (let impl of IMPLS) {
+	let errors = test(impl.fn);
+	console.log(errors.length == 0 ? 'PASS' : 'FAIL', impl.name);
+	if (impl.primary && errors.length) {
+		console.log(errors);
+		console.log(impl);
+		process.exit(1);
+	}
 }
 console.log('OK');
 
-function is_normalized(s) {
-	try {
-		return ens_normalize(s) === s;
-	} catch (err) {
+function test(fn) {
+	let errors = [];
+	for (let cp of CHARS.valid) {
+		if (!is_norm(String.fromCodePoint(cp))) {
+			errors.push({type: 'valid', cp});
+		} 
+	}
+	for (let [cp, cps] of CHARS.mapped) {
+		if (is_norm(String.fromCodePoint(cp))) {
+			errors.push({type: 'mapped-input', cp});
+		}
+		if (!is_norm(String.fromCodePoint(...cps))) {
+			errors.push({type: 'mapped-output', cps});
+		}
+	}
+	for (let cp of CHARS.ignored) {
+		if (!is_norm(String.fromCodePoint(cp), '')) {
+			errors.push({type: 'ignored', cp});
+		}
+	}
+	return errors;
+	function is_norm(s, s0) {
+		if (s0 === undefined) s0 = s;
+		try {
+			return fn(s) === s0;
+		} catch (err) {
+		}
 	}
 }
