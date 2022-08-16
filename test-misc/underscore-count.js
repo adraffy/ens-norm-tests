@@ -11,31 +11,28 @@ mkdirSync(out_dir, {recursive: true});
 const UNDERSCORE = 0x5F;
 
 let leading = {};
-let anywhere = [];
+let includes = [];
 
-for (let name of LABELS) {
+for (let label of LABELS) {
 	let norm;
 	try {
-		norm = ens_normalize(name);
+		norm = ens_normalize(label);
 	} catch (err) {
 		continue;
-	}
-	for (let label of norm.split('.')) {
-		let cps = explode_cp(label);
-		if (cps[0] === UNDERSCORE) {
-			let n = 1;
-			while (n < cps.length && cps[n] == UNDERSCORE) n++;
-			add_bucket(leading, String(n), norm);
-		}
-	}
-	if (explode_cp(norm).includes(UNDERSCORE)) {
-		anywhere.push(norm);
+	}	
+	let cps = explode_cp(label);
+	if (cps[0] === UNDERSCORE) {
+		let n = 1;
+		while (n < cps.length && cps[n] == UNDERSCORE) n++;
+		add_bucket(leading, String(n), norm);
+	} else if (cps.includes(UNDERSCORE)) {
+		includes.push(norm);
 	}
 }
 
-console.log({leading, anywhere: anywhere.length});
+console.log({leading, includes: includes.length});
 
-writeFileSync(new URL('./underscore-count.json', out_dir), JSON.stringify({leading, anywhere}, null, '\t'));
+writeFileSync(new URL('./underscore-count.json', out_dir), JSON.stringify({leading, includes}, null, '\t'));
 
 function add_bucket(tally, key, s) {
 	let v = tally[key];

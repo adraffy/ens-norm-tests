@@ -21,18 +21,13 @@ for (let name of LABELS) {
 	count(raw, name);
 }
 
-
 writeFileSync(new URL('./hyphen-count.json', out_dir), JSON.stringify({raw, norm}, null, '\t'));
 
 function count(tally, s) {
-	for (let label of s.split('.')) {
-		let cps = explode_cp(label);
-		if (cps[2] === HYPHEN && cps[3] === HYPHEN) {
-			add_bucket(tally, 'ext', s);
-			break;
-		}
-	}
 	let cps = explode_cp(s);
+	if (cps[2] === HYPHEN && cps[3] === HYPHEN) {
+		add_bucket(tally, 'ext', s);
+	}
 	let none = true;	
 	for (let i = 0; i < cps.length; ) {
 		if (cps[i++] == HYPHEN) {
