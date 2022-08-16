@@ -10,19 +10,19 @@ mkdirSync(out_dir, {recursive: true});
 
 const HYPHEN = 0x2D;
 
-let tally_raw = {};
-let tally_norm = {};
+let raw = {};
+let norm = {};
 
-for (let label of LABELS) {
+for (let name of LABELS) {
 	try {
-		count(tally_norm, ens_normalize(label));
+		count(norm, ens_normalize(name));
 	} catch (err) {
 	}
-	count(tally_raw, label);
+	count(raw, name);
 }
 
 
-writeFileSync(new URL('./hyphen-count.json', out_dir), JSON.stringify({tally_raw, tally_norm}, null, '\t'));
+writeFileSync(new URL('./hyphen-count.json', out_dir), JSON.stringify({raw, norm}, null, '\t'));
 
 function count(tally, s) {
 	for (let label of s.split('.')) {
