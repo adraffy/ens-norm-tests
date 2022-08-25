@@ -8,12 +8,21 @@ export const IMPLS = [];
 
 // ********************************************************************************
 
-import lib from '@ensdomains/eth-ens-namehash';
-export const ensdomains = lib.normalize.bind(lib);
+import A from '@ensdomains/eth-ens-namehash';
+export const ensdomains = A.normalize.bind(A);
 IMPLS.push({
 	name: 'eth-ens-namehash', 
 	fn: ensdomains, 
 	version: read_package_version('@ensdomains/eth-ens-namehash')
+});
+
+
+import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
+export {ethers};
+IMPLS.push({
+	name: 'ethers', 
+	fn: ethers, 
+	version: read_package_version('ethers')
 });
 
 // ********************************************************************************
