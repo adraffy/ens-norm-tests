@@ -12,6 +12,8 @@ let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
 
 let tally = {};
+let cases = [];
+let start = [];
 for (let label of LABELS) {
 	try {
 		let norm = ens_normalize(label);
@@ -24,12 +26,18 @@ for (let label of LABELS) {
 					n++;
 				}
 				tally[n] = (tally[n] ?? 0) + 1;
+				if (n >= 2) {
+					cases.push(label);
+				}
 			}
+		}
+		if (CM.has(cps[0])) {
+			start.push(label);
 		}
 	} catch (err) {
 	}
 }
 
-console.log(tally);
+console.log({tally, cases: cases.length, start: start.length});
 
-writeFileSync(new URL('./cm-count.json', out_dir), JSON.stringify(tally, null, '\t'));
+writeFileSync(new URL('./cm-count.json', out_dir), JSON.stringify({tally, cases, start}, null, '\t'));
