@@ -1,15 +1,9 @@
-// count combining marks in names
+// count runs of combining marks
 
 import LABELS from '../eth-labels/db.js';
-//import {CHARS} from '@adraffy/ensip-norm';
-//import {ens_normalize_fragment} from '@adraffy/ens-normalize';
-import {explode_cp, parse_cp_range} from '@adraffy/ens-norm-uts46';
-import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
-
-const CM = new Set(Object.entries(JSON.parse(readFileSync(new URL('../unicode-json/DerivedGeneralCategory.json', import.meta.url))))
-	.flatMap(([k, v]) => k.startsWith('M') ? v.flatMap(parse_cp_range) : []));
-
-//const CM_VALID = new Set(CHARS.cm);
+import {explode_cp} from '@adraffy/ens-norm-uts46';
+import {mkdirSync, writeFileSync} from 'node:fs';
+import {CM} from '../unicode-json/cm.js';
 	
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});

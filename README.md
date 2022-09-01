@@ -11,7 +11,7 @@
 
 ## Data Files
 
-* [`eth-labels/db.json`](./eth-labels/db.json) &mdash; `1,413,868` registered labels as of `2022-08-01`
+* [`eth-labels/registered.json`](./eth-labels/registered.json) &mdash; `1,452,496` registered labels as of `2022-09-01`
 
 ## Commands
 
