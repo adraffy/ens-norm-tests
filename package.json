@@ -33,10 +33,10 @@
 		"compare-report": "node test-compare/report.js"
 	},
 	"dependencies": {
-		"@adraffy/ens-norm-ref-impl": "^0.0.8",
+		"@adraffy/ens-norm-ref-impl": "^0.0.9",
 		"@adraffy/ens-norm-uts46": "^0.0.5",
-		"@adraffy/ens-normalize": "^1.5.6",
-		"@adraffy/ensip-norm": "^0.0.6",
+		"@adraffy/ens-normalize": "^1.6.0",
+		"@adraffy/ensip-norm": "^0.0.7",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
 		"ethers": "^5.7.0"
 	}

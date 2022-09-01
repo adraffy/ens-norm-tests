@@ -14,3 +14,16 @@ export function escape_unicode(s) {
 	// 0x7F (delete)
 	return s.replace(/[^\x21\x23-\x7A\x7C\x7E]/gu, x => `{${x.codePointAt(0).toString(16).toUpperCase()}}`);
 }
+
+export function split_on(v, x) {
+	let ret = [];
+	let pos = 0;
+	while (true) {
+		let next = v.indexOf(x, pos);
+		if (next == -1) break;
+		ret.push(v.slice(pos, next));
+		pos = next + 1;		
+	}
+	ret.push(v.slice(pos));
+	return ret;
+}

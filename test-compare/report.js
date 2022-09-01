@@ -7,6 +7,8 @@ let out_dir = new URL('./output/', import.meta.url);
 
 await mkdir(out_dir, {recursive: true});
 
+// pairwise
+/*
 for (let j = 1; j < IMPLS.length; j++) {
 	for (let i = 0; i < j; i++) {
 		let [a, b] = [IMPLS[i], IMPLS[j]].sort((a, b) => a.slug.localeCompare(b.slug));
@@ -15,6 +17,18 @@ for (let j = 1; j < IMPLS.length; j++) {
 		console.log(i, j, a.name, b.name);
 	}
 }
+*/
+
+let j = IMPLS.findIndex(x => x.name === 'ens_normalize');
+if (j == -1) throw new Error('wtf');
+for (let i = 0; i < IMPLS.length; i++) {
+	if (i == j) continue;
+	let [a, b] = [IMPLS[i], IMPLS[j]].sort((a, b) => a.slug.localeCompare(b.slug));
+	let out_file = new URL(`./${a.slug}_${a.version}_vs_${b.slug}_${b.version}.html`, out_dir);
+	await writeFile(out_file, create_html_report(a, b)); 
+	console.log(i, j, a.name, b.name);
+}
+
 
 await writeFile(new URL('./index.html', out_dir), await create_html_index());
 

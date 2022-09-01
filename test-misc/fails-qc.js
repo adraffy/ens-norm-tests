@@ -1,7 +1,7 @@
 // check label fails qc
 
 import LABELS from '../eth-labels/db.js';
-import {ens_normalize} from '@adraffy/ens-normalize';
+import {ens_normalize_fragment} from '@adraffy/ens-normalize';
 import {explode_cp, parse_cp_range, escape_unicode} from '@adraffy/ens-norm-uts46';
 import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 
@@ -20,7 +20,7 @@ let fail_qc = LABELS.filter(s => fails_qc(s));
 
 let pass_norm = fail_qc.filter(s => {
 	try {
-		ens_normalize(s);
+		ens_normalize_fragment(s);
 		return true;
 	} catch (err) {
 	}

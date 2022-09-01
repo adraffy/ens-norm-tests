@@ -1,7 +1,7 @@
 // count underscores
 
 import LABELS from '../eth-labels/db.js';
-import {ens_normalize} from '@adraffy/ens-normalize';
+import {ens_normalize_fragment} from '@adraffy/ens-normalize';
 import {explode_cp} from '@adraffy/ens-norm-uts46';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
@@ -16,7 +16,7 @@ let includes = [];
 for (let label of LABELS) {
 	let norm;
 	try {
-		norm = ens_normalize(label);
+		norm = ens_normalize_fragment(label);
 	} catch (err) {
 		continue;
 	}	

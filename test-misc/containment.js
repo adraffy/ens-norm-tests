@@ -5,8 +5,8 @@
 // * ignored is empty string
 
 import {CHARS} from '@adraffy/ensip-norm';
+/*
 import {IMPLS} from '../impls.js';
-
 for (let impl of IMPLS) {
 	let errors = test(impl.fn);
 	console.log(errors.length == 0 ? 'PASS' : 'FAIL', impl.name);
@@ -15,6 +15,14 @@ for (let impl of IMPLS) {
 		console.log(impl);
 		process.exit(1);
 	}
+}
+console.log('OK');
+*/
+import {ens_normalize_fragment} from '@adraffy/ens-normalize';
+let errors = test(ens_normalize_fragment);
+if (errors.length) {
+	console.log(errors);
+	process.exit(1);
 }
 console.log('OK');
 

@@ -1,7 +1,7 @@
 // count hyphens
 
 import LABELS from '../eth-labels/db.js';
-import {ens_normalize} from '@adraffy/ens-normalize';
+import {ens_normalize_fragment} from '@adraffy/ens-normalize';
 import {explode_cp} from '@adraffy/ens-norm-uts46';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
@@ -15,7 +15,7 @@ let norm = {};
 
 for (let name of LABELS) {
 	try {
-		count(norm, ens_normalize(name));
+		count(norm, ens_normalize_fragment(name));
 	} catch (err) {
 	}
 	count(raw, name);

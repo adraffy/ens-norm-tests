@@ -1,7 +1,7 @@
 // count hyphen-likes in names
 
 import LABELS from '../eth-labels/db.js';
-import {ens_normalize} from '@adraffy/ens-normalize';
+import {ens_normalize_fragment} from '@adraffy/ens-normalize';
 import {explode_cp} from '@adraffy/ens-norm-uts46';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
@@ -37,7 +37,7 @@ for (let label of LABELS) {
 	}
 	if (any) count++;
 	try {
-		let cps = explode_cp(ens_normalize(label));
+		let cps = explode_cp(ens_normalize_fragment(label));
 		for (let [cp, key] of HYPHENS) {
 			if (cps.includes(cp)) {
 				after[key] = (after[key] ?? 0) + 1;
