@@ -11,8 +11,7 @@ mkdirSync(out_dir, {recursive: true});
 let tally = {};
 for (let label of LABELS) {
 	try {
-		let cps = explode_cp(label.normalize('NFD'));
-		for (let cp of cps) {
+		for (let cp of new Set(explode_cp(label.normalize('NFD')))) {
 			if (CM.has(cp)) {
 				tally[cp] = (tally[cp] ?? 0) + 1;
 			}
