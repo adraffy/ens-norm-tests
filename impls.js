@@ -9,16 +9,14 @@ export const IMPLS = [];
 // ********************************************************************************
 
 import A from '@ensdomains/eth-ens-namehash';
-export const ensdomains = A.normalize.bind(A);
 IMPLS.push({
 	name: 'eth-ens-namehash', 
-	fn: ensdomains, 
+	fn: A.normalize.bind(A), 
 	version: read_package_version('@ensdomains/eth-ens-namehash')
 });
 
 
 import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
-export {ethers};
 IMPLS.push({
 	name: 'ethers', 
 	fn: ethers, 
@@ -28,7 +26,6 @@ IMPLS.push({
 // ********************************************************************************
 
 import {ens_normalize as reference} from '@adraffy/ens-norm-ref-impl';
-export {reference};
 IMPLS.push({
 	name: 'Reference', 
 	fn: reference, 
@@ -39,12 +36,20 @@ IMPLS.push({
 // ********************************************************************************
 
 import {ens_normalize} from '@adraffy/ens-normalize';
-export {ens_normalize};
 IMPLS.push({
 	name: 'ens_normalize', 
 	fn: ens_normalize, 
 	version: read_package_version(`@adraffy/ens-normalize`),
 	primary: true
+});
+
+
+import {ens_normalize as prior} from 'prior_ens_norm';
+IMPLS.push({
+	name: 'ens_normalize', 
+	fn: prior, 
+	version: read_package_version(`prior_ens_norm`),
+	prior: true
 });
 
 // ********************************************************************************
@@ -96,7 +101,7 @@ IMPLS.push({
 // ********************************************************************************
 
 for (let impl of IMPLS) {
-	impl.slug = impl.name.replace(/\s+/, '').toLowerCase();
+	impl.slug = impl.name.replace(/\s+/, '').toLowerCase() + '_' + impl.version;
 }
 
 // ********************************************************************************

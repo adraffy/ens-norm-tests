@@ -1,0 +1,2155 @@
+
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>ens_normalize (1.6.3) vs Reference (0.0.10) [1473529 labels] @ 2022-09-09T08:56:36.144Z</title>
+		<style>
+			body { margin: 1rem; }
+			table { border-collapse: collapse; width: 100%; }
+			td { border: 1px solid #aaa; line-break: anywhere; }
+			thead td { background: #ccc; font-weight: bold; }
+			tbody tr:nth-child(odd) { background: #eee; }
+			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			tbody td.error { background: #fcc; }
+			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			#overall td { text-align: right; }
+		</style>
+		</head>
+		<body>
+		<h1>ens_normalize (1.6.3) vs Reference (0.0.10) [1473529 labels] @ 2022-09-09T08:56:36.144Z</h1>
+	
+		<table id="overall">
+		<thead>
+		<tr>
+		<td>Type</td>
+		<td>#</td>
+		<td>%</td>
+		</tr>
+		</thead>
+		<tbody>
+	<tr><td style="background-color: #cfc; font-weight: bold">Same</td><td>1470879</td><td>99.82016%</td></tr><tr><td style="background-color: #fcc; font-weight: bold">Different</td><td>2650</td><td>0.17984%</td></tr><tr><td><a href="#both-error">both-error</a></td><td>2650</td><td>0.17984%</td></tr></tbody></table><a name="both-error"><h2>both-error (2650)</h2></a><h3>Only showing 352 differences</h3>			
+			<table id="both-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.3)</td>
+			<td>Reference (0.0.10)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>&#64830&#865&#3663&#815&#865&#3663&#64831</div></td>
+			<td><div>{FD3E}{361}{E4F}{32F}{361}{E4F}{FD3F}</div></td>
+			<td class="error">Invalid label "﴾͡๏̯͡๏﴿": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Invalid label "﴾͡๏̯͡๏﴿": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>&#215&#822&#860&#822&#215&#822</div></td>
+			<td><div>{D7}{336}{35C}{336}{D7}{336}</div></td>
+			<td class="error">Invalid label "×̶̶͜×̶": adjacent combining marks "×̶̶"</td>
+			<td class="error">Invalid label "×̶̶͜×̶": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>&#8734&#822&#808&#846&#816&#805&#816&#846&#783&#843&#779&#774&#773&#785</div></td>
+			<td><div>{221E}{336}{328}{34E}{330}{325}{330}{34E}{30F}{34B}{30B}{306}{305}{311}</div></td>
+			<td class="error">Invalid label "∞̶̨͎̰̥̰͎̏͋̋̆̅̑": adjacent combining marks "∞̶̨"</td>
+			<td class="error">Invalid label "∞̶̨͎̰̥̰͎̏͋̋̆̅̑": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>&#9484&#3900&#9600&#831&#314&#815&#9600&#831&#3901&#9488</div></td>
+			<td><div>{250C}{F3C}{2580}{33F}{13A}{32F}{2580}{33F}{F3D}{2510}</div></td>
+			<td class="error">Invalid label "┌༼▀̿ĺ̯▀̿༽┐": adjacent combining marks "ĺ̯"</td>
+			<td class="error">Invalid label "┌༼▀̿ĺ̯▀̿༽┐": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>&#9574&#821&#821&#831&#9572&#9472</div></td>
+			<td><div>{2566}{335}{335}{33F}{2564}{2500}</div></td>
+			<td class="error">Invalid label "╦̵̵̿╤─": adjacent combining marks "╦̵̵"</td>
+			<td class="error">Invalid label "╦̵̵̿╤─": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>1&#820&#801&#792&#852&#812&#845&#825&#815&#788</div></td>
+			<td><div>1{334}{321}{318}{354}{32C}{34D}{339}{32F}{314}</div></td>
+			<td class="error">Invalid label "1̴̡̘͔̬͍̹̯̔": adjacent combining marks "1̴̡"</td>
+			<td class="error">Invalid label "1̴̡̘͔̬͍̹̯̔": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>1&#844&#786&#7890&#838&#838&#7940&#859&#864</div></td>
+			<td><div>1{34C}{312}{315}0{346}{346}{31A}0{35B}{360}</div></td>
+			<td class="error">Invalid label "1͌̒̕0͆͆̚0͛͠": adjacent combining marks "1͌̒"</td>
+			<td class="error">Invalid label "1͌̒̕0͆͆̚0͛͠": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>1&#774&#7762&#774&#7763&#774&#776</div></td>
+			<td><div>1{306}{308}2{306}{308}3{306}{308}</div></td>
+			<td class="error">Invalid label "1̆̈2̆̈3̆̈": adjacent combining marks "1̆̈"</td>
+			<td class="error">Invalid label "1̆̈2̆̈3̆̈": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>&#1634&#1634&#1634&#1622&#1623</div></td>
+			<td><div>{662}{662}{662}{656}{657}</div></td>
+			<td class="error">Invalid label "٢٢٢ٖٗ": adjacent combining marks "٢ٖٗ"</td>
+			<td class="error">Invalid label "٢٢٢ٖٗ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>3&#821&#808&#841&#797&#788&#850&#859&#778&#7890&#821&#795&#791&#825&#848&#842&#768&#775&#787&#787&#842&#781&#8610&#824&#795&#825&#793&#786&#850&#859&#777&#859&#782&#772&#794</div></td>
+			<td><div>3{335}{328}{349}{31D}{314}{352}{35B}{30A}{315}0{335}{31B}{317}{339}{350}{34A}{300}{307}{313}{313}{34A}{30D}{35D}0{338}{31B}{339}{319}{312}{352}{35B}{309}{35B}{30E}{304}{31A}</div></td>
+			<td class="error">Invalid label "3̵̨͉̝̔͒͛̊̕0̵̛̗̹͐͊̀̇̓̓͊̍͝0̸̛̹̙̒͒͛̉͛̎̄̚": adjacent combining marks "3̵̨"</td>
+			<td class="error">Invalid label "3̵̨͉̝̔͒͛̊̕0̵̛̗̹͐͊̀̇̓̓͊̍͝0̸̛̹̙̒͒͛̉͛̎̄̚": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>4&#851&#8292&#851&#8290&#851&#829</div></td>
+			<td><div>4{353}{33D}2{353}{33D}0{353}{33D}</div></td>
+			<td class="error">Invalid label "4͓̽2͓̽0͓̽": adjacent combining marks "4͓̽"</td>
+			<td class="error">Invalid label "4͓̽2͓̽0͓̽": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>&#3670&#1763&#1756moon</div></td>
+			<td><div>{E56}{6E3}{6DC}moon</div></td>
+			<td class="error">Invalid label "๖ۣۜmoon": adjacent combining marks "๖ۣۜ"</td>
+			<td class="error">Invalid label "๖ۣۜmoon": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>7&#787&#776&#769&#856</div></td>
+			<td><div>7{313}{308}{301}{358}</div></td>
+			<td class="error">Invalid label "7̓̈́͘": adjacent combining marks "7̓̈"</td>
+			<td class="error">Invalid label "7̓̈́͘": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>&#1639&#1639&#1639&#1622&#1623</div></td>
+			<td><div>{667}{667}{667}{656}{657}</div></td>
+			<td class="error">Invalid label "٧٧٧ٖٗ": adjacent combining marks "٧ٖٗ"</td>
+			<td class="error">Invalid label "٧٧٧ٖٗ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>8&#805&#809&#840&#851&#851</div></td>
+			<td><div>8{325}{329}{348}{353}{353}</div></td>
+			<td class="error">Invalid label "8̥̩͈͓͓": adjacent combining marks "8̥̩"</td>
+			<td class="error">Invalid label "8̥̩͈͓͓": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>&#1641&#64830&#3663&#815&#865&#3663&#64831</div></td>
+			<td><div>{669}{FD3E}{E4F}{32F}{361}{E4F}{FD3F}</div></td>
+			<td class="error">Invalid label "٩﴾๏̯͡๏﴿": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Invalid label "٩﴾๏̯͡๏﴿": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>&#1641&#3663&#815&#865&#3663&#1782</div></td>
+			<td><div>{669}{E4F}{32F}{361}{E4F}{6F6}</div></td>
+			<td class="error">Invalid label "٩๏̯͡๏۶": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Invalid label "٩๏̯͡๏۶": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>a&#851&#846&#851&#829&#829b&#851&#846&#851&#829&#829c&#851&#846&#851&#829&#829</div></td>
+			<td><div>a{353}{34E}{353}{33D}{33D}b{353}{34E}{353}{33D}{33D}c{353}{34E}{353}{33D}{33D}</div></td>
+			<td class="error">Invalid label "a͓͎͓̽̽b͓͎͓̽̽c͓͎͓̽̽": adjacent combining marks "a͓͎"</td>
+			<td class="error">Invalid label "a͓͎͓̽̽b͓͎͓̽̽c͓͎͓̽̽": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>&#7855bdulaziz</div></td>
+			<td><div>{1EAF}bdulaziz</div></td>
+			<td class="error">Invalid label "ắbdulaziz": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "ắbdulaziz": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>&#7855bdullah</div></td>
+			<td><div>{1EAF}bdullah</div></td>
+			<td class="error">Invalid label "ắbdullah": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "ắbdullah": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>a&#273&#226yr&#7891i</div></td>
+			<td><div>a{111}{E2}yr{1ED3}i</div></td>
+			<td class="error">Invalid label "ađâyrồi": adjacent combining marks "ồ"</td>
+			<td class="error">Invalid label "ađâyrồi": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>&#7855hmed</div></td>
+			<td><div>{1EAF}hmed</div></td>
+			<td class="error">Invalid label "ắhmed": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "ắhmed": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>b&#7843ohi&#7875m</div></td>
+			<td><div>b{1EA3}ohi{1EC3}m</div></td>
+			<td class="error">Invalid label "bảohiểm": adjacent combining marks "ể"</td>
+			<td class="error">Invalid label "bảohiểm": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>b&#7843ovi&#7879t</div></td>
+			<td><div>b{1EA3}ovi{1EC7}t</div></td>
+			<td class="error">Invalid label "bảoviệt": adjacent combining marks "ệ"</td>
+			<td class="error">Invalid label "bảoviệt": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>c&#7847nth&#417</div></td>
+			<td><div>c{1EA7}nth{1A1}</div></td>
+			<td class="error">Invalid label "cầnthơ": adjacent combining marks "ầ"</td>
+			<td class="error">Invalid label "cầnthơ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>c&#224ph&#234s&#7919a&#273&#225</div></td>
+			<td><div>c{E0}ph{EA}s{1EEF}a{111}{E1}</div></td>
+			<td class="error">Invalid label "càphêsữađá": adjacent combining marks "ữ"</td>
+			<td class="error">Invalid label "càphêsữađá": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>c&#7855rlos</div></td>
+			<td><div>c{1EAF}rlos</div></td>
+			<td class="error">Invalid label "cắrlos": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "cắrlos": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>chu&#7889i</div></td>
+			<td><div>chu{1ED1}i</div></td>
+			<td class="error">Invalid label "chuối": adjacent combining marks "ố"</td>
+			<td class="error">Invalid label "chuối": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>c&#417mt&#7845m</div></td>
+			<td><div>c{1A1}mt{1EA5}m</div></td>
+			<td class="error">Invalid label "cơmtấm": adjacent combining marks "ấ"</td>
+			<td class="error">Invalid label "cơmtấm": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>c&#432&#7901ng</div></td>
+			<td><div>c{1B0}{1EDD}ng</div></td>
+			<td class="error">Invalid label "cường": adjacent combining marks "ờ"</td>
+			<td class="error">Invalid label "cường": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>&#273&#7863cbi&#7879t</div></td>
+			<td><div>{111}{1EB7}cbi{1EC7}t</div></td>
+			<td class="error">Invalid label "đặcbiệt": adjacent combining marks "ặ"</td>
+			<td class="error">Invalid label "đặcbiệt": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>&#273&#224n&#7861ng</div></td>
+			<td><div>{111}{E0}n{1EB5}ng</div></td>
+			<td class="error">Invalid label "đànẵng": adjacent combining marks "ẵ"</td>
+			<td class="error">Invalid label "đànẵng": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>&#273&#7863ngv&#259nth&#224nh</div></td>
+			<td><div>{111}{1EB7}ngv{103}nth{E0}nh</div></td>
+			<td class="error">Invalid label "đặngvănthành": adjacent combining marks "ặ"</td>
+			<td class="error">Invalid label "đặngvănthành": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>e&#814&#799&#840&#803&#790&#816&#809&#825&#840&#830&#872&#785&#849t&#792&#799&#828&#777&#776&#769&#848&#843&#844&#778h&#858&#790&#796&#781&#771&#848</div></td>
+			<td><div>e{32E}{31F}{348}{323}{316}{330}{329}{339}{348}{33E}{368}{311}{351}t{318}{31F}{33C}{309}{308}{301}{350}{34B}{34C}{30A}h{35A}{316}{31C}{30D}{303}{350}</div></td>
+			<td class="error">Invalid label "e̮̟͈̣̖̰̩̹͈̾ͨ̑͑t̘̟̼̉̈́͐͋͌̊h͚̖̜̍̃͐": adjacent combining marks "e̮̟"</td>
+			<td class="error">Invalid label "e̮̟͈̣̖̰̩̹͈̾ͨ̑͑t̘̟̼̉̈́͐͋͌̊h͚̖̜̍̃͐": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>e&#814&#799&#840&#803&#790&#816&#809&#825&#840&#830&#872&#785&#849t&#792&#799&#828&#777&#776&#769&#848&#843&#844&#778h&#858&#790&#796&#781&#771&#848e&#814&#799&#840&#803&#790&#816&#809&#825&#840&#830&#872&#785&#849r&#828&#815&#804&#776&#877&#771&#872&#774</div></td>
+			<td><div>e{32E}{31F}{348}{323}{316}{330}{329}{339}{348}{33E}{368}{311}{351}t{318}{31F}{33C}{309}{308}{301}{350}{34B}{34C}{30A}h{35A}{316}{31C}{30D}{303}{350}e{32E}{31F}{348}{323}{316}{330}{329}{339}{348}{33E}{368}{311}{351}r{33C}{32F}{324}{308}{36D}{303}{368}{306}</div></td>
+			<td class="error">Invalid label "e̮̟͈̣̖̰̩̹͈̾ͨ̑͑t̘̟̼̉̈́͐͋͌̊h͚̖̜̍̃͐e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̈ͭ̃ͨ̆": adjacent combining marks "e̮̟"</td>
+			<td class="error">Invalid label "e̮̟͈̣̖̰̩̹͈̾ͨ̑͑t̘̟̼̉̈́͐͋͌̊h͚̖̜̍̃͐e̮̟͈̣̖̰̩̹͈̾ͨ̑͑r̼̯̤̈ͭ̃ͨ̆": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>e&#860&#865t&#860&#865h</div></td>
+			<td><div>e{35C}{361}t{35C}{361}h</div></td>
+			<td class="error">Invalid label "e͜͡t͜͡h": adjacent combining marks "e͜͡"</td>
+			<td class="error">Invalid label "e͜͡t͜͡h": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>&#7869&#820&#791&#817&#851&#831&#860t&#822&#851&#842&#778&#834&#843h&#823&#802&#826&#814&#827&#804&#831&#770&#844&#856&#861</div></td>
+			<td><div>{1EBD}{334}{317}{331}{353}{33F}{35C}t{336}{353}{34A}{30A}{342}{34B}h{337}{322}{33A}{32E}{33B}{324}{33F}{302}{34C}{358}{35D}</div></td>
+			<td class="error">Invalid label "ẽ̴̗̱͓̿͜t̶͓͊̊͂͋h̷̢̺̮̻̤̿̂͌͘͝": adjacent combining marks "e̴̗"</td>
+			<td class="error">Invalid label "ẽ̴̗̱͓̿͜t̶͓͊̊͂͋h̷̢̺̮̻̤̿̂͌͘͝": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>e&#860&#865t&#860&#865h&#860&#865e&#860&#865r&#860&#865e&#860&#865u&#860&#865m&#860&#865</div></td>
+			<td><div>e{35C}{361}t{35C}{361}h{35C}{361}e{35C}{361}r{35C}{361}e{35C}{361}u{35C}{361}m{35C}{361}</div></td>
+			<td class="error">Invalid label "e͜͡t͜͡h͜͡e͜͡r͜͡e͜͡u͜͡m͜͡": adjacent combining marks "e͜͡"</td>
+			<td class="error">Invalid label "e͜͡t͜͡h͜͡e͜͡r͜͡e͜͡u͜͡m͜͡": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>f&#462l&#476ji&#257</div></td>
+			<td><div>f{1CE}l{1DC}ji{101}</div></td>
+			<td class="error">Invalid label "fǎlǜjiā": adjacent combining marks "ǜ"</td>
+			<td class="error">Invalid label "fǎlǜjiā": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>&#487&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#322&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#464&#843&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#357&#843&#843&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#269&#843&#843&#843&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#844&#543&#843&#843&#843&#843&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844&#844&#345&#843&#843&#843&#843&#843&#843&#843&#843&#843&#843&#843&#844&#844&#844&#844&#844&#844&#844&#844</div></td>
+			<td><div>{1E7}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{142}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{1D0}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{165}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{10D}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{21F}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{159}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34B}{34C}{34C}{34C}{34C}{34C}{34C}{34C}{34C}</div></td>
+			<td class="error">Invalid label "ǧ͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌ł͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌͌͌ǐ͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌ť͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌č͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌ȟ͋͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌ř͋͋͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌": adjacent combining marks "ǧ͋"</td>
+			<td class="error">Invalid label "ǧ͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌͌͌͌͌ł͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌͌͌ǐ͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌ť͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌͌č͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌͌ȟ͋͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌͌ř͋͋͋͋͋͋͋͋͋͋͋͌͌͌͌͌͌͌͌": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>g&#7759d</div></td>
+			<td><div>g{1E4F}d</div></td>
+			<td class="error">Invalid label "gṏd": adjacent combining marks "ṏ"</td>
+			<td class="error">Invalid label "gṏd": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>h&#224n&#7897i</div></td>
+			<td><div>h{E0}n{1ED9}i</div></td>
+			<td class="error">Invalid label "hànội": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "hànội": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>h&#7891ch&#237minh</div></td>
+			<td><div>h{1ED3}ch{ED}minh</div></td>
+			<td class="error">Invalid label "hồchíminh": adjacent combining marks "ồ"</td>
+			<td class="error">Invalid label "hồchíminh": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>hu&#7871</div></td>
+			<td><div>hu{1EBF}</div></td>
+			<td class="error">Invalid label "huế": adjacent combining marks "ế"</td>
+			<td class="error">Invalid label "huế": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>moh&#7855mmed</div></td>
+			<td><div>moh{1EAF}mmed</div></td>
+			<td class="error">Invalid label "mohắmmed": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "mohắmmed": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>m&#7897t</div></td>
+			<td><div>m{1ED9}t</div></td>
+			<td class="error">Invalid label "một": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "một": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>m&#7897thaiba</div></td>
+			<td><div>m{1ED9}thaiba</div></td>
+			<td class="error">Invalid label "mộthaiba": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "mộthaiba": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>m&#7897tt&#225m</div></td>
+			<td><div>m{1ED9}tt{E1}m</div></td>
+			<td class="error">Invalid label "mộttám": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "mộttám": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>m&#7897ttr&#259m</div></td>
+			<td><div>m{1ED9}ttr{103}m</div></td>
+			<td class="error">Invalid label "mộttrăm": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "mộttrăm": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>muh&#7855mmed</div></td>
+			<td><div>muh{1EAF}mmed</div></td>
+			<td class="error">Invalid label "muhắmmed": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "muhắmmed": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>nguy&#7877n</div></td>
+			<td><div>nguy{1EC5}n</div></td>
+			<td class="error">Invalid label "nguyễn": adjacent combining marks "ễ"</td>
+			<td class="error">Invalid label "nguyễn": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>ph&#7841mnh&#7853tv&#432&#7907ng</div></td>
+			<td><div>ph{1EA1}mnh{1EAD}tv{1B0}{1EE3}ng</div></td>
+			<td class="error">Invalid label "phạmnhậtvượng": adjacent combining marks "ậ"</td>
+			<td class="error">Invalid label "phạmnhậtvượng": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>ph&#7853t</div></td>
+			<td><div>ph{1EAD}t</div></td>
+			<td class="error">Invalid label "phật": adjacent combining marks "ậ"</td>
+			<td class="error">Invalid label "phật": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>ph&#7903</div></td>
+			<td><div>ph{1EDF}</div></td>
+			<td class="error">Invalid label "phở": adjacent combining marks "ở"</td>
+			<td class="error">Invalid label "phở": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>s&#7889m&#7897t</div></td>
+			<td><div>s{1ED1}m{1ED9}t</div></td>
+			<td class="error">Invalid label "sốmột": adjacent combining marks "ố"</td>
+			<td class="error">Invalid label "sốmột": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>t&#224il&#7897cph&#225t</div></td>
+			<td><div>t{E0}il{1ED9}cph{E1}t</div></td>
+			<td class="error">Invalid label "tàilộcphát": adjacent combining marks "ộ"</td>
+			<td class="error">Invalid label "tàilộcphát": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>th&#7855ng</div></td>
+			<td><div>th{1EAF}ng</div></td>
+			<td class="error">Invalid label "thắng": adjacent combining marks "ắ"</td>
+			<td class="error">Invalid label "thắng": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>th&#432&#7907ng&#273&#7871</div></td>
+			<td><div>th{1B0}{1EE3}ng{111}{1EBF}</div></td>
+			<td class="error">Invalid label "thượngđế": adjacent combining marks "ợ"</td>
+			<td class="error">Invalid label "thượngđế": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>ti&#7873n</div></td>
+			<td><div>ti{1EC1}n</div></td>
+			<td class="error">Invalid label "tiền": adjacent combining marks "ề"</td>
+			<td class="error">Invalid label "tiền": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>ti&#7873nb&#7841c</div></td>
+			<td><div>ti{1EC1}nb{1EA1}c</div></td>
+			<td class="error">Invalid label "tiềnbạc": adjacent combining marks "ề"</td>
+			<td class="error">Invalid label "tiềnbạc": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>ti&#7871ngvi&#7879t</div></td>
+			<td><div>ti{1EBF}ngvi{1EC7}t</div></td>
+			<td class="error">Invalid label "tiếngviệt": adjacent combining marks "ế"</td>
+			<td class="error">Invalid label "tiếngviệt": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>ti&#7873nvay</div></td>
+			<td><div>ti{1EC1}nvay</div></td>
+			<td class="error">Invalid label "tiềnvay": adjacent combining marks "ề"</td>
+			<td class="error">Invalid label "tiềnvay": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>t&#851&#829k&#851&#829</div></td>
+			<td><div>t{353}{33D}k{353}{33D}</div></td>
+			<td class="error">Invalid label "t͓̽k͓̽": adjacent combining marks "t͓̽"</td>
+			<td class="error">Invalid label "t͓̽k͓̽": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>t&#823&#814&#840&#769&#782&#856&#789&#489&#821&#795&#845&#845&#825&#776&#776&#769</div></td>
+			<td><div>t{337}{32E}{348}{301}{30E}{358}{315}{1E9}{335}{31B}{34D}{34D}{339}{308}{308}{301}</div></td>
+			<td class="error">Invalid label "t̷̮͈́̎͘̕ǩ̵̛͍͍̹̈̈́": adjacent combining marks "t̷̮"</td>
+			<td class="error">Invalid label "t̷̮͈́̎͘̕ǩ̵̛͍͍̹̈̈́": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>tr&#7847n</div></td>
+			<td><div>tr{1EA7}n</div></td>
+			<td class="error">Invalid label "trần": adjacent combining marks "ầ"</td>
+			<td class="error">Invalid label "trần": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>tri&#7879u</div></td>
+			<td><div>tri{1EC7}u</div></td>
+			<td class="error">Invalid label "triệu": adjacent combining marks "ệ"</td>
+			<td class="error">Invalid label "triệu": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>vayti&#7873n</div></td>
+			<td><div>vayti{1EC1}n</div></td>
+			<td class="error">Invalid label "vaytiền": adjacent combining marks "ề"</td>
+			<td class="error">Invalid label "vaytiền": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>vi&#7879t</div></td>
+			<td><div>vi{1EC7}t</div></td>
+			<td class="error">Invalid label "việt": adjacent combining marks "ệ"</td>
+			<td class="error">Invalid label "việt": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>vi&#7879t-nam</div></td>
+			<td><div>vi{1EC7}t-nam</div></td>
+			<td class="error">Invalid label "việt-nam": adjacent combining marks "ệ"</td>
+			<td class="error">Invalid label "việt-nam": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>vi&#7879tnam</div></td>
+			<td><div>vi{1EC7}tnam</div></td>
+			<td class="error">Invalid label "việtnam": adjacent combining marks "ệ"</td>
+			<td class="error">Invalid label "việtnam": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>x&#7893s&#7889mi&#7873nb&#7855c</div></td>
+			<td><div>x{1ED5}s{1ED1}mi{1EC1}nb{1EAF}c</div></td>
+			<td class="error">Invalid label "xổsốmiềnbắc": adjacent combining marks "ổ"</td>
+			<td class="error">Invalid label "xổsốmiềnbắc": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>&#441&#821&#801&#1245&#821&#808&#772&#658</div></td>
+			<td><div>{1B9}{335}{321}{4DD}{335}{328}{304}{292}</div></td>
+			<td class="error">Invalid label "ƹ̵̡ӝ̵̨̄ʒ": adjacent combining marks "ƹ̵̡"</td>
+			<td class="error">Invalid label "ƹ̵̡ӝ̵̨̄ʒ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>&#661&#8270&#815&#865&#8270&#660&#3844</div></td>
+			<td><div>{295}{204E}{32F}{361}{204E}{294}{F04}</div></td>
+			<td class="error">Invalid label "ʕ⁎̯͡⁎ʔ༄": adjacent combining marks "⁎̯͡"</td>
+			<td class="error">Invalid label "ʕ⁎̯͡⁎ʔ༄": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>&#661&#8226&#811&#865&#8226&#660</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{294}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ʔ": adjacent combining marks "•̫͡"</td>
+			<td class="error">Invalid label "ʕ•̫͡•ʔ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>&#661&#8226&#811&#865&#8226&#661&#8226&#811&#865&#8226&#660&#8226&#811&#865&#8226&#660</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{295}{2022}{32B}{361}{2022}{294}{2022}{32B}{361}{2022}{294}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ": adjacent combining marks "•̫͡"</td>
+			<td class="error">Invalid label "ʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>&#661&#8226&#811&#865&#8226&#3954&#660&#3968</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{F72}{294}{F80}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ིʔྀ": adjacent combining marks "•̫͡"</td>
+			<td class="error">Invalid label "ʕ•̫͡•ིʔྀ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>&#661&#9600&#314&#815&#9600&#660</div></td>
+			<td><div>{295}{2580}{13A}{32F}{2580}{294}</div></td>
+			<td class="error">Invalid label "ʕ▀ĺ̯▀ʔ": adjacent combining marks "ĺ̯"</td>
+			<td class="error">Invalid label "ʕ▀ĺ̯▀ʔ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>&#661&#664&#773&#860&#664&#773&#660</div></td>
+			<td><div>{295}{298}{305}{35C}{298}{305}{294}</div></td>
+			<td class="error">Invalid label "ʕʘ̅͜ʘ̅ʔ": adjacent combining marks "ʘ̅͜"</td>
+			<td class="error">Invalid label "ʕʘ̅͜ʘ̅ʔ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>&#957&#943&#968&#959&#957&#7936&#957&#959&#956&#942&#956&#945&#964&#945&#956&#8052&#956&#972&#957&#945&#957&#8004&#968&#953&#957</div></td>
+			<td><div>{3BD}{3AF}{3C8}{3BF}{3BD}{1F00}{3BD}{3BF}{3BC}{3AE}{3BC}{3B1}{3C4}{3B1}{3BC}{1F74}{3BC}{3CC}{3BD}{3B1}{3BD}{1F44}{3C8}{3B9}{3BD}</div></td>
+			<td class="error">Invalid label "νίψονἀνομήματαμὴμόνανὄψιν": adjacent combining marks "ὄ"</td>
+			<td class="error">Invalid label "νίψονἀνομήματαμὴμόνανὄψιν": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>&#8004&#963&#953&#961&#953&#962</div></td>
+			<td><div>{1F44}{3C3}{3B9}{3C1}{3B9}{3C2}</div></td>
+			<td class="error">Invalid label "ὄσιρις": adjacent combining marks "ὄ"</td>
+			<td class="error">Invalid label "ὄσιρις": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">81</td>
+			<td class="name"><div>&#1488&#1464&#1489&#1464&#1468&#1488</div></td>
+			<td><div>{5D0}{5B8}{5D1}{5B8}{5BC}{5D0}</div></td>
+			<td class="error">Invalid label "אָבָּא": adjacent combining marks "בָּ"</td>
+			<td class="error">Invalid label "אָבָּא": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">82</td>
+			<td class="name"><div>&#1488&#1463&#1512&#1456&#1489&#1463&#1468&#1506</div></td>
+			<td><div>{5D0}{5B7}{5E8}{5B0}{5D1}{5B7}{5BC}{5E2}</div></td>
+			<td class="error">Invalid label "אַרְבַּע": adjacent combining marks "בַּ"</td>
+			<td class="error">Invalid label "אַרְבַּע": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">83</td>
+			<td class="name"><div>&#1488&#1463&#1512&#1456&#1489&#1464&#1468&#1506&#1464&#1492</div></td>
+			<td><div>{5D0}{5B7}{5E8}{5B0}{5D1}{5B8}{5BC}{5E2}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "אַרְבָּעָה": adjacent combining marks "בָּ"</td>
+			<td class="error">Invalid label "אַרְבָּעָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">84</td>
+			<td class="name"><div>&#1489&#1456&#1468</div></td>
+			<td><div>{5D1}{5B0}{5BC}</div></td>
+			<td class="error">Invalid label "בְּ": adjacent combining marks "בְּ"</td>
+			<td class="error">Invalid label "בְּ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">85</td>
+			<td class="name"><div>&#1489&#1460&#1468&#1497&#1496&#1493&#1465&#1503</div></td>
+			<td><div>{5D1}{5B4}{5BC}{5D9}{5D8}{5D5}{5B9}{5DF}</div></td>
+			<td class="error">Invalid label "בִּיטוֹן": adjacent combining marks "בִּ"</td>
+			<td class="error">Invalid label "בִּיטוֹן": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">86</td>
+			<td class="name"><div>&#1489&#1460&#1468&#1504&#1456&#1497&#1464&#1502&#1460&#1497&#1503</div></td>
+			<td><div>{5D1}{5B4}{5BC}{5E0}{5B0}{5D9}{5B8}{5DE}{5B4}{5D9}{5DF}</div></td>
+			<td class="error">Invalid label "בִּנְיָמִין": adjacent combining marks "בִּ"</td>
+			<td class="error">Invalid label "בִּנְיָמִין": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">87</td>
+			<td class="name"><div>&#1489&#1463&#1468&#1504&#1511</div></td>
+			<td><div>{5D1}{5B7}{5BC}{5E0}{5E7}</div></td>
+			<td class="error">Invalid label "בַּנק": adjacent combining marks "בַּ"</td>
+			<td class="error">Invalid label "בַּנק": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">88</td>
+			<td class="name"><div>&#1489&#1463&#1468&#1504&#1511&#1464&#1488&#1493&#1468&#1514</div></td>
+			<td><div>{5D1}{5B7}{5BC}{5E0}{5E7}{5B8}{5D0}{5D5}{5BC}{5EA}</div></td>
+			<td class="error">Invalid label "בַּנקָאוּת": adjacent combining marks "בַּ"</td>
+			<td class="error">Invalid label "בַּנקָאוּת": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">89</td>
+			<td class="name"><div>&#1489&#1456&#1468&#1512&#1461&#1488&#1513&#1460&#1473&#1497&#1514</div></td>
+			<td><div>{5D1}{5B0}{5BC}{5E8}{5B5}{5D0}{5E9}{5B4}{5C1}{5D9}{5EA}</div></td>
+			<td class="error">Invalid label "בְּרֵאשִׁית": adjacent combining marks "בְּ"</td>
+			<td class="error">Invalid label "בְּרֵאשִׁית": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">90</td>
+			<td class="name"><div>&#1491&#1464&#1468&#1493&#1491</div></td>
+			<td><div>{5D3}{5B8}{5BC}{5D5}{5D3}</div></td>
+			<td class="error">Invalid label "דָּוד": adjacent combining marks "דָּ"</td>
+			<td class="error">Invalid label "דָּוד": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">91</td>
+			<td class="name"><div>&#1491&#1464&#1468&#1504&#1460&#1497&#1461&#1468&#1488&#1500</div></td>
+			<td><div>{5D3}{5B8}{5BC}{5E0}{5B4}{5D9}{5B5}{5BC}{5D0}{5DC}</div></td>
+			<td class="error">Invalid label "דָּנִיֵּאל": adjacent combining marks "דָּ"</td>
+			<td class="error">Invalid label "דָּנִיֵּאל": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">92</td>
+			<td class="name"><div>&#1491&#1464&#1468&#1512&#1456&#1499&#1468&#1493&#1465&#1503</div></td>
+			<td><div>{5D3}{5B8}{5BC}{5E8}{5B0}{5DB}{5BC}{5D5}{5B9}{5DF}</div></td>
+			<td class="error">Invalid label "דָּרְכּוֹן": adjacent combining marks "דָּ"</td>
+			<td class="error">Invalid label "דָּרְכּוֹן": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">93</td>
+			<td class="name"><div>&#1492&#1463&#1513&#1461&#1468&#1473&#1501</div></td>
+			<td><div>{5D4}{5B7}{5E9}{5B5}{5BC}{5C1}{5DD}</div></td>
+			<td class="error">Invalid label "הַשֵּׁם": adjacent combining marks "שֵּ"</td>
+			<td class="error">Invalid label "הַשֵּׁם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">94</td>
+			<td class="name"><div>&#1495&#1463&#1493&#1464&#1468&#1492</div></td>
+			<td><div>{5D7}{5B7}{5D5}{5B8}{5BC}{5D4}</div></td>
+			<td class="error">Invalid label "חַוָּה": adjacent combining marks "וָּ"</td>
+			<td class="error">Invalid label "חַוָּה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">95</td>
+			<td class="name"><div>&#1495&#1458&#1502&#1460&#1513&#1464&#1468&#1473&#1492</div></td>
+			<td><div>{5D7}{5B2}{5DE}{5B4}{5E9}{5B8}{5BC}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "חֲמִשָּׁה": adjacent combining marks "שָּ"</td>
+			<td class="error">Invalid label "חֲמִשָּׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">96</td>
+			<td class="name"><div>&#1495&#1458&#1502&#1460&#1513&#1460&#1468&#1473&#1497&#1501</div></td>
+			<td><div>{5D7}{5B2}{5DE}{5B4}{5E9}{5B4}{5BC}{5C1}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "חֲמִשִּׁים": adjacent combining marks "שִּ"</td>
+			<td class="error">Invalid label "חֲמִשִּׁים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">97</td>
+			<td class="name"><div>&#1495&#1458&#1513&#1460&#1473&#1497&#1513&#1473</div></td>
+			<td><div>{5D7}{5B2}{5E9}{5B4}{5C1}{5D9}{5E9}{5C1}</div></td>
+			<td class="error">Invalid label "חֲשִׁישׁ": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "חֲשִׁישׁ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">98</td>
+			<td class="name"><div>&#1497&#1456&#1512&#1493&#1468&#1513&#1464&#1473&#1500&#1463&#1497&#1460&#1501</div></td>
+			<td><div>{5D9}{5B0}{5E8}{5D5}{5BC}{5E9}{5B8}{5C1}{5DC}{5B7}{5D9}{5B4}{5DD}</div></td>
+			<td class="error">Invalid label "יְרוּשָׁלַיִם": adjacent combining marks "שָׁ"</td>
+			<td class="error">Invalid label "יְרוּשָׁלַיִם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">99</td>
+			<td class="name"><div>&#1497&#1456&#1513&#1463&#1473&#1506&#1456&#1497&#1464&#1492&#1493&#1468</div></td>
+			<td><div>{5D9}{5B0}{5E9}{5B7}{5C1}{5E2}{5B0}{5D9}{5B8}{5D4}{5D5}{5BC}</div></td>
+			<td class="error">Invalid label "יְשַׁעְיָהוּ": adjacent combining marks "שַׁ"</td>
+			<td class="error">Invalid label "יְשַׁעְיָהוּ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">100</td>
+			<td class="name"><div>&#1499&#1465&#1468&#1492&#1461&#1503</div></td>
+			<td><div>{5DB}{5B9}{5BC}{5D4}{5B5}{5DF}</div></td>
+			<td class="error">Invalid label "כֹּהֵן": adjacent combining marks "כֹּ"</td>
+			<td class="error">Invalid label "כֹּהֵן": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">101</td>
+			<td class="name"><div>&#1499&#1464&#1468&#1500&#1461&#1489</div></td>
+			<td><div>{5DB}{5B8}{5BC}{5DC}{5B5}{5D1}</div></td>
+			<td class="error">Invalid label "כָּלֵב": adjacent combining marks "כָּ"</td>
+			<td class="error">Invalid label "כָּלֵב": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">102</td>
+			<td class="name"><div>&#1499&#1456&#1468&#1500&#1464&#1500</div></td>
+			<td><div>{5DB}{5B0}{5BC}{5DC}{5B8}{5DC}</div></td>
+			<td class="error">Invalid label "כְּלָל": adjacent combining marks "כְּ"</td>
+			<td class="error">Invalid label "כְּלָל": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">103</td>
+			<td class="name"><div>&#1499&#1462&#1468&#1505&#1462&#1507</div></td>
+			<td><div>{5DB}{5B6}{5BC}{5E1}{5B6}{5E3}</div></td>
+			<td class="error">Invalid label "כֶּסֶף": adjacent combining marks "כֶּ"</td>
+			<td class="error">Invalid label "כֶּסֶף": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">104</td>
+			<td class="name"><div>&#1499&#1456&#1468&#1505&#1464&#1508&#1460&#1497&#1501</div></td>
+			<td><div>{5DB}{5B0}{5BC}{5E1}{5B8}{5E4}{5B4}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "כְּסָפִים": adjacent combining marks "כְּ"</td>
+			<td class="error">Invalid label "כְּסָפִים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">105</td>
+			<td class="name"><div>&#1499&#1464&#1468&#1513&#1461&#1473&#1512</div></td>
+			<td><div>{5DB}{5B8}{5BC}{5E9}{5B5}{5C1}{5E8}</div></td>
+			<td class="error">Invalid label "כָּשֵׁר": adjacent combining marks "כָּ"</td>
+			<td class="error">Invalid label "כָּשֵׁר": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">106</td>
+			<td class="name"><div>&#1500&#1456&#1495&#1463&#1497&#1460&#1468&#1497&#1501</div></td>
+			<td><div>{5DC}{5B0}{5D7}{5B7}{5D9}{5B4}{5BC}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "לְחַיִּים": adjacent combining marks "יִּ"</td>
+			<td class="error">Invalid label "לְחַיִּים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">107</td>
+			<td class="name"><div>&#1500&#1456&#1513&#1463&#1474&#1495&#1461&#1511</div></td>
+			<td><div>{5DC}{5B0}{5E9}{5B7}{5C2}{5D7}{5B5}{5E7}</div></td>
+			<td class="error">Invalid label "לְשַׂחֵק": adjacent combining marks "שַׂ"</td>
+			<td class="error">Invalid label "לְשַׂחֵק": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">108</td>
+			<td class="name"><div>&#1500&#1456&#1513&#1463&#1473&#1500&#1461&#1501</div></td>
+			<td><div>{5DC}{5B0}{5E9}{5B7}{5C1}{5DC}{5B5}{5DD}</div></td>
+			<td class="error">Invalid label "לְשַׁלֵם": adjacent combining marks "שַׁ"</td>
+			<td class="error">Invalid label "לְשַׁלֵם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">109</td>
+			<td class="name"><div>&#1502&#1463&#1494&#1464&#1468&#1500&#1496&#1493&#1465&#1489</div></td>
+			<td><div>{5DE}{5B7}{5D6}{5B8}{5BC}{5DC}{5D8}{5D5}{5B9}{5D1}</div></td>
+			<td class="error">Invalid label "מַזָּלטוֹב": adjacent combining marks "זָּ"</td>
+			<td class="error">Invalid label "מַזָּלטוֹב": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">110</td>
+			<td class="name"><div>&#1502&#1463&#1499&#1463&#1468&#1489&#1460&#1468&#1497</div></td>
+			<td><div>{5DE}{5B7}{5DB}{5B7}{5BC}{5D1}{5B4}{5BC}{5D9}</div></td>
+			<td class="error">Invalid label "מַכַּבִּי": adjacent combining marks "כַּ"</td>
+			<td class="error">Invalid label "מַכַּבִּי": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">111</td>
+			<td class="name"><div>&#1502&#1463&#1500&#1499&#1464&#1468&#1492</div></td>
+			<td><div>{5DE}{5B7}{5DC}{5DB}{5B8}{5BC}{5D4}</div></td>
+			<td class="error">Invalid label "מַלכָּה": adjacent combining marks "כָּ"</td>
+			<td class="error">Invalid label "מַלכָּה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">112</td>
+			<td class="name"><div>&#1502&#1463&#1510&#1464&#1468&#1492</div></td>
+			<td><div>{5DE}{5B7}{5E6}{5B8}{5BC}{5D4}</div></td>
+			<td class="error">Invalid label "מַצָּה": adjacent combining marks "צָּ"</td>
+			<td class="error">Invalid label "מַצָּה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">113</td>
+			<td class="name"><div>&#1502&#1465&#1513&#1462&#1473&#1492</div></td>
+			<td><div>{5DE}{5B9}{5E9}{5B6}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "מֹשֶׁה": adjacent combining marks "שֶׁ"</td>
+			<td class="error">Invalid label "מֹשֶׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">114</td>
+			<td class="name"><div>&#1502&#1464&#1513&#1460&#1473&#1497&#1495&#1463</div></td>
+			<td><div>{5DE}{5B8}{5E9}{5B4}{5C1}{5D9}{5D7}{5B7}</div></td>
+			<td class="error">Invalid label "מָשִׁיחַ": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "מָשִׁיחַ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">115</td>
+			<td class="name"><div>&#1504&#1463&#1508&#1456&#1514&#1464&#1468&#1500&#1460&#1497</div></td>
+			<td><div>{5E0}{5B7}{5E4}{5B0}{5EA}{5B8}{5BC}{5DC}{5B4}{5D9}</div></td>
+			<td class="error">Invalid label "נַפְתָּלִי": adjacent combining marks "תָּ"</td>
+			<td class="error">Invalid label "נַפְתָּלִי": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">116</td>
+			<td class="name"><div>&#1504&#1464&#1513&#1460&#1474&#1497&#1488</div></td>
+			<td><div>{5E0}{5B8}{5E9}{5B4}{5C2}{5D9}{5D0}</div></td>
+			<td class="error">Invalid label "נָשִׂיא": adjacent combining marks "שִׂ"</td>
+			<td class="error">Invalid label "נָשִׂיא": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">117</td>
+			<td class="name"><div>&#1505&#1462&#1508&#1468&#1496&#1462&#1502&#1489&#1462&#1468&#1512</div></td>
+			<td><div>{5E1}{5B6}{5E4}{5BC}{5D8}{5B6}{5DE}{5D1}{5B6}{5BC}{5E8}</div></td>
+			<td class="error">Invalid label "סֶפּטֶמבֶּר": adjacent combining marks "בֶּ"</td>
+			<td class="error">Invalid label "סֶפּטֶמבֶּר": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">118</td>
+			<td class="name"><div>&#1506&#1493&#1465&#1513&#1462&#1473&#1512</div></td>
+			<td><div>{5E2}{5D5}{5B9}{5E9}{5B6}{5C1}{5E8}</div></td>
+			<td class="error">Invalid label "עוֹשֶׁר": adjacent combining marks "שֶׁ"</td>
+			<td class="error">Invalid label "עוֹשֶׁר": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">119</td>
+			<td class="name"><div>&#1506&#1460&#1502&#1464&#1468&#1504&#1493&#1468&#1488&#1461&#1500</div></td>
+			<td><div>{5E2}{5B4}{5DE}{5B8}{5BC}{5E0}{5D5}{5BC}{5D0}{5B5}{5DC}</div></td>
+			<td class="error">Invalid label "עִמָּנוּאֵל": adjacent combining marks "מָּ"</td>
+			<td class="error">Invalid label "עִמָּנוּאֵל": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">120</td>
+			<td class="name"><div>&#1506&#1464&#1513&#1460&#1473&#1497&#1512</div></td>
+			<td><div>{5E2}{5B8}{5E9}{5B4}{5C1}{5D9}{5E8}</div></td>
+			<td class="error">Invalid label "עָשִׁיר": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "עָשִׁיר": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">121</td>
+			<td class="name"><div>&#1506&#1462&#1513&#1462&#1474&#1512</div></td>
+			<td><div>{5E2}{5B6}{5E9}{5B6}{5C2}{5E8}</div></td>
+			<td class="error">Invalid label "עֶשֶׂר": adjacent combining marks "שֶׂ"</td>
+			<td class="error">Invalid label "עֶשֶׂר": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">122</td>
+			<td class="name"><div>&#1506&#1458&#1513&#1464&#1474&#1512&#1464&#1492</div></td>
+			<td><div>{5E2}{5B2}{5E9}{5B8}{5C2}{5E8}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "עֲשָׂרָה": adjacent combining marks "שָׂ"</td>
+			<td class="error">Invalid label "עֲשָׂרָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">123</td>
+			<td class="name"><div>&#1506&#1462&#1513&#1456&#1474&#1512&#1460&#1497&#1501</div></td>
+			<td><div>{5E2}{5B6}{5E9}{5B0}{5C2}{5E8}{5B4}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "עֶשְׂרִים": adjacent combining marks "שְׂ"</td>
+			<td class="error">Invalid label "עֶשְׂרִים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">124</td>
+			<td class="name"><div>&#1508&#1464&#1468&#1488&#1504&#1511</div></td>
+			<td><div>{5E4}{5B8}{5BC}{5D0}{5E0}{5E7}</div></td>
+			<td class="error">Invalid label "פָּאנק": adjacent combining marks "פָּ"</td>
+			<td class="error">Invalid label "פָּאנק": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">125</td>
+			<td class="name"><div>&#1508&#1456&#1468&#1500&#1464&#1496&#1460&#1497&#1504&#1464&#1492</div></td>
+			<td><div>{5E4}{5B0}{5BC}{5DC}{5B8}{5D8}{5B4}{5D9}{5E0}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "פְּלָטִינָה": adjacent combining marks "פְּ"</td>
+			<td class="error">Invalid label "פְּלָטִינָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">126</td>
+			<td class="name"><div>&#1508&#1462&#1468&#1512&#1462&#1509</div></td>
+			<td><div>{5E4}{5B6}{5BC}{5E8}{5B6}{5E5}</div></td>
+			<td class="error">Invalid label "פֶּרֶץ": adjacent combining marks "פֶּ"</td>
+			<td class="error">Invalid label "פֶּרֶץ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">127</td>
+			<td class="name"><div>&#1513&#1462&#1473&#1489&#1463&#1506</div></td>
+			<td><div>{5E9}{5B6}{5C1}{5D1}{5B7}{5E2}</div></td>
+			<td class="error">Invalid label "שֶׁבַע": adjacent combining marks "שֶׁ"</td>
+			<td class="error">Invalid label "שֶׁבַע": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">128</td>
+			<td class="name"><div>&#1513&#1460&#1473&#1489&#1456&#1506&#1464&#1492</div></td>
+			<td><div>{5E9}{5B4}{5C1}{5D1}{5B0}{5E2}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "שִׁבְעָה": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "שִׁבְעָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">129</td>
+			<td class="name"><div>&#1513&#1463&#1473&#1489&#1464&#1468&#1514</div></td>
+			<td><div>{5E9}{5B7}{5C1}{5D1}{5B8}{5BC}{5EA}</div></td>
+			<td class="error">Invalid label "שַׁבָּת": adjacent combining marks "שַׁ"</td>
+			<td class="error">Invalid label "שַׁבָּת": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">130</td>
+			<td class="name"><div>&#1513&#1460&#1474&#1490&#1513&#1474&#1493&#1468&#1490</div></td>
+			<td><div>{5E9}{5B4}{5C2}{5D2}{5E9}{5C2}{5D5}{5BC}{5D2}</div></td>
+			<td class="error">Invalid label "שִׂגשׂוּג": adjacent combining marks "שִׂ"</td>
+			<td class="error">Invalid label "שִׂגשׂוּג": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">131</td>
+			<td class="name"><div>&#1513&#1464&#1473&#1496&#1460&#1497&#1495&#1463</div></td>
+			<td><div>{5E9}{5B8}{5C1}{5D8}{5B4}{5D9}{5D7}{5B7}</div></td>
+			<td class="error">Invalid label "שָׁטִיחַ": adjacent combining marks "שָׁ"</td>
+			<td class="error">Invalid label "שָׁטִיחַ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">132</td>
+			<td class="name"><div>&#1513&#1464&#1473&#1500&#1493&#1465&#1501</div></td>
+			<td><div>{5E9}{5B8}{5C1}{5DC}{5D5}{5B9}{5DD}</div></td>
+			<td class="error">Invalid label "שָׁלוֹם": adjacent combining marks "שָׁ"</td>
+			<td class="error">Invalid label "שָׁלוֹם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">133</td>
+			<td class="name"><div>&#1513&#1464&#1473&#1500&#1493&#1465&#1513&#1473</div></td>
+			<td><div>{5E9}{5B8}{5C1}{5DC}{5D5}{5B9}{5E9}{5C1}</div></td>
+			<td class="error">Invalid label "שָׁלוֹשׁ": adjacent combining marks "שָׁ"</td>
+			<td class="error">Invalid label "שָׁלוֹשׁ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">134</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1500&#1493&#1465&#1513&#1464&#1473&#1492</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DC}{5D5}{5B9}{5E9}{5B8}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "שְׁלוֹשָׁה": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁלוֹשָׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">135</td>
+			<td class="name"><div>&#1513&#1473&#1500&#1493&#1465&#1513&#1460&#1473&#1497&#1501</div></td>
+			<td><div>{5E9}{5C1}{5DC}{5D5}{5B9}{5E9}{5B4}{5C1}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "שׁלוֹשִׁים": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "שׁלוֹשִׁים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">136</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1500&#1465&#1513&#1464&#1473&#1492</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DC}{5B9}{5E9}{5B8}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "שְׁלֹשָׁה": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁלֹשָׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">137</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1500&#1465&#1513&#1460&#1473&#1497&#1501</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DC}{5B9}{5E9}{5B4}{5C1}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "שְׁלֹשִׁים": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁלֹשִׁים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">138</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1502&#1493&#1468&#1488&#1461&#1500</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DE}{5D5}{5BC}{5D0}{5B5}{5DC}</div></td>
+			<td class="error">Invalid label "שְׁמוּאֵל": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁמוּאֵל": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">139</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1502&#1493&#1465&#1504&#1464&#1492</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DE}{5D5}{5B9}{5E0}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "שְׁמוֹנָה": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁמוֹנָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">140</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1502&#1463&#1506</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DE}{5B7}{5E2}</div></td>
+			<td class="error">Invalid label "שְׁמַע": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁמַע": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">141</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1502&#1463&#1506&#9474&#1497&#1460&#1513&#1456&#1474&#1512&#1464&#1488&#1461&#1500&#9474&#1497&#1456&#1497&#1464&#9474&#1488&#1457&#1500&#1465&#1492&#1461&#1497&#1504&#1493&#1468&#9474&#1497&#1456&#1497&#1464&#9474&#1488&#1462&#1495&#1464&#1469&#1491</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DE}{5B7}{5E2}{2502}{5D9}{5B4}{5E9}{5B0}{5C2}{5E8}{5B8}{5D0}{5B5}{5DC}{2502}{5D9}{5B0}{5D9}{5B8}{2502}{5D0}{5B1}{5DC}{5B9}{5D4}{5B5}{5D9}{5E0}{5D5}{5BC}{2502}{5D9}{5B0}{5D9}{5B8}{2502}{5D0}{5B6}{5D7}{5B8}{5BD}{5D3}</div></td>
+			<td class="error">Invalid label "שְׁמַע│יִשְׂרָאֵל│יְיָ│אֱלֹהֵינוּ│יְיָ│אֶחָֽד": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁמַע│יִשְׂרָאֵל│יְיָ│אֱלֹהֵינוּ│יְיָ│אֶחָֽד": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">142</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1502&#1463&#1430&#1506&#1497&#1460&#1513&#1456&#1474&#1512&#1464&#1488&#1461&#1425&#1500</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5DE}{5B7}{596}{5E2}{5D9}{5B4}{5E9}{5B0}{5C2}{5E8}{5B8}{5D0}{5B5}{591}{5DC}</div></td>
+			<td class="error">Invalid label "שְׁמַ֖עיִשְׂרָאֵ֑ל": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁמַ֖עיִשְׂרָאֵ֑ל": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">143</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1504&#1463&#1497&#1460&#1501</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5E0}{5B7}{5D9}{5B4}{5DD}</div></td>
+			<td class="error">Invalid label "שְׁנַיִם": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁנַיִם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">144</td>
+			<td class="name"><div>&#1513&#1461&#1473&#1513&#1473</div></td>
+			<td><div>{5E9}{5B5}{5C1}{5E9}{5C1}</div></td>
+			<td class="error">Invalid label "שֵׁשׁ": adjacent combining marks "שֵׁ"</td>
+			<td class="error">Invalid label "שֵׁשׁ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">145</td>
+			<td class="name"><div>&#1513&#1460&#1473&#1513&#1464&#1473&#1492</div></td>
+			<td><div>{5E9}{5B4}{5C1}{5E9}{5B8}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "שִׁשָׁה": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "שִׁשָׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">146</td>
+			<td class="name"><div>&#1513&#1460&#1473&#1513&#1464&#1468&#1473&#1492</div></td>
+			<td><div>{5E9}{5B4}{5C1}{5E9}{5B8}{5BC}{5C1}{5D4}</div></td>
+			<td class="error">Invalid label "שִׁשָּׁה": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "שִׁשָּׁה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">147</td>
+			<td class="name"><div>&#1513&#1456&#1473&#1514&#1463&#1468&#1497&#1460&#1501</div></td>
+			<td><div>{5E9}{5B0}{5C1}{5EA}{5B7}{5BC}{5D9}{5B4}{5DD}</div></td>
+			<td class="error">Invalid label "שְׁתַּיִם": adjacent combining marks "שְׁ"</td>
+			<td class="error">Invalid label "שְׁתַּיִם": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">148</td>
+			<td class="name"><div>&#1514&#1463&#1499&#1513&#1460&#1473&#1497&#1496&#1460&#1497&#1501</div></td>
+			<td><div>{5EA}{5B7}{5DB}{5E9}{5B4}{5C1}{5D9}{5D8}{5B4}{5D9}{5DD}</div></td>
+			<td class="error">Invalid label "תַכשִׁיטִים": adjacent combining marks "שִׁ"</td>
+			<td class="error">Invalid label "תַכשִׁיטִים": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">149</td>
+			<td class="name"><div>&#1514&#1463&#1468&#1504&#1463&#1524&#1498&#1456</div></td>
+			<td><div>{5EA}{5B7}{5BC}{5E0}{5B7}{5F4}{5DA}{5B0}</div></td>
+			<td class="error">Invalid label "תַּנַ״ךְ": adjacent combining marks "תַּ"</td>
+			<td class="error">Invalid label "תַּנַ״ךְ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">150</td>
+			<td class="name"><div>&#1514&#1461&#1513&#1463&#1473&#1506</div></td>
+			<td><div>{5EA}{5B5}{5E9}{5B7}{5C1}{5E2}</div></td>
+			<td class="error">Invalid label "תֵשַׁע": adjacent combining marks "שַׁ"</td>
+			<td class="error">Invalid label "תֵשַׁע": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">151</td>
+			<td class="name"><div>&#1514&#1461&#1468&#1513&#1463&#1473&#1506</div></td>
+			<td><div>{5EA}{5B5}{5BC}{5E9}{5B7}{5C1}{5E2}</div></td>
+			<td class="error">Invalid label "תֵּשַׁע": adjacent combining marks "תֵּ"</td>
+			<td class="error">Invalid label "תֵּשַׁע": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">152</td>
+			<td class="name"><div>&#1514&#1460&#1468&#1513&#1456&#1473&#1506&#1464&#1492</div></td>
+			<td><div>{5EA}{5B4}{5BC}{5E9}{5B0}{5C1}{5E2}{5B8}{5D4}</div></td>
+			<td class="error">Invalid label "תִּשְׁעָה": adjacent combining marks "תִּ"</td>
+			<td class="error">Invalid label "תִּשְׁעָה": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">153</td>
+			<td class="name"><div>&#1571&#1614&#1576&#1615&#1608&#1592&#1614&#1576&#1618&#1610&#1613</div></td>
+			<td><div>{623}{64E}{628}{64F}{648}{638}{64E}{628}{652}{64A}{64D}</div></td>
+			<td class="error">Invalid label "أَبُوظَبْيٍ": adjacent combining marks "أَ"</td>
+			<td class="error">Invalid label "أَبُوظَبْيٍ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">154</td>
+			<td class="name"><div>&#1571&#1614&#1579&#1618&#1605&#1614&#1585</div></td>
+			<td><div>{623}{64E}{62B}{652}{645}{64E}{631}</div></td>
+			<td class="error">Invalid label "أَثْمَر": adjacent combining marks "أَ"</td>
+			<td class="error">Invalid label "أَثْمَر": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">155</td>
+			<td class="name"><div>&#1571&#1614&#1581&#1618&#1605&#1614&#1583</div></td>
+			<td><div>{623}{64E}{62D}{652}{645}{64E}{62F}</div></td>
+			<td class="error">Invalid label "أَحْمَد": adjacent combining marks "أَ"</td>
+			<td class="error">Invalid label "أَحْمَد": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">156</td>
+			<td class="name"><div>&#1571&#1614&#1585&#1618&#1576&#1614&#1593&#1614&#1577&#1612</div></td>
+			<td><div>{623}{64E}{631}{652}{628}{64E}{639}{64E}{629}{64C}</div></td>
+			<td class="error">Invalid label "أَرْبَعَةٌ": adjacent combining marks "أَ"</td>
+			<td class="error">Invalid label "أَرْبَعَةٌ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">157</td>
+			<td class="name"><div>&#1571&#1614&#1605&#1616&#1610&#1618&#1606</div></td>
+			<td><div>{623}{64E}{645}{650}{64A}{652}{646}</div></td>
+			<td class="error">Invalid label "أَمِيْن": adjacent combining marks "أَ"</td>
+			<td class="error">Invalid label "أَمِيْن": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">158</td>
+			<td class="name"><div>&#1649&#1604&#1618&#1581&#1614&#1605&#1618&#1583&#1615&#1604&#1616&#1604&#1614&#1617&#1648&#1607&#1616</div></td>
+			<td><div>{671}{644}{652}{62D}{64E}{645}{652}{62F}{64F}{644}{650}{644}{64E}{651}{670}{647}{650}</div></td>
+			<td class="error">Invalid label "ٱلْحَمْدُلِلَّٰهِ": adjacent combining marks "لَّ"</td>
+			<td class="error">Invalid label "ٱلْحَمْدُلِلَّٰهِ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">159</td>
+			<td class="name"><div>&#1649&#1604&#1618&#1605&#1614&#1605&#1618&#1604&#1614&#1603&#1614&#1577&#1649&#1604&#1618&#1593&#1614&#1585&#1614&#1576&#1616&#1610&#1614&#1617&#1577&#1649&#1604&#1587&#1615&#1617&#1593&#1615&#1608&#1618&#1583&#1616&#1610&#1614&#1617&#1577</div></td>
+			<td><div>{671}{644}{652}{645}{64E}{645}{652}{644}{64E}{643}{64E}{629}{671}{644}{652}{639}{64E}{631}{64E}{628}{650}{64A}{64E}{651}{629}{671}{644}{633}{64F}{651}{639}{64F}{648}{652}{62F}{650}{64A}{64E}{651}{629}</div></td>
+			<td class="error">Invalid label "ٱلْمَمْلَكَةٱلْعَرَبِيَّةٱلسُّعُوْدِيَّة": adjacent combining marks "يَّ"</td>
+			<td class="error">Invalid label "ٱلْمَمْلَكَةٱلْعَرَبِيَّةٱلسُّعُوْدِيَّة": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">160</td>
+			<td class="name"><div>&#1573&#1616&#1576&#1614&#1575&#1581&#1616&#1610&#1614&#1617&#1577</div></td>
+			<td><div>{625}{650}{628}{64E}{627}{62D}{650}{64A}{64E}{651}{629}</div></td>
+			<td class="error">Invalid label "إِبَاحِيَّة": adjacent combining marks "إِ"</td>
+			<td class="error">Invalid label "إِبَاحِيَّة": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">161</td>
+			<td class="name"><div>&#1573&#1616&#1586&#1618&#1583&#1616&#1607&#1614&#1575&#1585</div></td>
+			<td><div>{625}{650}{632}{652}{62F}{650}{647}{64E}{627}{631}</div></td>
+			<td class="error">Invalid label "إِزْدِهَار": adjacent combining marks "إِ"</td>
+			<td class="error">Invalid label "إِزْدِهَار": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">162</td>
+			<td class="name"><div>&#1575&#1604&#1587&#1614&#1617&#1610&#1618&#1583</div></td>
+			<td><div>{627}{644}{633}{64E}{651}{64A}{652}{62F}</div></td>
+			<td class="error">Invalid label "السَّيْد": adjacent combining marks "سَّ"</td>
+			<td class="error">Invalid label "السَّيْد": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">163</td>
+			<td class="name"><div>&#1580&#1614&#1606&#1614&#1617&#1577</div></td>
+			<td><div>{62C}{64E}{646}{64E}{651}{629}</div></td>
+			<td class="error">Invalid label "جَنَّة": adjacent combining marks "نَّ"</td>
+			<td class="error">Invalid label "جَنَّة": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">164</td>
+			<td class="name"><div>&#1593&#1614&#1576&#1618&#1583&#1615&#1575&#1604&#1585&#1614&#1617&#1581&#1618&#1605&#1614&#1606</div></td>
+			<td><div>{639}{64E}{628}{652}{62F}{64F}{627}{644}{631}{64E}{651}{62D}{652}{645}{64E}{646}</div></td>
+			<td class="error">Invalid label "عَبْدُالرَّحْمَن": adjacent combining marks "رَّ"</td>
+			<td class="error">Invalid label "عَبْدُالرَّحْمَن": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">165</td>
+			<td class="name"><div>&#1604&#1616&#1604&#1614&#1617&#1648&#1607&#1616</div></td>
+			<td><div>{644}{650}{644}{64E}{651}{670}{647}{650}</div></td>
+			<td class="error">Invalid label "لِلَّٰهِ": adjacent combining marks "لَّ"</td>
+			<td class="error">Invalid label "لِلَّٰهِ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">166</td>
+			<td class="name"><div>&#1605&#1615&#1581&#1614&#1605&#1614&#1617&#1583</div></td>
+			<td><div>{645}{64F}{62D}{64E}{645}{64E}{651}{62F}</div></td>
+			<td class="error">Invalid label "مُحَمَّد": adjacent combining marks "مَّ"</td>
+			<td class="error">Invalid label "مُحَمَّد": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">167</td>
+			<td class="name"><div>&#1605&#1615&#1581&#1614&#1605&#1614&#1617&#1583&#1612</div></td>
+			<td><div>{645}{64F}{62D}{64E}{645}{64E}{651}{62F}{64C}</div></td>
+			<td class="error">Invalid label "مُحَمَّدٌ": adjacent combining marks "مَّ"</td>
+			<td class="error">Invalid label "مُحَمَّدٌ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">168</td>
+			<td class="name"><div>&#1605&#1615&#1581&#1614&#1605&#1614&#1617&#1583786</div></td>
+			<td><div>{645}{64F}{62D}{64E}{645}{64E}{651}{62F}786</div></td>
+			<td class="error">Invalid label "مُحَمَّد786": adjacent combining marks "مَّ"</td>
+			<td class="error">Invalid label "مُحَمَّد786": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">169</td>
+			<td class="name"><div>&#2384&#2350&#2339&#2367&#2346&#2342&#2381&#2350&#2375&#2361&#2370&#2306</div></td>
+			<td><div>{950}{92E}{923}{93F}{92A}{926}{94D}{92E}{947}{939}{942}{902}</div></td>
+			<td class="error">Invalid label "ॐमणिपद्मेहूं": adjacent combining marks "हूं"</td>
+			<td class="error">Invalid label "ॐमणिपद्मेहूं": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">170</td>
+			<td class="name"><div>&#2309&#2337&#2364&#2366&#2344&#2368</div></td>
+			<td><div>{905}{921}{93C}{93E}{928}{940}</div></td>
+			<td class="error">Invalid label "अड़ानी": adjacent combining marks "ड़ा"</td>
+			<td class="error">Invalid label "अड़ानी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">171</td>
+			<td class="name"><div>&#2309&#2361&#2367&#2306&#2360&#2366</div></td>
+			<td><div>{905}{939}{93F}{902}{938}{93E}</div></td>
+			<td class="error">Invalid label "अहिंसा": adjacent combining marks "हिं"</td>
+			<td class="error">Invalid label "अहिंसा": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">172</td>
+			<td class="name"><div>&#2311&#2306&#2358&#2381&#2351&#2379&#2352&#2375&#2306&#2360</div></td>
+			<td><div>{907}{902}{936}{94D}{92F}{94B}{930}{947}{902}{938}</div></td>
+			<td class="error">Invalid label "इंश्योरेंस": adjacent combining marks "रें"</td>
+			<td class="error">Invalid label "इंश्योरेंस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">173</td>
+			<td class="name"><div>&#2319&#2325&#2361&#2332&#2364&#2366&#2352</div></td>
+			<td><div>{90F}{915}{939}{91C}{93C}{93E}{930}</div></td>
+			<td class="error">Invalid label "एकहज़ार": adjacent combining marks "ज़ा"</td>
+			<td class="error">Invalid label "एकहज़ार": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">174</td>
+			<td class="name"><div>&#2319&#2325&#2361&#2332&#2364&#2366&#2352&#2310&#2336</div></td>
+			<td><div>{90F}{915}{939}{91C}{93C}{93E}{930}{906}{920}</div></td>
+			<td class="error">Invalid label "एकहज़ारआठ": adjacent combining marks "ज़ा"</td>
+			<td class="error">Invalid label "एकहज़ारआठ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">175</td>
+			<td class="name"><div>&#2319&#2330&#2337&#2368&#2319&#2347&#2360&#2368&#2348&#2376&#2306&#2325</div></td>
+			<td><div>{90F}{91A}{921}{940}{90F}{92B}{938}{940}{92C}{948}{902}{915}</div></td>
+			<td class="error">Invalid label "एचडीएफसीबैंक": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "एचडीएफसीबैंक": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">176</td>
+			<td class="name"><div>&#2319&#2350&#2381&#2347&#2364&#2376&#2335&#2375&#2350&#2367&#2344</div></td>
+			<td><div>{90F}{92E}{94D}{92B}{93C}{948}{91F}{947}{92E}{93F}{928}</div></td>
+			<td class="error">Invalid label "एम्फ़ैटेमिन": adjacent combining marks "फ़ै"</td>
+			<td class="error">Invalid label "एम्फ़ैटेमिन": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">177</td>
+			<td class="name"><div>&#2325&#2346&#2337&#2364&#2375</div></td>
+			<td><div>{915}{92A}{921}{93C}{947}</div></td>
+			<td class="error">Invalid label "कपड़े": adjacent combining marks "ड़े"</td>
+			<td class="error">Invalid label "कपड़े": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">178</td>
+			<td class="name"><div>&#2325&#2366&#2352&#2379&#2306</div></td>
+			<td><div>{915}{93E}{930}{94B}{902}</div></td>
+			<td class="error">Invalid label "कारों": adjacent combining marks "रों"</td>
+			<td class="error">Invalid label "कारों": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">179</td>
+			<td class="name"><div>&#2325&#2375&#2306&#2342&#2381&#2352</div></td>
+			<td><div>{915}{947}{902}{926}{94D}{930}</div></td>
+			<td class="error">Invalid label "केंद्र": adjacent combining marks "कें"</td>
+			<td class="error">Invalid label "केंद्र": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">180</td>
+			<td class="name"><div>&#2325&#2376&#2306&#2337&#2368</div></td>
+			<td><div>{915}{948}{902}{921}{940}</div></td>
+			<td class="error">Invalid label "कैंडी": adjacent combining marks "कैं"</td>
+			<td class="error">Invalid label "कैंडी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">181</td>
+			<td class="name"><div>&#2325&#2377&#2347&#2364&#2368</div></td>
+			<td><div>{915}{949}{92B}{93C}{940}</div></td>
+			<td class="error">Invalid label "कॉफ़ी": adjacent combining marks "फ़ी"</td>
+			<td class="error">Invalid label "कॉफ़ी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">182</td>
+			<td class="name"><div>&#2325&#2381&#2352&#2367&#2346&#2381&#2335&#2379&#2319&#2325&#2381&#2360&#2330&#2375&#2306&#2332</div></td>
+			<td><div>{915}{94D}{930}{93F}{92A}{94D}{91F}{94B}{90F}{915}{94D}{938}{91A}{947}{902}{91C}</div></td>
+			<td class="error">Invalid label "क्रिप्टोएक्सचेंज": adjacent combining marks "चें"</td>
+			<td class="error">Invalid label "क्रिप्टोएक्सचेंज": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">183</td>
+			<td class="name"><div>&#2325&#2381&#2352&#2367&#2346&#2381&#2335&#2379&#2325&#2352&#2375&#2306&#2360&#2368</div></td>
+			<td><div>{915}{94D}{930}{93F}{92A}{94D}{91F}{94B}{915}{930}{947}{902}{938}{940}</div></td>
+			<td class="error">Invalid label "क्रिप्टोकरेंसी": adjacent combining marks "रें"</td>
+			<td class="error">Invalid label "क्रिप्टोकरेंसी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">184</td>
+			<td class="name"><div>&#2326&#2367&#2354&#2366&#2337&#2364&#2368</div></td>
+			<td><div>{916}{93F}{932}{93E}{921}{93C}{940}</div></td>
+			<td class="error">Invalid label "खिलाड़ी": adjacent combining marks "ड़ी"</td>
+			<td class="error">Invalid label "खिलाड़ी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">185</td>
+			<td class="name"><div>&#2326&#2364&#2369&#2358&#2368</div></td>
+			<td><div>{916}{93C}{941}{936}{940}</div></td>
+			<td class="error">Invalid label "ख़ुशी": adjacent combining marks "ख़ु"</td>
+			<td class="error">Invalid label "ख़ुशी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">186</td>
+			<td class="name"><div>&#2327&#2366&#2306&#2332&#2366</div></td>
+			<td><div>{917}{93E}{902}{91C}{93E}</div></td>
+			<td class="error">Invalid label "गांजा": adjacent combining marks "गां"</td>
+			<td class="error">Invalid label "गांजा": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">187</td>
+			<td class="name"><div>&#2327&#2366&#2337&#2364&#2368</div></td>
+			<td><div>{917}{93E}{921}{93C}{940}</div></td>
+			<td class="error">Invalid label "गाड़ी": adjacent combining marks "ड़ी"</td>
+			<td class="error">Invalid label "गाड़ी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">188</td>
+			<td class="name"><div>&#2327&#2366&#2306&#2337&#2370</div></td>
+			<td><div>{917}{93E}{902}{921}{942}</div></td>
+			<td class="error">Invalid label "गांडू": adjacent combining marks "गां"</td>
+			<td class="error">Invalid label "गांडू": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">189</td>
+			<td class="name"><div>&#2327&#2366&#2305&#2343&#2368</div></td>
+			<td><div>{917}{93E}{901}{927}{940}</div></td>
+			<td class="error">Invalid label "गाँधी": adjacent combining marks "गाँ"</td>
+			<td class="error">Invalid label "गाँधी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">190</td>
+			<td class="name"><div>&#2327&#2366&#2306&#2343&#2368</div></td>
+			<td><div>{917}{93E}{902}{927}{940}</div></td>
+			<td class="error">Invalid label "गांधी": adjacent combining marks "गां"</td>
+			<td class="error">Invalid label "गांधी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">191</td>
+			<td class="name"><div>&#2327&#2369&#2337&#2327&#2366&#2305&#2357</div></td>
+			<td><div>{917}{941}{921}{917}{93E}{901}{935}</div></td>
+			<td class="error">Invalid label "गुडगाँव": adjacent combining marks "गाँ"</td>
+			<td class="error">Invalid label "गुडगाँव": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">192</td>
+			<td class="name"><div>&#2327&#2369&#2306&#2337&#2366</div></td>
+			<td><div>{917}{941}{902}{921}{93E}</div></td>
+			<td class="error">Invalid label "गुंडा": adjacent combining marks "गुं"</td>
+			<td class="error">Invalid label "गुंडा": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">193</td>
+			<td class="name"><div>&#2327&#2376&#2306&#2327&#2327&#2376&#2306&#2327</div></td>
+			<td><div>{917}{948}{902}{917}{917}{948}{902}{917}</div></td>
+			<td class="error">Invalid label "गैंगगैंग": adjacent combining marks "गैं"</td>
+			<td class="error">Invalid label "गैंगगैंग": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">194</td>
+			<td class="name"><div>&#2328&#2379&#2337&#2364&#2366</div></td>
+			<td><div>{918}{94B}{921}{93C}{93E}</div></td>
+			<td class="error">Invalid label "घोड़ा": adjacent combining marks "ड़ा"</td>
+			<td class="error">Invalid label "घोड़ा": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">195</td>
+			<td class="name"><div>&#2330&#2366&#2306&#2342&#2368</div></td>
+			<td><div>{91A}{93E}{902}{926}{940}</div></td>
+			<td class="error">Invalid label "चांदी": adjacent combining marks "चां"</td>
+			<td class="error">Invalid label "चांदी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">196</td>
+			<td class="name"><div>&#2330&#2366&#2352&#2360&#2380&#2330&#2380&#2306&#2340&#2366&#2354&#2368&#2360</div></td>
+			<td><div>{91A}{93E}{930}{938}{94C}{91A}{94C}{902}{924}{93E}{932}{940}{938}</div></td>
+			<td class="error">Invalid label "चारसौचौंतालीस": adjacent combining marks "चौं"</td>
+			<td class="error">Invalid label "चारसौचौंतालीस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">197</td>
+			<td class="name"><div>&#2330&#2380&#2306&#2340&#2366&#2354&#2368&#2360</div></td>
+			<td><div>{91A}{94C}{902}{924}{93E}{932}{940}{938}</div></td>
+			<td class="error">Invalid label "चौंतालीस": adjacent combining marks "चौं"</td>
+			<td class="error">Invalid label "चौंतालीस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">198</td>
+			<td class="name"><div>&#2332&#2364&#2306&#2332&#2368&#2352</div></td>
+			<td><div>{91C}{93C}{902}{91C}{940}{930}</div></td>
+			<td class="error">Invalid label "ज़ंजीर": adjacent combining marks "ज़ं"</td>
+			<td class="error">Invalid label "ज़ंजीर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">199</td>
+			<td class="name"><div>&#2332&#2367&#2306&#2342&#2327&#2368</div></td>
+			<td><div>{91C}{93F}{902}{926}{917}{940}</div></td>
+			<td class="error">Invalid label "जिंदगी": adjacent combining marks "जिं"</td>
+			<td class="error">Invalid label "जिंदगी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">200</td>
+			<td class="name"><div>&#2332&#2364&#2368&#2352&#2379&#2332&#2364&#2375&#2352&#2379&#2332&#2364&#2375&#2352&#2379</div></td>
+			<td><div>{91C}{93C}{940}{930}{94B}{91C}{93C}{947}{930}{94B}{91C}{93C}{947}{930}{94B}</div></td>
+			<td class="error">Invalid label "ज़ीरोज़ेरोज़ेरो": adjacent combining marks "ज़ी"</td>
+			<td class="error">Invalid label "ज़ीरोज़ेरोज़ेरो": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">201</td>
+			<td class="name"><div>&#2335&#2375&#2354&#2368&#2347&#2364&#2379&#2344&#2368</div></td>
+			<td><div>{91F}{947}{932}{940}{92B}{93C}{94B}{928}{940}</div></td>
+			<td class="error">Invalid label "टेलीफ़ोनी": adjacent combining marks "फ़ो"</td>
+			<td class="error">Invalid label "टेलीफ़ोनी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">202</td>
+			<td class="name"><div>&#2337&#2375&#2335&#2367&#2306&#2327</div></td>
+			<td><div>{921}{947}{91F}{93F}{902}{917}</div></td>
+			<td class="error">Invalid label "डेटिंग": adjacent combining marks "टिं"</td>
+			<td class="error">Invalid label "डेटिंग": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">203</td>
+			<td class="name"><div>&#2340&#2368&#2344&#2330&#2366&#2352&#2346&#2366&#2305&#2330</div></td>
+			<td><div>{924}{940}{928}{91A}{93E}{930}{92A}{93E}{901}{91A}</div></td>
+			<td class="error">Invalid label "तीनचारपाँच": adjacent combining marks "पाँ"</td>
+			<td class="error">Invalid label "तीनचारपाँच": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">204</td>
+			<td class="name"><div>&#2340&#2368&#2344&#2360&#2380&#2340&#2376&#2306&#2340&#2368&#2360</div></td>
+			<td><div>{924}{940}{928}{938}{94C}{924}{948}{902}{924}{940}{938}</div></td>
+			<td class="error">Invalid label "तीनसौतैंतीस": adjacent combining marks "तैं"</td>
+			<td class="error">Invalid label "तीनसौतैंतीस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">205</td>
+			<td class="name"><div>&#2340&#2375&#2306&#2342&#2369&#2310</div></td>
+			<td><div>{924}{947}{902}{926}{941}{906}</div></td>
+			<td class="error">Invalid label "तेंदुआ": adjacent combining marks "तें"</td>
+			<td class="error">Invalid label "तेंदुआ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">206</td>
+			<td class="name"><div>&#2340&#2381&#2352&#2351&#2360&#2381&#2340&#2381&#2352&#2367&#2306&#2358&#2340&#2381</div></td>
+			<td><div>{924}{94D}{930}{92F}{938}{94D}{924}{94D}{930}{93F}{902}{936}{924}{94D}</div></td>
+			<td class="error">Invalid label "त्रयस्त्रिंशत्": adjacent combining marks "रिं"</td>
+			<td class="error">Invalid label "त्रयस्त्रिंशत्": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">207</td>
+			<td class="name"><div>&#2342&#2306&#2340&#2330&#2367&#2325&#2367&#2340&#2381&#2360&#2325&#2379&#2306</div></td>
+			<td><div>{926}{902}{924}{91A}{93F}{915}{93F}{924}{94D}{938}{915}{94B}{902}</div></td>
+			<td class="error">Invalid label "दंतचिकित्सकों": adjacent combining marks "कों"</td>
+			<td class="error">Invalid label "दंतचिकित्सकों": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">208</td>
+			<td class="name"><div>&#2343&#2352&#2381&#2350&#2375&#2306&#2342&#2381&#2352</div></td>
+			<td><div>{927}{930}{94D}{92E}{947}{902}{926}{94D}{930}</div></td>
+			<td class="error">Invalid label "धर्मेंद्र": adjacent combining marks "में"</td>
+			<td class="error">Invalid label "धर्मेंद्र": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">209</td>
+			<td class="name"><div>&#2344&#2352&#2375&#2306&#2342&#2381&#2352</div></td>
+			<td><div>{928}{930}{947}{902}{926}{94D}{930}</div></td>
+			<td class="error">Invalid label "नरेंद्र": adjacent combining marks "रें"</td>
+			<td class="error">Invalid label "नरेंद्र": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">210</td>
+			<td class="name"><div>&#2344&#2352&#2375&#2306&#2342&#2381&#2352&#2350&#2379&#2342&#2368</div></td>
+			<td><div>{928}{930}{947}{902}{926}{94D}{930}{92E}{94B}{926}{940}</div></td>
+			<td class="error">Invalid label "नरेंद्रमोदी": adjacent combining marks "रें"</td>
+			<td class="error">Invalid label "नरेंद्रमोदी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">211</td>
+			<td class="name"><div>&#2344&#2380&#2361&#2332&#2364&#2366&#2352&#2342&#2379&#2360&#2380&#2327&#2381&#2351&#2366&#2352&#2361</div></td>
+			<td><div>{928}{94C}{939}{91C}{93C}{93E}{930}{926}{94B}{938}{94C}{917}{94D}{92F}{93E}{930}{939}</div></td>
+			<td class="error">Invalid label "नौहज़ारदोसौग्यारह": adjacent combining marks "ज़ा"</td>
+			<td class="error">Invalid label "नौहज़ारदोसौग्यारह": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">212</td>
+			<td class="name"><div>&#2346&#2366&#2305&#2330</div></td>
+			<td><div>{92A}{93E}{901}{91A}</div></td>
+			<td class="error">Invalid label "पाँच": adjacent combining marks "पाँ"</td>
+			<td class="error">Invalid label "पाँच": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">213</td>
+			<td class="name"><div>&#2346&#2366&#2305&#2330&#2331&#2307&#2360&#2366&#2340</div></td>
+			<td><div>{92A}{93E}{901}{91A}{91B}{903}{938}{93E}{924}</div></td>
+			<td class="error">Invalid label "पाँचछःसात": adjacent combining marks "पाँ"</td>
+			<td class="error">Invalid label "पाँचछःसात": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">214</td>
+			<td class="name"><div>&#2346&#2366&#2305&#2330&#2360&#2380&#2346&#2330&#2346&#2344</div></td>
+			<td><div>{92A}{93E}{901}{91A}{938}{94C}{92A}{91A}{92A}{928}</div></td>
+			<td class="error">Invalid label "पाँचसौपचपन": adjacent combining marks "पाँ"</td>
+			<td class="error">Invalid label "पाँचसौपचपन": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">215</td>
+			<td class="name"><div>&#2346&#2366&#2305&#2330&#2360&#2380&#2360&#2379&#2354&#2361</div></td>
+			<td><div>{92A}{93E}{901}{91A}{938}{94C}{938}{94B}{932}{939}</div></td>
+			<td class="error">Invalid label "पाँचसौसोलह": adjacent combining marks "पाँ"</td>
+			<td class="error">Invalid label "पाँचसौसोलह": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">216</td>
+			<td class="name"><div>&#2346&#2367&#2332&#2364&#2381&#2332&#2364&#2366</div></td>
+			<td><div>{92A}{93F}{91C}{93C}{94D}{91C}{93C}{93E}</div></td>
+			<td class="error">Invalid label "पिज़्ज़ा": adjacent combining marks "ज़्"</td>
+			<td class="error">Invalid label "पिज़्ज़ा": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">217</td>
+			<td class="name"><div>&#2346&#2381&#2352&#2358&#2366&#2306&#2340</div></td>
+			<td><div>{92A}{94D}{930}{936}{93E}{902}{924}</div></td>
+			<td class="error">Invalid label "प्रशांत": adjacent combining marks "शां"</td>
+			<td class="error">Invalid label "प्रशांत": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">218</td>
+			<td class="name"><div>&#2347&#2364&#2366&#2311&#2354</div></td>
+			<td><div>{92B}{93C}{93E}{907}{932}</div></td>
+			<td class="error">Invalid label "फ़ाइल": adjacent combining marks "फ़ा"</td>
+			<td class="error">Invalid label "फ़ाइल": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">219</td>
+			<td class="name"><div>&#2347&#2364&#2369&#2335&#2348&#2377&#2354</div></td>
+			<td><div>{92B}{93C}{941}{91F}{92C}{949}{932}</div></td>
+			<td class="error">Invalid label "फ़ुटबॉल": adjacent combining marks "फ़ु"</td>
+			<td class="error">Invalid label "फ़ुटबॉल": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">220</td>
+			<td class="name"><div>&#2348&#2366&#2306&#2327&#2381&#2354&#2366&#2342&#2375&#2358</div></td>
+			<td><div>{92C}{93E}{902}{917}{94D}{932}{93E}{926}{947}{936}</div></td>
+			<td class="error">Invalid label "बांग्लादेश": adjacent combining marks "बां"</td>
+			<td class="error">Invalid label "बांग्लादेश": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">221</td>
+			<td class="name"><div>&#2348&#2366&#2332&#2364&#2366&#2352</div></td>
+			<td><div>{92C}{93E}{91C}{93C}{93E}{930}</div></td>
+			<td class="error">Invalid label "बाज़ार": adjacent combining marks "ज़ा"</td>
+			<td class="error">Invalid label "बाज़ार": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">222</td>
+			<td class="name"><div>&#2348&#2367&#2344&#2375&#2306&#2360</div></td>
+			<td><div>{92C}{93F}{928}{947}{902}{938}</div></td>
+			<td class="error">Invalid label "बिनेंस": adjacent combining marks "नें"</td>
+			<td class="error">Invalid label "बिनेंस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">223</td>
+			<td class="name"><div>&#2348&#2375&#2306&#2327&#2354&#2369&#2352&#2369</div></td>
+			<td><div>{92C}{947}{902}{917}{932}{941}{930}{941}</div></td>
+			<td class="error">Invalid label "बेंगलुरु": adjacent combining marks "बें"</td>
+			<td class="error">Invalid label "बेंगलुरु": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">224</td>
+			<td class="name"><div>&#2348&#2375&#2306&#2327&#2354&#2370&#2352&#2369</div></td>
+			<td><div>{92C}{947}{902}{917}{932}{942}{930}{941}</div></td>
+			<td class="error">Invalid label "बेंगलूरु": adjacent combining marks "बें"</td>
+			<td class="error">Invalid label "बेंगलूरु": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">225</td>
+			<td class="name"><div>&#2348&#2376&#2306&#2325</div></td>
+			<td><div>{92C}{948}{902}{915}</div></td>
+			<td class="error">Invalid label "बैंक": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "बैंक": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">226</td>
+			<td class="name"><div>&#2348&#2376&#2306&#2325&#2352</div></td>
+			<td><div>{92C}{948}{902}{915}{930}</div></td>
+			<td class="error">Invalid label "बैंकर": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "बैंकर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">227</td>
+			<td class="name"><div>&#2348&#2376&#2306&#2325&#2361&#2368&#2344</div></td>
+			<td><div>{92C}{948}{902}{915}{939}{940}{928}</div></td>
+			<td class="error">Invalid label "बैंकहीन": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "बैंकहीन": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">228</td>
+			<td class="name"><div>&#2348&#2376&#2306&#2327&#2354&#2379&#2352</div></td>
+			<td><div>{92C}{948}{902}{917}{932}{94B}{930}</div></td>
+			<td class="error">Invalid label "बैंगलोर": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "बैंगलोर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">229</td>
+			<td class="name"><div>&#2349&#2366&#2352&#2340&#2368&#2351&#2360&#2381&#2335&#2375&#2335&#2348&#2376&#2306&#2325</div></td>
+			<td><div>{92D}{93E}{930}{924}{940}{92F}{938}{94D}{91F}{947}{91F}{92C}{948}{902}{915}</div></td>
+			<td class="error">Invalid label "भारतीयस्टेटबैंक": adjacent combining marks "बैं"</td>
+			<td class="error">Invalid label "भारतीयस्टेटबैंक": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">230</td>
+			<td class="name"><div>&#2350&#2361&#2366&#2340&#2381&#2350&#2366&#2327&#2366&#2306&#2343&#2368</div></td>
+			<td><div>{92E}{939}{93E}{924}{94D}{92E}{93E}{917}{93E}{902}{927}{940}</div></td>
+			<td class="error">Invalid label "महात्मागांधी": adjacent combining marks "गां"</td>
+			<td class="error">Invalid label "महात्मागांधी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">231</td>
+			<td class="name"><div>&#2350&#2366&#2311&#2325&#2381&#2352&#2379&#2360&#2377&#2347&#2364&#2381&#2335</div></td>
+			<td><div>{92E}{93E}{907}{915}{94D}{930}{94B}{938}{949}{92B}{93C}{94D}{91F}</div></td>
+			<td class="error">Invalid label "माइक्रोसॉफ़्ट": adjacent combining marks "फ़्"</td>
+			<td class="error">Invalid label "माइक्रोसॉफ़्ट": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">232</td>
+			<td class="name"><div>&#2350&#2369&#2306&#2348&#2312</div></td>
+			<td><div>{92E}{941}{902}{92C}{908}</div></td>
+			<td class="error">Invalid label "मुंबई": adjacent combining marks "मुं"</td>
+			<td class="error">Invalid label "मुंबई": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">233</td>
+			<td class="name"><div>&#2350&#2379&#2327&#2376&#2306&#2348&#2379</div></td>
+			<td><div>{92E}{94B}{917}{948}{902}{92C}{94B}</div></td>
+			<td class="error">Invalid label "मोगैंबो": adjacent combining marks "गैं"</td>
+			<td class="error">Invalid label "मोगैंबो": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">234</td>
+			<td class="name"><div>&#2352&#2350&#2375&#2358&#2360&#2367&#2306&#2361</div></td>
+			<td><div>{930}{92E}{947}{936}{938}{93F}{902}{939}</div></td>
+			<td class="error">Invalid label "रमेशसिंह": adjacent combining marks "सिं"</td>
+			<td class="error">Invalid label "रमेशसिंह": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">235</td>
+			<td class="name"><div>&#2352&#2376&#2306&#2330&#2379</div></td>
+			<td><div>{930}{948}{902}{91A}{94B}</div></td>
+			<td class="error">Invalid label "रैंचो": adjacent combining marks "रैं"</td>
+			<td class="error">Invalid label "रैंचो": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">236</td>
+			<td class="name"><div>&#2354&#2367&#2306&#2327</div></td>
+			<td><div>{932}{93F}{902}{917}</div></td>
+			<td class="error">Invalid label "लिंग": adjacent combining marks "लिं"</td>
+			<td class="error">Invalid label "लिंग": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">237</td>
+			<td class="name"><div>&#2357&#2368&#2352&#2366&#2306&#2327&#2344&#2366</div></td>
+			<td><div>{935}{940}{930}{93E}{902}{917}{928}{93E}</div></td>
+			<td class="error">Invalid label "वीरांगना": adjacent combining marks "रां"</td>
+			<td class="error">Invalid label "वीरांगना": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">238</td>
+			<td class="name"><div>&#2357&#2375&#2342&#2379&#2306</div></td>
+			<td><div>{935}{947}{926}{94B}{902}</div></td>
+			<td class="error">Invalid label "वेदों": adjacent combining marks "दों"</td>
+			<td class="error">Invalid label "वेदों": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">239</td>
+			<td class="name"><div>&#2358&#2358&#2366&#2306&#2325</div></td>
+			<td><div>{936}{936}{93E}{902}{915}</div></td>
+			<td class="error">Invalid label "शशांक": adjacent combining marks "शां"</td>
+			<td class="error">Invalid label "शशांक": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">240</td>
+			<td class="name"><div>&#2358&#2366&#2361&#2352&#2369&#2326&#2364&#2326&#2364&#2366&#2344</div></td>
+			<td><div>{936}{93E}{939}{930}{941}{916}{93C}{916}{93C}{93E}{928}</div></td>
+			<td class="error">Invalid label "शाहरुख़ख़ान": adjacent combining marks "ख़ा"</td>
+			<td class="error">Invalid label "शाहरुख़ख़ान": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">241</td>
+			<td class="name"><div>&#2360&#2330&#2367&#2344&#2340&#2375&#2306&#2342&#2369&#2354&#2325&#2352</div></td>
+			<td><div>{938}{91A}{93F}{928}{924}{947}{902}{926}{941}{932}{915}{930}</div></td>
+			<td class="error">Invalid label "सचिनतेंदुलकर": adjacent combining marks "तें"</td>
+			<td class="error">Invalid label "सचिनतेंदुलकर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">242</td>
+			<td class="name"><div>&#2360&#2366&#2306&#2326&#2381&#2351</div></td>
+			<td><div>{938}{93E}{902}{916}{94D}{92F}</div></td>
+			<td class="error">Invalid label "सांख्य": adjacent combining marks "सां"</td>
+			<td class="error">Invalid label "सांख्य": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">243</td>
+			<td class="name"><div>&#2360&#2367&#2306&#2361</div></td>
+			<td><div>{938}{93F}{902}{939}</div></td>
+			<td class="error">Invalid label "सिंह": adjacent combining marks "सिं"</td>
+			<td class="error">Invalid label "सिंह": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">244</td>
+			<td class="name"><div>&#2360&#2367&#2306&#2361&#2346&#2369&#2352</div></td>
+			<td><div>{938}{93F}{902}{939}{92A}{941}{930}</div></td>
+			<td class="error">Invalid label "सिंहपुर": adjacent combining marks "सिं"</td>
+			<td class="error">Invalid label "सिंहपुर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">245</td>
+			<td class="name"><div>&#2360&#2369&#2306&#2342&#2352&#2340&#2366</div></td>
+			<td><div>{938}{941}{902}{926}{930}{924}{93E}</div></td>
+			<td class="error">Invalid label "सुंदरता": adjacent combining marks "सुं"</td>
+			<td class="error">Invalid label "सुंदरता": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">246</td>
+			<td class="name"><div>&#2360&#2376&#2306&#2340&#2366&#2354&#2368&#2360</div></td>
+			<td><div>{938}{948}{902}{924}{93E}{932}{940}{938}</div></td>
+			<td class="error">Invalid label "सैंतालीस": adjacent combining marks "सैं"</td>
+			<td class="error">Invalid label "सैंतालीस": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">247</td>
+			<td class="name"><div>&#2360&#2377&#2347&#2364&#2381&#2335&#2357&#2375&#2351&#2352</div></td>
+			<td><div>{938}{949}{92B}{93C}{94D}{91F}{935}{947}{92F}{930}</div></td>
+			<td class="error">Invalid label "सॉफ़्टवेयर": adjacent combining marks "फ़्"</td>
+			<td class="error">Invalid label "सॉफ़्टवेयर": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">248</td>
+			<td class="name"><div>&#2361&#2366&#2332&#2364&#2367&#2352&#2332&#2357&#2366&#2348</div></td>
+			<td><div>{939}{93E}{91C}{93C}{93F}{930}{91C}{935}{93E}{92C}</div></td>
+			<td class="error">Invalid label "हाज़िरजवाब": adjacent combining marks "ज़ि"</td>
+			<td class="error">Invalid label "हाज़िरजवाब": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">249</td>
+			<td class="name"><div>&#2361&#2367&#2306&#2342&#2368</div></td>
+			<td><div>{939}{93F}{902}{926}{940}</div></td>
+			<td class="error">Invalid label "हिंदी": adjacent combining marks "हिं"</td>
+			<td class="error">Invalid label "हिंदी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">250</td>
+			<td class="name"><div>&#2361&#2367&#2306&#2342&#2369&#2360&#2381&#2340&#2366&#2344&#2368</div></td>
+			<td><div>{939}{93F}{902}{926}{941}{938}{94D}{924}{93E}{928}{940}</div></td>
+			<td class="error">Invalid label "हिंदुस्तानी": adjacent combining marks "हिं"</td>
+			<td class="error">Invalid label "हिंदुस्तानी": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">251</td>
+			<td class="name"><div>&#2361&#2367&#2350&#2366&#2306&#2358&#2369</div></td>
+			<td><div>{939}{93F}{92E}{93E}{902}{936}{941}</div></td>
+			<td class="error">Invalid label "हिमांशु": adjacent combining marks "मां"</td>
+			<td class="error">Invalid label "हिमांशु": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">252</td>
+			<td class="name"><div>&#2439&#2469&#2503&#2480&#2495&#2479&#2492&#2494&#2478</div></td>
+			<td><div>{987}{9A5}{9C7}{9B0}{9BF}{9AF}{9BC}{9BE}{9AE}</div></td>
+			<td class="error">Invalid label "ইথেরিয়াম": adjacent combining marks "য়া"</td>
+			<td class="error">Invalid label "ইথেরিয়াম": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">253</td>
+			<td class="name"><div>&#2451&#2479&#2492&#2494&#2482&#2503&#2463</div></td>
+			<td><div>{993}{9AF}{9BC}{9BE}{9B2}{9C7}{99F}</div></td>
+			<td class="error">Invalid label "ওয়ালেট": adjacent combining marks "য়া"</td>
+			<td class="error">Invalid label "ওয়ালেট": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">254</td>
+			<td class="name"><div>&#2453&#2509&#2479&#2494&#2488&#2495&#2472&#2507</div></td>
+			<td><div>{995}{9CD}{9AF}{9BE}{9B8}{9BF}{9A8}{9CB}</div></td>
+			<td class="error">Invalid label "ক্যাসিনো": adjacent combining marks "নো"</td>
+			<td class="error">Invalid label "ক্যাসিনো": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">255</td>
+			<td class="name"><div>&#2453&#2509&#2480&#2495&#2474&#2509&#2463&#2507</div></td>
+			<td><div>{995}{9CD}{9B0}{9BF}{9AA}{9CD}{99F}{9CB}</div></td>
+			<td class="error">Invalid label "ক্রিপ্টো": adjacent combining marks "টো"</td>
+			<td class="error">Invalid label "ক্রিপ্টো": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">256</td>
+			<td class="name"><div>&#2455&#2494&#2465&#2492&#2496</div></td>
+			<td><div>{997}{9BE}{9A1}{9BC}{9C0}</div></td>
+			<td class="error">Invalid label "গাড়ী": adjacent combining marks "ড়ী"</td>
+			<td class="error">Invalid label "গাড়ী": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">257</td>
+			<td class="name"><div>&#2455&#2494&#2465&#2492&#2496&#2476&#2496&#2478&#2494</div></td>
+			<td><div>{997}{9BE}{9A1}{9BC}{9C0}{9AC}{9C0}{9AE}{9BE}</div></td>
+			<td class="error">Invalid label "গাড়ীবীমা": adjacent combining marks "ড়ী"</td>
+			<td class="error">Invalid label "গাড়ীবীমা": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">258</td>
+			<td class="name"><div>&#2470&#2507&#2453&#2494&#2472</div></td>
+			<td><div>{9A6}{9CB}{995}{9BE}{9A8}</div></td>
+			<td class="error">Invalid label "দোকান": adjacent combining marks "দো"</td>
+			<td class="error">Invalid label "দোকান": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">259</td>
+			<td class="name"><div>&#2474&#2480&#2509&#2472&#2507</div></td>
+			<td><div>{9AA}{9B0}{9CD}{9A8}{9CB}</div></td>
+			<td class="error">Invalid label "পর্নো": adjacent combining marks "নো"</td>
+			<td class="error">Invalid label "পর্নো": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">260</td>
+			<td class="name"><div>&#2476&#2494&#2465&#2492&#2495</div></td>
+			<td><div>{9AC}{9BE}{9A1}{9BC}{9BF}</div></td>
+			<td class="error">Invalid label "বাড়ি": adjacent combining marks "ড়ি"</td>
+			<td class="error">Invalid label "বাড়ি": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">261</td>
+			<td class="name"><div>&#2476&#2494&#2434&#2482&#2494</div></td>
+			<td><div>{9AC}{9BE}{982}{9B2}{9BE}</div></td>
+			<td class="error">Invalid label "বাংলা": adjacent combining marks "বাং"</td>
+			<td class="error">Invalid label "বাংলা": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">262</td>
+			<td class="name"><div>&#2476&#2495&#2463&#2453&#2479&#2492&#2503&#2472</div></td>
+			<td><div>{9AC}{9BF}{99F}{995}{9AF}{9BC}{9C7}{9A8}</div></td>
+			<td class="error">Invalid label "বিটকয়েন": adjacent combining marks "য়ে"</td>
+			<td class="error">Invalid label "বিটকয়েন": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">263</td>
+			<td class="name"><div>&#2476&#2495&#2472&#2495&#2479&#2492&#2507&#2455</div></td>
+			<td><div>{9AC}{9BF}{9A8}{9BF}{9AF}{9BC}{9CB}{997}</div></td>
+			<td class="error">Invalid label "বিনিয়োগ": adjacent combining marks "য়ে"</td>
+			<td class="error">Invalid label "বিনিয়োগ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">264</td>
+			<td class="name"><div>&#2476&#2495&#2479&#2492&#2494&#2480</div></td>
+			<td><div>{9AC}{9BF}{9AF}{9BC}{9BE}{9B0}</div></td>
+			<td class="error">Invalid label "বিয়ার": adjacent combining marks "য়া"</td>
+			<td class="error">Invalid label "বিয়ার": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">265</td>
+			<td class="name"><div>&#2476&#2509&#2479&#2494&#2434&#2453</div></td>
+			<td><div>{9AC}{9CD}{9AF}{9BE}{982}{995}</div></td>
+			<td class="error">Invalid label "ব্যাংক": adjacent combining marks "যাং"</td>
+			<td class="error">Invalid label "ব্যাংক": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">266</td>
+			<td class="name"><div>&#2476&#2509&#2479&#2494&#2434&#2453&#2476&#2495&#2489&#2496&#2472</div></td>
+			<td><div>{9AC}{9CD}{9AF}{9BE}{982}{995}{9AC}{9BF}{9B9}{9C0}{9A8}</div></td>
+			<td class="error">Invalid label "ব্যাংকবিহীন": adjacent combining marks "যাং"</td>
+			<td class="error">Invalid label "ব্যাংকবিহীন": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">267</td>
+			<td class="name"><div>&#2477&#2479&#2492&#2503&#2488</div></td>
+			<td><div>{9AD}{9AF}{9BC}{9C7}{9B8}</div></td>
+			<td class="error">Invalid label "ভয়েস": adjacent combining marks "য়ে"</td>
+			<td class="error">Invalid label "ভয়েস": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">268</td>
+			<td class="name"><div>&#2477&#2494&#2465&#2492&#2494</div></td>
+			<td><div>{9AD}{9BE}{9A1}{9BC}{9BE}</div></td>
+			<td class="error">Invalid label "ভাড়া": adjacent combining marks "ড়া"</td>
+			<td class="error">Invalid label "ভাড়া": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">269</td>
+			<td class="name"><div>&#2478&#2507&#2489&#2494&#2478&#2509&#2478&#2470</div></td>
+			<td><div>{9AE}{9CB}{9B9}{9BE}{9AE}{9CD}{9AE}{9A6}</div></td>
+			<td class="error">Invalid label "মোহাম্মদ": adjacent combining marks "মো"</td>
+			<td class="error">Invalid label "মোহাম্মদ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">270</td>
+			<td class="name"><div>&#2479&#2507&#2455&#2494&#2479&#2507&#2455</div></td>
+			<td><div>{9AF}{9CB}{997}{9BE}{9AF}{9CB}{997}</div></td>
+			<td class="error">Invalid label "যোগাযোগ": adjacent combining marks "যো"</td>
+			<td class="error">Invalid label "যোগাযোগ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">271</td>
+			<td class="name"><div>&#2479&#2508&#2472&#2468&#2494</div></td>
+			<td><div>{9AF}{9CC}{9A8}{9A4}{9BE}</div></td>
+			<td class="error">Invalid label "যৌনতা": adjacent combining marks "যৌ"</td>
+			<td class="error">Invalid label "যৌনতা": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">272</td>
+			<td class="name"><div>&#2488&#2475&#2463&#2451&#2479&#2492&#2509&#2479&#2494&#2480</div></td>
+			<td><div>{9B8}{9AB}{99F}{993}{9AF}{9BC}{9CD}{9AF}{9BE}{9B0}</div></td>
+			<td class="error">Invalid label "সফটওয়্যার": adjacent combining marks "য়্"</td>
+			<td class="error">Invalid label "সফটওয়্যার": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">273</td>
+			<td class="name"><div>&#2488&#2507&#2472&#2494</div></td>
+			<td><div>{9B8}{9CB}{9A8}{9BE}</div></td>
+			<td class="error">Invalid label "সোনা": adjacent combining marks "সো"</td>
+			<td class="error">Invalid label "সোনা": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">274</td>
+			<td class="name"><div>&#2489&#2494&#2441&#2460&#2495&#2434</div></td>
+			<td><div>{9B9}{9BE}{989}{99C}{9BF}{982}</div></td>
+			<td class="error">Invalid label "হাউজিং": adjacent combining marks "জিং"</td>
+			<td class="error">Invalid label "হাউজিং": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">275</td>
+			<td class="name"><div>&#2489&#2509&#2479&#2494&#2482&#2507</div></td>
+			<td><div>{9B9}{9CD}{9AF}{9BE}{9B2}{9CB}</div></td>
+			<td class="error">Invalid label "হ্যালো": adjacent combining marks "লো"</td>
+			<td class="error">Invalid label "হ্যালো": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">276</td>
+			<td class="name"><div>&#2616&#2623&#2673&#2582</div></td>
+			<td><div>{A38}{A3F}{A71}{A16}</div></td>
+			<td class="error">Invalid label "ਸਿੱਖ": adjacent combining marks "ਸਿੱ"</td>
+			<td class="error">Invalid label "ਸਿੱਖ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">277</td>
+			<td class="name"><div>&#2616&#2623&#2673&#2582&#2624</div></td>
+			<td><div>{A38}{A3F}{A71}{A16}{A40}</div></td>
+			<td class="error">Invalid label "ਸਿੱਖੀ": adjacent combining marks "ਸਿੱ"</td>
+			<td class="error">Invalid label "ਸਿੱਖੀ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">278</td>
+			<td class="name"><div>&#2616&#2623&#2672&#2584</div></td>
+			<td><div>{A38}{A3F}{A70}{A18}</div></td>
+			<td class="error">Invalid label "ਸਿੰਘ": adjacent combining marks "ਸਿੰ"</td>
+			<td class="error">Invalid label "ਸਿੰਘ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">279</td>
+			<td class="name"><div>&#2616&#2623&#2673&#2599&#2626</div></td>
+			<td><div>{A38}{A3F}{A71}{A27}{A42}</div></td>
+			<td class="error">Invalid label "ਸਿੱਧੂ": adjacent combining marks "ਸਿੱ"</td>
+			<td class="error">Invalid label "ਸਿੱਧੂ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">280</td>
+			<td class="name"><div>&#2588&#2616&#2613&#2623&#2672&#2598&#2608</div></td>
+			<td><div>{A1C}{A38}{A35}{A3F}{A70}{A26}{A30}</div></td>
+			<td class="error">Invalid label "ਜਸਵਿੰਦਰ": adjacent combining marks "ਵਿੰ"</td>
+			<td class="error">Invalid label "ਜਸਵਿੰਦਰ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">281</td>
+			<td class="name"><div>&#2594&#2623&#2673&#2610&#2635&#2562</div></td>
+			<td><div>{A22}{A3F}{A71}{A32}{A4B}{A02}</div></td>
+			<td class="error">Invalid label "ਢਿੱਲੋਂ": adjacent combining marks "ਢਿੱ"</td>
+			<td class="error">Invalid label "ਢਿੱਲੋਂ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">282</td>
+			<td class="name"><div>&#2598&#2635&#2616&#2622&#2562&#2589</div></td>
+			<td><div>{A26}{A4B}{A38}{A3E}{A02}{A1D}</div></td>
+			<td class="error">Invalid label "ਦੋਸਾਂਝ": adjacent combining marks "ਸਾਂ"</td>
+			<td class="error">Invalid label "ਦੋਸਾਂਝ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">283</td>
+			<td class="name"><div>&#2603&#2631&#2616&#2604&#2625&#2673&#2581</div></td>
+			<td><div>{A2B}{A47}{A38}{A2C}{A41}{A71}{A15}</div></td>
+			<td class="error">Invalid label "ਫੇਸਬੁੱਕ": adjacent combining marks "ਬੁੱ"</td>
+			<td class="error">Invalid label "ਫੇਸਬੁੱਕ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">284</td>
+			<td class="name"><div>&#2605&#2625&#2673&#2610&#2608</div></td>
+			<td><div>{A2D}{A41}{A71}{A32}{A30}</div></td>
+			<td class="error">Invalid label "ਭੁੱਲਰ": adjacent combining marks "ਭੁੱ"</td>
+			<td class="error">Invalid label "ਭੁੱਲਰ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">285</td>
+			<td class="name"><div>&#2732&#2759&#2690&#2709&#2738&#2759&#2744</div></td>
+			<td><div>{AAC}{AC7}{A82}{A95}{AB2}{AC7}{AB8}</div></td>
+			<td class="error">Invalid label "બેંકલેસ": adjacent combining marks "બેં"</td>
+			<td class="error">Invalid label "બેંકલેસ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">286</td>
+			<td class="name"><div>&#2742&#2750&#2690&#2724&#2751</div></td>
+			<td><div>{AB6}{ABE}{A82}{AA4}{ABF}</div></td>
+			<td class="error">Invalid label "શાંતિ": adjacent combining marks "શાં"</td>
+			<td class="error">Invalid label "શાંતિ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">287</td>
+			<td class="name"><div>&#2744&#2763&#2728&#2753&#2690</div></td>
+			<td><div>{AB8}{ACB}{AA8}{AC1}{A82}</div></td>
+			<td class="error">Invalid label "સોનું": adjacent combining marks "નું"</td>
+			<td class="error">Invalid label "સોનું": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">288</td>
+			<td class="name"><div>&#2965&#3019&#2991&#2990&#3021&#2986&#3009&#2980&#3021&#2980&#3010&#2992&#3021</div></td>
+			<td><div>{B95}{BCB}{BAF}{BAE}{BCD}{BAA}{BC1}{BA4}{BCD}{BA4}{BC2}{BB0}{BCD}</div></td>
+			<td class="error">Invalid label "கோயம்புத்தூர்": adjacent combining marks "கோ"</td>
+			<td class="error">Invalid label "கோயம்புத்தூர்": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">289</td>
+			<td class="name"><div>&#2986&#2980&#3007&#2985&#3018&#2985&#3021&#2993&#3009</div></td>
+			<td><div>{BAA}{BA4}{BBF}{BA9}{BCA}{BA9}{BCD}{BB1}{BC1}</div></td>
+			<td class="error">Invalid label "பதினொன்று": adjacent combining marks "னொ"</td>
+			<td class="error">Invalid label "பதினொன்று": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">290</td>
+			<td class="name"><div>&#2990&#3014&#2975&#3021&#2975&#2965&#3019&#2997&#2985&#3021</div></td>
+			<td><div>{BAE}{BC6}{B9F}{BCD}{B9F}{B95}{BCB}{BB5}{BA9}{BCD}</div></td>
+			<td class="error">Invalid label "மெட்டகோவன்": adjacent combining marks "கோ"</td>
+			<td class="error">Invalid label "மெட்டகோவன்": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">291</td>
+			<td class="name"><div>&#3120&#3142&#3074&#3105&#3137</div></td>
+			<td><div>{C30}{C46}{C02}{C21}{C41}</div></td>
+			<td class="error">Invalid label "రెండు": adjacent combining marks "రెం"</td>
+			<td class="error">Invalid label "రెండు": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">292</td>
+			<td class="name"><div>&#3221&#3272&#3226&#3264&#3250</div></td>
+			<td><div>{C95}{CC8}{C9A}{CC0}{CB2}</div></td>
+			<td class="error">Invalid label "ಕೈಚೀಲ": adjacent combining marks "ಕೈ"</td>
+			<td class="error">Invalid label "ಕೈಚೀಲ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">293</td>
+			<td class="name"><div>&#3244&#3270&#3202&#3223&#3251&#3266&#3248&#3265</div></td>
+			<td><div>{CAC}{CC6}{C82}{C97}{CB3}{CC2}{CB0}{CC1}</div></td>
+			<td class="error">Invalid label "ಬೆಂಗಳೂರು": adjacent combining marks "ಬೆಂ"</td>
+			<td class="error">Invalid label "ಬೆಂಗಳೂರು": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">294</td>
+			<td class="name"><div>&#3246&#3272&#3256&#3266&#3248&#3265</div></td>
+			<td><div>{CAE}{CC8}{CB8}{CC2}{CB0}{CC1}</div></td>
+			<td class="error">Invalid label "ಮೈಸೂರು": adjacent combining marks "ಮೈ"</td>
+			<td class="error">Invalid label "ಮೈಸೂರು": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">295</td>
+			<td class="name"><div>&#3585&#3659&#3623&#3618&#3648&#3605&#3637&#3659&#3618&#3623</div></td>
+			<td><div>{E01}{E4B}{E27}{E22}{E40}{E15}{E35}{E4B}{E22}{E27}</div></td>
+			<td class="error">Invalid label "ก๋วยเตี๋ยว": adjacent combining marks "ตี๋"</td>
+			<td class="error">Invalid label "ก๋วยเตี๋ยว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">296</td>
+			<td class="name"><div>&#3648&#3585&#3636&#3609&#3611&#3640&#3618&#3617&#3640&#3657&#3618</div></td>
+			<td><div>{E40}{E01}{E34}{E19}{E1B}{E38}{E22}{E21}{E38}{E49}{E22}</div></td>
+			<td class="error">Invalid label "เกินปุยมุ้ย": adjacent combining marks "มุ้"</td>
+			<td class="error">Invalid label "เกินปุยมุ้ย": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">297</td>
+			<td class="name"><div>&#3586&#3629&#3633&#3612&#3641&#3657</div></td>
+			<td><div>{E02}{E2D}{E31}{E1C}{E39}{E49}</div></td>
+			<td class="error">Invalid label "ขอัผู้": adjacent combining marks "ผู้"</td>
+			<td class="error">Invalid label "ขอัผู้": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">298</td>
+			<td class="name"><div>&#3589&#661&#8226&#811&#865&#8226&#660&#3589</div></td>
+			<td><div>{E05}{295}{2022}{32B}{361}{2022}{294}{E05}</div></td>
+			<td class="error">Invalid label "ฅʕ•̫͡•ʔฅ": adjacent combining marks "•̫͡"</td>
+			<td class="error">Invalid label "ฅʕ•̫͡•ʔฅ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">299</td>
+			<td class="name"><div>&#3648&#3591&#3636&#3609&#3585&#3641&#3657</div></td>
+			<td><div>{E40}{E07}{E34}{E19}{E01}{E39}{E49}</div></td>
+			<td class="error">Invalid label "เงินกู้": adjacent combining marks "กู้"</td>
+			<td class="error">Invalid label "เงินกู้": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">300</td>
+			<td class="name"><div>&#3592&#3629&#3627&#3660&#3609&#3609&#3637&#3656</div></td>
+			<td><div>{E08}{E2D}{E2B}{E4C}{E19}{E19}{E35}{E48}</div></td>
+			<td class="error">Invalid label "จอห์นนี่": adjacent combining marks "นี่"</td>
+			<td class="error">Invalid label "จอห์นนี่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">301</td>
+			<td class="name"><div>&#3595&#3639&#3657&#3629&#3668&#3666&#3664</div></td>
+			<td><div>{E0B}{E37}{E49}{E2D}{E54}{E52}{E50}</div></td>
+			<td class="error">Invalid label "ซื้อ๔๒๐": adjacent combining marks "ซื้"</td>
+			<td class="error">Invalid label "ซื้อ๔๒๐": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">302</td>
+			<td class="name"><div>&#3604&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657</div></td>
+			<td><div>{E14}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}</div></td>
+			<td class="error">Invalid label "ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้": adjacent combining marks "ด้้"</td>
+			<td class="error">Invalid label "ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">303</td>
+			<td class="name"><div>&#3604&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3604&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3604&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3655&#3655&#3655&#3655&#3655</div></td>
+			<td><div>{E14}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E14}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E14}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E47}{E47}{E47}{E47}{E47}</div></td>
+			<td class="error">Invalid label "ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็": adjacent combining marks "ด้้"</td>
+			<td class="error">Invalid label "ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็ด้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็้้้้้็็็็็้้้้้้้้็็็็็": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">304</td>
+			<td class="name"><div>&#3604&#3637&#3607&#3637&#3656&#3626&#3640&#3604&#3668&#3666&#3664</div></td>
+			<td><div>{E14}{E35}{E17}{E35}{E48}{E2A}{E38}{E14}{E54}{E52}{E50}</div></td>
+			<td class="error">Invalid label "ดีที่สุด๔๒๐": adjacent combining marks "ที่"</td>
+			<td class="error">Invalid label "ดีที่สุด๔๒๐": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">305</td>
+			<td class="name"><div>&#3605&#3657&#3617&#3618&#3661&#3634&#3585&#3640&#3657&#3591</div></td>
+			<td><div>{E15}{E49}{E21}{E22}{E4D}{E32}{E01}{E38}{E49}{E07}</div></td>
+			<td class="error">Invalid label "ต้มยํากุ้ง": adjacent combining marks "กุ้"</td>
+			<td class="error">Invalid label "ต้มยํากุ้ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">306</td>
+			<td class="name"><div>&#3607&#3637&#3656&#3627&#3609&#3638&#3656&#3591</div></td>
+			<td><div>{E17}{E35}{E48}{E2B}{E19}{E36}{E48}{E07}</div></td>
+			<td class="error">Invalid label "ที่หนึ่ง": adjacent combining marks "ที่"</td>
+			<td class="error">Invalid label "ที่หนึ่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">307</td>
+			<td class="name"><div>&#3610&#3633&#3597&#3594&#3637&#3612&#3641&#3657&#3651&#3594&#3657&#3609&#3637&#3657&#3648&#3611&#3655&#3609&#3626&#3656&#3623&#3609&#3605&#3633&#3623</div></td>
+			<td><div>{E1A}{E31}{E0D}{E0A}{E35}{E1C}{E39}{E49}{E43}{E0A}{E49}{E19}{E35}{E49}{E40}{E1B}{E47}{E19}{E2A}{E48}{E27}{E19}{E15}{E31}{E27}</div></td>
+			<td class="error">Invalid label "บัญชีผู้ใช้นี้เป็นส่วนตัว": adjacent combining marks "ผู้"</td>
+			<td class="error">Invalid label "บัญชีผู้ใช้นี้เป็นส่วนตัว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">308</td>
+			<td class="name"><div>&#3610&#3657&#3634&#3609&#3648&#3621&#3586&#3607&#3637&#3656</div></td>
+			<td><div>{E1A}{E49}{E32}{E19}{E40}{E25}{E02}{E17}{E35}{E48}</div></td>
+			<td class="error">Invalid label "บ้านเลขที่": adjacent combining marks "ที่"</td>
+			<td class="error">Invalid label "บ้านเลขที่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">309</td>
+			<td class="name"><div>&#3611&#3619&#3632&#3605&#3641&#3609&#3657&#3661&#3634</div></td>
+			<td><div>{E1B}{E23}{E30}{E15}{E39}{E19}{E49}{E4D}{E32}</div></td>
+			<td class="error">Invalid label "ประตูน้ํา": adjacent combining marks "น้ํ"</td>
+			<td class="error">Invalid label "ประตูน้ํา": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">310</td>
+			<td class="name"><div>&#3612&#3633&#3604&#3586&#3637&#3657&#3648&#3617&#3634</div></td>
+			<td><div>{E1C}{E31}{E14}{E02}{E35}{E49}{E40}{E21}{E32}</div></td>
+			<td class="error">Invalid label "ผัดขี้เมา": adjacent combining marks "ขี้"</td>
+			<td class="error">Invalid label "ผัดขี้เมา": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">311</td>
+			<td class="name"><div>&#3612&#3633&#3604&#3594&#3637&#3629&#3636&#3657&#3623</div></td>
+			<td><div>{E1C}{E31}{E14}{E0A}{E35}{E2D}{E34}{E49}{E27}</div></td>
+			<td class="error">Invalid label "ผัดชีอิ้ว": adjacent combining marks "อิ้"</td>
+			<td class="error">Invalid label "ผัดชีอิ้ว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">312</td>
+			<td class="name"><div>&#3612&#3633&#3604&#3595&#3637&#3629&#3636&#3657&#3623</div></td>
+			<td><div>{E1C}{E31}{E14}{E0B}{E35}{E2D}{E34}{E49}{E27}</div></td>
+			<td class="error">Invalid label "ผัดซีอิ้ว": adjacent combining marks "อิ้"</td>
+			<td class="error">Invalid label "ผัดซีอิ้ว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">313</td>
+			<td class="name"><div>&#3613&#3619&#3633&#3656&#3591</div></td>
+			<td><div>{E1D}{E23}{E31}{E48}{E07}</div></td>
+			<td class="error">Invalid label "ฝรั่ง": adjacent combining marks "รั่"</td>
+			<td class="error">Invalid label "ฝรั่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">314</td>
+			<td class="name"><div>&#3614&#3619&#3632&#3648&#3592&#3657&#3634&#3629&#3618&#3641&#3656&#3627&#3633&#3623</div></td>
+			<td><div>{E1E}{E23}{E30}{E40}{E08}{E49}{E32}{E2D}{E22}{E39}{E48}{E2B}{E31}{E27}</div></td>
+			<td class="error">Invalid label "พระเจ้าอยู่หัว": adjacent combining marks "ยู่"</td>
+			<td class="error">Invalid label "พระเจ้าอยู่หัว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">315</td>
+			<td class="name"><div>&#3617&#3633&#3656&#3591&#3588&#3633&#3656&#3591</div></td>
+			<td><div>{E21}{E31}{E48}{E07}{E04}{E31}{E48}{E07}</div></td>
+			<td class="error">Invalid label "มั่งคั่ง": adjacent combining marks "มั่"</td>
+			<td class="error">Invalid label "มั่งคั่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">316</td>
+			<td class="name"><div>&#3617&#3633&#3656&#3591&#3617&#3637&#3624&#3619&#3637&#3626&#3640&#3586</div></td>
+			<td><div>{E21}{E31}{E48}{E07}{E21}{E35}{E28}{E23}{E35}{E2A}{E38}{E02}</div></td>
+			<td class="error">Invalid label "มั่งมีศรีสุข": adjacent combining marks "มั่"</td>
+			<td class="error">Invalid label "มั่งมีศรีสุข": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">317</td>
+			<td class="name"><div>&#3618&#3637&#3656&#3626&#3636&#3610</div></td>
+			<td><div>{E22}{E35}{E48}{E2A}{E34}{E1A}</div></td>
+			<td class="error">Invalid label "ยี่สิบ": adjacent combining marks "ยี่"</td>
+			<td class="error">Invalid label "ยี่สิบ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">318</td>
+			<td class="name"><div>&#3619&#3656&#3661&#3634&#3619&#3623&#3618</div></td>
+			<td><div>{E23}{E48}{E4D}{E32}{E23}{E27}{E22}</div></td>
+			<td class="error">Invalid label "ร่ํารวย": adjacent combining marks "ร่ํ"</td>
+			<td class="error">Invalid label "ร่ํารวย": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">319</td>
+			<td class="name"><div>&#3621&#3640&#3591&#3605&#3641&#3656</div></td>
+			<td><div>{E25}{E38}{E07}{E15}{E39}{E48}</div></td>
+			<td class="error">Invalid label "ลุงตู่": adjacent combining marks "ตู่"</td>
+			<td class="error">Invalid label "ลุงตู่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">320</td>
+			<td class="name"><div>&#3624&#3641&#3609&#3618&#3660&#3624&#3641&#3609&#3618&#3660&#3627&#3609&#3638&#3656&#3591</div></td>
+			<td><div>{E28}{E39}{E19}{E22}{E4C}{E28}{E39}{E19}{E22}{E4C}{E2B}{E19}{E36}{E48}{E07}</div></td>
+			<td class="error">Invalid label "ศูนย์ศูนย์หนึ่ง": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "ศูนย์ศูนย์หนึ่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">321</td>
+			<td class="name"><div>&#3624&#3641&#3618&#3660&#3626&#3637&#3656</div></td>
+			<td><div>{E28}{E39}{E22}{E4C}{E2A}{E35}{E48}</div></td>
+			<td class="error">Invalid label "ศูย์สี่": adjacent combining marks "สี่"</td>
+			<td class="error">Invalid label "ศูย์สี่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">322</td>
+			<td class="name"><div>&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657</div></td>
+			<td><div>{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}</div></td>
+			<td class="error">Invalid label "ส้้้้้้้้้้้้้้้้้้้้": adjacent combining marks "ส้้"</td>
+			<td class="error">Invalid label "ส้้้้้้้้้้้้้้้้้้้้": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">323</td>
+			<td class="name"><div>&#3626&#3617&#3624&#3633&#3585&#3604&#3636&#3660</div></td>
+			<td><div>{E2A}{E21}{E28}{E31}{E01}{E14}{E34}{E4C}</div></td>
+			<td class="error">Invalid label "สมศักดิ์": adjacent combining marks "ดิ์"</td>
+			<td class="error">Invalid label "สมศักดิ์": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">324</td>
+			<td class="name"><div>&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3626&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657&#3657</div></td>
+			<td><div>{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E2A}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}{E49}</div></td>
+			<td class="error">Invalid label "ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้": adjacent combining marks "ส้้"</td>
+			<td class="error">Invalid label "ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้ส้้้้้้้้้้้้้้้้้้้้": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">325</td>
+			<td class="name"><div>&#3626&#3637&#3656&#3619&#3657&#3629&#3618&#3618&#3637&#3656&#3626&#3636&#3610</div></td>
+			<td><div>{E2A}{E35}{E48}{E23}{E49}{E2D}{E22}{E22}{E35}{E48}{E2A}{E34}{E1A}</div></td>
+			<td class="error">Invalid label "สี่ร้อยยี่สิบ": adjacent combining marks "สี่"</td>
+			<td class="error">Invalid label "สี่ร้อยยี่สิบ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">326</td>
+			<td class="name"><div>&#3626&#3637&#3656&#3626&#3629&#3591&#3624&#3641&#3609&#3618&#3660</div></td>
+			<td><div>{E2A}{E35}{E48}{E2A}{E2D}{E07}{E28}{E39}{E19}{E22}{E4C}</div></td>
+			<td class="error">Invalid label "สี่สองศูนย์": adjacent combining marks "สี่"</td>
+			<td class="error">Invalid label "สี่สองศูนย์": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">327</td>
+			<td class="name"><div>&#3626&#3637&#3656&#3626&#3637&#3656&#3626&#3637&#3656</div></td>
+			<td><div>{E2A}{E35}{E48}{E2A}{E35}{E48}{E2A}{E35}{E48}</div></td>
+			<td class="error">Invalid label "สี่สี่สี่": adjacent combining marks "สี่"</td>
+			<td class="error">Invalid label "สี่สี่สี่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">328</td>
+			<td class="name"><div>&#3626&#3637&#3656&#3626&#3637&#3656&#3626&#3637&#3656&#3626&#3637&#3656</div></td>
+			<td><div>{E2A}{E35}{E48}{E2A}{E35}{E48}{E2A}{E35}{E48}{E2A}{E35}{E48}</div></td>
+			<td class="error">Invalid label "สี่สี่สี่สี่": adjacent combining marks "สี่"</td>
+			<td class="error">Invalid label "สี่สี่สี่สี่": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">329</td>
+			<td class="name"><div>&#3626&#3639&#3656&#3629&#3621&#3634&#3617&#3585</div></td>
+			<td><div>{E2A}{E37}{E48}{E2D}{E25}{E32}{E21}{E01}</div></td>
+			<td class="error">Invalid label "สื่อลามก": adjacent combining marks "สื่"</td>
+			<td class="error">Invalid label "สื่อลามก": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">330</td>
+			<td class="name"><div>&#3627&#3609&#3638&#3656&#3591</div></td>
+			<td><div>{E2B}{E19}{E36}{E48}{E07}</div></td>
+			<td class="error">Invalid label "หนึ่ง": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "หนึ่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">331</td>
+			<td class="name"><div>&#3627&#3609&#3638&#3656&#3591&#3626&#3629&#3591&#3626&#3634&#3617</div></td>
+			<td><div>{E2B}{E19}{E36}{E48}{E07}{E2A}{E2D}{E07}{E2A}{E32}{E21}</div></td>
+			<td class="error">Invalid label "หนึ่งสองสาม": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "หนึ่งสองสาม": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">332</td>
+			<td class="name"><div>&#3627&#3609&#3638&#3656&#3591&#3626&#3629&#3591&#3627&#3609&#3638&#3656&#3591</div></td>
+			<td><div>{E2B}{E19}{E36}{E48}{E07}{E2A}{E2D}{E07}{E2B}{E19}{E36}{E48}{E07}</div></td>
+			<td class="error">Invalid label "หนึ่งสองหนึ่ง": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "หนึ่งสองหนึ่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">333</td>
+			<td class="name"><div>&#3627&#3609&#3638&#3656&#3591&#3626&#3629&#3591&#3627&#3657&#3634</div></td>
+			<td><div>{E2B}{E19}{E36}{E48}{E07}{E2A}{E2D}{E07}{E2B}{E49}{E32}</div></td>
+			<td class="error">Invalid label "หนึ่งสองห้า": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "หนึ่งสองห้า": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">334</td>
+			<td class="name"><div>&#3627&#3609&#3638&#3656&#3591&#3627&#3609&#3638&#3656&#3591&#3627&#3609&#3638&#3656&#3591</div></td>
+			<td><div>{E2B}{E19}{E36}{E48}{E07}{E2B}{E19}{E36}{E48}{E07}{E2B}{E19}{E36}{E48}{E07}</div></td>
+			<td class="error">Invalid label "หนึ่งหนึ่งหนึ่ง": adjacent combining marks "นึ่"</td>
+			<td class="error">Invalid label "หนึ่งหนึ่งหนึ่ง": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">335</td>
+			<td class="name"><div>&#3627&#3621&#3623&#3591&#3611&#3641&#3656&#3617&#3633&#3591&#3585&#3619&#3586&#3634&#3623</div></td>
+			<td><div>{E2B}{E25}{E27}{E07}{E1B}{E39}{E48}{E21}{E31}{E07}{E01}{E23}{E02}{E32}{E27}</div></td>
+			<td class="error">Invalid label "หลวงปู่มังกรขาว": adjacent combining marks "ปู่"</td>
+			<td class="error">Invalid label "หลวงปู่มังกรขาว": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">336</td>
+			<td class="name"><div>&#3627&#3623&#3634&#3609&#3648&#3621&#3637&#3657&#3618&#3610</div></td>
+			<td><div>{E2B}{E27}{E32}{E19}{E40}{E25}{E35}{E49}{E22}{E1A}</div></td>
+			<td class="error">Invalid label "หวานเลี้ยบ": adjacent combining marks "ลี้"</td>
+			<td class="error">Invalid label "หวานเลี้ยบ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">337</td>
+			<td class="name"><div>&#3648&#3627&#3637&#3657&#3618</div></td>
+			<td><div>{E40}{E2B}{E35}{E49}{E22}</div></td>
+			<td class="error">Invalid label "เหี้ย": adjacent combining marks "หี้"</td>
+			<td class="error">Invalid label "เหี้ย": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">338</td>
+			<td class="name"><div>&#3652&#3629&#3657&#3595&#3633&#3657&#3604</div></td>
+			<td><div>{E44}{E2D}{E49}{E0B}{E31}{E49}{E14}</div></td>
+			<td class="error">Invalid label "ไอ้ซั้ด": adjacent combining marks "ซั้"</td>
+			<td class="error">Invalid label "ไอ้ซั้ด": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">339</td>
+			<td class="name"><div>&#3720&#3757&#3737&#3737&#3765&#3785</div></td>
+			<td><div>{E88}{EAD}{E99}{E99}{EB5}{EC9}</div></td>
+			<td class="error">Invalid label "ຈອນນີ້": adjacent combining marks "ນີ້"</td>
+			<td class="error">Invalid label "ຈອນນີ້": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">340</td>
+			<td class="name"><div>&#3738&#3789&#3784&#3745&#3765&#3735&#3760&#3737&#3762&#3716&#3762&#3737</div></td>
+			<td><div>{E9A}{ECD}{EC8}{EA1}{EB5}{E97}{EB0}{E99}{EB2}{E84}{EB2}{E99}</div></td>
+			<td class="error">Invalid label "ບໍ່ມີທະນາຄານ": adjacent combining marks "ບໍ່"</td>
+			<td class="error">Invalid label "ບໍ່ມີທະນາຄານ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">341</td>
+			<td class="name"><div>&#3755&#3737&#3766&#3784&#3719</div></td>
+			<td><div>{EAB}{E99}{EB6}{EC8}{E87}</div></td>
+			<td class="error">Invalid label "ຫນຶ່ງ": adjacent combining marks "ນຶ່"</td>
+			<td class="error">Invalid label "ຫນຶ່ງ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">342</td>
+			<td class="name"><div>&#3906&#3962&#3851&#3942&#3938&#3851&#3938&#3986&#4017&#3939&#3851&#3924&#3964&#3851</div></td>
+			<td><div>{F42}{F7A}{F0B}{F66}{F62}{F0B}{F62}{F92}{FB1}{F63}{F0B}{F54}{F7C}{F0B}</div></td>
+			<td class="error">Invalid label "གེ་སར་རྒྱལ་པོ་": adjacent combining marks "རྒྱ"</td>
+			<td class="error">Invalid label "གེ་སར་རྒྱལ་པོ་": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">343</td>
+			<td class="name"><div>&#3926&#3938&#3986&#4017&#3851</div></td>
+			<td><div>{F56}{F62}{F92}{FB1}{F0B}</div></td>
+			<td class="error">Invalid label "བརྒྱ་": adjacent combining marks "རྒྱ"</td>
+			<td class="error">Invalid label "བརྒྱ་": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">344</td>
+			<td class="name"><div>&#3936&#3926&#4018&#3956&#3906&#3851&#3937&#3956&#3939&#3851</div></td>
+			<td><div>{F60}{F56}{FB2}{F74}{F42}{F0B}{F61}{F74}{F63}{F0B}</div></td>
+			<td class="error">Invalid label "འབྲུག་ཡུལ་": adjacent combining marks "བྲུ"</td>
+			<td class="error">Invalid label "འབྲུག་ཡུལ་": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">345</td>
+			<td class="name"><div>&#3944&#3964&#3966&#3851&#3928&#3851&#3918&#3954&#3851&#3924&#3851&#3921&#4008&#3962&#3851&#3943&#3953&#3956&#3971&#3853</div></td>
+			<td><div>{F68}{F7C}{F7E}{F0B}{F58}{F0B}{F4E}{F72}{F0B}{F54}{F0B}{F51}{FA8}{F7A}{F0B}{F67}{F71}{F74}{F83}{F0D}</div></td>
+			<td class="error">Invalid label "ཨོཾ་མ་ཎི་པ་དྨེ་ཧཱུྃ།": adjacent combining marks "ཨོཾ"</td>
+			<td class="error">Invalid label "ཨོཾ་མ་ཎི་པ་དྨེ་ཧཱུྃ།": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">346</td>
+			<td class="name"><div>&#3944&#3964&#3966&#3851&#3928&#3851&#3918&#3954&#3851&#3924&#3921&#4008&#3962&#3851&#3943&#3953&#3956&#3971</div></td>
+			<td><div>{F68}{F7C}{F7E}{F0B}{F58}{F0B}{F4E}{F72}{F0B}{F54}{F51}{FA8}{F7A}{F0B}{F67}{F71}{F74}{F83}</div></td>
+			<td class="error">Invalid label "ཨོཾ་མ་ཎི་པདྨེ་ཧཱུྃ": adjacent combining marks "ཨོཾ"</td>
+			<td class="error">Invalid label "ཨོཾ་མ་ཎི་པདྨེ་ཧཱུྃ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">347</td>
+			<td class="name"><div>&#4112&#4101&#4154&#4113&#4145&#4140&#4100&#4151&#4154&#4116&#4158&#4101&#4154&#4123&#4140&#4151&#4126&#4143&#4150&#4152&#4102&#4122&#4154&#4124&#4145&#4152</div></td>
+			<td><div>{1010}{1005}{103A}{1011}{1031}{102C}{1004}{1037}{103A}{1014}{103E}{1005}{103A}{101B}{102C}{1037}{101E}{102F}{1036}{1038}{1006}{101A}{103A}{101C}{1031}{1038}</div></td>
+			<td class="error">Invalid label "တစ်ထောင့်နှစ်ရာ့သုံးဆယ်လေး": adjacent combining marks "ထော"</td>
+			<td class="error">Invalid label "တစ်ထောင့်နှစ်ရာ့သုံးဆယ်လေး": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">348</td>
+			<td class="name"><div>&#4116&#4158&#4101&#4154&#4123&#4140&#4151&#4116&#4158&#4101&#4154&#4102&#4122&#4154&#4116&#4158&#4101&#4154</div></td>
+			<td><div>{1014}{103E}{1005}{103A}{101B}{102C}{1037}{1014}{103E}{1005}{103A}{1006}{101A}{103A}{1014}{103E}{1005}{103A}</div></td>
+			<td class="error">Invalid label "နှစ်ရာ့နှစ်ဆယ်နှစ်": adjacent combining marks "ရာ့"</td>
+			<td class="error">Invalid label "နှစ်ရာ့နှစ်ဆယ်နှစ်": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">349</td>
+			<td class="name"><div>&#4117&#4141&#4143&#4096&#4154&#4102&#4150</div></td>
+			<td><div>{1015}{102D}{102F}{1000}{103A}{1006}{1036}</div></td>
+			<td class="error">Invalid label "ပိုက်ဆံ": adjacent combining marks "ပို"</td>
+			<td class="error">Invalid label "ပိုက်ဆံ": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">350</td>
+			<td class="name"><div>&#4117&#4141&#4143&#4096&#4154&#4102&#4150&#4129&#4141&#4112&#4154</div></td>
+			<td><div>{1015}{102D}{102F}{1000}{103A}{1006}{1036}{1021}{102D}{1010}{103A}</div></td>
+			<td class="error">Invalid label "ပိုက်ဆံအိတ်": adjacent combining marks "ပို"</td>
+			<td class="error">Invalid label "ပိုက်ဆံအိတ်": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">351</td>
+			<td class="name"><div>&#4120&#4111&#4154&#4121&#4146&#4151</div></td>
+			<td><div>{1018}{100F}{103A}{1019}{1032}{1037}</div></td>
+			<td class="error">Invalid label "ဘဏ်မဲ့": adjacent combining marks "မဲ့"</td>
+			<td class="error">Invalid label "ဘဏ်မဲ့": adjacent combining marks</td>
+		</tr><tr>
+			<td class="index">352</td>
+			<td class="name"><div>&#12560&#1473&#14732&#1468</div></td>
+			<td><div>{3110}{5C1}{5C1}2{5BC}</div></td>
+			<td class="error">Invalid label "ㄐׁׁ2ּ": adjacent combining marks "ㄐׁׁ"</td>
+			<td class="error">Invalid label "ㄐׁׁ2ּ": adjacent combining marks</td>
+		</tr></tbody></table></body></html>

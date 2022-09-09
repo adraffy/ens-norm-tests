@@ -6,6 +6,7 @@ import {explode_cp} from '@adraffy/ens-norm-uts46';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
 const HYPHENS = [
+	// https://discuss.ens.domains/t/ens-name-normalization/8652/348
 	0x2D,
 	0x2010,
 	0x2011,
@@ -17,7 +18,14 @@ const HYPHENS = [
 	0x208B,
 	0xFE31,
 	0xFE32,
-	0xFE58
+	0xFE58,
+	// https://discuss.ens.domains/t/ens-name-normalization/8652/393
+	0x23BA,
+	0x23BB,
+	0x23BC,
+	0x23BD,
+	0x23E4,
+	0x23AF,
 ].map(cp => [cp, `${String.fromCodePoint(cp)} {${cp.toString(16).toUpperCase()}}`]);
 
 let out_dir = new URL('./output/', import.meta.url);

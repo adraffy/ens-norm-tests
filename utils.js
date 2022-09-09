@@ -1,3 +1,11 @@
+export function hex_cp(cp) {
+	return cp.toString(16).toUpperCase();
+}
+
+export function quote_cp(cp) {
+	return `{${hex_cp(cp)}}`;
+}
+
 export function escape_for_html(s) {
 	// printable w/o:
 	// html: 0x26 &, 0x3C <, 0x3E >

@@ -1,0 +1,91 @@
+
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>ens_normalize (1.6.1) vs ens_normalize (1.6.3) [1473529 labels] @ 2022-09-09T08:57:10.840Z</title>
+		<style>
+			body { margin: 1rem; }
+			table { border-collapse: collapse; width: 100%; }
+			td { border: 1px solid #aaa; line-break: anywhere; }
+			thead td { background: #ccc; font-weight: bold; }
+			tbody tr:nth-child(odd) { background: #eee; }
+			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			tbody td.error { background: #fcc; }
+			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			#overall td { text-align: right; }
+		</style>
+		</head>
+		<body>
+		<h1>ens_normalize (1.6.1) vs ens_normalize (1.6.3) [1473529 labels] @ 2022-09-09T08:57:10.840Z</h1>
+	
+		<table id="overall">
+		<thead>
+		<tr>
+		<td>Type</td>
+		<td>#</td>
+		<td>%</td>
+		</tr>
+		</thead>
+		<tbody>
+	<tr><td style="background-color: #cfc; font-weight: bold">Same</td><td>1470875</td><td>99.81989%</td></tr><tr><td style="background-color: #fcc; font-weight: bold">Different</td><td>2654</td><td>0.18011%</td></tr><tr><td><a href="#both-error">both-error</a></td><td>2648</td><td>0.17970%</td></tr><tr><td><a href="#diff-norm">diff-norm</a></td><td>4</td><td>0.00027%</td></tr><tr><td><a href="#b-error">ens_normalize_1.6.3-error</a></td><td>2</td><td>0.00014%</td></tr></tbody></table><a name="both-error"><h2>both-error (2648)</h2></a><a name="diff-norm"><h2>diff-norm (4)</h2></a>			
+			<table id="diff-norm">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.1)</td>
+			<td>ens_normalize (1.6.3)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>&#9115&#3232&#9149&#3232&#9118</div></td>
+			<td><div>{239B}{CA0}{23BD}{CA0}{239E}</div></td>
+			<td><div>{239B}{CA0}{23BD}{CA0}{239E}</div></td>
+			<td><div>{239B}{CA0}-{CA0}{239E}</div></td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>&#9149&#9149&#9149</div></td>
+			<td><div>{23BD}{23BD}{23BD}</div></td>
+			<td><div>{23BD}{23BD}{23BD}</div></td>
+			<td><div>---</div></td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>&#9188&#9188&#9188</div></td>
+			<td><div>{23E4}{23E4}{23E4}</div></td>
+			<td><div>{23E4}{23E4}{23E4}</div></td>
+			<td><div>---</div></td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>&#9484&#8745&#9488&#9115&#9685&#9149&#9685&#9118&#9484&#8745&#9488</div></td>
+			<td><div>{250C}{2229}{2510}{239B}{25D5}{23BD}{25D5}{239E}{250C}{2229}{2510}</div></td>
+			<td><div>{250C}{2229}{2510}{239B}{25D5}{23BD}{25D5}{239E}{250C}{2229}{2510}</div></td>
+			<td><div>{250C}{2229}{2510}{239B}{25D5}-{25D5}{239E}{250C}{2229}{2510}</div></td>
+		</tr></tbody></table><a name="b-error"><h2>ens_normalize_1.6.3-error (2)</h2></a>			
+			<table id="b-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.1)</td>
+			<td>ens_normalize (1.6.3)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>&#9135&#9135&#9135&#9135&#9135</div></td>
+			<td><div>{23AF}{23AF}{23AF}{23AF}{23AF}</div></td>
+			<td><div>{23AF}{23AF}{23AF}{23AF}{23AF}</div></td>
+			<td class="error">Invalid label "-----": invalid label extension</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>&#9147&#9147&#9147&#9147&#9147</div></td>
+			<td><div>{23BB}{23BB}{23BB}{23BB}{23BB}</div></td>
+			<td><div>{23BB}{23BB}{23BB}{23BB}{23BB}</div></td>
+			<td class="error">Invalid label "-----": invalid label extension</td>
+		</tr></tbody></table></body></html>

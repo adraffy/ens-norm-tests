@@ -1,6 +1,6 @@
 import {IMPLS} from '../impls.js';
 import {escape_for_html, escape_unicode} from '../utils.js';
-import {run_tests} from './validate.js';
+import {run_tests} from '@adraffy/ensip-norm';
 import {mkdir, writeFile, readdir} from 'node:fs/promises';
 
 let out_dir = new URL('./output/', import.meta.url);
@@ -8,7 +8,8 @@ let out_dir = new URL('./output/', import.meta.url);
 await mkdir(out_dir, {recursive: true});
 
 for (let impl of IMPLS) {
-	await writeFile(new URL(`./${impl.slug}_${impl.version}.html`, out_dir), create_html_report(impl)); 
+	if (impl.prior) continue; // dont generate old reports
+	await writeFile(new URL(`./${impl.slug}.html`, out_dir), create_html_report(impl)); 
 }
 
 await writeFile(new URL('./index.html', out_dir), await create_html_index());
@@ -40,7 +41,7 @@ function escape_name(name) {
 }
 
 function error_tds(error) {
-	switch (error.fail) {
+	switch (error.type) {
 		case 'unexpected error': 
 			return `
 				<td class="expect">${escape_name(escape_unicode(error.norm ?? error.name))}</td>
@@ -60,16 +61,16 @@ function error_tds(error) {
 	}
 }
 
-function create_html_report({name, fn, version, slug}) {
+function create_html_report({name, fn, version}) {
 	let errors = run_tests(fn);
 	let html;
 	if (errors.length == 0) {
 		html = `<div id="pass">0 Errors!</div>`
 	} else {
 		html = errors.map((x, i) => `
-			<tr class="${x.fail.replace(' ', '-')}">
+			<tr class="${x.type.replace(' ', '-')}">
 			<td class="index">${i+1}</td>
-			<td class="type">${x.fail}</td>
+			<td class="type">${x.type}</td>
 			<td class="name">${escape_name(x.name)}</td>
 			<td class="escaped">${escape_name(escape_unicode(x.name))}</td>
 			${error_tds(x)}

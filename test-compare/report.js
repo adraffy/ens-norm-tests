@@ -19,12 +19,12 @@ for (let j = 1; j < IMPLS.length; j++) {
 }
 */
 
-let j = IMPLS.findIndex(x => x.name === 'ens_normalize');
+let j = IMPLS.findIndex(x => x.name === 'ens_normalize' && x.primary);
 if (j == -1) throw new Error('wtf');
 for (let i = 0; i < IMPLS.length; i++) {
 	if (i == j) continue;
 	let [a, b] = [IMPLS[i], IMPLS[j]].sort((a, b) => a.slug.localeCompare(b.slug));
-	let out_file = new URL(`./${a.slug}_${a.version}_vs_${b.slug}_${b.version}.html`, out_dir);
+	let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
 	await writeFile(out_file, create_html_report(a, b)); 
 	console.log(i, j, a.name, b.name);
 }
@@ -55,6 +55,7 @@ async function create_html_index() {
 }
 
 function create_html_report(A, B) {
+	let same_lib = A.name === B.name;
 	let buckets = {};
 	for (let label of LABELS) {
 		let a_norm, a_error;
@@ -139,7 +140,7 @@ function create_html_report(A, B) {
 		<tbody>
 	`;
 	function format_total(td, n) {
-		return `<tr>${td}<td>${n}</td><td>${(100 * n / LABELS.length).toFixed(3)}%</td></tr>`;
+		return `<tr>${td}<td>${n}</td><td>${(100 * n / LABELS.length).toFixed(5)}%</td></tr>`;
 	}
 	let diff = Object.values(buckets).reduce((a, v) => a + v.length, 0);
 	html += format_total('<td style="background-color: #cfc; font-weight: bold">Same</td>', LABELS.length - diff);
@@ -149,17 +150,24 @@ function create_html_report(A, B) {
 	}
 	html += '</tbody></table>';
 
-	for (let [type, bucket] of Object.entries(buckets)) {
-		let temp = `
-			<a name="${type}"><h2>${format_type(type)} (${bucket.length})</h2></a>
+	for (let [type, bucket] of Object.entries(buckets)) {		
+		html += `<a name="${type}"><h2>${format_type(type)} (${bucket.length})</h2></a>`;
+		if (type === 'both-error') {
+			bucket = bucket.filter(x => x.a.message !== x.b.message);
+			if (bucket.length === 0) {
+				continue;				
+			}
+			html += `<h3>Only showing ${bucket.length} differences</h3>`;
+		}
+		let temp = `			
 			<table id="${type}">
 			<thead>
 			<tr>
 			<td class="index">#</td>
 			<td class="name">Name</td>
 			<td>Escaped</td>
-			<td>${A.name}</td>
-			<td>${B.name}</td>
+			<td>${A.name} (${A.version})</td>
+			<td>${B.name} (${B.version})</td>
 			</tr>
 			</thead>
 			<tbody>
