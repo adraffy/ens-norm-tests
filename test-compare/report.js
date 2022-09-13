@@ -154,10 +154,10 @@ function create_html_report(A, B) {
 		html += `<a name="${type}"><h2>${format_type(type)} (${bucket.length})</h2></a>`;
 		if (type === 'both-error') {
 			bucket = bucket.filter(x => x.a.message !== x.b.message);
+			html += `<h3>Showing ${bucket.length} differences</h3>`;
 			if (bucket.length === 0) {
 				continue;				
 			}
-			html += `<h3>Only showing ${bucket.length} differences</h3>`;
 		}
 		let temp = `			
 			<table id="${type}">
