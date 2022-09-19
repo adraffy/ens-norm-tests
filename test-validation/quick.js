@@ -1,6 +1,6 @@
 import {IMPLS} from '../impls.js';
-import {run_tests} from '@adraffy/ensip-norm';
+import {run_validation_tests} from '../utils.js';
 
 for (let {name, version, fn} of IMPLS) {
-    console.log(`${name} (${version})`, run_tests(fn).length);
+	console.log(`${name} (${version})`, run_validation_tests(fn).length);
 }

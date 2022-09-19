@@ -2,7 +2,7 @@
 
 import LABELS from '../eth-labels/db.js';
 import {ens_normalize_fragment} from '@adraffy/ens-normalize';
-import {explode_cp} from '@adraffy/ens-norm-uts46';
+import {explode_cp, SPEC} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
 const HYPHENS = [
@@ -16,6 +16,7 @@ const HYPHENS = [
 	0x2015,
 	0x207B,
 	0x208B,
+	0x2212,
 	0xFE31,
 	0xFE32,
 	0xFE58,
@@ -26,10 +27,10 @@ const HYPHENS = [
 	0x23BD,
 	0x23E4,
 	0x23AF,
-].map(cp => [cp, `${String.fromCodePoint(cp)} {${cp.toString(16).toUpperCase()}}`]);
-
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
+	// https://discuss.ens.domains/t/ens-name-normalization/8652/396
+	0x2027,
+	0x2043,
+].map(cp => [cp, SPEC.format(cp)]);
 
 let count = 0;
 let tally = Object.fromEntries(HYPHENS.map(x => [x[1], 0]));
@@ -57,4 +58,6 @@ for (let label of LABELS) {
 
 console.log({count, tally, after});
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./hyphen-like.json', out_dir), JSON.stringify({count, tally, after}, null, '\t'));

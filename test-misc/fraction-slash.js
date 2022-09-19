@@ -2,11 +2,7 @@
 
 import LABELS from '../eth-labels/db.js';
 import {ens_normalize} from '@adraffy/ens-normalize';
-import {explode_cp, parse_cp_range} from '@adraffy/ens-norm-uts46';
-import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
-
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
+import {mkdirSync, writeFileSync} from 'node:fs';
 
 let labels = [];
 for (let label of LABELS) {
@@ -19,6 +15,8 @@ for (let label of LABELS) {
 	}
 }
 
-console.log({labels});
+console.log(labels.length);
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./fraction-slash.json', out_dir), JSON.stringify(labels, null, '\t'));

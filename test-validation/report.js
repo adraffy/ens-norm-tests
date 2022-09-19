@@ -1,21 +1,17 @@
 import {IMPLS} from '../impls.js';
-import {escape_for_html, escape_unicode} from '../utils.js';
-import {run_tests} from '@adraffy/ensip-norm';
-import {mkdir, writeFile, readdir} from 'node:fs/promises';
+import {escape_for_html, escape_unicode, run_validation_tests} from '../utils.js';
+import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);
-
-await mkdir(out_dir, {recursive: true});
-
+mkdirSync(out_dir, {recursive: true});
 for (let impl of IMPLS) {
 	if (impl.prior) continue; // dont generate old reports
-	await writeFile(new URL(`./${impl.slug}.html`, out_dir), create_html_report(impl)); 
+	writeFileSync(new URL(`./${impl.slug}.html`, out_dir), create_html_report(impl)); 
 }
+writeFileSync(new URL('./index.html', out_dir), create_html_index());
 
-await writeFile(new URL('./index.html', out_dir), await create_html_index());
-
-async function create_html_index() {
-	let names = (await readdir(out_dir)).filter(x => x.includes('_') && x.endsWith('.html'));
+function create_html_index() {
+	let names = readdirSync(out_dir).filter(x => x.includes('_') && x.endsWith('.html'));
 	let html = names.map(name => {
 		return `<li><a href="./${name}">${name}</a></li>`;
 	}).join('');
@@ -62,7 +58,7 @@ function error_tds(error) {
 }
 
 function create_html_report({name, fn, version}) {
-	let errors = run_tests(fn);
+	let errors = run_validation_tests(fn);
 	let html;
 	if (errors.length == 0) {
 		html = `<div id="pass">0 Errors!</div>`

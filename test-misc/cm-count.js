@@ -1,19 +1,18 @@
 // count runs of combining marks
 
 import LABELS from '../eth-labels/db.js';
-import {explode_cp} from '@adraffy/ens-norm-uts46';
+import {SPEC, explode_cp} from '../utils.js';
+import {nfd} from '@adraffy/ens-normalize';
 import {mkdirSync, writeFileSync} from 'node:fs';
-import {CM} from '../unicode-json/cm.js';
-	
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
+
+const CM = new Set(SPEC.general_category('M').map(x => x.cp));
 
 let tally = {};
 let cases = [];
 let start = [];
 for (let label of LABELS) {
 	try {
-		let cps = explode_cp(label.normalize('NFD'));
+		let cps = nfd(explode_cp(label));
 		for (let i = 0; i < cps.length; ) {
 			if (CM.has(cps[i++])) {
 				let n = 1;
@@ -36,4 +35,6 @@ for (let label of LABELS) {
 
 console.log({tally, cases: cases.length, start: start.length});
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./cm-count.json', out_dir), JSON.stringify({tally, cases, start}, null, '\t'));

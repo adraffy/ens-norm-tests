@@ -5,9 +5,6 @@ import {ens_normalize} from '@adraffy/ens-normalize';
 import {escape_unicode} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
 
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
-
 let tally = {};
 for (let label of LABELS) {
 	try {
@@ -44,4 +41,6 @@ console.log({
 });
 
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./collisions.json', out_dir), JSON.stringify({trivial, pure_an, non_trivial}, null, '\t'));

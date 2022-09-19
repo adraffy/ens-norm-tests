@@ -5,11 +5,11 @@ import {IMPLS} from '../impls.js';
 
 for (let impl of IMPLS) {
 	let errors = test(impl.fn);
-	console.log(errors.length == 0 ? 'PASS' : 'FAIL', impl.name);
+	console.log(`${errors.length == 0 ? 'PASS' : 'FAIL'} ${impl.name} (${impl.version})`);
 	if (impl.primary && errors.length) {
 		console.log(errors);
 		console.log(impl);
-		process.exit(1);
+		throw new Error('wrong');
 	}
 }
 console.log('OK');

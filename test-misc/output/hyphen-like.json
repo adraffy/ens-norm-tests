@@ -1,26 +1,29 @@
 {
-	"count": 51182,
+	"count": 52896,
 	"tally": {
-		"- {2D}": 50957,
-		"‐ {2010}": 10,
-		"‑ {2011}": 0,
-		"‒ {2012}": 7,
-		"– {2013}": 137,
-		"— {2014}": 77,
-		"― {2015}": 2,
-		"⁻ {207B}": 0,
-		"₋ {208B}": 0,
-		"︱ {FE31}": 0,
-		"︲ {FE32}": 0,
-		"﹘ {FE58}": 0,
-		"⎺ {23BA}": 0,
-		"⎻ {23BB}": 1,
-		"⎼ {23BC}": 0,
-		"⎽ {23BD}": 3,
-		"⏤ {23E4}": 1,
-		"⎯ {23AF}": 1
+		"2D (-) HYPHEN-MINUS": 52551,
+		"2010 (‐) HYPHEN": 10,
+		"2011 (‑) NON-BREAKING HYPHEN": 0,
+		"2012 (‒) FIGURE DASH": 7,
+		"2013 (–) EN DASH": 143,
+		"2014 (—) EM DASH": 78,
+		"2015 (―) HORIZONTAL BAR": 2,
+		"207B (⁻) SUPERSCRIPT MINUS": 0,
+		"208B (₋) SUBSCRIPT MINUS": 0,
+		"2212 (−) MINUS SIGN": 109,
+		"FE31 (︱) PRESENTATION FORM FOR VERTICAL EM DASH": 0,
+		"FE32 (︲) PRESENTATION FORM FOR VERTICAL EN DASH": 0,
+		"FE58 (﹘) SMALL EM DASH": 0,
+		"23BA (⎺) HORIZONTAL SCAN LINE-1": 0,
+		"23BB (⎻) HORIZONTAL SCAN LINE-3": 1,
+		"23BC (⎼) HORIZONTAL SCAN LINE-7": 0,
+		"23BD (⎽) HORIZONTAL SCAN LINE-9": 3,
+		"23E4 (⏤) STRAIGHTNESS": 1,
+		"23AF (⎯) HORIZONTAL LINE EXTENSION": 1,
+		"2027 (‧) HYPHENATION POINT": 0,
+		"2043 (⁃) HYPHEN BULLET": 5
 	},
 	"after": {
-		"- {2D}": 51275
+		"2D (-) HYPHEN-MINUS": 52876
 	}
 }

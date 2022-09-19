@@ -1,0 +1,3 @@
+[submodule "ens-normalize.js"]
+	path = ens-normalize.js
+	url = https://github.com/adraffy/ens-normalize.js

@@ -25,16 +25,6 @@ IMPLS.push({
 
 // ********************************************************************************
 
-import {ens_normalize as reference} from '@adraffy/ens-norm-ref-impl';
-IMPLS.push({
-	name: 'Reference', 
-	fn: reference, 
-	version: read_package_version(`@adraffy/ens-norm-ref-impl`),
-	primary: true
-});
-
-// ********************************************************************************
-
 import {ens_normalize} from '@adraffy/ens-normalize';
 IMPLS.push({
 	name: 'ens_normalize', 
@@ -43,6 +33,14 @@ IMPLS.push({
 	primary: true
 });
 
+/*
+import {ens_normalize} from './ens-normalize.js/src/lib.js';
+IMPLS.push({
+	name: 'ens_normalize', 
+	fn: ens_normalize, 
+	version: 'HEAD'
+});
+*/
 
 import {ens_normalize as prior} from 'prior_ens_norm';
 IMPLS.push({
@@ -74,8 +72,8 @@ IMPLS.push({
 export const ens0 = create_uts46({
 	version: 2003,
 	valid_deviations: true,
-	check_hyphens: true,
-	punycode: true,
+	check_hyphens: false, // 20220918: i had these as true
+	punycode: false,      // they probably should be false
 });
 IMPLS.push({
 	name: 'ENS0',

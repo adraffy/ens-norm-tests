@@ -1,0 +1,4261 @@
+
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>ens_normalize (1.6.3) vs ens_normalize (1.6.4) [1484938 labels] @ 2022-09-19T05:21:53.105Z</title>
+		<style>
+			body { margin: 1rem; }
+			table { border-collapse: collapse; width: 100%; }
+			td { border: 1px solid #aaa; line-break: anywhere; }
+			thead td { background: #ccc; font-weight: bold; }
+			tbody tr:nth-child(odd) { background: #eee; }
+			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			tbody td.error { background: #fcc; }
+			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			#overall td { text-align: right; }
+		</style>
+		</head>
+		<body>
+		<h1>ens_normalize (1.6.3) vs ens_normalize (1.6.4) [1484938 labels] @ 2022-09-19T05:21:53.105Z</h1>
+	
+		<table id="overall">
+		<thead>
+		<tr>
+		<td>Type</td>
+		<td>#</td>
+		<td>%</td>
+		</tr>
+		</thead>
+		<tbody>
+	<tr><td style="background-color: #cfc; font-weight: bold">Same</td><td>1481548</td><td>99.77171%</td></tr><tr><td style="background-color: #fcc; font-weight: bold">Different</td><td>3390</td><td>0.22829%</td></tr><tr><td><a href="#b-error">ens_normalize_1.6.4-error</a></td><td>531</td><td>0.03576%</td></tr><tr><td><a href="#both-error">both-error</a></td><td>2775</td><td>0.18688%</td></tr><tr><td><a href="#a-error">ens_normalize_1.6.3-error</a></td><td>80</td><td>0.00539%</td></tr><tr><td><a href="#diff-norm">diff-norm</a></td><td>4</td><td>0.00027%</td></tr></tbody></table><a name="b-error"><h2>ens_normalize_1.6.4-error (531)</h2></a>			
+			<table id="b-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.3)</td>
+			<td>ens_normalize (1.6.4)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div></div></td>
+			<td><div></div></td>
+			<td><div></div></td>
+			<td class="error">Empty label</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>️️️️️</div></td>
+			<td><div>{FE0F}{FE0F}{FE0F}{FE0F}{FE0F}</div></td>
+			<td><div></div></td>
+			<td class="error">Empty label</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>——†——</div></td>
+			<td><div>{2014}{2014}{2020}{2014}{2014}</div></td>
+			<td><div>--{2020}--</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>‽‽‽</div></td>
+			<td><div>{203D}{203D}{203D}</div></td>
+			<td><div>{203D}{203D}{203D}</div></td>
+			<td class="error">Disallowed codepoint: 0x203D</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>‽‽‽‽‽</div></td>
+			<td><div>{203D}{203D}{203D}{203D}{203D}</div></td>
+			<td><div>{203D}{203D}{203D}{203D}{203D}</div></td>
+			<td class="error">Disallowed codepoint: 0x203D</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>⁕⁕⁕⁕⁕</div></td>
+			<td><div>{2055}{2055}{2055}{2055}{2055}</div></td>
+			<td><div>{2055}{2055}{2055}{2055}{2055}</div></td>
+			<td class="error">Disallowed codepoint: 0x2055</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>⁕bloom</div></td>
+			<td><div>{2055}bloom</div></td>
+			<td><div>{2055}bloom</div></td>
+			<td class="error">Disallowed codepoint: 0x2055</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>⁞⁞⁞⁞⁞</div></td>
+			<td><div>{205E}{205E}{205E}{205E}{205E}</div></td>
+			<td><div>{205E}{205E}{205E}{205E}{205E}</div></td>
+			<td class="error">Disallowed codepoint: 0x205E</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>‘-‘</div></td>
+			<td><div>{2018}-{2018}</div></td>
+			<td><div>{2018}-{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>‘‘‘‘</div></td>
+			<td><div>{2018}{2018}{2018}{2018}</div></td>
+			<td><div>{2018}{2018}{2018}{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>‘‘‘‘‘</div></td>
+			<td><div>{2018}{2018}{2018}{2018}{2018}</div></td>
+			<td><div>{2018}{2018}{2018}{2018}{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>‘’’</div></td>
+			<td><div>{2018}{2019}{2019}</div></td>
+			<td><div>{2018}{2019}{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>‘00</div></td>
+			<td><div>{2018}00</div></td>
+			<td><div>{2018}00</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>‘000‘</div></td>
+			<td><div>{2018}000{2018}</div></td>
+			<td><div>{2018}000{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>‘0000</div></td>
+			<td><div>{2018}0000</div></td>
+			<td><div>{2018}0000</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>‘01</div></td>
+			<td><div>{2018}01</div></td>
+			<td><div>{2018}01</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>‘02</div></td>
+			<td><div>{2018}02</div></td>
+			<td><div>{2018}02</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>‘1‘</div></td>
+			<td><div>{2018}1{2018}</div></td>
+			<td><div>{2018}1{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>‘1’</div></td>
+			<td><div>{2018}1{2019}</div></td>
+			<td><div>{2018}1{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>‘100</div></td>
+			<td><div>{2018}100</div></td>
+			<td><div>{2018}100</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>‘111‘</div></td>
+			<td><div>{2018}111{2018}</div></td>
+			<td><div>{2018}111{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>‘1949’</div></td>
+			<td><div>{2018}1949{2019}</div></td>
+			<td><div>{2018}1949{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>‘305</div></td>
+			<td><div>{2018}305</div></td>
+			<td><div>{2018}305</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>‘333’</div></td>
+			<td><div>{2018}333{2019}</div></td>
+			<td><div>{2018}333{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>‘3333</div></td>
+			<td><div>{2018}3333</div></td>
+			<td><div>{2018}3333</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>‘420‘</div></td>
+			<td><div>{2018}420{2018}</div></td>
+			<td><div>{2018}420{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>‘420’</div></td>
+			<td><div>{2018}420{2019}</div></td>
+			<td><div>{2018}420{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>‘4444</div></td>
+			<td><div>{2018}4444</div></td>
+			<td><div>{2018}4444</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>‘555’</div></td>
+			<td><div>{2018}555{2019}</div></td>
+			<td><div>{2018}555{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>‘6‘9‘</div></td>
+			<td><div>{2018}6{2018}9{2018}</div></td>
+			<td><div>{2018}6{2018}9{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>‘666‘</div></td>
+			<td><div>{2018}666{2018}</div></td>
+			<td><div>{2018}666{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>‘666’</div></td>
+			<td><div>{2018}666{2019}</div></td>
+			<td><div>{2018}666{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>‘69</div></td>
+			<td><div>{2018}69</div></td>
+			<td><div>{2018}69</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>‘69420’</div></td>
+			<td><div>{2018}69420{2019}</div></td>
+			<td><div>{2018}69420{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>‘7777</div></td>
+			<td><div>{2018}7777</div></td>
+			<td><div>{2018}7777</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>‘888</div></td>
+			<td><div>{2018}888</div></td>
+			<td><div>{2018}888</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>‘888‘</div></td>
+			<td><div>{2018}888{2018}</div></td>
+			<td><div>{2018}888{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>‘888’</div></td>
+			<td><div>{2018}888{2019}</div></td>
+			<td><div>{2018}888{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>‘911‘</div></td>
+			<td><div>{2018}911{2018}</div></td>
+			<td><div>{2018}911{2018}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>‘99</div></td>
+			<td><div>{2018}99</div></td>
+			<td><div>{2018}99</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>‘alex’</div></td>
+			<td><div>{2018}alex{2019}</div></td>
+			<td><div>{2018}alex{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>‘bnb’</div></td>
+			<td><div>{2018}bnb{2019}</div></td>
+			<td><div>{2018}bnb{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>‘btc’</div></td>
+			<td><div>{2018}btc{2019}</div></td>
+			<td><div>{2018}btc{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>‘com’</div></td>
+			<td><div>{2018}com{2019}</div></td>
+			<td><div>{2018}com{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>‘darkmarket’</div></td>
+			<td><div>{2018}darkmarket{2019}</div></td>
+			<td><div>{2018}darkmarket{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>‘ens’</div></td>
+			<td><div>{2018}ens{2019}</div></td>
+			<td><div>{2018}ens{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>‘eth’</div></td>
+			<td><div>{2018}eth{2019}</div></td>
+			<td><div>{2018}eth{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>‘gm</div></td>
+			<td><div>{2018}gm</div></td>
+			<td><div>{2018}gm</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>‘gold’</div></td>
+			<td><div>{2018}gold{2019}</div></td>
+			<td><div>{2018}gold{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>‘google’</div></td>
+			<td><div>{2018}google{2019}</div></td>
+			<td><div>{2018}google{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>‘nft’</div></td>
+			<td><div>{2018}nft{2019}</div></td>
+			<td><div>{2018}nft{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>‘panda’</div></td>
+			<td><div>{2018}panda{2019}</div></td>
+			<td><div>{2018}panda{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>‘sex’</div></td>
+			<td><div>{2018}sex{2019}</div></td>
+			<td><div>{2018}sex{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>‘trust’</div></td>
+			<td><div>{2018}trust{2019}</div></td>
+			<td><div>{2018}trust{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>‘wagmi’</div></td>
+			<td><div>{2018}wagmi{2019}</div></td>
+			<td><div>{2018}wagmi{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>‘wallet’</div></td>
+			<td><div>{2018}wallet{2019}</div></td>
+			<td><div>{2018}wallet{2019}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>’’’’’</div></td>
+			<td><div>{2019}{2019}{2019}{2019}{2019}</div></td>
+			<td><div>{2019}{2019}{2019}{2019}{2019}</div></td>
+			<td class="error">Invalid label "’’’’’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>’’1’’</div></td>
+			<td><div>{2019}{2019}1{2019}{2019}</div></td>
+			<td><div>{2019}{2019}1{2019}{2019}</div></td>
+			<td class="error">Invalid label "’’1’’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>’’420’’</div></td>
+			<td><div>{2019}{2019}420{2019}{2019}</div></td>
+			<td><div>{2019}{2019}420{2019}{2019}</div></td>
+			<td class="error">Invalid label "’’420’’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>’’69’’</div></td>
+			<td><div>{2019}{2019}69{2019}{2019}</div></td>
+			<td><div>{2019}{2019}69{2019}{2019}</div></td>
+			<td class="error">Invalid label "’’69’’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>’7’</div></td>
+			<td><div>{2019}7{2019}</div></td>
+			<td><div>{2019}7{2019}</div></td>
+			<td class="error">Invalid label "’7’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>’777’</div></td>
+			<td><div>{2019}777{2019}</div></td>
+			<td><div>{2019}777{2019}</div></td>
+			<td class="error">Invalid label "’777’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>’888’</div></td>
+			<td><div>{2019}888{2019}</div></td>
+			<td><div>{2019}888{2019}</div></td>
+			<td class="error">Invalid label "’888’": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>’bitcoin</div></td>
+			<td><div>{2019}bitcoin</div></td>
+			<td><div>{2019}bitcoin</div></td>
+			<td class="error">Invalid label "’bitcoin": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>’sony</div></td>
+			<td><div>{2019}sony</div></td>
+			<td><div>{2019}sony</div></td>
+			<td class="error">Invalid label "’sony": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>‚‚‚</div></td>
+			<td><div>{201A}{201A}{201A}</div></td>
+			<td><div>{201A}{201A}{201A}</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>‚0000</div></td>
+			<td><div>{201A}0000</div></td>
+			<td><div>{201A}0000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>‛0000</div></td>
+			<td><div>{201B}0000</div></td>
+			<td><div>{201B}0000</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>‛0001</div></td>
+			<td><div>{201B}0001</div></td>
+			<td><div>{201B}0001</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>‛0003</div></td>
+			<td><div>{201B}0003</div></td>
+			<td><div>{201B}0003</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>‛0005</div></td>
+			<td><div>{201B}0005</div></td>
+			<td><div>{201B}0005</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>‛1000</div></td>
+			<td><div>{201B}1000</div></td>
+			<td><div>{201B}1000</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>‛2000</div></td>
+			<td><div>{201B}2000</div></td>
+			<td><div>{201B}2000</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>‛6666</div></td>
+			<td><div>{201B}6666</div></td>
+			<td><div>{201B}6666</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>‛777</div></td>
+			<td><div>{201B}777</div></td>
+			<td><div>{201B}777</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>‛777‛</div></td>
+			<td><div>{201B}777{201B}</div></td>
+			<td><div>{201B}777{201B}</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>‛7777</div></td>
+			<td><div>{201B}7777</div></td>
+			<td><div>{201B}7777</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>‛8888</div></td>
+			<td><div>{201B}8888</div></td>
+			<td><div>{201B}8888</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>‛9999</div></td>
+			<td><div>{201B}9999</div></td>
+			<td><div>{201B}9999</div></td>
+			<td class="error">Disallowed codepoint: 0x201B</td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>‹———›</div></td>
+			<td><div>{2039}{2014}{2014}{2014}{203A}</div></td>
+			<td><div>{2039}---{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">81</td>
+			<td class="name"><div>‹•—•›</div></td>
+			<td><div>{2039}{2022}{2014}{2022}{203A}</div></td>
+			<td><div>{2039}{2022}-{2022}{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">82</td>
+			<td class="name"><div>‹°—°›</div></td>
+			<td><div>{2039}{B0}{2014}{B0}{203A}</div></td>
+			<td><div>{2039}{B0}-{B0}{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">83</td>
+			<td class="name"><div>‹°¿°›</div></td>
+			<td><div>{2039}{B0}{BF}{B0}{203A}</div></td>
+			<td><div>{2039}{B0}{BF}{B0}{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">84</td>
+			<td class="name"><div>‹°o°›</div></td>
+			<td><div>{2039}{B0}o{B0}{203A}</div></td>
+			<td><div>{2039}{B0}o{B0}{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">85</td>
+			<td class="name"><div>‹♞⚂⚑›</div></td>
+			<td><div>{2039}{265E}{2682}{2691}{203A}</div></td>
+			<td><div>{2039}{265E}{2682}{2691}{203A}</div></td>
+			<td class="error">Disallowed codepoint: 0x2039</td>
+		</tr><tr>
+			<td class="index">86</td>
+			<td class="name"><div>“-“</div></td>
+			<td><div>{201C}-{201C}</div></td>
+			<td><div>{201C}-{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">87</td>
+			<td class="name"><div>“““““</div></td>
+			<td><div>{201C}{201C}{201C}{201C}{201C}</div></td>
+			<td><div>{201C}{201C}{201C}{201C}{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">88</td>
+			<td class="name"><div>“•••”</div></td>
+			<td><div>{201C}{2022}{2022}{2022}{201D}</div></td>
+			<td><div>{201C}{2022}{2022}{2022}{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">89</td>
+			<td class="name"><div>“🍆🍆🍆”</div></td>
+			<td><div>{201C}{1F346}{1F346}{1F346}{201D}</div></td>
+			<td><div>{201C}{1F346}{1F346}{1F346}{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">90</td>
+			<td class="name"><div>“👀👀👀”</div></td>
+			<td><div>{201C}{1F440}{1F440}{1F440}{201D}</div></td>
+			<td><div>{201C}{1F440}{1F440}{1F440}{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">91</td>
+			<td class="name"><div>“0“</div></td>
+			<td><div>{201C}0{201C}</div></td>
+			<td><div>{201C}0{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">92</td>
+			<td class="name"><div>“0”</div></td>
+			<td><div>{201C}0{201D}</div></td>
+			<td><div>{201C}0{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">93</td>
+			<td class="name"><div>“0”•”0”</div></td>
+			<td><div>{201C}0{201D}{2022}{201D}0{201D}</div></td>
+			<td><div>{201C}0{201D}{2022}{201D}0{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">94</td>
+			<td class="name"><div>“00”</div></td>
+			<td><div>{201C}00{201D}</div></td>
+			<td><div>{201C}00{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">95</td>
+			<td class="name"><div>“000</div></td>
+			<td><div>{201C}000</div></td>
+			<td><div>{201C}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">96</td>
+			<td class="name"><div>“000“</div></td>
+			<td><div>{201C}000{201C}</div></td>
+			<td><div>{201C}000{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">97</td>
+			<td class="name"><div>“000”</div></td>
+			<td><div>{201C}000{201D}</div></td>
+			<td><div>{201C}000{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">98</td>
+			<td class="name"><div>“0000”</div></td>
+			<td><div>{201C}0000{201D}</div></td>
+			<td><div>{201C}0000{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">99</td>
+			<td class="name"><div>“001”</div></td>
+			<td><div>{201C}001{201D}</div></td>
+			<td><div>{201C}001{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">100</td>
+			<td class="name"><div>“002”</div></td>
+			<td><div>{201C}002{201D}</div></td>
+			<td><div>{201C}002{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">101</td>
+			<td class="name"><div>“003”</div></td>
+			<td><div>{201C}003{201D}</div></td>
+			<td><div>{201C}003{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">102</td>
+			<td class="name"><div>“004”</div></td>
+			<td><div>{201C}004{201D}</div></td>
+			<td><div>{201C}004{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">103</td>
+			<td class="name"><div>“005”</div></td>
+			<td><div>{201C}005{201D}</div></td>
+			<td><div>{201C}005{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">104</td>
+			<td class="name"><div>“006”</div></td>
+			<td><div>{201C}006{201D}</div></td>
+			<td><div>{201C}006{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">105</td>
+			<td class="name"><div>“007”</div></td>
+			<td><div>{201C}007{201D}</div></td>
+			<td><div>{201C}007{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">106</td>
+			<td class="name"><div>“008”</div></td>
+			<td><div>{201C}008{201D}</div></td>
+			<td><div>{201C}008{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">107</td>
+			<td class="name"><div>“009”</div></td>
+			<td><div>{201C}009{201D}</div></td>
+			<td><div>{201C}009{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">108</td>
+			<td class="name"><div>“01</div></td>
+			<td><div>{201C}01</div></td>
+			<td><div>{201C}01</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">109</td>
+			<td class="name"><div>“01”</div></td>
+			<td><div>{201C}01{201D}</div></td>
+			<td><div>{201C}01{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">110</td>
+			<td class="name"><div>“010”</div></td>
+			<td><div>{201C}010{201D}</div></td>
+			<td><div>{201C}010{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">111</td>
+			<td class="name"><div>“02”</div></td>
+			<td><div>{201C}02{201D}</div></td>
+			<td><div>{201C}02{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">112</td>
+			<td class="name"><div>“020”</div></td>
+			<td><div>{201C}020{201D}</div></td>
+			<td><div>{201C}020{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">113</td>
+			<td class="name"><div>“03”</div></td>
+			<td><div>{201C}03{201D}</div></td>
+			<td><div>{201C}03{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">114</td>
+			<td class="name"><div>“069”</div></td>
+			<td><div>{201C}069{201D}</div></td>
+			<td><div>{201C}069{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">115</td>
+			<td class="name"><div>“070”</div></td>
+			<td><div>{201C}070{201D}</div></td>
+			<td><div>{201C}070{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">116</td>
+			<td class="name"><div>“09”</div></td>
+			<td><div>{201C}09{201D}</div></td>
+			<td><div>{201C}09{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">117</td>
+			<td class="name"><div>“1“</div></td>
+			<td><div>{201C}1{201C}</div></td>
+			<td><div>{201C}1{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">118</td>
+			<td class="name"><div>“1”</div></td>
+			<td><div>{201C}1{201D}</div></td>
+			<td><div>{201C}1{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">119</td>
+			<td class="name"><div>“100”</div></td>
+			<td><div>{201C}100{201D}</div></td>
+			<td><div>{201C}100{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">120</td>
+			<td class="name"><div>“1001”</div></td>
+			<td><div>{201C}1001{201D}</div></td>
+			<td><div>{201C}1001{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">121</td>
+			<td class="name"><div>“101”</div></td>
+			<td><div>{201C}101{201D}</div></td>
+			<td><div>{201C}101{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">122</td>
+			<td class="name"><div>“11</div></td>
+			<td><div>{201C}11</div></td>
+			<td><div>{201C}11</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">123</td>
+			<td class="name"><div>“11”</div></td>
+			<td><div>{201C}11{201D}</div></td>
+			<td><div>{201C}11{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">124</td>
+			<td class="name"><div>“110”</div></td>
+			<td><div>{201C}110{201D}</div></td>
+			<td><div>{201C}110{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">125</td>
+			<td class="name"><div>“111”</div></td>
+			<td><div>{201C}111{201D}</div></td>
+			<td><div>{201C}111{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">126</td>
+			<td class="name"><div>“112”</div></td>
+			<td><div>{201C}112{201D}</div></td>
+			<td><div>{201C}112{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">127</td>
+			<td class="name"><div>“116”</div></td>
+			<td><div>{201C}116{201D}</div></td>
+			<td><div>{201C}116{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">128</td>
+			<td class="name"><div>“117”</div></td>
+			<td><div>{201C}117{201D}</div></td>
+			<td><div>{201C}117{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">129</td>
+			<td class="name"><div>“118”</div></td>
+			<td><div>{201C}118{201D}</div></td>
+			<td><div>{201C}118{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">130</td>
+			<td class="name"><div>“12”</div></td>
+			<td><div>{201C}12{201D}</div></td>
+			<td><div>{201C}12{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">131</td>
+			<td class="name"><div>“121”</div></td>
+			<td><div>{201C}121{201D}</div></td>
+			<td><div>{201C}121{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">132</td>
+			<td class="name"><div>“123”</div></td>
+			<td><div>{201C}123{201D}</div></td>
+			<td><div>{201C}123{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">133</td>
+			<td class="name"><div>“1234”</div></td>
+			<td><div>{201C}1234{201D}</div></td>
+			<td><div>{201C}1234{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">134</td>
+			<td class="name"><div>“128”</div></td>
+			<td><div>{201C}128{201D}</div></td>
+			<td><div>{201C}128{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">135</td>
+			<td class="name"><div>“13”</div></td>
+			<td><div>{201C}13{201D}</div></td>
+			<td><div>{201C}13{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">136</td>
+			<td class="name"><div>“143”</div></td>
+			<td><div>{201C}143{201D}</div></td>
+			<td><div>{201C}143{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">137</td>
+			<td class="name"><div>“15”</div></td>
+			<td><div>{201C}15{201D}</div></td>
+			<td><div>{201C}15{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">138</td>
+			<td class="name"><div>“166”</div></td>
+			<td><div>{201C}166{201D}</div></td>
+			<td><div>{201C}166{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">139</td>
+			<td class="name"><div>“168”</div></td>
+			<td><div>{201C}168{201D}</div></td>
+			<td><div>{201C}168{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">140</td>
+			<td class="name"><div>“171”</div></td>
+			<td><div>{201C}171{201D}</div></td>
+			<td><div>{201C}171{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">141</td>
+			<td class="name"><div>“18”</div></td>
+			<td><div>{201C}18{201D}</div></td>
+			<td><div>{201C}18{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">142</td>
+			<td class="name"><div>“188”</div></td>
+			<td><div>{201C}188{201D}</div></td>
+			<td><div>{201C}188{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">143</td>
+			<td class="name"><div>“1949”</div></td>
+			<td><div>{201C}1949{201D}</div></td>
+			<td><div>{201C}1949{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">144</td>
+			<td class="name"><div>“2”</div></td>
+			<td><div>{201C}2{201D}</div></td>
+			<td><div>{201C}2{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">145</td>
+			<td class="name"><div>“20”</div></td>
+			<td><div>{201C}20{201D}</div></td>
+			<td><div>{201C}20{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">146</td>
+			<td class="name"><div>“200”</div></td>
+			<td><div>{201C}200{201D}</div></td>
+			<td><div>{201C}200{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">147</td>
+			<td class="name"><div>“201”</div></td>
+			<td><div>{201C}201{201D}</div></td>
+			<td><div>{201C}201{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">148</td>
+			<td class="name"><div>“202”</div></td>
+			<td><div>{201C}202{201D}</div></td>
+			<td><div>{201C}202{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">149</td>
+			<td class="name"><div>“21”</div></td>
+			<td><div>{201C}21{201D}</div></td>
+			<td><div>{201C}21{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">150</td>
+			<td class="name"><div>“212”</div></td>
+			<td><div>{201C}212{201D}</div></td>
+			<td><div>{201C}212{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">151</td>
+			<td class="name"><div>“215”</div></td>
+			<td><div>{201C}215{201D}</div></td>
+			<td><div>{201C}215{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">152</td>
+			<td class="name"><div>“22”</div></td>
+			<td><div>{201C}22{201D}</div></td>
+			<td><div>{201C}22{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">153</td>
+			<td class="name"><div>“222”</div></td>
+			<td><div>{201C}222{201D}</div></td>
+			<td><div>{201C}222{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">154</td>
+			<td class="name"><div>“2222”</div></td>
+			<td><div>{201C}2222{201D}</div></td>
+			<td><div>{201C}2222{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">155</td>
+			<td class="name"><div>“23”</div></td>
+			<td><div>{201C}23{201D}</div></td>
+			<td><div>{201C}23{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">156</td>
+			<td class="name"><div>“24”</div></td>
+			<td><div>{201C}24{201D}</div></td>
+			<td><div>{201C}24{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">157</td>
+			<td class="name"><div>“247”</div></td>
+			<td><div>{201C}247{201D}</div></td>
+			<td><div>{201C}247{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">158</td>
+			<td class="name"><div>“260”</div></td>
+			<td><div>{201C}260{201D}</div></td>
+			<td><div>{201C}260{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">159</td>
+			<td class="name"><div>“27”</div></td>
+			<td><div>{201C}27{201D}</div></td>
+			<td><div>{201C}27{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">160</td>
+			<td class="name"><div>“3”</div></td>
+			<td><div>{201C}3{201D}</div></td>
+			<td><div>{201C}3{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">161</td>
+			<td class="name"><div>“300”</div></td>
+			<td><div>{201C}300{201D}</div></td>
+			<td><div>{201C}300{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">162</td>
+			<td class="name"><div>“303”</div></td>
+			<td><div>{201C}303{201D}</div></td>
+			<td><div>{201C}303{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">163</td>
+			<td class="name"><div>“305”</div></td>
+			<td><div>{201C}305{201D}</div></td>
+			<td><div>{201C}305{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">164</td>
+			<td class="name"><div>“310”</div></td>
+			<td><div>{201C}310{201D}</div></td>
+			<td><div>{201C}310{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">165</td>
+			<td class="name"><div>“312”</div></td>
+			<td><div>{201C}312{201D}</div></td>
+			<td><div>{201C}312{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">166</td>
+			<td class="name"><div>“313”</div></td>
+			<td><div>{201C}313{201D}</div></td>
+			<td><div>{201C}313{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">167</td>
+			<td class="name"><div>“321”</div></td>
+			<td><div>{201C}321{201D}</div></td>
+			<td><div>{201C}321{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">168</td>
+			<td class="name"><div>“33”</div></td>
+			<td><div>{201C}33{201D}</div></td>
+			<td><div>{201C}33{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">169</td>
+			<td class="name"><div>“333”</div></td>
+			<td><div>{201C}333{201D}</div></td>
+			<td><div>{201C}333{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">170</td>
+			<td class="name"><div>“3333”</div></td>
+			<td><div>{201C}3333{201D}</div></td>
+			<td><div>{201C}3333{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">171</td>
+			<td class="name"><div>“347”</div></td>
+			<td><div>{201C}347{201D}</div></td>
+			<td><div>{201C}347{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">172</td>
+			<td class="name"><div>“360”</div></td>
+			<td><div>{201C}360{201D}</div></td>
+			<td><div>{201C}360{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">173</td>
+			<td class="name"><div>“361”</div></td>
+			<td><div>{201C}361{201D}</div></td>
+			<td><div>{201C}361{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">174</td>
+			<td class="name"><div>“365”</div></td>
+			<td><div>{201C}365{201D}</div></td>
+			<td><div>{201C}365{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">175</td>
+			<td class="name"><div>“369”</div></td>
+			<td><div>{201C}369{201D}</div></td>
+			<td><div>{201C}369{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">176</td>
+			<td class="name"><div>“386”</div></td>
+			<td><div>{201C}386{201D}</div></td>
+			<td><div>{201C}386{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">177</td>
+			<td class="name"><div>“4”</div></td>
+			<td><div>{201C}4{201D}</div></td>
+			<td><div>{201C}4{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">178</td>
+			<td class="name"><div>“400”</div></td>
+			<td><div>{201C}400{201D}</div></td>
+			<td><div>{201C}400{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">179</td>
+			<td class="name"><div>“404”</div></td>
+			<td><div>{201C}404{201D}</div></td>
+			<td><div>{201C}404{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">180</td>
+			<td class="name"><div>“415”</div></td>
+			<td><div>{201C}415{201D}</div></td>
+			<td><div>{201C}415{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">181</td>
+			<td class="name"><div>“416”</div></td>
+			<td><div>{201C}416{201D}</div></td>
+			<td><div>{201C}416{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">182</td>
+			<td class="name"><div>“42”</div></td>
+			<td><div>{201C}42{201D}</div></td>
+			<td><div>{201C}42{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">183</td>
+			<td class="name"><div>“420“</div></td>
+			<td><div>{201C}420{201C}</div></td>
+			<td><div>{201C}420{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">184</td>
+			<td class="name"><div>“420”</div></td>
+			<td><div>{201C}420{201D}</div></td>
+			<td><div>{201C}420{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">185</td>
+			<td class="name"><div>“42069”</div></td>
+			<td><div>{201C}42069{201D}</div></td>
+			<td><div>{201C}42069{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">186</td>
+			<td class="name"><div>“444”</div></td>
+			<td><div>{201C}444{201D}</div></td>
+			<td><div>{201C}444{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">187</td>
+			<td class="name"><div>“4444”</div></td>
+			<td><div>{201C}4444{201D}</div></td>
+			<td><div>{201C}4444{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">188</td>
+			<td class="name"><div>“45”</div></td>
+			<td><div>{201C}45{201D}</div></td>
+			<td><div>{201C}45{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">189</td>
+			<td class="name"><div>“47”</div></td>
+			<td><div>{201C}47{201D}</div></td>
+			<td><div>{201C}47{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">190</td>
+			<td class="name"><div>“5”</div></td>
+			<td><div>{201C}5{201D}</div></td>
+			<td><div>{201C}5{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">191</td>
+			<td class="name"><div>“50”</div></td>
+			<td><div>{201C}50{201D}</div></td>
+			<td><div>{201C}50{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">192</td>
+			<td class="name"><div>“500”</div></td>
+			<td><div>{201C}500{201D}</div></td>
+			<td><div>{201C}500{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">193</td>
+			<td class="name"><div>“505”</div></td>
+			<td><div>{201C}505{201D}</div></td>
+			<td><div>{201C}505{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">194</td>
+			<td class="name"><div>“510”</div></td>
+			<td><div>{201C}510{201D}</div></td>
+			<td><div>{201C}510{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">195</td>
+			<td class="name"><div>“516”</div></td>
+			<td><div>{201C}516{201D}</div></td>
+			<td><div>{201C}516{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">196</td>
+			<td class="name"><div>“518”</div></td>
+			<td><div>{201C}518{201D}</div></td>
+			<td><div>{201C}518{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">197</td>
+			<td class="name"><div>“520”</div></td>
+			<td><div>{201C}520{201D}</div></td>
+			<td><div>{201C}520{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">198</td>
+			<td class="name"><div>“531”</div></td>
+			<td><div>{201C}531{201D}</div></td>
+			<td><div>{201C}531{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">199</td>
+			<td class="name"><div>“555”</div></td>
+			<td><div>{201C}555{201D}</div></td>
+			<td><div>{201C}555{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">200</td>
+			<td class="name"><div>“5555”</div></td>
+			<td><div>{201C}5555{201D}</div></td>
+			<td><div>{201C}5555{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">201</td>
+			<td class="name"><div>“561”</div></td>
+			<td><div>{201C}561{201D}</div></td>
+			<td><div>{201C}561{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">202</td>
+			<td class="name"><div>“588”</div></td>
+			<td><div>{201C}588{201D}</div></td>
+			<td><div>{201C}588{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">203</td>
+			<td class="name"><div>“6“</div></td>
+			<td><div>{201C}6{201C}</div></td>
+			<td><div>{201C}6{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">204</td>
+			<td class="name"><div>“6”</div></td>
+			<td><div>{201C}6{201D}</div></td>
+			<td><div>{201C}6{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">205</td>
+			<td class="name"><div>“604”</div></td>
+			<td><div>{201C}604{201D}</div></td>
+			<td><div>{201C}604{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">206</td>
+			<td class="name"><div>“612”</div></td>
+			<td><div>{201C}612{201D}</div></td>
+			<td><div>{201C}612{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">207</td>
+			<td class="name"><div>“618”</div></td>
+			<td><div>{201C}618{201D}</div></td>
+			<td><div>{201C}618{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">208</td>
+			<td class="name"><div>“626”</div></td>
+			<td><div>{201C}626{201D}</div></td>
+			<td><div>{201C}626{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">209</td>
+			<td class="name"><div>“646”</div></td>
+			<td><div>{201C}646{201D}</div></td>
+			<td><div>{201C}646{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">210</td>
+			<td class="name"><div>“650”</div></td>
+			<td><div>{201C}650{201D}</div></td>
+			<td><div>{201C}650{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">211</td>
+			<td class="name"><div>“666”</div></td>
+			<td><div>{201C}666{201D}</div></td>
+			<td><div>{201C}666{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">212</td>
+			<td class="name"><div>“6666”</div></td>
+			<td><div>{201C}6666{201D}</div></td>
+			<td><div>{201C}6666{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">213</td>
+			<td class="name"><div>“669”</div></td>
+			<td><div>{201C}669{201D}</div></td>
+			<td><div>{201C}669{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">214</td>
+			<td class="name"><div>“678”</div></td>
+			<td><div>{201C}678{201D}</div></td>
+			<td><div>{201C}678{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">215</td>
+			<td class="name"><div>“686”</div></td>
+			<td><div>{201C}686{201D}</div></td>
+			<td><div>{201C}686{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">216</td>
+			<td class="name"><div>“688”</div></td>
+			<td><div>{201C}688{201D}</div></td>
+			<td><div>{201C}688{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">217</td>
+			<td class="name"><div>“69”</div></td>
+			<td><div>{201C}69{201D}</div></td>
+			<td><div>{201C}69{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">218</td>
+			<td class="name"><div>“69420”</div></td>
+			<td><div>{201C}69420{201D}</div></td>
+			<td><div>{201C}69420{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">219</td>
+			<td class="name"><div>“696”</div></td>
+			<td><div>{201C}696{201D}</div></td>
+			<td><div>{201C}696{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">220</td>
+			<td class="name"><div>“6969”</div></td>
+			<td><div>{201C}6969{201D}</div></td>
+			<td><div>{201C}6969{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">221</td>
+			<td class="name"><div>“7”</div></td>
+			<td><div>{201C}7{201D}</div></td>
+			<td><div>{201C}7{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">222</td>
+			<td class="name"><div>“702”</div></td>
+			<td><div>{201C}702{201D}</div></td>
+			<td><div>{201C}702{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">223</td>
+			<td class="name"><div>“713”</div></td>
+			<td><div>{201C}713{201D}</div></td>
+			<td><div>{201C}713{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">224</td>
+			<td class="name"><div>“718”</div></td>
+			<td><div>{201C}718{201D}</div></td>
+			<td><div>{201C}718{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">225</td>
+			<td class="name"><div>“724”</div></td>
+			<td><div>{201C}724{201D}</div></td>
+			<td><div>{201C}724{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">226</td>
+			<td class="name"><div>“7331”</div></td>
+			<td><div>{201C}7331{201D}</div></td>
+			<td><div>{201C}7331{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">227</td>
+			<td class="name"><div>“75”</div></td>
+			<td><div>{201C}75{201D}</div></td>
+			<td><div>{201C}75{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">228</td>
+			<td class="name"><div>“77”</div></td>
+			<td><div>{201C}77{201D}</div></td>
+			<td><div>{201C}77{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">229</td>
+			<td class="name"><div>“770”</div></td>
+			<td><div>{201C}770{201D}</div></td>
+			<td><div>{201C}770{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">230</td>
+			<td class="name"><div>“777”</div></td>
+			<td><div>{201C}777{201D}</div></td>
+			<td><div>{201C}777{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">231</td>
+			<td class="name"><div>“7777”</div></td>
+			<td><div>{201C}7777{201D}</div></td>
+			<td><div>{201C}7777{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">232</td>
+			<td class="name"><div>“786”</div></td>
+			<td><div>{201C}786{201D}</div></td>
+			<td><div>{201C}786{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">233</td>
+			<td class="name"><div>“789”</div></td>
+			<td><div>{201C}789{201D}</div></td>
+			<td><div>{201C}789{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">234</td>
+			<td class="name"><div>“8“</div></td>
+			<td><div>{201C}8{201C}</div></td>
+			<td><div>{201C}8{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">235</td>
+			<td class="name"><div>“8”</div></td>
+			<td><div>{201C}8{201D}</div></td>
+			<td><div>{201C}8{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">236</td>
+			<td class="name"><div>“80”</div></td>
+			<td><div>{201C}80{201D}</div></td>
+			<td><div>{201C}80{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">237</td>
+			<td class="name"><div>“808”</div></td>
+			<td><div>{201C}808{201D}</div></td>
+			<td><div>{201C}808{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">238</td>
+			<td class="name"><div>“818”</div></td>
+			<td><div>{201C}818{201D}</div></td>
+			<td><div>{201C}818{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">239</td>
+			<td class="name"><div>“866”</div></td>
+			<td><div>{201C}866{201D}</div></td>
+			<td><div>{201C}866{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">240</td>
+			<td class="name"><div>“88”</div></td>
+			<td><div>{201C}88{201D}</div></td>
+			<td><div>{201C}88{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">241</td>
+			<td class="name"><div>“881”</div></td>
+			<td><div>{201C}881{201D}</div></td>
+			<td><div>{201C}881{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">242</td>
+			<td class="name"><div>“885”</div></td>
+			<td><div>{201C}885{201D}</div></td>
+			<td><div>{201C}885{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">243</td>
+			<td class="name"><div>“886”</div></td>
+			<td><div>{201C}886{201D}</div></td>
+			<td><div>{201C}886{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">244</td>
+			<td class="name"><div>“888”</div></td>
+			<td><div>{201C}888{201D}</div></td>
+			<td><div>{201C}888{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">245</td>
+			<td class="name"><div>“889”</div></td>
+			<td><div>{201C}889{201D}</div></td>
+			<td><div>{201C}889{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">246</td>
+			<td class="name"><div>“905”</div></td>
+			<td><div>{201C}905{201D}</div></td>
+			<td><div>{201C}905{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">247</td>
+			<td class="name"><div>“911”</div></td>
+			<td><div>{201C}911{201D}</div></td>
+			<td><div>{201C}911{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">248</td>
+			<td class="name"><div>“917”</div></td>
+			<td><div>{201C}917{201D}</div></td>
+			<td><div>{201C}917{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">249</td>
+			<td class="name"><div>“918”</div></td>
+			<td><div>{201C}918{201D}</div></td>
+			<td><div>{201C}918{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">250</td>
+			<td class="name"><div>“949”</div></td>
+			<td><div>{201C}949{201D}</div></td>
+			<td><div>{201C}949{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">251</td>
+			<td class="name"><div>“966”</div></td>
+			<td><div>{201C}966{201D}</div></td>
+			<td><div>{201C}966{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">252</td>
+			<td class="name"><div>“988”</div></td>
+			<td><div>{201C}988{201D}</div></td>
+			<td><div>{201C}988{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">253</td>
+			<td class="name"><div>“99”</div></td>
+			<td><div>{201C}99{201D}</div></td>
+			<td><div>{201C}99{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">254</td>
+			<td class="name"><div>“999“</div></td>
+			<td><div>{201C}999{201C}</div></td>
+			<td><div>{201C}999{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">255</td>
+			<td class="name"><div>“999”</div></td>
+			<td><div>{201C}999{201D}</div></td>
+			<td><div>{201C}999{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">256</td>
+			<td class="name"><div>“9999”</div></td>
+			<td><div>{201C}9999{201D}</div></td>
+			<td><div>{201C}9999{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">257</td>
+			<td class="name"><div>“abc”</div></td>
+			<td><div>{201C}abc{201D}</div></td>
+			<td><div>{201C}abc{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">258</td>
+			<td class="name"><div>“air”</div></td>
+			<td><div>{201C}air{201D}</div></td>
+			<td><div>{201C}air{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">259</td>
+			<td class="name"><div>“alien”</div></td>
+			<td><div>{201C}alien{201D}</div></td>
+			<td><div>{201C}alien{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">260</td>
+			<td class="name"><div>“amazon”</div></td>
+			<td><div>{201C}amazon{201D}</div></td>
+			<td><div>{201C}amazon{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">261</td>
+			<td class="name"><div>“apple”</div></td>
+			<td><div>{201C}apple{201D}</div></td>
+			<td><div>{201C}apple{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">262</td>
+			<td class="name"><div>“backwoods”</div></td>
+			<td><div>{201C}backwoods{201D}</div></td>
+			<td><div>{201C}backwoods{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">263</td>
+			<td class="name"><div>“barackobama”</div></td>
+			<td><div>{201C}barackobama{201D}</div></td>
+			<td><div>{201C}barackobama{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">264</td>
+			<td class="name"><div>“bayc”</div></td>
+			<td><div>{201C}bayc{201D}</div></td>
+			<td><div>{201C}bayc{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">265</td>
+			<td class="name"><div>“biden”</div></td>
+			<td><div>{201C}biden{201D}</div></td>
+			<td><div>{201C}biden{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">266</td>
+			<td class="name"><div>“bitcoin”</div></td>
+			<td><div>{201C}bitcoin{201D}</div></td>
+			<td><div>{201C}bitcoin{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">267</td>
+			<td class="name"><div>“blacklivesmatter”</div></td>
+			<td><div>{201C}blacklivesmatter{201D}</div></td>
+			<td><div>{201C}blacklivesmatter{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">268</td>
+			<td class="name"><div>“bn89”</div></td>
+			<td><div>{201C}bn89{201D}</div></td>
+			<td><div>{201C}bn89{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">269</td>
+			<td class="name"><div>“boredapeyachtclub”</div></td>
+			<td><div>{201C}boredapeyachtclub{201D}</div></td>
+			<td><div>{201C}boredapeyachtclub{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">270</td>
+			<td class="name"><div>“cristiano”</div></td>
+			<td><div>{201C}cristiano{201D}</div></td>
+			<td><div>{201C}cristiano{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">271</td>
+			<td class="name"><div>“crypto”</div></td>
+			<td><div>{201C}crypto{201D}</div></td>
+			<td><div>{201C}crypto{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">272</td>
+			<td class="name"><div>“cryptopunk”</div></td>
+			<td><div>{201C}cryptopunk{201D}</div></td>
+			<td><div>{201C}cryptopunk{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">273</td>
+			<td class="name"><div>“cryptopunks”</div></td>
+			<td><div>{201C}cryptopunks{201D}</div></td>
+			<td><div>{201C}cryptopunks{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">274</td>
+			<td class="name"><div>“darkmarket”</div></td>
+			<td><div>{201C}darkmarket{201D}</div></td>
+			<td><div>{201C}darkmarket{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">275</td>
+			<td class="name"><div>“disco”</div></td>
+			<td><div>{201C}disco{201D}</div></td>
+			<td><div>{201C}disco{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">276</td>
+			<td class="name"><div>“donaldtrump”</div></td>
+			<td><div>{201C}donaldtrump{201D}</div></td>
+			<td><div>{201C}donaldtrump{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">277</td>
+			<td class="name"><div>“elonmusk”</div></td>
+			<td><div>{201C}elonmusk{201D}</div></td>
+			<td><div>{201C}elonmusk{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">278</td>
+			<td class="name"><div>“ens”</div></td>
+			<td><div>{201C}ens{201D}</div></td>
+			<td><div>{201C}ens{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">279</td>
+			<td class="name"><div>“eth”</div></td>
+			<td><div>{201C}eth{201D}</div></td>
+			<td><div>{201C}eth{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">280</td>
+			<td class="name"><div>“ethereum”</div></td>
+			<td><div>{201C}ethereum{201D}</div></td>
+			<td><div>{201C}ethereum{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">281</td>
+			<td class="name"><div>“facebook”</div></td>
+			<td><div>{201C}facebook{201D}</div></td>
+			<td><div>{201C}facebook{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">282</td>
+			<td class="name"><div>“foxnews”</div></td>
+			<td><div>{201C}foxnews{201D}</div></td>
+			<td><div>{201C}foxnews{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">283</td>
+			<td class="name"><div>“garyvee”</div></td>
+			<td><div>{201C}garyvee{201D}</div></td>
+			<td><div>{201C}garyvee{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">284</td>
+			<td class="name"><div>“gm”</div></td>
+			<td><div>{201C}gm{201D}</div></td>
+			<td><div>{201C}gm{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">285</td>
+			<td class="name"><div>“gmi”</div></td>
+			<td><div>{201C}gmi{201D}</div></td>
+			<td><div>{201C}gmi{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">286</td>
+			<td class="name"><div>“god”</div></td>
+			<td><div>{201C}god{201D}</div></td>
+			<td><div>{201C}god{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">287</td>
+			<td class="name"><div>“google”</div></td>
+			<td><div>{201C}google{201D}</div></td>
+			<td><div>{201C}google{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">288</td>
+			<td class="name"><div>“hacker”</div></td>
+			<td><div>{201C}hacker{201D}</div></td>
+			<td><div>{201C}hacker{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">289</td>
+			<td class="name"><div>“hfsp”</div></td>
+			<td><div>{201C}hfsp{201D}</div></td>
+			<td><div>{201C}hfsp{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">290</td>
+			<td class="name"><div>“iphone”</div></td>
+			<td><div>{201C}iphone{201D}</div></td>
+			<td><div>{201C}iphone{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">291</td>
+			<td class="name"><div>“j1mmy”</div></td>
+			<td><div>{201C}j1mmy{201D}</div></td>
+			<td><div>{201C}j1mmy{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">292</td>
+			<td class="name"><div>“jack”</div></td>
+			<td><div>{201C}jack{201D}</div></td>
+			<td><div>{201C}jack{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">293</td>
+			<td class="name"><div>“joebiden”</div></td>
+			<td><div>{201C}joebiden{201D}</div></td>
+			<td><div>{201C}joebiden{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">294</td>
+			<td class="name"><div>“kimkardashian”</div></td>
+			<td><div>{201C}kimkardashian{201D}</div></td>
+			<td><div>{201C}kimkardashian{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">295</td>
+			<td class="name"><div>“larvalabs”</div></td>
+			<td><div>{201C}larvalabs{201D}</div></td>
+			<td><div>{201C}larvalabs{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">296</td>
+			<td class="name"><div>“lol”</div></td>
+			<td><div>{201C}lol{201D}</div></td>
+			<td><div>{201C}lol{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">297</td>
+			<td class="name"><div>“meebit”</div></td>
+			<td><div>{201C}meebit{201D}</div></td>
+			<td><div>{201C}meebit{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">298</td>
+			<td class="name"><div>“meebits”</div></td>
+			<td><div>{201C}meebits{201D}</div></td>
+			<td><div>{201C}meebits{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">299</td>
+			<td class="name"><div>“meta”</div></td>
+			<td><div>{201C}meta{201D}</div></td>
+			<td><div>{201C}meta{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">300</td>
+			<td class="name"><div>“metaverse”</div></td>
+			<td><div>{201C}metaverse{201D}</div></td>
+			<td><div>{201C}metaverse{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">301</td>
+			<td class="name"><div>“michaeljordan”</div></td>
+			<td><div>{201C}michaeljordan{201D}</div></td>
+			<td><div>{201C}michaeljordan{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">302</td>
+			<td class="name"><div>“nft”</div></td>
+			<td><div>{201C}nft{201D}</div></td>
+			<td><div>{201C}nft{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">303</td>
+			<td class="name"><div>“ngmi”</div></td>
+			<td><div>{201C}ngmi{201D}</div></td>
+			<td><div>{201C}ngmi{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">304</td>
+			<td class="name"><div>“obama”</div></td>
+			<td><div>{201C}obama{201D}</div></td>
+			<td><div>{201C}obama{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">305</td>
+			<td class="name"><div>“off-white”</div></td>
+			<td><div>{201C}off-white{201D}</div></td>
+			<td><div>{201C}off-white{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">306</td>
+			<td class="name"><div>“os”</div></td>
+			<td><div>{201C}os{201D}</div></td>
+			<td><div>{201C}os{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">307</td>
+			<td class="name"><div>“porn”</div></td>
+			<td><div>{201C}porn{201D}</div></td>
+			<td><div>{201C}porn{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">308</td>
+			<td class="name"><div>“punk”</div></td>
+			<td><div>{201C}punk{201D}</div></td>
+			<td><div>{201C}punk{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">309</td>
+			<td class="name"><div>“punks”</div></td>
+			<td><div>{201C}punks{201D}</div></td>
+			<td><div>{201C}punks{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">310</td>
+			<td class="name"><div>“quotes”</div></td>
+			<td><div>{201C}quotes{201D}</div></td>
+			<td><div>{201C}quotes{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">311</td>
+			<td class="name"><div>“rileyreid”</div></td>
+			<td><div>{201C}rileyreid{201D}</div></td>
+			<td><div>{201C}rileyreid{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">312</td>
+			<td class="name"><div>“sex”</div></td>
+			<td><div>{201C}sex{201D}</div></td>
+			<td><div>{201C}sex{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">313</td>
+			<td class="name"><div>“slinky”</div></td>
+			<td><div>{201C}slinky{201D}</div></td>
+			<td><div>{201C}slinky{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">314</td>
+			<td class="name"><div>“tesla”</div></td>
+			<td><div>{201C}tesla{201D}</div></td>
+			<td><div>{201C}tesla{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">315</td>
+			<td class="name"><div>“trump”</div></td>
+			<td><div>{201C}trump{201D}</div></td>
+			<td><div>{201C}trump{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">316</td>
+			<td class="name"><div>“twitter”</div></td>
+			<td><div>{201C}twitter{201D}</div></td>
+			<td><div>{201C}twitter{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">317</td>
+			<td class="name"><div>“usa”</div></td>
+			<td><div>{201C}usa{201D}</div></td>
+			<td><div>{201C}usa{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">318</td>
+			<td class="name"><div>“validator”</div></td>
+			<td><div>{201C}validator{201D}</div></td>
+			<td><div>{201C}validator{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">319</td>
+			<td class="name"><div>“vitalik”</div></td>
+			<td><div>{201C}vitalik{201D}</div></td>
+			<td><div>{201C}vitalik{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">320</td>
+			<td class="name"><div>“wagmi”</div></td>
+			<td><div>{201C}wagmi{201D}</div></td>
+			<td><div>{201C}wagmi{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">321</td>
+			<td class="name"><div>“wallet”</div></td>
+			<td><div>{201C}wallet{201D}</div></td>
+			<td><div>{201C}wallet{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">322</td>
+			<td class="name"><div>“豚林”</div></td>
+			<td><div>{201C}{8C5A}{6797}{201D}</div></td>
+			<td><div>{201C}{8C5A}{6797}{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr><tr>
+			<td class="index">323</td>
+			<td class="name"><div>”””””</div></td>
+			<td><div>{201D}{201D}{201D}{201D}{201D}</div></td>
+			<td><div>{201D}{201D}{201D}{201D}{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">324</td>
+			<td class="name"><div>”0”</div></td>
+			<td><div>{201D}0{201D}</div></td>
+			<td><div>{201D}0{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">325</td>
+			<td class="name"><div>”001”</div></td>
+			<td><div>{201D}001{201D}</div></td>
+			<td><div>{201D}001{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">326</td>
+			<td class="name"><div>”1”</div></td>
+			<td><div>{201D}1{201D}</div></td>
+			<td><div>{201D}1{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">327</td>
+			<td class="name"><div>⁅-¦-⁆</div></td>
+			<td><div>{2045}-{A6}-{2046}</div></td>
+			<td><div>{2045}-{A6}-{2046}</div></td>
+			<td class="error">Disallowed codepoint: 0x2045</td>
+		</tr><tr>
+			<td class="index">328</td>
+			<td class="name"><div>❨3‚3❩</div></td>
+			<td><div>{2768}3{201A}3{2769}</div></td>
+			<td><div>{2768}3{201A}3{2769}</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">329</td>
+			<td class="name"><div>⁋⁋⁋</div></td>
+			<td><div>{204B}{204B}{204B}</div></td>
+			<td><div>{204B}{204B}{204B}</div></td>
+			<td class="error">Disallowed codepoint: 0x204B</td>
+		</tr><tr>
+			<td class="index">330</td>
+			<td class="name"><div>⁊⁊⁊⁊</div></td>
+			<td><div>{204A}{204A}{204A}{204A}</div></td>
+			<td><div>{204A}{204A}{204A}{204A}</div></td>
+			<td class="error">Disallowed codepoint: 0x204A</td>
+		</tr><tr>
+			<td class="index">331</td>
+			<td class="name"><div>⁊⁊⁊⁊⁊</div></td>
+			<td><div>{204A}{204A}{204A}{204A}{204A}</div></td>
+			<td><div>{204A}{204A}{204A}{204A}{204A}</div></td>
+			<td class="error">Disallowed codepoint: 0x204A</td>
+		</tr><tr>
+			<td class="index">332</td>
+			<td class="name"><div>‰‰‰</div></td>
+			<td><div>{2030}{2030}{2030}</div></td>
+			<td><div>{2030}{2030}{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">333</td>
+			<td class="name"><div>†††</div></td>
+			<td><div>{2020}{2020}{2020}</div></td>
+			<td><div>{2020}{2020}{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">334</td>
+			<td class="name"><div>†666</div></td>
+			<td><div>{2020}666</div></td>
+			<td><div>{2020}666</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">335</td>
+			<td class="name"><div>†666†</div></td>
+			<td><div>{2020}666{2020}</div></td>
+			<td><div>{2020}666{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">336</td>
+			<td class="name"><div>†69†</div></td>
+			<td><div>{2020}69{2020}</div></td>
+			<td><div>{2020}69{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">337</td>
+			<td class="name"><div>†esla</div></td>
+			<td><div>{2020}esla</div></td>
+			<td><div>{2020}esla</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">338</td>
+			<td class="name"><div>‡‡‡</div></td>
+			<td><div>{2021}{2021}{2021}</div></td>
+			<td><div>{2021}{2021}{2021}</div></td>
+			<td class="error">Disallowed codepoint: 0x2021</td>
+		</tr><tr>
+			<td class="index">339</td>
+			<td class="name"><div>‡lordofthedepths‡</div></td>
+			<td><div>{2021}lordofthedepths{2021}</div></td>
+			<td><div>{2021}lordofthedepths{2021}</div></td>
+			<td class="error">Disallowed codepoint: 0x2021</td>
+		</tr><tr>
+			<td class="index">340</td>
+			<td class="name"><div>‣ethereum</div></td>
+			<td><div>{2023}ethereum</div></td>
+			<td><div>{2023}ethereum</div></td>
+			<td class="error">Disallowed codepoint: 0x2023</td>
+		</tr><tr>
+			<td class="index">341</td>
+			<td class="name"><div>⁃⁃⁃⁃⁃</div></td>
+			<td><div>{2043}{2043}{2043}{2043}{2043}</div></td>
+			<td><div>{2043}{2043}{2043}{2043}{2043}</div></td>
+			<td class="error">Invalid label "-----": invalid label extension</td>
+		</tr><tr>
+			<td class="index">342</td>
+			<td class="name"><div>‵‵‵‵‵</div></td>
+			<td><div>{2035}{2035}{2035}{2035}{2035}</div></td>
+			<td><div>{2035}{2035}{2035}{2035}{2035}</div></td>
+			<td class="error">Disallowed codepoint: 0x2035</td>
+		</tr><tr>
+			<td class="index">343</td>
+			<td class="name"><div>‵‵‵‵‵‵</div></td>
+			<td><div>{2035}{2035}{2035}{2035}{2035}{2035}</div></td>
+			<td><div>{2035}{2035}{2035}{2035}{2035}{2035}</div></td>
+			<td class="error">Disallowed codepoint: 0x2035</td>
+		</tr><tr>
+			<td class="index">344</td>
+			<td class="name"><div>⁀⁀⁀</div></td>
+			<td><div>{2040}{2040}{2040}</div></td>
+			<td><div>{2040}{2040}{2040}</div></td>
+			<td class="error">Disallowed codepoint: 0x2040</td>
+		</tr><tr>
+			<td class="index">345</td>
+			<td class="name"><div>°‘°</div></td>
+			<td><div>{B0}{2018}{B0}</div></td>
+			<td><div>{B0}{2018}{B0}</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">346</td>
+			<td class="name"><div>⁒⁒⁒</div></td>
+			<td><div>{2052}{2052}{2052}</div></td>
+			<td><div>{2052}{2052}{2052}</div></td>
+			<td class="error">Disallowed codepoint: 0x2052</td>
+		</tr><tr>
+			<td class="index">347</td>
+			<td class="name"><div>⎜⏝⏜⏝⎟</div></td>
+			<td><div>{239C}{23DD}{23DC}{23DD}{239F}</div></td>
+			<td><div>{239C}{23DD}{23DC}{23DD}{239F}</div></td>
+			<td class="error">Disallowed codepoint: 0x23DD</td>
+		</tr><tr>
+			<td class="index">348</td>
+			<td class="name"><div>⏡⏡⏡⏡⬤</div></td>
+			<td><div>{23E1}{23E1}{23E1}{23E1}{2B24}</div></td>
+			<td><div>{23E1}{23E1}{23E1}{23E1}{2B24}</div></td>
+			<td class="error">Disallowed codepoint: 0x23E1</td>
+		</tr><tr>
+			<td class="index">349</td>
+			<td class="name"><div>☾⏜⏝⏜☽</div></td>
+			<td><div>{263E}{23DC}{23DD}{23DC}{263D}</div></td>
+			<td><div>{263E}{23DC}{23DD}{23DC}{263D}</div></td>
+			<td class="error">Disallowed codepoint: 0x23DC</td>
+		</tr><tr>
+			<td class="index">350</td>
+			<td class="name"><div>0‚0</div></td>
+			<td><div>0{201A}0</div></td>
+			<td><div>0{201A}0</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">351</td>
+			<td class="name"><div>0‚0‚0</div></td>
+			<td><div>0{201A}0{201A}0</div></td>
+			<td><div>0{201A}0{201A}0</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">352</td>
+			<td class="name"><div>0‚0‚0‚0‚0‚0‚0‚1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">353</td>
+			<td class="name"><div>0‚0‚0‚0‚0‚0‚1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">354</td>
+			<td class="name"><div>0‚0‚0‚0‚0‚1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td><div>0{201A}0{201A}0{201A}0{201A}0{201A}1</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">355</td>
+			<td class="name"><div>0‚0‚1</div></td>
+			<td><div>0{201A}0{201A}1</div></td>
+			<td><div>0{201A}0{201A}1</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">356</td>
+			<td class="name"><div>0‚0‚2</div></td>
+			<td><div>0{201A}0{201A}2</div></td>
+			<td><div>0{201A}0{201A}2</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">357</td>
+			<td class="name"><div>0‚0‚3</div></td>
+			<td><div>0{201A}0{201A}3</div></td>
+			<td><div>0{201A}0{201A}3</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">358</td>
+			<td class="name"><div>0‚0‚4</div></td>
+			<td><div>0{201A}0{201A}4</div></td>
+			<td><div>0{201A}0{201A}4</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">359</td>
+			<td class="name"><div>0‚0‚5</div></td>
+			<td><div>0{201A}0{201A}5</div></td>
+			<td><div>0{201A}0{201A}5</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">360</td>
+			<td class="name"><div>0‚0‚6</div></td>
+			<td><div>0{201A}0{201A}6</div></td>
+			<td><div>0{201A}0{201A}6</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">361</td>
+			<td class="name"><div>0‚0‚9</div></td>
+			<td><div>0{201A}0{201A}9</div></td>
+			<td><div>0{201A}0{201A}9</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">362</td>
+			<td class="name"><div>0‚000</div></td>
+			<td><div>0{201A}000</div></td>
+			<td><div>0{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">363</td>
+			<td class="name"><div>0‚008</div></td>
+			<td><div>0{201A}008</div></td>
+			<td><div>0{201A}008</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">364</td>
+			<td class="name"><div>0‚009</div></td>
+			<td><div>0{201A}009</div></td>
+			<td><div>0{201A}009</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">365</td>
+			<td class="name"><div>0‚010</div></td>
+			<td><div>0{201A}010</div></td>
+			<td><div>0{201A}010</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">366</td>
+			<td class="name"><div>0‚012</div></td>
+			<td><div>0{201A}012</div></td>
+			<td><div>0{201A}012</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">367</td>
+			<td class="name"><div>0‚031</div></td>
+			<td><div>0{201A}031</div></td>
+			<td><div>0{201A}031</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">368</td>
+			<td class="name"><div>0‚051</div></td>
+			<td><div>0{201A}051</div></td>
+			<td><div>0{201A}051</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">369</td>
+			<td class="name"><div>0‚055</div></td>
+			<td><div>0{201A}055</div></td>
+			<td><div>0{201A}055</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">370</td>
+			<td class="name"><div>0‚062</div></td>
+			<td><div>0{201A}062</div></td>
+			<td><div>0{201A}062</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">371</td>
+			<td class="name"><div>0‚085</div></td>
+			<td><div>0{201A}085</div></td>
+			<td><div>0{201A}085</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">372</td>
+			<td class="name"><div>0‚1‚1‚2‚3‚5‚8‚13‚21‚34‚55‚89</div></td>
+			<td><div>0{201A}1{201A}1{201A}2{201A}3{201A}5{201A}8{201A}13{201A}21{201A}34{201A}55{201A}89</div></td>
+			<td><div>0{201A}1{201A}1{201A}2{201A}3{201A}5{201A}8{201A}13{201A}21{201A}34{201A}55{201A}89</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">373</td>
+			<td class="name"><div>0‚100</div></td>
+			<td><div>0{201A}100</div></td>
+			<td><div>0{201A}100</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">374</td>
+			<td class="name"><div>0‚110</div></td>
+			<td><div>0{201A}110</div></td>
+			<td><div>0{201A}110</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">375</td>
+			<td class="name"><div>0‚111</div></td>
+			<td><div>0{201A}111</div></td>
+			<td><div>0{201A}111</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">376</td>
+			<td class="name"><div>0‚122</div></td>
+			<td><div>0{201A}122</div></td>
+			<td><div>0{201A}122</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">377</td>
+			<td class="name"><div>0‚169</div></td>
+			<td><div>0{201A}169</div></td>
+			<td><div>0{201A}169</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">378</td>
+			<td class="name"><div>0‚178</div></td>
+			<td><div>0{201A}178</div></td>
+			<td><div>0{201A}178</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">379</td>
+			<td class="name"><div>0‚203</div></td>
+			<td><div>0{201A}203</div></td>
+			<td><div>0{201A}203</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">380</td>
+			<td class="name"><div>0‚232</div></td>
+			<td><div>0{201A}232</div></td>
+			<td><div>0{201A}232</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">381</td>
+			<td class="name"><div>0‚246</div></td>
+			<td><div>0{201A}246</div></td>
+			<td><div>0{201A}246</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">382</td>
+			<td class="name"><div>0‚268</div></td>
+			<td><div>0{201A}268</div></td>
+			<td><div>0{201A}268</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">383</td>
+			<td class="name"><div>0‚307</div></td>
+			<td><div>0{201A}307</div></td>
+			<td><div>0{201A}307</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">384</td>
+			<td class="name"><div>0‚342</div></td>
+			<td><div>0{201A}342</div></td>
+			<td><div>0{201A}342</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">385</td>
+			<td class="name"><div>0‚374</div></td>
+			<td><div>0{201A}374</div></td>
+			<td><div>0{201A}374</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">386</td>
+			<td class="name"><div>0‚448</div></td>
+			<td><div>0{201A}448</div></td>
+			<td><div>0{201A}448</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">387</td>
+			<td class="name"><div>0‚479</div></td>
+			<td><div>0{201A}479</div></td>
+			<td><div>0{201A}479</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">388</td>
+			<td class="name"><div>0‚500</div></td>
+			<td><div>0{201A}500</div></td>
+			<td><div>0{201A}500</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">389</td>
+			<td class="name"><div>0‚574</div></td>
+			<td><div>0{201A}574</div></td>
+			<td><div>0{201A}574</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">390</td>
+			<td class="name"><div>0‚618</div></td>
+			<td><div>0{201A}618</div></td>
+			<td><div>0{201A}618</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">391</td>
+			<td class="name"><div>0‚658</div></td>
+			<td><div>0{201A}658</div></td>
+			<td><div>0{201A}658</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">392</td>
+			<td class="name"><div>0‚690</div></td>
+			<td><div>0{201A}690</div></td>
+			<td><div>0{201A}690</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">393</td>
+			<td class="name"><div>0‚691</div></td>
+			<td><div>0{201A}691</div></td>
+			<td><div>0{201A}691</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">394</td>
+			<td class="name"><div>0‚692</div></td>
+			<td><div>0{201A}692</div></td>
+			<td><div>0{201A}692</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">395</td>
+			<td class="name"><div>0‚693</div></td>
+			<td><div>0{201A}693</div></td>
+			<td><div>0{201A}693</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">396</td>
+			<td class="name"><div>0‚695</div></td>
+			<td><div>0{201A}695</div></td>
+			<td><div>0{201A}695</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">397</td>
+			<td class="name"><div>0‚800</div></td>
+			<td><div>0{201A}800</div></td>
+			<td><div>0{201A}800</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">398</td>
+			<td class="name"><div>0‚880</div></td>
+			<td><div>0{201A}880</div></td>
+			<td><div>0{201A}880</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">399</td>
+			<td class="name"><div>0‚881</div></td>
+			<td><div>0{201A}881</div></td>
+			<td><div>0{201A}881</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">400</td>
+			<td class="name"><div>0”””0</div></td>
+			<td><div>0{201D}{201D}{201D}0</div></td>
+			<td><div>0{201D}{201D}{201D}0</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">401</td>
+			<td class="name"><div>0”0”0</div></td>
+			<td><div>0{201D}0{201D}0</div></td>
+			<td><div>0{201D}0{201D}0</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">402</td>
+			<td class="name"><div>0”0”7</div></td>
+			<td><div>0{201D}0{201D}7</div></td>
+			<td><div>0{201D}0{201D}7</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">403</td>
+			<td class="name"><div>00‚00</div></td>
+			<td><div>00{201A}00</div></td>
+			<td><div>00{201A}00</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">404</td>
+			<td class="name"><div>000”</div></td>
+			<td><div>000{201D}</div></td>
+			<td><div>000{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">405</td>
+			<td class="name"><div>0000‰</div></td>
+			<td><div>0000{2030}</div></td>
+			<td><div>0000{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">406</td>
+			<td class="name"><div>0001’</div></td>
+			<td><div>0001{2019}</div></td>
+			<td><div>0001{2019}</div></td>
+			<td class="error">Invalid label "0001’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">407</td>
+			<td class="name"><div>001‰</div></td>
+			<td><div>001{2030}</div></td>
+			<td><div>001{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">408</td>
+			<td class="name"><div>01’</div></td>
+			<td><div>01{2019}</div></td>
+			<td><div>01{2019}</div></td>
+			<td class="error">Invalid label "01’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">409</td>
+			<td class="name"><div>01”</div></td>
+			<td><div>01{201D}</div></td>
+			<td><div>01{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">410</td>
+			<td class="name"><div>01′′</div></td>
+			<td><div>01{2032}{2032}</div></td>
+			<td><div>01{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">411</td>
+			<td class="name"><div>05′′</div></td>
+			<td><div>05{2032}{2032}</div></td>
+			<td><div>05{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">412</td>
+			<td class="name"><div>07′′</div></td>
+			<td><div>07{2032}{2032}</div></td>
+			<td><div>07{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">413</td>
+			<td class="name"><div>08′′</div></td>
+			<td><div>08{2032}{2032}</div></td>
+			<td><div>08{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">414</td>
+			<td class="name"><div>1‚000</div></td>
+			<td><div>1{201A}000</div></td>
+			<td><div>1{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">415</td>
+			<td class="name"><div>1‚000‚000</div></td>
+			<td><div>1{201A}000{201A}000</div></td>
+			<td><div>1{201A}000{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">416</td>
+			<td class="name"><div>1‚000‚000‚000</div></td>
+			<td><div>1{201A}000{201A}000{201A}000</div></td>
+			<td><div>1{201A}000{201A}000{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">417</td>
+			<td class="name"><div>1‚005</div></td>
+			<td><div>1{201A}005</div></td>
+			<td><div>1{201A}005</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">418</td>
+			<td class="name"><div>1‚111</div></td>
+			<td><div>1{201A}111</div></td>
+			<td><div>1{201A}111</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">419</td>
+			<td class="name"><div>1‚2‚3</div></td>
+			<td><div>1{201A}2{201A}3</div></td>
+			<td><div>1{201A}2{201A}3</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">420</td>
+			<td class="name"><div>1‚738</div></td>
+			<td><div>1{201A}738</div></td>
+			<td><div>1{201A}738</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">421</td>
+			<td class="name"><div>1‚999</div></td>
+			<td><div>1{201A}999</div></td>
+			<td><div>1{201A}999</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">422</td>
+			<td class="name"><div>1‣2‣3</div></td>
+			<td><div>1{2023}2{2023}3</div></td>
+			<td><div>1{2023}2{2023}3</div></td>
+			<td class="error">Disallowed codepoint: 0x2023</td>
+		</tr><tr>
+			<td class="index">423</td>
+			<td class="name"><div>1′′</div></td>
+			<td><div>1{2032}{2032}</div></td>
+			<td><div>1{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">424</td>
+			<td class="name"><div>10‚000</div></td>
+			<td><div>10{201A}000</div></td>
+			<td><div>10{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">425</td>
+			<td class="name"><div>10‚001</div></td>
+			<td><div>10{201A}001</div></td>
+			<td><div>10{201A}001</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">426</td>
+			<td class="name"><div>10′′</div></td>
+			<td><div>10{2032}{2032}</div></td>
+			<td><div>10{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">427</td>
+			<td class="name"><div>100‚000</div></td>
+			<td><div>100{201A}000</div></td>
+			<td><div>100{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">428</td>
+			<td class="name"><div>100‰</div></td>
+			<td><div>100{2030}</div></td>
+			<td><div>100{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">429</td>
+			<td class="name"><div>100⁒</div></td>
+			<td><div>100{2052}</div></td>
+			<td><div>100{2052}</div></td>
+			<td class="error">Disallowed codepoint: 0x2052</td>
+		</tr><tr>
+			<td class="index">430</td>
+			<td class="name"><div>1000‰</div></td>
+			<td><div>1000{2030}</div></td>
+			<td><div>1000{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">431</td>
+			<td class="name"><div>11‘11</div></td>
+			<td><div>11{2018}11</div></td>
+			<td><div>11{2018}11</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">432</td>
+			<td class="name"><div>11”</div></td>
+			<td><div>11{201D}</div></td>
+			<td><div>11{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">433</td>
+			<td class="name"><div>11′′</div></td>
+			<td><div>11{2032}{2032}</div></td>
+			<td><div>11{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">434</td>
+			<td class="name"><div>1111’</div></td>
+			<td><div>1111{2019}</div></td>
+			<td><div>1111{2019}</div></td>
+			<td class="error">Invalid label "1111’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">435</td>
+			<td class="name"><div>1111‰</div></td>
+			<td><div>1111{2030}</div></td>
+			<td><div>1111{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">436</td>
+			<td class="name"><div>12′′</div></td>
+			<td><div>12{2032}{2032}</div></td>
+			<td><div>12{2032}{2032}</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">437</td>
+			<td class="name"><div>123’</div></td>
+			<td><div>123{2019}</div></td>
+			<td><div>123{2019}</div></td>
+			<td class="error">Invalid label "123’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">438</td>
+			<td class="name"><div>1995”</div></td>
+			<td><div>1995{201D}</div></td>
+			<td><div>1995{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">439</td>
+			<td class="name"><div>2‚000</div></td>
+			<td><div>2{201A}000</div></td>
+			<td><div>2{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">440</td>
+			<td class="name"><div>2‚196</div></td>
+			<td><div>2{201A}196</div></td>
+			<td><div>2{201A}196</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">441</td>
+			<td class="name"><div>2‚222</div></td>
+			<td><div>2{201A}222</div></td>
+			<td><div>2{201A}222</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">442</td>
+			<td class="name"><div>2‚333</div></td>
+			<td><div>2{201A}333</div></td>
+			<td><div>2{201A}333</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">443</td>
+			<td class="name"><div>2‚718</div></td>
+			<td><div>2{201A}718</div></td>
+			<td><div>2{201A}718</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">444</td>
+			<td class="name"><div>3‚14</div></td>
+			<td><div>3{201A}14</div></td>
+			<td><div>3{201A}14</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">445</td>
+			<td class="name"><div>3‚14159265359</div></td>
+			<td><div>3{201A}14159265359</div></td>
+			<td><div>3{201A}14159265359</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">446</td>
+			<td class="name"><div>3‚444</div></td>
+			<td><div>3{201A}444</div></td>
+			<td><div>3{201A}444</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">447</td>
+			<td class="name"><div>39°55′n116°23′e</div></td>
+			<td><div>39{B0}55{2032}n116{B0}23{2032}e</div></td>
+			<td><div>39{B0}55{2032}n116{B0}23{2032}e</div></td>
+			<td class="error">Disallowed codepoint: 0x2032</td>
+		</tr><tr>
+			<td class="index">448</td>
+			<td class="name"><div>4‚2‚0</div></td>
+			<td><div>4{201A}2{201A}0</div></td>
+			<td><div>4{201A}2{201A}0</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">449</td>
+			<td class="name"><div>4‚444</div></td>
+			<td><div>4{201A}444</div></td>
+			<td><div>4{201A}444</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">450</td>
+			<td class="name"><div>4‣2‣0</div></td>
+			<td><div>4{2023}2{2023}0</div></td>
+			<td><div>4{2023}2{2023}0</div></td>
+			<td class="error">Disallowed codepoint: 0x2023</td>
+		</tr><tr>
+			<td class="index">451</td>
+			<td class="name"><div>40°n44’x73°w59’</div></td>
+			<td><div>40{B0}n44{2019}x73{B0}w59{2019}</div></td>
+			<td><div>40{B0}n44{2019}x73{B0}w59{2019}</div></td>
+			<td class="error">Invalid label "40°n44’x73°w59’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">452</td>
+			<td class="name"><div>42‚069</div></td>
+			<td><div>42{201A}069</div></td>
+			<td><div>42{201A}069</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">453</td>
+			<td class="name"><div>420’</div></td>
+			<td><div>420{2019}</div></td>
+			<td><div>420{2019}</div></td>
+			<td class="error">Invalid label "420’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">454</td>
+			<td class="name"><div>420’69”</div></td>
+			<td><div>420{2019}69{201D}</div></td>
+			<td><div>420{2019}69{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">455</td>
+			<td class="name"><div>420‚69</div></td>
+			<td><div>420{201A}69</div></td>
+			<td><div>420{201A}69</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">456</td>
+			<td class="name"><div>5‚222</div></td>
+			<td><div>5{201A}222</div></td>
+			<td><div>5{201A}222</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">457</td>
+			<td class="name"><div>5‚555</div></td>
+			<td><div>5{201A}555</div></td>
+			<td><div>5{201A}555</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">458</td>
+			<td class="name"><div>5‚775</div></td>
+			<td><div>5{201A}775</div></td>
+			<td><div>5{201A}775</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">459</td>
+			<td class="name"><div>5‚777</div></td>
+			<td><div>5{201A}777</div></td>
+			<td><div>5{201A}777</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">460</td>
+			<td class="name"><div>5‚885</div></td>
+			<td><div>5{201A}885</div></td>
+			<td><div>5{201A}885</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">461</td>
+			<td class="name"><div>5”5”5</div></td>
+			<td><div>5{201D}5{201D}5</div></td>
+			<td><div>5{201D}5{201D}5</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">462</td>
+			<td class="name"><div>6’0”</div></td>
+			<td><div>6{2019}0{201D}</div></td>
+			<td><div>6{2019}0{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">463</td>
+			<td class="name"><div>6’9”</div></td>
+			<td><div>6{2019}9{201D}</div></td>
+			<td><div>6{2019}9{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">464</td>
+			<td class="name"><div>6‚022</div></td>
+			<td><div>6{201A}022</div></td>
+			<td><div>6{201A}022</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">465</td>
+			<td class="name"><div>6‚6‚6</div></td>
+			<td><div>6{201A}6{201A}6</div></td>
+			<td><div>6{201A}6{201A}6</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">466</td>
+			<td class="name"><div>6‚626</div></td>
+			<td><div>6{201A}626</div></td>
+			<td><div>6{201A}626</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">467</td>
+			<td class="name"><div>6‚666</div></td>
+			<td><div>6{201A}666</div></td>
+			<td><div>6{201A}666</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">468</td>
+			<td class="name"><div>6‚886</div></td>
+			<td><div>6{201A}886</div></td>
+			<td><div>6{201A}886</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">469</td>
+			<td class="name"><div>6‚902</div></td>
+			<td><div>6{201A}902</div></td>
+			<td><div>6{201A}902</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">470</td>
+			<td class="name"><div>6‚940</div></td>
+			<td><div>6{201A}940</div></td>
+			<td><div>6{201A}940</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">471</td>
+			<td class="name"><div>6‚941</div></td>
+			<td><div>6{201A}941</div></td>
+			<td><div>6{201A}941</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">472</td>
+			<td class="name"><div>6‚962</div></td>
+			<td><div>6{201A}962</div></td>
+			<td><div>6{201A}962</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">473</td>
+			<td class="name"><div>6‚969</div></td>
+			<td><div>6{201A}969</div></td>
+			<td><div>6{201A}969</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">474</td>
+			<td class="name"><div>6‚982</div></td>
+			<td><div>6{201A}982</div></td>
+			<td><div>6{201A}982</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">475</td>
+			<td class="name"><div>6666’</div></td>
+			<td><div>6666{2019}</div></td>
+			<td><div>6666{2019}</div></td>
+			<td class="error">Invalid label "6666’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">476</td>
+			<td class="name"><div>69’</div></td>
+			<td><div>69{2019}</div></td>
+			<td><div>69{2019}</div></td>
+			<td class="error">Invalid label "69’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">477</td>
+			<td class="name"><div>69’420”</div></td>
+			<td><div>69{2019}420{201D}</div></td>
+			<td><div>69{2019}420{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">478</td>
+			<td class="name"><div>69‚420</div></td>
+			<td><div>69{201A}420</div></td>
+			<td><div>69{201A}420</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">479</td>
+			<td class="name"><div>69‚69</div></td>
+			<td><div>69{201A}69</div></td>
+			<td><div>69{201A}69</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">480</td>
+			<td class="name"><div>69”420</div></td>
+			<td><div>69{201D}420</div></td>
+			<td><div>69{201D}420</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">481</td>
+			<td class="name"><div>7‚000</div></td>
+			<td><div>7{201A}000</div></td>
+			<td><div>7{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">482</td>
+			<td class="name"><div>7‚333</div></td>
+			<td><div>7{201A}333</div></td>
+			<td><div>7{201A}333</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">483</td>
+			<td class="name"><div>7‚557</div></td>
+			<td><div>7{201A}557</div></td>
+			<td><div>7{201A}557</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">484</td>
+			<td class="name"><div>7‚777</div></td>
+			<td><div>7{201A}777</div></td>
+			<td><div>7{201A}777</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">485</td>
+			<td class="name"><div>7‚777‚777</div></td>
+			<td><div>7{201A}777{201A}777</div></td>
+			<td><div>7{201A}777{201A}777</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">486</td>
+			<td class="name"><div>7‚888</div></td>
+			<td><div>7{201A}888</div></td>
+			<td><div>7{201A}888</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">487</td>
+			<td class="name"><div>7”7”7</div></td>
+			<td><div>7{201D}7{201D}7</div></td>
+			<td><div>7{201D}7{201D}7</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">488</td>
+			<td class="name"><div>777‚777</div></td>
+			<td><div>777{201A}777</div></td>
+			<td><div>777{201A}777</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">489</td>
+			<td class="name"><div>7777’</div></td>
+			<td><div>7777{2019}</div></td>
+			<td><div>7777{2019}</div></td>
+			<td class="error">Invalid label "7777’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">490</td>
+			<td class="name"><div>8‚008</div></td>
+			<td><div>8{201A}008</div></td>
+			<td><div>8{201A}008</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">491</td>
+			<td class="name"><div>8‚666</div></td>
+			<td><div>8{201A}666</div></td>
+			<td><div>8{201A}666</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">492</td>
+			<td class="name"><div>8‚8‚8‚8‚8</div></td>
+			<td><div>8{201A}8{201A}8{201A}8{201A}8</div></td>
+			<td><div>8{201A}8{201A}8{201A}8{201A}8</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">493</td>
+			<td class="name"><div>8‚8‚8‚8‚8‚8</div></td>
+			<td><div>8{201A}8{201A}8{201A}8{201A}8{201A}8</div></td>
+			<td><div>8{201A}8{201A}8{201A}8{201A}8{201A}8</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">494</td>
+			<td class="name"><div>8‚880</div></td>
+			<td><div>8{201A}880</div></td>
+			<td><div>8{201A}880</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">495</td>
+			<td class="name"><div>8‚888</div></td>
+			<td><div>8{201A}888</div></td>
+			<td><div>8{201A}888</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">496</td>
+			<td class="name"><div>8”8”8</div></td>
+			<td><div>8{201D}8{201D}8</div></td>
+			<td><div>8{201D}8{201D}8</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">497</td>
+			<td class="name"><div>888’</div></td>
+			<td><div>888{2019}</div></td>
+			<td><div>888{2019}</div></td>
+			<td class="error">Invalid label "888’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">498</td>
+			<td class="name"><div>888‚888</div></td>
+			<td><div>888{201A}888</div></td>
+			<td><div>888{201A}888</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">499</td>
+			<td class="name"><div>8888’</div></td>
+			<td><div>8888{2019}</div></td>
+			<td><div>8888{2019}</div></td>
+			<td class="error">Invalid label "8888’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">500</td>
+			<td class="name"><div>9‚000</div></td>
+			<td><div>9{201A}000</div></td>
+			<td><div>9{201A}000</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">501</td>
+			<td class="name"><div>9‚069</div></td>
+			<td><div>9{201A}069</div></td>
+			<td><div>9{201A}069</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">502</td>
+			<td class="name"><div>9‚222</div></td>
+			<td><div>9{201A}222</div></td>
+			<td><div>9{201A}222</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">503</td>
+			<td class="name"><div>9‚669</div></td>
+			<td><div>9{201A}669</div></td>
+			<td><div>9{201A}669</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">504</td>
+			<td class="name"><div>9‚888</div></td>
+			<td><div>9{201A}888</div></td>
+			<td><div>9{201A}888</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">505</td>
+			<td class="name"><div>9‚999</div></td>
+			<td><div>9{201A}999</div></td>
+			<td><div>9{201A}999</div></td>
+			<td class="error">Disallowed codepoint: 0x201A</td>
+		</tr><tr>
+			<td class="index">506</td>
+			<td class="name"><div>9”””9</div></td>
+			<td><div>9{201D}{201D}{201D}9</div></td>
+			<td><div>9{201D}{201D}{201D}9</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">507</td>
+			<td class="name"><div>9”9”9</div></td>
+			<td><div>9{201D}9{201D}9</div></td>
+			<td><div>9{201D}9{201D}9</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">508</td>
+			<td class="name"><div>999‰</div></td>
+			<td><div>999{2030}</div></td>
+			<td><div>999{2030}</div></td>
+			<td class="error">Disallowed codepoint: 0x2030</td>
+		</tr><tr>
+			<td class="index">509</td>
+			<td class="name"><div>ballantine”s</div></td>
+			<td><div>ballantine{201D}s</div></td>
+			<td><div>ballantine{201D}s</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">510</td>
+			<td class="name"><div>bashas’</div></td>
+			<td><div>bashas{2019}</div></td>
+			<td><div>bashas{2019}</div></td>
+			<td class="error">Invalid label "bashas’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">511</td>
+			<td class="name"><div>boredape’</div></td>
+			<td><div>boredape{2019}</div></td>
+			<td><div>boredape{2019}</div></td>
+			<td class="error">Invalid label "boredape’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">512</td>
+			<td class="name"><div>boredapeyachtclub’</div></td>
+			<td><div>boredapeyachtclub{2019}</div></td>
+			<td><div>boredapeyachtclub{2019}</div></td>
+			<td class="error">Invalid label "boredapeyachtclub’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">513</td>
+			<td class="name"><div>charmander†</div></td>
+			<td><div>charmander{2020}</div></td>
+			<td><div>charmander{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">514</td>
+			<td class="name"><div>chris†</div></td>
+			<td><div>chris{2020}</div></td>
+			<td><div>chris{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">515</td>
+			<td class="name"><div>cross†</div></td>
+			<td><div>cross{2020}</div></td>
+			<td><div>cross{2020}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">516</td>
+			<td class="name"><div>crypto‘s</div></td>
+			<td><div>crypto{2018}s</div></td>
+			<td><div>crypto{2018}s</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">517</td>
+			<td class="name"><div>diggin’</div></td>
+			<td><div>diggin{2019}</div></td>
+			<td><div>diggin{2019}</div></td>
+			<td class="error">Invalid label "diggin’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">518</td>
+			<td class="name"><div>dunkin’</div></td>
+			<td><div>dunkin{2019}</div></td>
+			<td><div>dunkin{2019}</div></td>
+			<td class="error">Invalid label "dunkin’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">519</td>
+			<td class="name"><div>ðÿ‡°ðÿ‡·</div></td>
+			<td><div>{F0}{FF}{2021}{B0}{F0}{FF}{2021}{B7}</div></td>
+			<td><div>{F0}{FF}{2021}{B0}{F0}{FF}{2021}{B7}</div></td>
+			<td class="error">Disallowed codepoint: 0x2021</td>
+		</tr><tr>
+			<td class="index">520</td>
+			<td class="name"><div>eth”</div></td>
+			<td><div>eth{201D}</div></td>
+			<td><div>eth{201D}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">521</td>
+			<td class="name"><div>frontin’</div></td>
+			<td><div>frontin{2019}</div></td>
+			<td><div>frontin{2019}</div></td>
+			<td class="error">Invalid label "frontin’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">522</td>
+			<td class="name"><div>john’</div></td>
+			<td><div>john{2019}</div></td>
+			<td><div>john{2019}</div></td>
+			<td class="error">Invalid label "john’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">523</td>
+			<td class="name"><div>kiehl”s</div></td>
+			<td><div>kiehl{201D}s</div></td>
+			<td><div>kiehl{201D}s</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">524</td>
+			<td class="name"><div>kwon”ustispegged”butnowgcrandalgodpegginhimahhhcumyesbrutfuk</div></td>
+			<td><div>kwon{201D}ustispegged{201D}butnowgcrandalgodpegginhimahhhcumyesbrutfuk</div></td>
+			<td><div>kwon{201D}ustispegged{201D}butnowgcrandalgodpegginhimahhhcumyesbrutfuk</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">525</td>
+			<td class="name"><div>levi‘s</div></td>
+			<td><div>levi{2018}s</div></td>
+			<td><div>levi{2018}s</div></td>
+			<td class="error">Disallowed codepoint: 0x2018</td>
+		</tr><tr>
+			<td class="index">526</td>
+			<td class="name"><div>me‡a</div></td>
+			<td><div>me{2021}a</div></td>
+			<td><div>me{2021}a</div></td>
+			<td class="error">Disallowed codepoint: 0x2021</td>
+		</tr><tr>
+			<td class="index">527</td>
+			<td class="name"><div>penis’</div></td>
+			<td><div>penis{2019}</div></td>
+			<td><div>penis{2019}</div></td>
+			<td class="error">Invalid label "penis’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">528</td>
+			<td class="name"><div>sa†oshi</div></td>
+			<td><div>sa{2020}oshi</div></td>
+			<td><div>sa{2020}oshi</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">529</td>
+			<td class="name"><div>sequoiacapital”-“</div></td>
+			<td><div>sequoiacapital{201D}-{201C}</div></td>
+			<td><div>sequoiacapital{201D}-{201C}</div></td>
+			<td class="error">Disallowed codepoint: 0x201D</td>
+		</tr><tr>
+			<td class="index">530</td>
+			<td class="name"><div>vir†uε</div></td>
+			<td><div>vir{2020}u{3B5}</div></td>
+			<td><div>vir{2020}u{3B5}</div></td>
+			<td class="error">Disallowed codepoint: 0x2020</td>
+		</tr><tr>
+			<td class="index">531</td>
+			<td class="name"><div>オレは“海賊かいぞく王おう”になる男おとこだ</div></td>
+			<td><div>{30AA}{30EC}{306F}{201C}{6D77}{8CCA}{304B}{3044}{305E}{304F}{738B}{304A}{3046}{201D}{306B}{306A}{308B}{7537}{304A}{3068}{3053}{3060}</div></td>
+			<td><div>{30AA}{30EC}{306F}{201C}{6D77}{8CCA}{304B}{3044}{305E}{304F}{738B}{304A}{3046}{201D}{306B}{306A}{308B}{7537}{304A}{3068}{3053}{3060}</div></td>
+			<td class="error">Disallowed codepoint: 0x201C</td>
+		</tr></tbody></table><a name="both-error"><h2>both-error (2775)</h2></a><h3>Showing 82 differences</h3>			
+			<table id="both-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.3)</td>
+			<td>ens_normalize (1.6.4)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>'"&#62;&#60;img{20}src=x{20}onerror=alert(1)&#62;</div></td>
+			<td><div>'{22}&#62;&#60;img{20}src=x{20}onerror=alert(1)&#62;</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Disallowed codepoint: 0x22</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>'123</div></td>
+			<td><div>'123</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’123": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>'555</div></td>
+			<td><div>'555</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’555": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>'70s</div></td>
+			<td><div>'70s</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’70s": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>'80s</div></td>
+			<td><div>'80s</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’80s": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>'90s</div></td>
+			<td><div>'90s</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’90s": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>'vitalik</div></td>
+			<td><div>'vitalik</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "’vitalik": leading apostrophe</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>006'</div></td>
+			<td><div>006'</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "006’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>6666'</div></td>
+			<td><div>6666'</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "6666’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>7777'</div></td>
+			<td><div>7777'</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "7777’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>9999'</div></td>
+			<td><div>9999'</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "9999’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>ắbdulaziz</div></td>
+			<td><div>{1EAF}bdulaziz</div></td>
+			<td class="error">Invalid label "ắbdulaziz": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>ắbdullah</div></td>
+			<td><div>{1EAF}bdullah</div></td>
+			<td class="error">Invalid label "ắbdullah": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>ađâyrồi</div></td>
+			<td><div>a{111}{E2}yr{1ED3}i</div></td>
+			<td class="error">Invalid label "ađâyrồi": adjacent combining marks "ồ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED3</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>ắhmed</div></td>
+			<td><div>{1EAF}hmed</div></td>
+			<td class="error">Invalid label "ắhmed": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>bảohiểm</div></td>
+			<td><div>b{1EA3}ohi{1EC3}m</div></td>
+			<td class="error">Invalid label "bảohiểm": adjacent combining marks "ể"</td>
+			<td class="error">Disallowed codepoint: 0x1EC3</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>bảoviệt</div></td>
+			<td><div>b{1EA3}ovi{1EC7}t</div></td>
+			<td class="error">Invalid label "bảoviệt": adjacent combining marks "ệ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC7</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>cầnthơ</div></td>
+			<td><div>c{1EA7}nth{1A1}</div></td>
+			<td class="error">Invalid label "cầnthơ": adjacent combining marks "ầ"</td>
+			<td class="error">Disallowed codepoint: 0x1EA7</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>càphêsữađá</div></td>
+			<td><div>c{E0}ph{EA}s{1EEF}a{111}{E1}</div></td>
+			<td class="error">Invalid label "càphêsữađá": adjacent combining marks "ữ"</td>
+			<td class="error">Disallowed codepoint: 0x1EEF</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>cắrlos</div></td>
+			<td><div>c{1EAF}rlos</div></td>
+			<td class="error">Invalid label "cắrlos": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>chucknorris'</div></td>
+			<td><div>chucknorris'</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td class="error">Invalid label "chucknorris’": trailing apostrophe</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>chuối</div></td>
+			<td><div>chu{1ED1}i</div></td>
+			<td class="error">Invalid label "chuối": adjacent combining marks "ố"</td>
+			<td class="error">Disallowed codepoint: 0x1ED1</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>cơmtấm</div></td>
+			<td><div>c{1A1}mt{1EA5}m</div></td>
+			<td class="error">Invalid label "cơmtấm": adjacent combining marks "ấ"</td>
+			<td class="error">Disallowed codepoint: 0x1EA5</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>cường</div></td>
+			<td><div>c{1B0}{1EDD}ng</div></td>
+			<td class="error">Invalid label "cường": adjacent combining marks "ờ"</td>
+			<td class="error">Disallowed codepoint: 0x1EDD</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>đặcbiệt</div></td>
+			<td><div>{111}{1EB7}cbi{1EC7}t</div></td>
+			<td class="error">Invalid label "đặcbiệt": adjacent combining marks "ặ"</td>
+			<td class="error">Disallowed codepoint: 0x1EB7</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>đànẵng</div></td>
+			<td><div>{111}{E0}n{1EB5}ng</div></td>
+			<td class="error">Invalid label "đànẵng": adjacent combining marks "ẵ"</td>
+			<td class="error">Disallowed codepoint: 0x1EB5</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>đặngvănthành</div></td>
+			<td><div>{111}{1EB7}ngv{103}nth{E0}nh</div></td>
+			<td class="error">Invalid label "đặngvănthành": adjacent combining marks "ặ"</td>
+			<td class="error">Disallowed codepoint: 0x1EB7</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>fǎlǜjiā</div></td>
+			<td><div>f{1CE}l{1DC}ji{101}</div></td>
+			<td class="error">Invalid label "fǎlǜjiā": adjacent combining marks "ǜ"</td>
+			<td class="error">Disallowed codepoint: 0x1DC</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>gṏd</div></td>
+			<td><div>g{1E4F}d</div></td>
+			<td class="error">Invalid label "gṏd": adjacent combining marks "ṏ"</td>
+			<td class="error">Disallowed codepoint: 0x1E4F</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>hànội</div></td>
+			<td><div>h{E0}n{1ED9}i</div></td>
+			<td class="error">Invalid label "hànội": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>hồchíminh</div></td>
+			<td><div>h{1ED3}ch{ED}minh</div></td>
+			<td class="error">Invalid label "hồchíminh": adjacent combining marks "ồ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED3</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>huế</div></td>
+			<td><div>hu{1EBF}</div></td>
+			<td class="error">Invalid label "huế": adjacent combining marks "ế"</td>
+			<td class="error">Disallowed codepoint: 0x1EBF</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>mohắmmed</div></td>
+			<td><div>moh{1EAF}mmed</div></td>
+			<td class="error">Invalid label "mohắmmed": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>m̸̧̧̖͖̻̜̭̹̱̭̥̦̈́̈́͂ợ̶̫́̍̿̀͌̽̏̈̅̔̅͋̅͒̅́̀ơ̴̡̨̧̢͙̥̝̝̪̎̃̄͂̽̅̏̈́̆̅̀̄̎͘ι̤̤͓̪̦̩̻̭n̴̡̬̭̺̠̮̬̤̼͚͉̣̗̹̝̈́͋̍̆̂̆̉̕͘͜</div></td>
+			<td><div>m{338}{327}{327}{316}{356}{33B}{31C}{32D}{339}{331}{32D}{325}{326}{308}{301}{308}{301}{342}{1EE3}{336}{32B}{301}{30D}{33F}{300}{34C}{33D}{30F}{308}{305}{314}{305}{34B}{305}{352}{305}{301}{300}{1A1}{334}{321}{328}{327}{322}{359}{325}{31D}{31D}{32A}{30E}{303}{304}{342}{33D}{305}{30F}{308}{301}{306}{305}{300}{304}{30E}{358}{3B9}{324}{324}{353}{32A}{326}{329}{33B}{32D}n{334}{321}{32C}{32D}{33A}{320}{32E}{32C}{324}{33C}{35A}{349}{323}{317}{339}{31D}{308}{301}{34B}{30D}{306}{302}{306}{309}{315}{358}{35C}</div></td>
+			<td class="error">Disallowed codepoint: 0x320</td>
+			<td class="error">Disallowed codepoint: 0x1EE3</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>một</div></td>
+			<td><div>m{1ED9}t</div></td>
+			<td class="error">Invalid label "một": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>mộthaiba</div></td>
+			<td><div>m{1ED9}thaiba</div></td>
+			<td class="error">Invalid label "mộthaiba": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>mộttám</div></td>
+			<td><div>m{1ED9}tt{E1}m</div></td>
+			<td class="error">Invalid label "mộttám": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>mộttrăm</div></td>
+			<td><div>m{1ED9}ttr{103}m</div></td>
+			<td class="error">Invalid label "mộttrăm": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>muhắmmed</div></td>
+			<td><div>muh{1EAF}mmed</div></td>
+			<td class="error">Invalid label "muhắmmed": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>nguyễn</div></td>
+			<td><div>nguy{1EC5}n</div></td>
+			<td class="error">Invalid label "nguyễn": adjacent combining marks "ễ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC5</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>nullbyte{00}</div></td>
+			<td><div>nullbyte{00}</div></td>
+			<td class="error">Disallowed codepoint: 0x0</td>
+			<td class="error">Disallowed codepoint: 0x00</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>phạmnhậtvượng</div></td>
+			<td><div>ph{1EA1}mnh{1EAD}tv{1B0}{1EE3}ng</div></td>
+			<td class="error">Invalid label "phạmnhậtvượng": adjacent combining marks "ậ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAD</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>phật</div></td>
+			<td><div>ph{1EAD}t</div></td>
+			<td class="error">Invalid label "phật": adjacent combining marks "ậ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAD</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>phở</div></td>
+			<td><div>ph{1EDF}</div></td>
+			<td class="error">Invalid label "phở": adjacent combining marks "ở"</td>
+			<td class="error">Disallowed codepoint: 0x1EDF</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>randydandy{00}</div></td>
+			<td><div>randydandy{00}</div></td>
+			<td class="error">Disallowed codepoint: 0x0</td>
+			<td class="error">Disallowed codepoint: 0x00</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>sốmột</div></td>
+			<td><div>s{1ED1}m{1ED9}t</div></td>
+			<td class="error">Invalid label "sốmột": adjacent combining marks "ố"</td>
+			<td class="error">Disallowed codepoint: 0x1ED1</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>tàilộcphát</div></td>
+			<td><div>t{E0}il{1ED9}cph{E1}t</div></td>
+			<td class="error">Invalid label "tàilộcphát": adjacent combining marks "ộ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED9</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>tencentcloud{00}{00}{00}{00}{00}{00}</div></td>
+			<td><div>tencentcloud{00}{00}{00}{00}{00}{00}</div></td>
+			<td class="error">Disallowed codepoint: 0x0</td>
+			<td class="error">Disallowed codepoint: 0x00</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>tencentclub{00}{00}{00}{00}{00}{00}</div></td>
+			<td><div>tencentclub{00}{00}{00}{00}{00}{00}</div></td>
+			<td class="error">Disallowed codepoint: 0x0</td>
+			<td class="error">Disallowed codepoint: 0x00</td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>tencentnews{00}{00}{00}{00}{00}{00}</div></td>
+			<td><div>tencentnews{00}{00}{00}{00}{00}{00}</div></td>
+			<td class="error">Disallowed codepoint: 0x0</td>
+			<td class="error">Disallowed codepoint: 0x00</td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>thắng</div></td>
+			<td><div>th{1EAF}ng</div></td>
+			<td class="error">Invalid label "thắng": adjacent combining marks "ắ"</td>
+			<td class="error">Disallowed codepoint: 0x1EAF</td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>thượngđế</div></td>
+			<td><div>th{1B0}{1EE3}ng{111}{1EBF}</div></td>
+			<td class="error">Invalid label "thượngđế": adjacent combining marks "ợ"</td>
+			<td class="error">Disallowed codepoint: 0x1EE3</td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>tiền</div></td>
+			<td><div>ti{1EC1}n</div></td>
+			<td class="error">Invalid label "tiền": adjacent combining marks "ề"</td>
+			<td class="error">Disallowed codepoint: 0x1EC1</td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>tiềnbạc</div></td>
+			<td><div>ti{1EC1}nb{1EA1}c</div></td>
+			<td class="error">Invalid label "tiềnbạc": adjacent combining marks "ề"</td>
+			<td class="error">Disallowed codepoint: 0x1EC1</td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>tiếngviệt</div></td>
+			<td><div>ti{1EBF}ngvi{1EC7}t</div></td>
+			<td class="error">Invalid label "tiếngviệt": adjacent combining marks "ế"</td>
+			<td class="error">Disallowed codepoint: 0x1EBF</td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>tiềnvay</div></td>
+			<td><div>ti{1EC1}nvay</div></td>
+			<td class="error">Invalid label "tiềnvay": adjacent combining marks "ề"</td>
+			<td class="error">Disallowed codepoint: 0x1EC1</td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>trần</div></td>
+			<td><div>tr{1EA7}n</div></td>
+			<td class="error">Invalid label "trần": adjacent combining marks "ầ"</td>
+			<td class="error">Disallowed codepoint: 0x1EA7</td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>triệu</div></td>
+			<td><div>tri{1EC7}u</div></td>
+			<td class="error">Invalid label "triệu": adjacent combining marks "ệ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC7</td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>vaytiền</div></td>
+			<td><div>vayti{1EC1}n</div></td>
+			<td class="error">Invalid label "vaytiền": adjacent combining marks "ề"</td>
+			<td class="error">Disallowed codepoint: 0x1EC1</td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>việt</div></td>
+			<td><div>vi{1EC7}t</div></td>
+			<td class="error">Invalid label "việt": adjacent combining marks "ệ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC7</td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>việt-nam</div></td>
+			<td><div>vi{1EC7}t-nam</div></td>
+			<td class="error">Invalid label "việt-nam": adjacent combining marks "ệ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC7</td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>việtnam</div></td>
+			<td><div>vi{1EC7}tnam</div></td>
+			<td class="error">Invalid label "việtnam": adjacent combining marks "ệ"</td>
+			<td class="error">Disallowed codepoint: 0x1EC7</td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>xổsốmiềnbắc</div></td>
+			<td><div>x{1ED5}s{1ED1}mi{1EC1}nb{1EAF}c</div></td>
+			<td class="error">Invalid label "xổsốmiềnbắc": adjacent combining marks "ổ"</td>
+			<td class="error">Disallowed codepoint: 0x1ED5</td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>ʕ⁎̯͡⁎ʔ༄</div></td>
+			<td><div>{295}{204E}{32F}{361}{204E}{294}{F04}</div></td>
+			<td class="error">Invalid label "ʕ⁎̯͡⁎ʔ༄": adjacent combining marks "⁎̯͡"</td>
+			<td class="error">Disallowed codepoint: 0x204E</td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>νίψονἀνομήματαμὴμόνανὄψιν</div></td>
+			<td><div>{3BD}{3AF}{3C8}{3BF}{3BD}{1F00}{3BD}{3BF}{3BC}{3AE}{3BC}{3B1}{3C4}{3B1}{3BC}{1F74}{3BC}{3CC}{3BD}{3B1}{3BD}{1F44}{3C8}{3B9}{3BD}</div></td>
+			<td class="error">Invalid label "νίψονἀνομήματαμὴμόνανὄψιν": adjacent combining marks "ὄ"</td>
+			<td class="error">Disallowed codepoint: 0x1F44</td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>ὄσιρις</div></td>
+			<td><div>{1F44}{3C3}{3B9}{3C1}{3B9}{3C2}</div></td>
+			<td class="error">Invalid label "ὄσιρις": adjacent combining marks "ὄ"</td>
+			<td class="error">Disallowed codepoint: 0x1F44</td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>ক্যাসিনো</div></td>
+			<td><div>{995}{9CD}{9AF}{9BE}{9B8}{9BF}{9A8}{9CB}</div></td>
+			<td class="error">Invalid label "ক্যাসিনো": adjacent combining marks "নো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>ক্রিপ্টো</div></td>
+			<td><div>{995}{9CD}{9B0}{9BF}{9AA}{9CD}{99F}{9CB}</div></td>
+			<td class="error">Invalid label "ক্রিপ্টো": adjacent combining marks "টো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>দোকান</div></td>
+			<td><div>{9A6}{9CB}{995}{9BE}{9A8}</div></td>
+			<td class="error">Invalid label "দোকান": adjacent combining marks "দো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>পর্নো</div></td>
+			<td><div>{9AA}{9B0}{9CD}{9A8}{9CB}</div></td>
+			<td class="error">Invalid label "পর্নো": adjacent combining marks "নো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>বিনিয়োগ</div></td>
+			<td><div>{9AC}{9BF}{9A8}{9BF}{9AF}{9BC}{9CB}{997}</div></td>
+			<td class="error">Invalid label "বিনিয়োগ": adjacent combining marks "য়ে"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>মোহাম্মদ</div></td>
+			<td><div>{9AE}{9CB}{9B9}{9BE}{9AE}{9CD}{9AE}{9A6}</div></td>
+			<td class="error">Invalid label "মোহাম্মদ": adjacent combining marks "মো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>যোগাযোগ</div></td>
+			<td><div>{9AF}{9CB}{997}{9BE}{9AF}{9CB}{997}</div></td>
+			<td class="error">Invalid label "যোগাযোগ": adjacent combining marks "যো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>যৌনতা</div></td>
+			<td><div>{9AF}{9CC}{9A8}{9A4}{9BE}</div></td>
+			<td class="error">Invalid label "যৌনতা": adjacent combining marks "যৌ"</td>
+			<td class="error">Disallowed codepoint: 0x9CC</td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>সোনা</div></td>
+			<td><div>{9B8}{9CB}{9A8}{9BE}</div></td>
+			<td class="error">Invalid label "সোনা": adjacent combining marks "সো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>হ্যালো</div></td>
+			<td><div>{9B9}{9CD}{9AF}{9BE}{9B2}{9CB}</div></td>
+			<td class="error">Invalid label "হ্যালো": adjacent combining marks "লো"</td>
+			<td class="error">Disallowed codepoint: 0x9CB</td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>கோயம்புத்தூர்</div></td>
+			<td><div>{B95}{BCB}{BAF}{BAE}{BCD}{BAA}{BC1}{BA4}{BCD}{BA4}{BC2}{BB0}{BCD}</div></td>
+			<td class="error">Invalid label "கோயம்புத்தூர்": adjacent combining marks "கோ"</td>
+			<td class="error">Disallowed codepoint: 0xBCB</td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>பதினொன்று</div></td>
+			<td><div>{BAA}{BA4}{BBF}{BA9}{BCA}{BA9}{BCD}{BB1}{BC1}</div></td>
+			<td class="error">Invalid label "பதினொன்று": adjacent combining marks "னொ"</td>
+			<td class="error">Disallowed codepoint: 0xBCA</td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>மெட்டகோவன்</div></td>
+			<td><div>{BAE}{BC6}{B9F}{BCD}{B9F}{B95}{BCB}{BB5}{BA9}{BCD}</div></td>
+			<td class="error">Invalid label "மெட்டகோவன்": adjacent combining marks "கோ"</td>
+			<td class="error">Disallowed codepoint: 0xBCB</td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>ಕೈಚೀಲ</div></td>
+			<td><div>{C95}{CC8}{C9A}{CC0}{CB2}</div></td>
+			<td class="error">Invalid label "ಕೈಚೀಲ": adjacent combining marks "ಕೈ"</td>
+			<td class="error">Disallowed codepoint: 0xCC8</td>
+		</tr><tr>
+			<td class="index">81</td>
+			<td class="name"><div>ಮೈಸೂರು</div></td>
+			<td><div>{CAE}{CC8}{CB8}{CC2}{CB0}{CC1}</div></td>
+			<td class="error">Invalid label "ಮೈಸೂರು": adjacent combining marks "ಮೈ"</td>
+			<td class="error">Disallowed codepoint: 0xCC8</td>
+		</tr><tr>
+			<td class="index">82</td>
+			<td class="name"><div>🪽{20}🪽{20}🪽{20}🪽</div></td>
+			<td><div>{1FABD}{20}{1FABD}{20}{1FABD}{20}{1FABD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FABD</td>
+			<td class="error">Disallowed codepoint: 0x20</td>
+		</tr></tbody></table><a name="a-error"><h2>ens_normalize_1.6.3-error (80)</h2></a>			
+			<table id="a-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.3)</td>
+			<td>ens_normalize (1.6.4)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>_🐦{200D}⬛</div></td>
+			<td><div>_{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>_{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>🐦{200D}⬛</div></td>
+			<td><div>{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>🐦{200D}⬛🐈{200D}⬛</div></td>
+			<td><div>{1F426}{200D}{2B1B}{1F408}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>{1F426}{200D}{2B1B}{1F408}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>🐦{200D}⬛🐦{200D}⬛</div></td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>🐦{200D}⬛🐦{200D}⬛🐦{200D}⬛</div></td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>🐦{200D}⬛🐦{200D}⬛🐦{200D}⬛🐦{200D}⬛</div></td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>0x🐦{200D}⬛</div></td>
+			<td><div>0x{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>0x{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>20's</div></td>
+			<td><div>20's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>20{2019}s</div></td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>adam's</div></td>
+			<td><div>adam's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>adam{2019}s</div></td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>biker's</div></td>
+			<td><div>biker's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>biker{2019}s</div></td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>btc's</div></td>
+			<td><div>btc's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>btc{2019}s</div></td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>d'arc</div></td>
+			<td><div>d'arc</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>d{2019}arc</div></td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>d'artagnan</div></td>
+			<td><div>d'artagnan</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>d{2019}artagnan</div></td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>dan's</div></td>
+			<td><div>dan's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>dan{2019}s</div></td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>de'medici</div></td>
+			<td><div>de'medici</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>de{2019}medici</div></td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>demon's</div></td>
+			<td><div>demon's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>demon{2019}s</div></td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>derek's</div></td>
+			<td><div>derek's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>derek{2019}s</div></td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>dick's</div></td>
+			<td><div>dick's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>dick{2019}s</div></td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>doesn't</div></td>
+			<td><div>doesn't</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>doesn{2019}t</div></td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>england's</div></td>
+			<td><div>england's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>england{2019}s</div></td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>Farfetch'd</div></td>
+			<td><div>Farfetch'd</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>farfetch{2019}d</div></td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>game's</div></td>
+			<td><div>game's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>game{2019}s</div></td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>he'll</div></td>
+			<td><div>he'll</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>he{2019}ll</div></td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>head's</div></td>
+			<td><div>head's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>head{2019}s</div></td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>i🩷u</div></td>
+			<td><div>i{1FA77}u</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA77</td>
+			<td><div>i{1FA77}u</div></td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>jacob's</div></td>
+			<td><div>jacob's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>jacob{2019}s</div></td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>lowe's</div></td>
+			<td><div>lowe's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>lowe{2019}s</div></td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>luffy's</div></td>
+			<td><div>luffy's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>luffy{2019}s</div></td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>matt's</div></td>
+			<td><div>matt's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>matt{2019}s</div></td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>mayc's</div></td>
+			<td><div>mayc's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>mayc{2019}s</div></td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>mm's</div></td>
+			<td><div>mm's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>mm{2019}s</div></td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>nft's</div></td>
+			<td><div>nft's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>nft{2019}s</div></td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>o'brian</div></td>
+			<td><div>o'brian</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}brian</div></td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>o'brien</div></td>
+			<td><div>o'brien</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}brien</div></td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>o'doherty</div></td>
+			<td><div>o'doherty</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}doherty</div></td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>o'hare</div></td>
+			<td><div>o'hare</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}hare</div></td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>o'malley</div></td>
+			<td><div>o'malley</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}malley</div></td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>o'neil</div></td>
+			<td><div>o'neil</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}neil</div></td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>o'shea</div></td>
+			<td><div>o'shea</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>o{2019}shea</div></td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>papajohn's</div></td>
+			<td><div>papajohn's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>papajohn{2019}s</div></td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>shouldn't</div></td>
+			<td><div>shouldn't</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>shouldn{2019}t</div></td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>smith's</div></td>
+			<td><div>smith's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>smith{2019}s</div></td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>sr71🐦{200D}⬛</div></td>
+			<td><div>sr71{1F426}{200D}{2B1B}</div></td>
+			<td class="error">Disallowed codepoint: 0x200D</td>
+			<td><div>sr71{1F426}{200D}{2B1B}</div></td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>t'challa</div></td>
+			<td><div>t'challa</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>t{2019}challa</div></td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>they're</div></td>
+			<td><div>they're</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>they{2019}re</div></td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>timhorton's</div></td>
+			<td><div>timhorton's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>timhorton{2019}s</div></td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>trump's</div></td>
+			<td><div>trump's</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>trump{2019}s</div></td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>you've</div></td>
+			<td><div>you've</div></td>
+			<td class="error">Disallowed codepoint: 0x27</td>
+			<td><div>you{2019}ve</div></td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>🛜network</div></td>
+			<td><div>{1F6DC}network</div></td>
+			<td class="error">Disallowed codepoint: 0x1F6DC</td>
+			<td><div>{1F6DC}network</div></td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>🩵🩵🩵</div></td>
+			<td><div>{1FA75}{1FA75}{1FA75}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA75</td>
+			<td><div>{1FA75}{1FA75}{1FA75}</div></td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>🩵🩵🩵🩵🩵</div></td>
+			<td><div>{1FA75}{1FA75}{1FA75}{1FA75}{1FA75}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA75</td>
+			<td><div>{1FA75}{1FA75}{1FA75}{1FA75}{1FA75}</div></td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>🩶🩶🩶</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA76</td>
+			<td><div>{1FA76}{1FA76}{1FA76}</div></td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>🩶🩶🩶🩶</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA76</td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>🩶🩶🩶🩶🩶</div></td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA76</td>
+			<td><div>{1FA76}{1FA76}{1FA76}{1FA76}{1FA76}</div></td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>🩷🩷🩷</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA77</td>
+			<td><div>{1FA77}{1FA77}{1FA77}</div></td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>🩷🩷🩷🩷🩷</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA77</td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>🩷🩷🩷🩷🩷🩷🩷🩷</div></td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FA77</td>
+			<td><div>{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}{1FA77}</div></td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>🪮-🪮-🪮</div></td>
+			<td><div>{1FAAE}-{1FAAE}-{1FAAE}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAAE</td>
+			<td><div>{1FAAE}-{1FAAE}-{1FAAE}</div></td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>🪼🪼🪼🪼🪼🪼</div></td>
+			<td><div>{1FABC}{1FABC}{1FABC}{1FABC}{1FABC}{1FABC}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FABC</td>
+			<td><div>{1FABC}{1FABC}{1FABC}{1FABC}{1FABC}{1FABC}</div></td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>🪽-🪽-🪽</div></td>
+			<td><div>{1FABD}-{1FABD}-{1FABD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FABD</td>
+			<td><div>{1FABD}-{1FABD}-{1FABD}</div></td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>🪽🪽🪽🪽🪽</div></td>
+			<td><div>{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FABD</td>
+			<td><div>{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}</div></td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>🪽🪽🪽🪽🪽🪽</div></td>
+			<td><div>{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FABD</td>
+			<td><div>{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}{1FABD}</div></td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>🫎-🫎-🫎</div></td>
+			<td><div>{1FACE}-{1FACE}-{1FACE}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FACE</td>
+			<td><div>{1FACE}-{1FACE}-{1FACE}</div></td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>🫎🫎🫎</div></td>
+			<td><div>{1FACE}{1FACE}{1FACE}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FACE</td>
+			<td><div>{1FACE}{1FACE}{1FACE}</div></td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>🫏-🫏-🫏</div></td>
+			<td><div>{1FACF}-{1FACF}-{1FACF}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FACF</td>
+			<td><div>{1FACF}-{1FACF}-{1FACF}</div></td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>🫏🫏🫏</div></td>
+			<td><div>{1FACF}{1FACF}{1FACF}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FACF</td>
+			<td><div>{1FACF}{1FACF}{1FACF}</div></td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>🫚-🫚-🫚</div></td>
+			<td><div>{1FADA}-{1FADA}-{1FADA}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FADA</td>
+			<td><div>{1FADA}-{1FADA}-{1FADA}</div></td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>🫛🪻🛜🛜</div></td>
+			<td><div>{1FADB}{1FABB}{1F6DC}{1F6DC}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FADB</td>
+			<td><div>{1FADB}{1FABB}{1F6DC}{1F6DC}</div></td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>🫨🫨🫨</div></td>
+			<td><div>{1FAE8}{1FAE8}{1FAE8}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAE8</td>
+			<td><div>{1FAE8}{1FAE8}{1FAE8}</div></td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>🫨🫨🫨🫨🫨🫨🫨</div></td>
+			<td><div>{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAE8</td>
+			<td><div>{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}{1FAE8}</div></td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>🫷🏻🫷🏻🫷🏻</div></td>
+			<td><div>{1FAF7}{1F3FB}{1FAF7}{1F3FB}{1FAF7}{1F3FB}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF7</td>
+			<td><div>{1FAF7}{1F3FB}{1FAF7}{1F3FB}{1FAF7}{1F3FB}</div></td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>🫷🏼🫷🏼🫷🏼</div></td>
+			<td><div>{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF7</td>
+			<td><div>{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}</div></td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>🫷🏼🫷🏼🫷🏼🫷🏼🫷🏼</div></td>
+			<td><div>{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF7</td>
+			<td><div>{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}{1FAF7}{1F3FC}</div></td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>🫷🏽🫷🏽🫷🏽</div></td>
+			<td><div>{1FAF7}{1F3FD}{1FAF7}{1F3FD}{1FAF7}{1F3FD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF7</td>
+			<td><div>{1FAF7}{1F3FD}{1FAF7}{1F3FD}{1FAF7}{1F3FD}</div></td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>🫸🏻🫷🏿🫸🏻</div></td>
+			<td><div>{1FAF8}{1F3FB}{1FAF7}{1F3FF}{1FAF8}{1F3FB}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FB}{1FAF7}{1F3FF}{1FAF8}{1F3FB}</div></td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>🫸🏻🫸🏻🫸🏻</div></td>
+			<td><div>{1FAF8}{1F3FB}{1FAF8}{1F3FB}{1FAF8}{1F3FB}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FB}{1FAF8}{1F3FB}{1FAF8}{1F3FB}</div></td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>🫸🏼🫸🏼🫸🏼</div></td>
+			<td><div>{1FAF8}{1F3FC}{1FAF8}{1F3FC}{1FAF8}{1F3FC}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FC}{1FAF8}{1F3FC}{1FAF8}{1F3FC}</div></td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>🫸🏽🫸🏽🫸🏽</div></td>
+			<td><div>{1FAF8}{1F3FD}{1FAF8}{1F3FD}{1FAF8}{1F3FD}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FD}{1FAF8}{1F3FD}{1FAF8}{1F3FD}</div></td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>🫸🏾🫸🏾🫸🏾</div></td>
+			<td><div>{1FAF8}{1F3FE}{1FAF8}{1F3FE}{1FAF8}{1F3FE}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FE}{1FAF8}{1F3FE}{1FAF8}{1F3FE}</div></td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>🫸🏿🫸🏿🫸🏿</div></td>
+			<td><div>{1FAF8}{1F3FF}{1FAF8}{1F3FF}{1FAF8}{1F3FF}</div></td>
+			<td class="error">Disallowed codepoint: 0x1FAF8</td>
+			<td><div>{1FAF8}{1F3FF}{1FAF8}{1F3FF}{1FAF8}{1F3FF}</div></td>
+		</tr></tbody></table><a name="diff-norm"><h2>diff-norm (4)</h2></a>			
+			<table id="diff-norm">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.3)</td>
+			<td>ens_normalize (1.6.4)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>•⁃⁃⁃⁃</div></td>
+			<td><div>{2022}{2043}{2043}{2043}{2043}</div></td>
+			<td><div>{2022}{2043}{2043}{2043}{2043}</div></td>
+			<td><div>{2022}----</div></td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>⁃-⁃</div></td>
+			<td><div>{2043}-{2043}</div></td>
+			<td><div>{2043}-{2043}</div></td>
+			<td><div>---</div></td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>⁃⁃⁃</div></td>
+			<td><div>{2043}{2043}{2043}</div></td>
+			<td><div>{2043}{2043}{2043}</div></td>
+			<td><div>---</div></td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>🅸⁃🅰🅼⁃🦇👨</div></td>
+			<td><div>{1F178}{2043}{1F170}{1F17C}{2043}{1F987}{1F468}</div></td>
+			<td><div>{1F178}{2043}{1F170}{1F17C}{2043}{1F987}{1F468}</div></td>
+			<td><div>{1F178}-{1F170}{1F17C}-{1F987}{1F468}</div></td>
+		</tr></tbody></table></body></html>

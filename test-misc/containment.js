@@ -1,24 +1,16 @@
+// NOTE: this test is no longer needed
+
 // check that every:
 // * valid is norm
 // * mapped input is not norm
 // * mapped output is norm
 // * ignored is empty string
 
-import {CHARS} from '@adraffy/ensip-norm';
-/*
-import {IMPLS} from '../impls.js';
-for (let impl of IMPLS) {
-	let errors = test(impl.fn);
-	console.log(errors.length == 0 ? 'PASS' : 'FAIL', impl.name);
-	if (impl.primary && errors.length) {
-		console.log(errors);
-		console.log(impl);
-		process.exit(1);
-	}
-}
-console.log('OK');
-*/
+import {readFileSync} from 'node:fs';
 import {ens_normalize_fragment} from '@adraffy/ens-normalize';
+
+let {valid, mapped, ignored} = JSON.parse(readFileSync(new URL('../ens-normalize.js/derive/output/chars.json', import.meta.url)));
+
 let errors = test(ens_normalize_fragment);
 if (errors.length) {
 	console.log(errors);
@@ -28,12 +20,12 @@ console.log('OK');
 
 function test(fn) {
 	let errors = [];
-	for (let cp of CHARS.valid) {
+	for (let cp of valid) {
 		if (!is_norm(String.fromCodePoint(cp))) {
 			errors.push({type: 'valid', cp});
 		} 
 	}
-	for (let [cp, cps] of CHARS.mapped) {
+	for (let [cp, cps] of mapped) {
 		if (is_norm(String.fromCodePoint(cp))) {
 			errors.push({type: 'mapped-input', cp});
 		}
@@ -41,7 +33,7 @@ function test(fn) {
 			errors.push({type: 'mapped-output', cps});
 		}
 	}
-	for (let cp of CHARS.ignored) {
+	for (let cp of ignored) {
 		if (!is_norm(String.fromCodePoint(cp), '')) {
 			errors.push({type: 'ignored', cp});
 		}

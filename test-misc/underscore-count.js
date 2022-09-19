@@ -2,11 +2,8 @@
 
 import LABELS from '../eth-labels/db.js';
 import {ens_normalize_fragment} from '@adraffy/ens-normalize';
-import {explode_cp} from '@adraffy/ens-norm-uts46';
+import {explode_cp} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
-
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
 
 const UNDERSCORE = 0x5F;
 
@@ -32,6 +29,8 @@ for (let label of LABELS) {
 
 console.log({leading, includes: includes.length});
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./underscore-count.json', out_dir), JSON.stringify({leading, includes}, null, '\t'));
 
 function add_bucket(tally, key, s) {

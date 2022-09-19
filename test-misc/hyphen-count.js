@@ -2,11 +2,8 @@
 
 import LABELS from '../eth-labels/db.js';
 import {ens_normalize_fragment} from '@adraffy/ens-normalize';
-import {explode_cp} from '@adraffy/ens-norm-uts46';
+import {explode_cp} from '../utils.js';
 import {mkdirSync, writeFileSync} from 'node:fs';
-
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
 
 const HYPHEN = 0x2D;
 
@@ -21,7 +18,10 @@ for (let name of LABELS) {
 	count(raw, name);
 }
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./hyphen-count.json', out_dir), JSON.stringify({raw, norm}, null, '\t'));
+
 
 function count(tally, s) {
 	let cps = explode_cp(s);

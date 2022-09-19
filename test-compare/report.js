@@ -1,11 +1,10 @@
 import {IMPLS} from '../impls.js';
 import LABELS from '../eth-labels/db.js';
 import {escape_for_html, escape_unicode} from '../utils.js';
-import {mkdir, writeFile, readdir} from 'node:fs/promises';
+import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);
-
-await mkdir(out_dir, {recursive: true});
+mkdirSync(out_dir, {recursive: true});
 
 // pairwise
 /*
@@ -19,21 +18,20 @@ for (let j = 1; j < IMPLS.length; j++) {
 }
 */
 
-let j = IMPLS.findIndex(x => x.name === 'ens_normalize' && x.primary);
+let j = IMPLS.findIndex(x => x.name === 'ens_normalize' && x.primary); // quick hack
 if (j == -1) throw new Error('wtf');
 for (let i = 0; i < IMPLS.length; i++) {
 	if (i == j) continue;
 	let [a, b] = [IMPLS[i], IMPLS[j]].sort((a, b) => a.slug.localeCompare(b.slug));
 	let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
-	await writeFile(out_file, create_html_report(a, b)); 
-	console.log(i, j, a.name, b.name);
+	console.log(i, j, a.slug, b.slug);
+	writeFileSync(out_file, create_html_report(a, b)); 
 }
 
+writeFileSync(new URL('./index.html', out_dir), create_html_index());
 
-await writeFile(new URL('./index.html', out_dir), await create_html_index());
-
-async function create_html_index() {
-	let names = (await readdir(out_dir)).filter(x => x.includes('_') && x.endsWith('.html'));
+function create_html_index() {
+	let names = readdirSync(out_dir).filter(x => x.includes('_') && x.endsWith('.html'));
 	let html = names.map(name => {
 		return `<li><a href="./${name}">${name}</a></li>`;
 	}).join('');
@@ -55,7 +53,7 @@ async function create_html_index() {
 }
 
 function create_html_report(A, B) {
-	let same_lib = A.name === B.name;
+	//let same_lib = A.name === B.name;
 	let buckets = {};
 	for (let label of LABELS) {
 		let a_norm, a_error;

@@ -1,6 +1,6 @@
 {
 	"name": "@adraffy/ens-norm-tests",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "ENS Name Normalization Tests",
 	"keywords": [
 		"ENS",
@@ -26,19 +26,18 @@
 	},
 	"scripts": {
 		"impls": "node impls.js",
+		"count": "node eth-labels/count.js",
 		"idempotence": "node test-misc/idempotence.js",
 		"uts46": "node test-misc/uts46.js",
-		"valid-quick": "node test-validation/quick.js",
-		"valid-report": "node test-validation/report.js",
-		"compare-report": "node test-compare/report.js"
+		"quick": "node test-validation/quick.js",
+		"validate": "node test-validation/report.js",
+		"compare": "node test-compare/report.js"
 	},
 	"dependencies": {
-		"@adraffy/ens-norm-ref-impl": "^0.0.10",
 		"@adraffy/ens-norm-uts46": "^0.0.5",
-		"@adraffy/ens-normalize": "^1.6.3",
-		"@adraffy/ensip-norm": "^0.0.8",
+		"@adraffy/ens-normalize": "^1.6.4",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
 		"ethers": "^5.7.0",
-		"prior_ens_norm": "npm:@adraffy/ens-normalize@^1.6.1"
+		"prior_ens_norm": "npm:@adraffy/ens-normalize@^1.6.3"
 	}
 }
