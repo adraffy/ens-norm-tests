@@ -1,9 +1,9 @@
 // count runs of combining marks
 
-import LABELS from '../eth-labels/db.js';
-import {SPEC, explode_cp} from '../utils.js';
-import {nfd} from '@adraffy/ens-normalize';
 import {mkdirSync, writeFileSync} from 'node:fs';
+import LABELS from '../eth-labels/db.js';
+import {SPEC, NF} from './ens-normalize.js/derive/unicode-version.js';
+import {explode_cp} from './ens-normalize.js/src/utils.js';
 
 const CM = new Set(SPEC.general_category('M').map(x => x.cp));
 
@@ -12,7 +12,7 @@ let cases = [];
 let start = [];
 for (let label of LABELS) {
 	try {
-		let cps = nfd(explode_cp(label));
+		let cps = NF.nfd(explode_cp(label));
 		for (let i = 0; i < cps.length; ) {
 			if (CM.has(cps[i++])) {
 				let n = 1;

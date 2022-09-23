@@ -1,5 +1,5 @@
 import {IMPLS} from '../impls.js';
-import {escape_for_html, escape_unicode, run_validation_tests} from '../utils.js';
+import {escape_for_html, escape_unicode, run_validation_tests} from '../ens-normalize/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);

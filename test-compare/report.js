@@ -1,6 +1,6 @@
 import {IMPLS} from '../impls.js';
 import LABELS from '../eth-labels/db.js';
-import {escape_for_html, escape_unicode} from '../utils.js';
+import {escape_for_html, escape_unicode} from '../ens-normalize.js/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 
 let out_dir = new URL('./output/', import.meta.url);

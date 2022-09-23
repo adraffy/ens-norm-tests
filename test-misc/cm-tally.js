@@ -1,16 +1,16 @@
 // count combining marks
 
-import LABELS from '../eth-labels/db.js';
-import {SPEC, explode_cp} from '../utils.js';
-import {nfd} from '@adraffy/ens-normalize';
 import {mkdirSync, writeFileSync} from 'node:fs';
+import LABELS from '../eth-labels/db.js';
+import {SPEC, NF} from './ens-normalize.js/derive/unicode-version.js';
+import {explode_cp} from './ens-normalize.js/src/utils.js';
 
 const CM = new Set(SPEC.general_category('M').map(x => x.cp));
 
 let tally = {};
 for (let label of LABELS) {
 	try {
-		for (let cp of new Set(nfd(explode_cp(label)))) {
+		for (let cp of new Set(NF.nfd(explode_cp(label)))) {
 			if (CM.has(cp)) {
 				tally[cp] = (tally[cp] ?? 0) + 1;
 			}

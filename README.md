@@ -17,7 +17,7 @@
 
 ## Data Files
 
-* [`eth-labels/registered.json`](./eth-labels/registered.json) &mdash; `1,484,938` registered labels as of `2022-09-18`
+* `1,484,938` registered labels as of `2022-09-18`
 
 ## Build
 

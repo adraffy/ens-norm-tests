@@ -1,12 +1,10 @@
 // find where arabic digit names are impacted by mapping
 
-import LABELS from '../eth-labels/db.js';
-import {ens_normalize} from '@adraffy/ens-normalize';
 import {mkdirSync, writeFileSync} from 'node:fs';
-import {escape_unicode} from '../utils.js';
+import LABELS from '../eth-labels/db.js';
+import {escape_unicode} from './ens-normalize.js/src/utils.js';
 
-let out_dir = new URL('./output/', import.meta.url);
-mkdirSync(out_dir, {recursive: true});
+import {ens_normalize} from '@adraffy/ens-normalize';
 
 const MAPPED = /[\u{6F0}-\u{6F3}\u{6F7}-\u{6F9}]/u;
 const PROPER = /[\u{660}-\u{663}\u{667}-\u{669}]/u;
@@ -43,4 +41,6 @@ console.log({
 	both: both.length
 });
 
+let out_dir = new URL('./output/', import.meta.url);
+mkdirSync(out_dir, {recursive: true});
 writeFileSync(new URL('./arabic-numerals.json', out_dir), JSON.stringify({valid, invalid, both}, null, '\t'));

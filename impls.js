@@ -1,7 +1,10 @@
 import {readFileSync} from 'node:fs';
 
 function read_package_version(path) {
-	return JSON.parse(readFileSync(new URL(`./node_modules/${path}/package.json`, import.meta.url))).version;
+	if (typeof path === 'string') {
+		path = new URL(`./node_modules/${path}/package.json`, import.meta.url);
+	}
+	return JSON.parse(readFileSync(path)).version;
 }
 
 export const IMPLS = [];
@@ -46,7 +49,7 @@ import {ens_normalize as prior} from 'prior_ens_norm';
 IMPLS.push({
 	name: 'ens_normalize', 
 	fn: prior, 
-	version: read_package_version(`prior_ens_norm`),
+	version: read_package_version('prior_ens_norm'),
 	prior: true
 });
 
