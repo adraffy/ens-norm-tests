@@ -1,0 +1,1015 @@
+
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>ens_normalize (1.6.7) vs ens_normalize (1.6.9) [1484938 labels] @ 2022-09-26T06:59:42.663Z</title>
+		<style>
+			body { margin: 1rem; }
+			table { border-collapse: collapse; width: 100%; }
+			td { border: 1px solid #aaa; line-break: anywhere; }
+			thead td { background: #ccc; font-weight: bold; }
+			tbody tr:nth-child(odd) { background: #eee; }
+			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			tbody td.error { background: #fcc; }
+			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			#overall td { text-align: right; }
+		</style>
+		</head>
+		<body>
+		<h1>ens_normalize (1.6.7) vs ens_normalize (1.6.9) [1484938 labels] @ 2022-09-26T06:59:42.663Z</h1>
+	
+		<table id="overall">
+		<thead>
+		<tr>
+		<td>Type</td>
+		<td>#</td>
+		<td>%</td>
+		</tr>
+		</thead>
+		<tbody>
+	<tr><td style="background-color: #cfc; font-weight: bold">Same</td><td>1478643</td><td>99.57608%</td></tr><tr><td style="background-color: #fcc; font-weight: bold">Different</td><td>6295</td><td>0.42392%</td></tr><tr><td><a href="#both-error">both-error</a></td><td>6161</td><td>0.41490%</td></tr><tr><td><a href="#b-error">ens_normalize_1.6.9-error</a></td><td>131</td><td>0.00882%</td></tr><tr><td><a href="#a-error">ens_normalize_1.6.7-error</a></td><td>3</td><td>0.00020%</td></tr></tbody></table><a name="both-error"><h2>both-error (6161)</h2></a><h3>Showing 24 differences</h3>			
+			<table id="both-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.7)</td>
+			<td>ens_normalize (1.6.9)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>༼つ•́ʖ̯•̀༽つ❤</div></td>
+			<td><div>{F3C}{3064}{2022}{301}{296}{32F}{2022}{300}{F3D}{3064}{2764}</div></td>
+			<td class="error">Invalid label "༼つ•́ʖ̯•̀༽つ❤": illegal combining mark</td>
+			<td class="error">Invalid label "༼つ•́ʖ̯•̀༽つ❤": isolate combining mark</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>﴾͡๏̯͡๏﴿</div></td>
+			<td><div>{FD3E}{361}{E4F}{32F}{361}{E4F}{FD3F}</div></td>
+			<td class="error">Invalid label "﴾͡๏̯͡๏﴿": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>•︠ˍ•︡</div></td>
+			<td><div>{2022}{FE20}{2CD}{2022}{FE21}</div></td>
+			<td class="error">Invalid label "•︠ˍ•︡": illegal combining mark</td>
+			<td class="error">Invalid label "•︠ˍ•︡": isolate combining mark</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>⎜⏝⏜⏝⎟</div></td>
+			<td><div>{239C}{23DD}{23DC}{23DD}{239F}</div></td>
+			<td class="error">Disallowed codepoint: 0x23DD</td>
+			<td class="error">Disallowed codepoint: 0x239C</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>♾⃨♾⃨♾</div></td>
+			<td><div>{267E}{20E8}{267E}{20E8}{267E}</div></td>
+			<td class="error">Invalid label "♾⃨♾⃨♾": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x20E8</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>👁⃤👁</div></td>
+			<td><div>{1F441}{20E4}{1F441}</div></td>
+			<td class="error">Invalid label "👁⃤👁": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x20E4</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>👁⃤👁⃤👁⃤</div></td>
+			<td><div>{1F441}{20E4}{1F441}{20E4}{1F441}{20E4}</div></td>
+			<td class="error">Invalid label "👁⃤👁⃤👁⃤": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x20E4</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>👨{200D}❤{200D}💋{200D}👨⃠</div></td>
+			<td><div>{1F468}{200D}{2764}{200D}{1F48B}{200D}{1F468}{20E0}</div></td>
+			<td class="error">Invalid label "👨‍❤‍💋‍👨⃠": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x20E0</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>1⃣⃣⃣</div></td>
+			<td><div>1{20E3}{20E3}{20E3}</div></td>
+			<td class="error">Invalid label "1⃣⃣⃣": illegal combining mark</td>
+			<td class="error">Invalid label "1⃣⃣⃣": isolate combining mark</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>٩﴾๏̯͡๏﴿</div></td>
+			<td><div>{669}{FD3E}{E4F}{32F}{361}{E4F}{FD3F}</div></td>
+			<td class="error">Invalid label "٩﴾๏̯͡๏﴿": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>٩๏̯͡๏۶</div></td>
+			<td><div>{669}{E4F}{32F}{361}{E4F}{6F6}</div></td>
+			<td class="error">Invalid label "٩๏̯͡๏۶": adjacent combining marks "๏̯͡"</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>e͜͡t͜͡h</div></td>
+			<td><div>e{35C}{361}t{35C}{361}h</div></td>
+			<td class="error">Invalid label "e͜͡t͜͡h": adjacent combining marks "e͜͡"</td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>e͜͡t͜͡h͜͡e͜͡r͜͡e͜͡u͜͡m͜͡</div></td>
+			<td><div>e{35C}{361}t{35C}{361}h{35C}{361}e{35C}{361}r{35C}{361}e{35C}{361}u{35C}{361}m{35C}{361}</div></td>
+			<td class="error">Invalid label "e͜͡t͜͡h͜͡e͜͡r͜͡e͜͡u͜͡m͜͡": adjacent combining marks "e͜͡"</td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>g̻̥͠m̲̞̣̘̞̖̻̥̫̺͇͂̎ͮ͊̓ͤ͌̂̉ͮ̆͝</div></td>
+			<td><div>g{33B}{325}{360}m{332}{31E}{323}{318}{31E}{316}{33B}{325}{32B}{33A}{347}{342}{30E}{36E}{34A}{313}{364}{34C}{302}{309}{36E}{306}{35D}</div></td>
+			<td class="error">Disallowed codepoint: 0x332</td>
+			<td class="error">Disallowed codepoint: 0x360</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>yu-gi-oh👁⃤</div></td>
+			<td><div>yu-gi-oh{1F441}{20E4}</div></td>
+			<td class="error">Invalid label "yu-gi-oh👁⃤": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x20E4</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>ʕ•̫͡•ʔ</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{294}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ʔ": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>ʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{295}{2022}{32B}{361}{2022}{294}{2022}{32B}{361}{2022}{294}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ʕ•̫͡•ʔ•̫͡•ʔ": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>ʕ•̫͡•ིʔྀ</div></td>
+			<td><div>{295}{2022}{32B}{361}{2022}{F72}{294}{F80}</div></td>
+			<td class="error">Invalid label "ʕ•̫͡•ིʔྀ": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>ʕ•́ᴥ•̀ʔ</div></td>
+			<td><div>{295}{2022}{301}{1D25}{2022}{300}{294}</div></td>
+			<td class="error">Invalid label "ʕ•́ᴥ•̀ʔ": illegal combining mark</td>
+			<td class="error">Invalid label "ʕ•́ᴥ•̀ʔ": isolate combining mark</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>ʕ•͡ᴥ•ʔ</div></td>
+			<td><div>{295}{2022}{361}{1D25}{2022}{294}</div></td>
+			<td class="error">Invalid label "ʕ•͡ᴥ•ʔ": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>ʕ•́ᴥ•̀ʔっ</div></td>
+			<td><div>{295}{2022}{301}{1D25}{2022}{300}{294}{3063}</div></td>
+			<td class="error">Invalid label "ʕ•́ᴥ•̀ʔっ": illegal combining mark</td>
+			<td class="error">Invalid label "ʕ•́ᴥ•̀ʔっ": isolate combining mark</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>ʕʘ̅͜ʘ̅ʔ</div></td>
+			<td><div>{295}{298}{305}{35C}{298}{305}{294}</div></td>
+			<td class="error">Invalid label "ʕʘ̅͜ʘ̅ʔ": adjacent combining marks "ʘ̅͜"</td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>ฅʕ•̫͡•ʔฅ</div></td>
+			<td><div>{E05}{295}{2022}{32B}{361}{2022}{294}{E05}</div></td>
+			<td class="error">Invalid label "ฅʕ•̫͡•ʔฅ": illegal combining mark</td>
+			<td class="error">Disallowed codepoint: 0x361</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>凸•̀•́凸</div></td>
+			<td><div>{51F8}{2022}{300}{2022}{301}{51F8}</div></td>
+			<td class="error">Invalid label "凸•̀•́凸": illegal combining mark</td>
+			<td class="error">Invalid label "凸•̀•́凸": isolate combining mark</td>
+		</tr></tbody></table><a name="b-error"><h2>ens_normalize_1.6.9-error (131)</h2></a>			
+			<table id="b-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.7)</td>
+			<td>ens_normalize (1.6.9)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>༼ʘ̚ل͜ʘ̚༽</div></td>
+			<td><div>{F3C}{298}{31A}{644}{35C}{298}{31A}{F3D}</div></td>
+			<td><div>{F3C}{298}{31A}{644}{35C}{298}{31A}{F3D}</div></td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>༼ຈل͜ຈ༽</div></td>
+			<td><div>{F3C}{E88}{644}{35C}{E88}{F3D}</div></td>
+			<td><div>{F3C}{E88}{644}{35C}{E88}{F3D}</div></td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>͵αρια</div></td>
+			<td><div>{375}{3B1}{3C1}{3B9}{3B1}</div></td>
+			<td><div>{375}{3B1}{3C1}{3B9}{3B1}</div></td>
+			<td class="error">Invalid label "͵αρια": whole-script confusable: Greek</td>
+		</tr><tr>
+			<td class="index">4</td>
+			<td class="name"><div>⊂⎬°⋅°⎨⊃</div></td>
+			<td><div>{2282}{23AC}{B0}{22C5}{B0}{23A8}{2283}</div></td>
+			<td><div>{2282}{23AC}{B0}{22C5}{B0}{23A8}{2283}</div></td>
+			<td class="error">Disallowed codepoint: 0x23AC</td>
+		</tr><tr>
+			<td class="index">5</td>
+			<td class="name"><div>⎜9000</div></td>
+			<td><div>{239C}9000</div></td>
+			<td><div>{239C}9000</div></td>
+			<td class="error">Disallowed codepoint: 0x239C</td>
+		</tr><tr>
+			<td class="index">6</td>
+			<td class="name"><div>⎜metaverse⎜</div></td>
+			<td><div>{239C}metaverse{239C}</div></td>
+			<td><div>{239C}metaverse{239C}</div></td>
+			<td class="error">Disallowed codepoint: 0x239C</td>
+		</tr><tr>
+			<td class="index">7</td>
+			<td class="name"><div>⎢888⎥</div></td>
+			<td><div>{23A2}888{23A5}</div></td>
+			<td><div>{23A2}888{23A5}</div></td>
+			<td class="error">Disallowed codepoint: 0x23A2</td>
+		</tr><tr>
+			<td class="index">8</td>
+			<td class="name"><div>⎮rock⎮</div></td>
+			<td><div>{23AE}rock{23AE}</div></td>
+			<td><div>{23AE}rock{23AE}</div></td>
+			<td class="error">Disallowed codepoint: 0x23AE</td>
+		</tr><tr>
+			<td class="index">9</td>
+			<td class="name"><div>✨ᕙ༼ຈل͜ຈ༽ᕗ✨</div></td>
+			<td><div>{2728}{1559}{F3C}{E88}{644}{35C}{E88}{F3D}{1557}{2728}</div></td>
+			<td><div>{2728}{1559}{F3C}{E88}{644}{35C}{E88}{F3D}{1557}{2728}</div></td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">10</td>
+			<td class="name"><div>ヽ༼ຈل͜ຈ༽ノ</div></td>
+			<td><div>{30FD}{F3C}{E88}{644}{35C}{E88}{F3D}{30CE}</div></td>
+			<td><div>{30FD}{F3C}{E88}{644}{35C}{E88}{F3D}{30CE}</div></td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr><tr>
+			<td class="index">11</td>
+			<td class="name"><div>0͟0͟0͟</div></td>
+			<td><div>0{35F}0{35F}0{35F}</div></td>
+			<td><div>0{35F}0{35F}0{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">12</td>
+			<td class="name"><div>0б30</div></td>
+			<td><div>0{431}30</div></td>
+			<td><div>0{431}30</div></td>
+			<td class="error">Invalid label "0б30": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">13</td>
+			<td class="name"><div>159б</div></td>
+			<td><div>159{431}</div></td>
+			<td><div>159{431}</div></td>
+			<td class="error">Invalid label "159б": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">14</td>
+			<td class="name"><div>28б5</div></td>
+			<td><div>28{431}5</div></td>
+			<td><div>28{431}5</div></td>
+			<td class="error">Invalid label "28б5": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">15</td>
+			<td class="name"><div>4⃞2⃞0⃞</div></td>
+			<td><div>4{20DE}2{20DE}0{20DE}</div></td>
+			<td><div>4{20DE}2{20DE}0{20DE}</div></td>
+			<td class="error">Disallowed codepoint: 0x20DE</td>
+		</tr><tr>
+			<td class="index">16</td>
+			<td class="name"><div>4⃨2⃨0⃨</div></td>
+			<td><div>4{20E8}2{20E8}0{20E8}</div></td>
+			<td><div>4{20E8}2{20E8}0{20E8}</div></td>
+			<td class="error">Disallowed codepoint: 0x20E8</td>
+		</tr><tr>
+			<td class="index">17</td>
+			<td class="name"><div>8б89</div></td>
+			<td><div>8{431}89</div></td>
+			<td><div>8{431}89</div></td>
+			<td class="error">Invalid label "8б89": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">18</td>
+			<td class="name"><div>a͟l͟p͟h͟a͟b͟e͟t͟</div></td>
+			<td><div>a{35F}l{35F}p{35F}h{35F}a{35F}b{35F}e{35F}t{35F}</div></td>
+			<td><div>a{35F}l{35F}p{35F}h{35F}a{35F}b{35F}e{35F}t{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">19</td>
+			<td class="name"><div>a͟m͟e͟x͟</div></td>
+			<td><div>a{35F}m{35F}e{35F}x{35F}</div></td>
+			<td><div>a{35F}m{35F}e{35F}x{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">20</td>
+			<td class="name"><div>a͟p͟p͟l͟e͟</div></td>
+			<td><div>a{35F}p{35F}p{35F}l{35F}e{35F}</div></td>
+			<td><div>a{35F}p{35F}p{35F}l{35F}e{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">21</td>
+			<td class="name"><div>a͟s͟i͟a͟</div></td>
+			<td><div>a{35F}s{35F}i{35F}a{35F}</div></td>
+			<td><div>a{35F}s{35F}i{35F}a{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">22</td>
+			<td class="name"><div>b͟i͟n͟a͟n͟c͟e͟</div></td>
+			<td><div>b{35F}i{35F}n{35F}a{35F}n{35F}c{35F}e{35F}</div></td>
+			<td><div>b{35F}i{35F}n{35F}a{35F}n{35F}c{35F}e{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">23</td>
+			<td class="name"><div>b͟l͟a͟c͟k͟r͟o͟c͟k͟</div></td>
+			<td><div>b{35F}l{35F}a{35F}c{35F}k{35F}r{35F}o{35F}c{35F}k{35F}</div></td>
+			<td><div>b{35F}l{35F}a{35F}c{35F}k{35F}r{35F}o{35F}c{35F}k{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">24</td>
+			<td class="name"><div>c͟o͟i͟n͟b͟a͟s͟e͟</div></td>
+			<td><div>c{35F}o{35F}i{35F}n{35F}b{35F}a{35F}s{35F}e{35F}</div></td>
+			<td><div>c{35F}o{35F}i{35F}n{35F}b{35F}a{35F}s{35F}e{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">25</td>
+			<td class="name"><div>d͟i͟s͟c͟o͟v͟e͟r͟</div></td>
+			<td><div>d{35F}i{35F}s{35F}c{35F}o{35F}v{35F}e{35F}r{35F}</div></td>
+			<td><div>d{35F}i{35F}s{35F}c{35F}o{35F}v{35F}e{35F}r{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">26</td>
+			<td class="name"><div>e⃗t⃗h⃗e⃗r⃗e⃗u⃗m⃗</div></td>
+			<td><div>e{20D7}t{20D7}h{20D7}e{20D7}r{20D7}e{20D7}u{20D7}m{20D7}</div></td>
+			<td><div>e{20D7}t{20D7}h{20D7}e{20D7}r{20D7}e{20D7}u{20D7}m{20D7}</div></td>
+			<td class="error">Disallowed codepoint: 0x20D7</td>
+		</tr><tr>
+			<td class="index">27</td>
+			<td class="name"><div>e͟u͟r͟o͟p͟e͟</div></td>
+			<td><div>e{35F}u{35F}r{35F}o{35F}p{35F}e{35F}</div></td>
+			<td><div>e{35F}u{35F}r{35F}o{35F}p{35F}e{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">28</td>
+			<td class="name"><div>f͟a͟c͟e͟b͟o͟o͟k͟</div></td>
+			<td><div>f{35F}a{35F}c{35F}e{35F}b{35F}o{35F}o{35F}k{35F}</div></td>
+			<td><div>f{35F}a{35F}c{35F}e{35F}b{35F}o{35F}o{35F}k{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">29</td>
+			<td class="name"><div>f͟i͟d͟e͟l͟i͟t͟y͟</div></td>
+			<td><div>f{35F}i{35F}d{35F}e{35F}l{35F}i{35F}t{35F}y{35F}</div></td>
+			<td><div>f{35F}i{35F}d{35F}e{35F}l{35F}i{35F}t{35F}y{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">30</td>
+			<td class="name"><div>g͟o͟d͟</div></td>
+			<td><div>g{35F}o{35F}d{35F}</div></td>
+			<td><div>g{35F}o{35F}d{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">31</td>
+			<td class="name"><div>j͟o͟h͟n͟</div></td>
+			<td><div>j{35F}o{35F}h{35F}n{35F}</div></td>
+			<td><div>j{35F}o{35F}h{35F}n{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">32</td>
+			<td class="name"><div>k͟r͟a͟k͟e͟n͟</div></td>
+			<td><div>k{35F}r{35F}a{35F}k{35F}e{35F}n{35F}</div></td>
+			<td><div>k{35F}r{35F}a{35F}k{35F}e{35F}n{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">33</td>
+			<td class="name"><div>m͟a͟s͟t͟e͟r͟c͟a͟r͟d͟</div></td>
+			<td><div>m{35F}a{35F}s{35F}t{35F}e{35F}r{35F}c{35F}a{35F}r{35F}d{35F}</div></td>
+			<td><div>m{35F}a{35F}s{35F}t{35F}e{35F}r{35F}c{35F}a{35F}r{35F}d{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">34</td>
+			<td class="name"><div>m͟i͟c͟r͟o͟s͟o͟f͟t͟</div></td>
+			<td><div>m{35F}i{35F}c{35F}r{35F}o{35F}s{35F}o{35F}f{35F}t{35F}</div></td>
+			<td><div>m{35F}i{35F}c{35F}r{35F}o{35F}s{35F}o{35F}f{35F}t{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">35</td>
+			<td class="name"><div>m⃨o⃨o⃨n⃨</div></td>
+			<td><div>m{20E8}o{20E8}o{20E8}n{20E8}</div></td>
+			<td><div>m{20E8}o{20E8}o{20E8}n{20E8}</div></td>
+			<td class="error">Disallowed codepoint: 0x20E8</td>
+		</tr><tr>
+			<td class="index">36</td>
+			<td class="name"><div>n͟a͟s͟d͟a͟q͟</div></td>
+			<td><div>n{35F}a{35F}s{35F}d{35F}a{35F}q{35F}</div></td>
+			<td><div>n{35F}a{35F}s{35F}d{35F}a{35F}q{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">37</td>
+			<td class="name"><div>r͟o͟y͟a͟l͟c͟a͟r͟i͟b͟b͟e͟a͟n͟</div></td>
+			<td><div>r{35F}o{35F}y{35F}a{35F}l{35F}c{35F}a{35F}r{35F}i{35F}b{35F}b{35F}e{35F}a{35F}n{35F}</div></td>
+			<td><div>r{35F}o{35F}y{35F}a{35F}l{35F}c{35F}a{35F}r{35F}i{35F}b{35F}b{35F}e{35F}a{35F}n{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">38</td>
+			<td class="name"><div>t͟e͟s͟l͟a͟</div></td>
+			<td><div>t{35F}e{35F}s{35F}l{35F}a{35F}</div></td>
+			<td><div>t{35F}e{35F}s{35F}l{35F}a{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">39</td>
+			<td class="name"><div>tr⎮beca</div></td>
+			<td><div>tr{23AE}beca</div></td>
+			<td><div>tr{23AE}beca</div></td>
+			<td class="error">Disallowed codepoint: 0x23AE</td>
+		</tr><tr>
+			<td class="index">40</td>
+			<td class="name"><div>u͟s͟a͟</div></td>
+			<td><div>u{35F}s{35F}a{35F}</div></td>
+			<td><div>u{35F}s{35F}a{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">41</td>
+			<td class="name"><div>v͟a͟n͟g͟u͟a͟r͟d͟</div></td>
+			<td><div>v{35F}a{35F}n{35F}g{35F}u{35F}a{35F}r{35F}d{35F}</div></td>
+			<td><div>v{35F}a{35F}n{35F}g{35F}u{35F}a{35F}r{35F}d{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">42</td>
+			<td class="name"><div>v͟i͟s͟a͟</div></td>
+			<td><div>v{35F}i{35F}s{35F}a{35F}</div></td>
+			<td><div>v{35F}i{35F}s{35F}a{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">43</td>
+			<td class="name"><div>v͟i͟t͟a͟l͟i͟k͟</div></td>
+			<td><div>v{35F}i{35F}t{35F}a{35F}l{35F}i{35F}k{35F}</div></td>
+			<td><div>v{35F}i{35F}t{35F}a{35F}l{35F}i{35F}k{35F}</div></td>
+			<td class="error">Disallowed codepoint: 0x35F</td>
+		</tr><tr>
+			<td class="index">44</td>
+			<td class="name"><div>абрам</div></td>
+			<td><div>{430}{431}{440}{430}{43C}</div></td>
+			<td><div>{430}{431}{440}{430}{43C}</div></td>
+			<td class="error">Invalid label "абрам": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">45</td>
+			<td class="name"><div>автобус</div></td>
+			<td><div>{430}{432}{442}{43E}{431}{443}{441}</div></td>
+			<td><div>{430}{432}{442}{43E}{431}{443}{441}</div></td>
+			<td class="error">Invalid label "автобус": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">46</td>
+			<td class="name"><div>азбука</div></td>
+			<td><div>{430}{437}{431}{443}{43A}{430}</div></td>
+			<td><div>{430}{437}{431}{443}{43A}{430}</div></td>
+			<td class="error">Invalid label "азбука": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">47</td>
+			<td class="name"><div>араб</div></td>
+			<td><div>{430}{440}{430}{431}</div></td>
+			<td><div>{430}{440}{430}{431}</div></td>
+			<td class="error">Invalid label "араб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">48</td>
+			<td class="name"><div>арбат</div></td>
+			<td><div>{430}{440}{431}{430}{442}</div></td>
+			<td><div>{430}{440}{431}{430}{442}</div></td>
+			<td class="error">Invalid label "арбат": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">49</td>
+			<td class="name"><div>б9б9</div></td>
+			<td><div>{431}9{431}9</div></td>
+			<td><div>{431}9{431}9</div></td>
+			<td class="error">Invalid label "б9б9": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">50</td>
+			<td class="name"><div>бабки</div></td>
+			<td><div>{431}{430}{431}{43A}{438}</div></td>
+			<td><div>{431}{430}{431}{43A}{438}</div></td>
+			<td class="error">Invalid label "бабки": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">51</td>
+			<td class="name"><div>базаар</div></td>
+			<td><div>{431}{430}{437}{430}{430}{440}</div></td>
+			<td><div>{431}{430}{437}{430}{430}{440}</div></td>
+			<td class="error">Invalid label "базаар": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">52</td>
+			<td class="name"><div>банк</div></td>
+			<td><div>{431}{430}{43D}{43A}</div></td>
+			<td><div>{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "банк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">53</td>
+			<td class="name"><div>банка</div></td>
+			<td><div>{431}{430}{43D}{43A}{430}</div></td>
+			<td><div>{431}{430}{43D}{43A}{430}</div></td>
+			<td class="error">Invalid label "банка": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">54</td>
+			<td class="name"><div>банквтб</div></td>
+			<td><div>{431}{430}{43D}{43A}{432}{442}{431}</div></td>
+			<td><div>{431}{430}{43D}{43A}{432}{442}{431}</div></td>
+			<td class="error">Invalid label "банквтб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">55</td>
+			<td class="name"><div>банки</div></td>
+			<td><div>{431}{430}{43D}{43A}{438}</div></td>
+			<td><div>{431}{430}{43D}{43A}{438}</div></td>
+			<td class="error">Invalid label "банки": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">56</td>
+			<td class="name"><div>банкир</div></td>
+			<td><div>{431}{430}{43D}{43A}{438}{440}</div></td>
+			<td><div>{431}{430}{43D}{43A}{438}{440}</div></td>
+			<td class="error">Invalid label "банкир": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">57</td>
+			<td class="name"><div>барвиха</div></td>
+			<td><div>{431}{430}{440}{432}{438}{445}{430}</div></td>
+			<td><div>{431}{430}{440}{432}{438}{445}{430}</div></td>
+			<td class="error">Invalid label "барвиха": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">58</td>
+			<td class="name"><div>барон</div></td>
+			<td><div>{431}{430}{440}{43E}{43D}</div></td>
+			<td><div>{431}{430}{440}{43E}{43D}</div></td>
+			<td class="error">Invalid label "барон": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">59</td>
+			<td class="name"><div>баста</div></td>
+			<td><div>{431}{430}{441}{442}{430}</div></td>
+			<td><div>{431}{430}{441}{442}{430}</div></td>
+			<td class="error">Invalid label "баста": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">60</td>
+			<td class="name"><div>батька</div></td>
+			<td><div>{431}{430}{442}{44C}{43A}{430}</div></td>
+			<td><div>{431}{430}{442}{44C}{43A}{430}</div></td>
+			<td class="error">Invalid label "батька": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">61</td>
+			<td class="name"><div>батько</div></td>
+			<td><div>{431}{430}{442}{44C}{43A}{43E}</div></td>
+			<td><div>{431}{430}{442}{44C}{43A}{43E}</div></td>
+			<td class="error">Invalid label "батько": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">62</td>
+			<td class="name"><div>ббб</div></td>
+			<td><div>{431}{431}{431}</div></td>
+			<td><div>{431}{431}{431}</div></td>
+			<td class="error">Invalid label "ббб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">63</td>
+			<td class="name"><div>бббб</div></td>
+			<td><div>{431}{431}{431}{431}</div></td>
+			<td><div>{431}{431}{431}{431}</div></td>
+			<td class="error">Invalid label "бббб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">64</td>
+			<td class="name"><div>ббббб</div></td>
+			<td><div>{431}{431}{431}{431}{431}</div></td>
+			<td><div>{431}{431}{431}{431}{431}</div></td>
+			<td class="error">Invalid label "ббббб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">65</td>
+			<td class="name"><div>бббббб</div></td>
+			<td><div>{431}{431}{431}{431}{431}{431}</div></td>
+			<td><div>{431}{431}{431}{431}{431}{431}</div></td>
+			<td class="error">Invalid label "бббббб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">66</td>
+			<td class="name"><div>безбанка</div></td>
+			<td><div>{431}{435}{437}{431}{430}{43D}{43A}{430}</div></td>
+			<td><div>{431}{435}{437}{431}{430}{43D}{43A}{430}</div></td>
+			<td class="error">Invalid label "безбанка": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">67</td>
+			<td class="name"><div>безбанкови</div></td>
+			<td><div>{431}{435}{437}{431}{430}{43D}{43A}{43E}{432}{438}</div></td>
+			<td><div>{431}{435}{437}{431}{430}{43D}{43A}{43E}{432}{438}</div></td>
+			<td class="error">Invalid label "безбанкови": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">68</td>
+			<td class="name"><div>безопасность</div></td>
+			<td><div>{431}{435}{437}{43E}{43F}{430}{441}{43D}{43E}{441}{442}{44C}</div></td>
+			<td><div>{431}{435}{437}{43E}{43F}{430}{441}{43D}{43E}{441}{442}{44C}</div></td>
+			<td class="error">Invalid label "безопасность": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">69</td>
+			<td class="name"><div>бизнес</div></td>
+			<td><div>{431}{438}{437}{43D}{435}{441}</div></td>
+			<td><div>{431}{438}{437}{43D}{435}{441}</div></td>
+			<td class="error">Invalid label "бизнес": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">70</td>
+			<td class="name"><div>бизнесмен</div></td>
+			<td><div>{431}{438}{437}{43D}{435}{441}{43C}{435}{43D}</div></td>
+			<td><div>{431}{438}{437}{43D}{435}{441}{43C}{435}{43D}</div></td>
+			<td class="error">Invalid label "бизнесмен": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">71</td>
+			<td class="name"><div>бимер</div></td>
+			<td><div>{431}{438}{43C}{435}{440}</div></td>
+			<td><div>{431}{438}{43C}{435}{440}</div></td>
+			<td class="error">Invalid label "бимер": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">72</td>
+			<td class="name"><div>бинанс</div></td>
+			<td><div>{431}{438}{43D}{430}{43D}{441}</div></td>
+			<td><div>{431}{438}{43D}{430}{43D}{441}</div></td>
+			<td class="error">Invalid label "бинанс": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">73</td>
+			<td class="name"><div>биткоин</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{438}{43D}</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{438}{43D}</div></td>
+			<td class="error">Invalid label "биткоин": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">74</td>
+			<td class="name"><div>биткоина</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{438}{43D}{430}</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{438}{43D}{430}</div></td>
+			<td class="error">Invalid label "биткоина": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">75</td>
+			<td class="name"><div>битконь</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{43D}{44C}</div></td>
+			<td><div>{431}{438}{442}{43A}{43E}{43D}{44C}</div></td>
+			<td class="error">Invalid label "битконь": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">76</td>
+			<td class="name"><div>бізнес</div></td>
+			<td><div>{431}{456}{437}{43D}{435}{441}</div></td>
+			<td><div>{431}{456}{437}{43D}{435}{441}</div></td>
+			<td class="error">Invalid label "бізнес": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">77</td>
+			<td class="name"><div>бог</div></td>
+			<td><div>{431}{43E}{433}</div></td>
+			<td><div>{431}{43E}{433}</div></td>
+			<td class="error">Invalid label "бог": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">78</td>
+			<td class="name"><div>богатство</div></td>
+			<td><div>{431}{43E}{433}{430}{442}{441}{442}{432}{43E}</div></td>
+			<td><div>{431}{43E}{433}{430}{442}{441}{442}{432}{43E}</div></td>
+			<td class="error">Invalid label "богатство": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">79</td>
+			<td class="name"><div>богиня</div></td>
+			<td><div>{431}{43E}{433}{438}{43D}{44F}</div></td>
+			<td><div>{431}{43E}{433}{438}{43D}{44F}</div></td>
+			<td class="error">Invalid label "богиня": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">80</td>
+			<td class="name"><div>бомба</div></td>
+			<td><div>{431}{43E}{43C}{431}{430}</div></td>
+			<td><div>{431}{43E}{43C}{431}{430}</div></td>
+			<td class="error">Invalid label "бомба": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">81</td>
+			<td class="name"><div>борис</div></td>
+			<td><div>{431}{43E}{440}{438}{441}</div></td>
+			<td><div>{431}{43E}{440}{438}{441}</div></td>
+			<td class="error">Invalid label "борис": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">82</td>
+			<td class="name"><div>бот</div></td>
+			<td><div>{431}{43E}{442}</div></td>
+			<td><div>{431}{43E}{442}</div></td>
+			<td class="error">Invalid label "бот": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">83</td>
+			<td class="name"><div>братан</div></td>
+			<td><div>{431}{440}{430}{442}{430}{43D}</div></td>
+			<td><div>{431}{440}{430}{442}{430}{43D}</div></td>
+			<td class="error">Invalid label "братан": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">84</td>
+			<td class="name"><div>браузер</div></td>
+			<td><div>{431}{440}{430}{443}{437}{435}{440}</div></td>
+			<td><div>{431}{440}{430}{443}{437}{435}{440}</div></td>
+			<td class="error">Invalid label "браузер": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">85</td>
+			<td class="name"><div>брокер</div></td>
+			<td><div>{431}{440}{43E}{43A}{435}{440}</div></td>
+			<td><div>{431}{440}{43E}{43A}{435}{440}</div></td>
+			<td class="error">Invalid label "брокер": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">86</td>
+			<td class="name"><div>бугатти</div></td>
+			<td><div>{431}{443}{433}{430}{442}{442}{438}</div></td>
+			<td><div>{431}{443}{433}{430}{442}{442}{438}</div></td>
+			<td class="error">Invalid label "бугатти": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">87</td>
+			<td class="name"><div>бургеркинг</div></td>
+			<td><div>{431}{443}{440}{433}{435}{440}{43A}{438}{43D}{433}</div></td>
+			<td><div>{431}{443}{440}{433}{435}{440}{43A}{438}{43D}{433}</div></td>
+			<td class="error">Invalid label "бургеркинг": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">88</td>
+			<td class="name"><div>бутерин</div></td>
+			<td><div>{431}{443}{442}{435}{440}{438}{43D}</div></td>
+			<td><div>{431}{443}{442}{435}{440}{438}{43D}</div></td>
+			<td class="error">Invalid label "бутерин": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">89</td>
+			<td class="name"><div>в-банке</div></td>
+			<td><div>{432}-{431}{430}{43D}{43A}{435}</div></td>
+			<td><div>{432}-{431}{430}{43D}{43A}{435}</div></td>
+			<td class="error">Invalid label "в-банке": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">90</td>
+			<td class="name"><div>вразработке</div></td>
+			<td><div>{432}{440}{430}{437}{440}{430}{431}{43E}{442}{43A}{435}</div></td>
+			<td><div>{432}{440}{430}{437}{440}{430}{431}{43E}{442}{43A}{435}</div></td>
+			<td class="error">Invalid label "вразработке": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">91</td>
+			<td class="name"><div>втббанк</div></td>
+			<td><div>{432}{442}{431}{431}{430}{43D}{43A}</div></td>
+			<td><div>{432}{442}{431}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "втббанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">92</td>
+			<td class="name"><div>газпромбанк</div></td>
+			<td><div>{433}{430}{437}{43F}{440}{43E}{43C}{431}{430}{43D}{43A}</div></td>
+			<td><div>{433}{430}{437}{43F}{440}{43E}{43C}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "газпромбанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">93</td>
+			<td class="name"><div>ебать</div></td>
+			<td><div>{435}{431}{430}{442}{44C}</div></td>
+			<td><div>{435}{431}{430}{442}{44C}</div></td>
+			<td class="error">Invalid label "ебать": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">94</td>
+			<td class="name"><div>кабинет</div></td>
+			<td><div>{43A}{430}{431}{438}{43D}{435}{442}</div></td>
+			<td><div>{43A}{430}{431}{438}{43D}{435}{442}</div></td>
+			<td class="error">Invalid label "кабинет": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">95</td>
+			<td class="name"><div>кгб</div></td>
+			<td><div>{43A}{433}{431}</div></td>
+			<td><div>{43A}{433}{431}</div></td>
+			<td class="error">Invalid label "кгб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">96</td>
+			<td class="name"><div>киберпанк</div></td>
+			<td><div>{43A}{438}{431}{435}{440}{43F}{430}{43D}{43A}</div></td>
+			<td><div>{43A}{438}{431}{435}{440}{43F}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "киберпанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">97</td>
+			<td class="name"><div>киберспорт</div></td>
+			<td><div>{43A}{438}{431}{435}{440}{441}{43F}{43E}{440}{442}</div></td>
+			<td><div>{43A}{438}{431}{435}{440}{441}{43F}{43E}{440}{442}</div></td>
+			<td class="error">Invalid label "киберспорт": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">98</td>
+			<td class="name"><div>криптобанк</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{430}{43D}{43A}</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "криптобанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">99</td>
+			<td class="name"><div>криптобог</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{43E}{433}</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{43E}{433}</div></td>
+			<td class="error">Invalid label "криптобог": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">100</td>
+			<td class="name"><div>криптобратан</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{440}{430}{442}{430}{43D}</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{440}{430}{442}{430}{43D}</div></td>
+			<td class="error">Invalid label "криптобратан": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">101</td>
+			<td class="name"><div>криптобро</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{440}{43E}</div></td>
+			<td><div>{43A}{440}{438}{43F}{442}{43E}{431}{440}{43E}</div></td>
+			<td class="error">Invalid label "криптобро": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">102</td>
+			<td class="name"><div>монетнаябаза</div></td>
+			<td><div>{43C}{43E}{43D}{435}{442}{43D}{430}{44F}{431}{430}{437}{430}</div></td>
+			<td><div>{43C}{43E}{43D}{435}{442}{43D}{430}{44F}{431}{430}{437}{430}</div></td>
+			<td class="error">Invalid label "монетнаябаза": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">103</td>
+			<td class="name"><div>обезьяна</div></td>
+			<td><div>{43E}{431}{435}{437}{44C}{44F}{43D}{430}</div></td>
+			<td><div>{43E}{431}{435}{437}{44C}{44F}{43D}{430}</div></td>
+			<td class="error">Invalid label "обезьяна": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">104</td>
+			<td class="name"><div>обмен</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}</div></td>
+			<td class="error">Invalid label "обмен": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">105</td>
+			<td class="name"><div>обменка</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}{43A}{430}</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}{43A}{430}</div></td>
+			<td class="error">Invalid label "обменка": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">106</td>
+			<td class="name"><div>обменник</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}{43D}{438}{43A}</div></td>
+			<td><div>{43E}{431}{43C}{435}{43D}{43D}{438}{43A}</div></td>
+			<td class="error">Invalid label "обменник": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">107</td>
+			<td class="name"><div>образование</div></td>
+			<td><div>{43E}{431}{440}{430}{437}{43E}{432}{430}{43D}{438}{435}</div></td>
+			<td><div>{43E}{431}{440}{430}{437}{43E}{432}{430}{43D}{438}{435}</div></td>
+			<td class="error">Invalid label "образование": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">108</td>
+			<td class="name"><div>обувь</div></td>
+			<td><div>{43E}{431}{443}{432}{44C}</div></td>
+			<td><div>{43E}{431}{443}{432}{44C}</div></td>
+			<td class="error">Invalid label "обувь": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">109</td>
+			<td class="name"><div>петербург</div></td>
+			<td><div>{43F}{435}{442}{435}{440}{431}{443}{440}{433}</div></td>
+			<td><div>{43F}{435}{442}{435}{440}{431}{443}{440}{433}</div></td>
+			<td class="error">Invalid label "петербург": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">110</td>
+			<td class="name"><div>поебень</div></td>
+			<td><div>{43F}{43E}{435}{431}{435}{43D}{44C}</div></td>
+			<td><div>{43F}{43E}{435}{431}{435}{43D}{44C}</div></td>
+			<td class="error">Invalid label "поебень": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">111</td>
+			<td class="name"><div>порнхаб</div></td>
+			<td><div>{43F}{43E}{440}{43D}{445}{430}{431}</div></td>
+			<td><div>{43F}{43E}{440}{43D}{445}{430}{431}</div></td>
+			<td class="error">Invalid label "порнхаб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">112</td>
+			<td class="name"><div>приватбанк</div></td>
+			<td><div>{43F}{440}{438}{432}{430}{442}{431}{430}{43D}{43A}</div></td>
+			<td><div>{43F}{440}{438}{432}{430}{442}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "приватбанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">113</td>
+			<td class="name"><div>работа</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{430}</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{430}</div></td>
+			<td class="error">Invalid label "работа": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">114</td>
+			<td class="name"><div>работать</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{430}{442}{44C}</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{430}{442}{44C}</div></td>
+			<td class="error">Invalid label "работать": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">115</td>
+			<td class="name"><div>работу</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{443}</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{443}</div></td>
+			<td class="error">Invalid label "работу": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">116</td>
+			<td class="name"><div>работы</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{44B}</div></td>
+			<td><div>{440}{430}{431}{43E}{442}{44B}</div></td>
+			<td class="error">Invalid label "работы": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">117</td>
+			<td class="name"><div>разработка</div></td>
+			<td><div>{440}{430}{437}{440}{430}{431}{43E}{442}{43A}{430}</div></td>
+			<td><div>{440}{430}{437}{440}{430}{431}{43E}{442}{43A}{430}</div></td>
+			<td class="error">Invalid label "разработка": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">118</td>
+			<td class="name"><div>росбанк</div></td>
+			<td><div>{440}{43E}{441}{431}{430}{43D}{43A}</div></td>
+			<td><div>{440}{43E}{441}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "росбанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">119</td>
+			<td class="name"><div>ротенберг</div></td>
+			<td><div>{440}{43E}{442}{435}{43D}{431}{435}{440}{433}</div></td>
+			<td><div>{440}{43E}{442}{435}{43D}{431}{435}{440}{433}</div></td>
+			<td class="error">Invalid label "ротенберг": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">120</td>
+			<td class="name"><div>санкт-петербург</div></td>
+			<td><div>{441}{430}{43D}{43A}{442}-{43F}{435}{442}{435}{440}{431}{443}{440}{433}</div></td>
+			<td><div>{441}{430}{43D}{43A}{442}-{43F}{435}{442}{435}{440}{431}{443}{440}{433}</div></td>
+			<td class="error">Invalid label "санкт-петербург": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">121</td>
+			<td class="name"><div>сбер</div></td>
+			<td><div>{441}{431}{435}{440}</div></td>
+			<td><div>{441}{431}{435}{440}</div></td>
+			<td class="error">Invalid label "сбер": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">122</td>
+			<td class="name"><div>сбербанк</div></td>
+			<td><div>{441}{431}{435}{440}{431}{430}{43D}{43A}</div></td>
+			<td><div>{441}{431}{435}{440}{431}{430}{43D}{43A}</div></td>
+			<td class="error">Invalid label "сбербанк": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">123</td>
+			<td class="name"><div>серебро</div></td>
+			<td><div>{441}{435}{440}{435}{431}{440}{43E}</div></td>
+			<td><div>{441}{435}{440}{435}{431}{440}{43E}</div></td>
+			<td class="error">Invalid label "серебро": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">124</td>
+			<td class="name"><div>сибур</div></td>
+			<td><div>{441}{438}{431}{443}{440}</div></td>
+			<td><div>{441}{438}{431}{443}{440}</div></td>
+			<td class="error">Invalid label "сибур": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">125</td>
+			<td class="name"><div>собака</div></td>
+			<td><div>{441}{43E}{431}{430}{43A}{430}</div></td>
+			<td><div>{441}{43E}{431}{430}{43A}{430}</div></td>
+			<td class="error">Invalid label "собака": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">126</td>
+			<td class="name"><div>собаки</div></td>
+			<td><div>{441}{43E}{431}{430}{43A}{438}</div></td>
+			<td><div>{441}{43E}{431}{430}{43A}{438}</div></td>
+			<td class="error">Invalid label "собаки": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">127</td>
+			<td class="name"><div>спасибо</div></td>
+			<td><div>{441}{43F}{430}{441}{438}{431}{43E}</div></td>
+			<td><div>{441}{43F}{430}{441}{438}{431}{43E}</div></td>
+			<td class="error">Invalid label "спасибо": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">128</td>
+			<td class="name"><div>србија</div></td>
+			<td><div>{441}{440}{431}{438}{458}{430}</div></td>
+			<td><div>{441}{440}{431}{438}{458}{430}</div></td>
+			<td class="error">Invalid label "србија": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">129</td>
+			<td class="name"><div>транссиб</div></td>
+			<td><div>{442}{440}{430}{43D}{441}{441}{438}{431}</div></td>
+			<td><div>{442}{440}{430}{43D}{441}{441}{438}{431}</div></td>
+			<td class="error">Invalid label "транссиб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">130</td>
+			<td class="name"><div>хабиб</div></td>
+			<td><div>{445}{430}{431}{438}{431}</div></td>
+			<td><div>{445}{430}{431}{438}{431}</div></td>
+			<td class="error">Invalid label "хабиб": whole-script confusable: Cyrillic</td>
+		</tr><tr>
+			<td class="index">131</td>
+			<td class="name"><div>ᕙ༼ຈل͜ຈ༽ᕗ</div></td>
+			<td><div>{1559}{F3C}{E88}{644}{35C}{E88}{F3D}{1557}</div></td>
+			<td><div>{1559}{F3C}{E88}{644}{35C}{E88}{F3D}{1557}</div></td>
+			<td class="error">Disallowed codepoint: 0x35C</td>
+		</tr></tbody></table><a name="a-error"><h2>ens_normalize_1.6.7-error (3)</h2></a>			
+			<table id="a-error">
+			<thead>
+			<tr>
+			<td class="index">#</td>
+			<td class="name">Name</td>
+			<td>Escaped</td>
+			<td>ens_normalize (1.6.7)</td>
+			<td>ens_normalize (1.6.9)</td>
+			</tr>
+			</thead>
+			<tbody>
+		<tr>
+			<td class="index">1</td>
+			<td class="name"><div>‼️‼️</div></td>
+			<td><div>{203C}{FE0F}{203C}{FE0F}</div></td>
+			<td class="error">Disallowed codepoint: 0x203C</td>
+			<td><div>{2757}{2757}{2757}{2757}</div></td>
+		</tr><tr>
+			<td class="index">2</td>
+			<td class="name"><div>‼️‼️‼️</div></td>
+			<td><div>{203C}{FE0F}{203C}{FE0F}{203C}{FE0F}</div></td>
+			<td class="error">Disallowed codepoint: 0x203C</td>
+			<td><div>{2757}{2757}{2757}{2757}{2757}{2757}</div></td>
+		</tr><tr>
+			<td class="index">3</td>
+			<td class="name"><div>⁉️⁉️⁉️</div></td>
+			<td><div>{2049}{FE0F}{2049}{FE0F}{2049}{FE0F}</div></td>
+			<td class="error">Disallowed codepoint: 0x2049</td>
+			<td><div>{2757}{2753}{2757}{2753}{2757}{2753}</div></td>
+		</tr></tbody></table></body></html>

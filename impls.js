@@ -28,6 +28,7 @@ IMPLS.push({
 
 // ********************************************************************************
 
+/*
 import {ens_normalize} from '@adraffy/ens-normalize';
 IMPLS.push({
 	name: 'ens_normalize', 
@@ -35,15 +36,15 @@ IMPLS.push({
 	version: read_package_version(`@adraffy/ens-normalize`),
 	primary: true
 });
-
-/*
+*/
+// use dev branch instead
 import {ens_normalize} from './ens-normalize.js/src/lib.js';
 IMPLS.push({
 	name: 'ens_normalize', 
 	fn: ens_normalize, 
-	version: 'HEAD'
+	version: JSON.parse(readFileSync(new URL('./ens-normalize.js/package.json', import.meta.url))).version,
+	primary: true
 });
-*/
 
 import {ens_normalize as prior} from 'prior_ens_norm';
 IMPLS.push({
