@@ -44,4 +44,4 @@ console.log({
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-writeFileSync(new URL('./regionals.json', out_dir), JSON.stringify(tally, null, '\t'));
+writeFileSync(new URL('./regionals.json', out_dir), JSON.stringify({any, pure, invalid}, null, '\t'));

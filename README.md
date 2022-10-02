@@ -17,7 +17,7 @@
 
 ## Data Files
 
-* `1,484,360` registered labels as of `2022-09-26`
+* `1,493,455` registered labels as of `2022-10-02`
 
 ## Build
 
