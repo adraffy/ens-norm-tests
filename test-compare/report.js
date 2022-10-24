@@ -22,6 +22,8 @@ let j = IMPLS.findIndex(x => x.name === 'ens_normalize' && x.primary); // quick 
 if (j == -1) throw new Error('wtf');
 for (let i = 0; i < IMPLS.length; i++) {
 	if (i == j) continue;
+	if (i != 0) continue;
+	
 	let [a, b] = [IMPLS[i], IMPLS[j]].sort((a, b) => a.slug.localeCompare(b.slug));
 	let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
 	console.log(i, j, a.slug, b.slug);
@@ -105,10 +107,10 @@ function create_html_report(A, B) {
 		<style>
 			body { margin: 1rem; }
 			table { border-collapse: collapse; width: 100%; }
-			td { border: 1px solid #aaa; line-break: anywhere; }
+			td { border: 1px solid #aaa; line-break: anywhere; width: 25% }
 			thead td { background: #ccc; font-weight: bold; }
 			tbody tr:nth-child(odd) { background: #eee; }
-			td.index { background: #ccc; text-align: center; white-space: pre; } 
+			td.index { background: #ccc; text-align: center; white-space: pre; width: 1%; } 
 			tbody td.error { background: #fcc; }
 			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
 			#overall td { text-align: right; }

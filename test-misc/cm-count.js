@@ -2,10 +2,10 @@
 
 import {mkdirSync, writeFileSync} from 'node:fs';
 import LABELS from '../eth-labels/db.js';
-import {SPEC, NF} from './ens-normalize.js/derive/unicode-version.js';
+import {UNICODE, NF} from './ens-normalize.js/derive/unicode-version.js';
 import {explode_cp} from './ens-normalize.js/src/utils.js';
 
-const CM = new Set(SPEC.general_category('M').map(x => x.cp));
+const CM = new Set(UNICODE.general_category('M').map(x => x.cp));
 
 let tally = {};
 let cases = [];

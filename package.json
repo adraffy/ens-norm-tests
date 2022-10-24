@@ -38,6 +38,6 @@
 		"@adraffy/ens-normalize": "^1.6.7",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
 		"ethers": "^5.7.0",
-		"prior_ens_norm": "npm:@adraffy/ens-normalize@^1.6.7"
+		"prior_ens_norm": "npm:@adraffy/ens-normalize@^1.6.11"
 	}
 }
