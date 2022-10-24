@@ -23,3 +23,7 @@ export function split_on(v, x) {
 	ret.push(v.slice(pos));
 	return ret;
 }
+
+export function html_escape(s) {
+	return s.replaceAll(/[<>&]/gu, x => `&#${x.charCodeAt(0)};`);
+}

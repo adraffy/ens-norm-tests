@@ -1,5 +1,5 @@
 import LABELS from './db.js';
-import {explode_cp} from '../utils.js';
+import {explode_cp} from '../ens-normalize.js/src/utils.js';
 
 let tally = {};
 let max = 12;

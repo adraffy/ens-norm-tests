@@ -1,7 +1,8 @@
 import {IMPLS} from '../impls.js';
-import {escape_for_html, escape_unicode} from '../ens-normalize.js/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
-import {run_validation_tests} from '../utils.js';
+import {html_escape, run_validation_tests} from '../utils.js';
+import {explode_cp, hex_cp} from '../ens-normalize.js/src/utils.js';
+import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
@@ -34,25 +35,25 @@ function create_html_index() {
 }
 
 function escape_name(name) {
-	return `<div>${escape_for_html(name)}</div>`;
+	return `<div>${html_escape(safe_str_from_cps(explode_cp(name)))}</div>`;
 }
 
 function error_tds(error) {
 	switch (error.type) {
 		case 'unexpected error': 
 			return `
-				<td class="expect">${escape_name(escape_unicode(error.norm ?? error.name))}</td>
-				<td class="result error">${error.result}</td>
+				<td class="expect">${escape_name(error.norm ?? error.name)}</td>
+				<td class="result error"><div>${html_escape(error.result)}</div></td>
 			`;
 		case 'expected error': 
 			return `
 				<td class="expect error"></td>
-				<td class="result">${escape_name(escape_unicode(error.result))}</td>
+				<td class="result"><div>${html_escape(error.result)}</div></td>
 			`;
 		case 'wrong norm': 
 			return `
-				<td class="expect">${escape_name(escape_unicode(error.norm ?? error.name))}</td>
-				<td class="result">${escape_name(escape_unicode(error.result))}</td>
+				<td class="expect">${escape_name(error.norm ?? error.name)}</td>
+				<td class="result"><div>${html_escape(error.result)}</div></td>
 			`;
 		default: throw new TypeError('wtf');
 	}
@@ -69,7 +70,7 @@ function create_html_report({name, fn, version}) {
 			<td class="index">${i+1}</td>
 			<td class="type">${x.type}</td>
 			<td class="name">${escape_name(x.name)}</td>
-			<td class="escaped">${escape_name(escape_unicode(x.name))}</td>
+			<td class="hex"><div>${explode_cp(x.name).map(hex_cp).join(' ')}</div></td>
 			${error_tds(x)}
 			<td class="comment">${x.comment ?? ''}</td>
 			</tr>
@@ -82,7 +83,7 @@ function create_html_report({name, fn, version}) {
 			<td class="index">#</td>
 			<td class="type">Type</td>
 			<td class="name">Name</td>
-			<td class="escaped">Escaped</td>
+			<td class="hex">Hex</td>
 			<td class="expect">Expect</td>
 			<td class="result">Result</td>
 			<td class="comment">Comment</td>
@@ -118,7 +119,7 @@ function create_html_report({name, fn, version}) {
 			tr.wrong-norm td.expect { background: #cfc; }
 			tr.wrong-norm td.result { background: #ffc; }
 			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
-			tbody tr:nth-child(odd) { background: #eee; }            
+			tbody tr:nth-child(odd) { background: #eee; }
 			#pass { font-size: 72px; color: #0a0; }
 		</style>
 		</head>

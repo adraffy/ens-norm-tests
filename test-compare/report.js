@@ -1,7 +1,9 @@
 import {IMPLS} from '../impls.js';
 import LABELS from '../eth-labels/db.js';
-import {escape_for_html, escape_unicode} from '../ens-normalize.js/src/utils.js';
+import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
+import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
+import {html_escape} from '../utils.js';
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
@@ -28,6 +30,7 @@ for (let i = 0; i < IMPLS.length; i++) {
 	let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
 	console.log(i, j, a.slug, b.slug);
 	writeFileSync(out_file, create_html_report(a, b)); 
+	throw 1;
 }
 
 writeFileSync(new URL('./index.html', out_dir), create_html_index());
@@ -106,13 +109,14 @@ function create_html_report(A, B) {
 		<title>${title}</title>
 		<style>
 			body { margin: 1rem; }
-			table { border-collapse: collapse; width: 100%; }
+			table { border-collapse: collapse; width: 100%; table-layout: fixed; }
 			td { border: 1px solid #aaa; line-break: anywhere; width: 25% }
 			thead td { background: #ccc; font-weight: bold; }
 			tbody tr:nth-child(odd) { background: #eee; }
-			td.index { background: #ccc; text-align: center; white-space: pre; width: 1%; } 
+			td.index { background: #ccc; text-align: center; white-space: pre; width: 60px; } 
+			td.width { width: 32%; }
 			tbody td.error { background: #fcc; }
-			td div { max-height: 10rem; overflow: auto; max-width: 25vw; }
+			td div { max-height: 10rem; overflow-y: auto;  }
 			#overall td { text-align: right; }
 		</style>
 		</head>
@@ -161,11 +165,16 @@ function create_html_report(A, B) {
 		}
 		let temp = `			
 			<table id="${type}">
+			<colgroup>
+			<col width="50px">
+			<col width="33%">
+			<col width="33%">
+			<col width="33%">
+			</colgroup>
 			<thead>
 			<tr>
 			<td class="index">#</td>
 			<td class="name">Name</td>
-			<td>Escaped</td>
 			<td>${A.name} (${A.version})</td>
 			<td>${B.name} (${B.version})</td>
 			</tr>
@@ -175,7 +184,6 @@ function create_html_report(A, B) {
 		temp += bucket.sort((a, b) => a.label.localeCompare(b.label)).map(({label, a, b}, i) => `<tr>
 			<td class="index">${i+1}</td>
 			<td class="name">${escape_name(label)}</td>
-			${format_result(label)}
 			${format_result(a)}
 			${format_result(b)}
 		</tr>`).join('');
@@ -186,14 +194,16 @@ function create_html_report(A, B) {
 	return html;
 }
 
+
 function escape_name(name) {
-	return `<div>${escape_for_html(name)}</div>`;
+	return `<div>${html_escape(safe_str_from_cps(explode_cp(name)))}</div>`;
 }
 
 function format_result(x) {
 	if (typeof x === 'string') {
-		return `<td>${escape_name(escape_unicode(x))}</td>`;
+		return `<td>${escape_name(x)}</td>`;
 	} else {
-		return `<td class="error">${x.message}</td>`;
+		return `<td class="error"><div>${x.message}</div></td>`;
 	}
 }
+
