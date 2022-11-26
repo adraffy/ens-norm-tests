@@ -15,10 +15,6 @@
 * [@ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
 * [ethers](https://github.com/ethers-io/ethers.js)
 
-## Data Files
-
-* `1,528,752` registered labels as of `2022-10-22`
-
 ## Build
 
 1. `git clone --recurse-submodules` this repo

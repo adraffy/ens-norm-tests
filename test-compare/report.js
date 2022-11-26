@@ -1,7 +1,7 @@
-import {IMPLS} from '../impls.js';
-import LABELS from '../eth-labels/db.js';
-import {explode_cp} from '../ens-normalize.js/src/utils.js';
+import {IMPLS, require_impl} from '../impls.js';
+import LABELS from '../ens-labels/labels.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
+import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
 import {html_escape} from '../utils.js';
 
@@ -19,7 +19,15 @@ for (let j = 1; j < IMPLS.length; j++) {
 	}
 }
 */
+let a = require_impl('ens_normalize.git');
 
+//let b = await impl_for_version('1.7.2');
+let b = require_impl('eth-ens-namehash');
+
+let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
+writeFileSync(out_file, create_html_report(a, b)); 
+
+/*
 let j = IMPLS.findIndex(x => x.name === 'ens_normalize' && x.primary); // quick hack
 if (j == -1) throw new Error('wtf');
 for (let i = 0; i < IMPLS.length; i++) {
@@ -32,6 +40,7 @@ for (let i = 0; i < IMPLS.length; i++) {
 	writeFileSync(out_file, create_html_report(a, b)); 
 	throw 1;
 }
+*/
 
 writeFileSync(new URL('./index.html', out_dir), create_html_index());
 

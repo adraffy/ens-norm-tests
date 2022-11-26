@@ -1,3 +1,6 @@
 [submodule "ens-normalize.js"]
 	path = ens-normalize.js
 	url = https://github.com/adraffy/ens-normalize.js
+[submodule "ens-labels"]
+	path = ens-labels
+	url = https://github.com/adraffy/ens-labels

@@ -1,6 +1,6 @@
 // check if f(f(x)) == f(x)
 
-import LABELS from '../eth-labels/db.js';
+import LABELS from '../ens-labels/labels.js';
 import {IMPLS} from '../impls.js';
 
 for (let impl of IMPLS) {

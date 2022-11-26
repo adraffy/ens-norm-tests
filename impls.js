@@ -1,4 +1,5 @@
 import {readFileSync} from 'node:fs';
+import {print_table} from './ens-normalize.js/derive/utils.js';
 
 function read_package_version(path) {
 	if (typeof path === 'string') {
@@ -7,24 +8,46 @@ function read_package_version(path) {
 	return JSON.parse(readFileSync(path)).version;
 }
 
+export async function import_ens_normalize(version) {
+	if (!version || version === 'latest') {
+		return import('./ens-normalize.js/src/lib.js');
+	} else if (version === 'dev') {
+		return import('../ens-normalize.js/src/lib.js');
+	} else {
+		return import(`./old-versions/${version}.js`);
+	}
+}
+export async function impl_for_version(version) {
+	let lib = await import_ens_normalize(version);
+	return new Impl('ens_normalize', lib.ens_normalize, version);
+}
+
+class Impl { 
+	constructor(name, fn, version) {
+		this.name = name;
+		this.fn = fn;
+		this.version = version;
+	}
+	get slug() {
+		return this.name.replace(/\s+/, '').toLowerCase() + '_' + this.version;
+	}
+}
+
 export const IMPLS = [];
+
+export function require_impl(name) {
+	let impl = IMPLS.find(x => x.name === name);
+	if (!impl) throw new Error(`expected implementation: ${name}`);
+	return impl;
+}
 
 // ********************************************************************************
 
 import A from '@ensdomains/eth-ens-namehash';
-IMPLS.push({
-	name: 'eth-ens-namehash', 
-	fn: A.normalize.bind(A), 
-	version: read_package_version('@ensdomains/eth-ens-namehash')
-});
-
+IMPLS.push(new Impl('eth-ens-namehash', A.normalize.bind(A), read_package_version('@ensdomains/eth-ens-namehash')));
 
 import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
-IMPLS.push({
-	name: 'ethers', 
-	fn: ethers, 
-	version: read_package_version('ethers')
-});
+IMPLS.push(new Impl('ethers', ethers, read_package_version('ethers')));
 
 // ********************************************************************************
 
@@ -36,15 +59,6 @@ IMPLS.push({
 	version: read_package_version(`@adraffy/ens-normalize`),
 	primary: true
 });
-*/
-// use dev branch instead
-import {ens_normalize} from './ens-normalize.js/src/lib.js';
-IMPLS.push({
-	name: 'ens_normalize', 
-	fn: ens_normalize, 
-	version: JSON.parse(readFileSync(new URL('./ens-normalize.js/package.json', import.meta.url))).version,
-	primary: true
-});
 
 import {ens_normalize as prior} from 'prior_ens_norm';
 IMPLS.push({
@@ -53,6 +67,15 @@ IMPLS.push({
 	version: read_package_version('prior_ens_norm'),
 	prior: true
 });
+*/
+
+// git branch instead
+import {ens_normalize} from './ens-normalize.js/src/lib.js';
+IMPLS.push(new Impl('ens_normalize.git', ens_normalize, JSON.parse(readFileSync(new URL('./ens-normalize.js/package.json', import.meta.url))).version));
+
+// raffy's local branch
+import {ens_normalize as ens_normalize_dev} from '../ens-normalize.js/src/lib.js';
+IMPLS.push(new Impl('ens_normalize.local', ens_normalize_dev, JSON.parse(readFileSync(new URL('../ens-normalize.js/package.json', import.meta.url))).version));
 
 // ********************************************************************************
 
@@ -67,11 +90,7 @@ export const uts46 = create_uts46({
 	check_leading_cm: true,
 	punycode: true,
 });
-IMPLS.push({
-	name: 'UTS46',
-	fn: uts46,
-	version: UTS46_VERSION
-});
+IMPLS.push(new Impl('UTS46', uts46, UTS46_VERSION));
 
 export const ens0 = create_uts46({
 	version: 2003,
@@ -79,11 +98,7 @@ export const ens0 = create_uts46({
 	check_hyphens: false, // 20220918: i had these as true
 	punycode: false,      // they probably should be false
 });
-IMPLS.push({
-	name: 'ENS0',
-	fn: ens0,
-	version: UTS46_VERSION
-});
+IMPLS.push(new Impl('ENS0', ens0, UTS46_VERSION));
 
 export const strict2008 = create_uts46({
 	version: 2008, 
@@ -94,34 +109,14 @@ export const strict2008 = create_uts46({
 	check_leading_cm: true,
 	punycode: true,
 });
-IMPLS.push({
-	name: 'Strict 2008',
-	fn: strict2008,
-	version: UTS46_VERSION
-});
-
-// ********************************************************************************
-
-for (let impl of IMPLS) {
-	impl.slug = impl.name.replace(/\s+/, '').toLowerCase() + '_' + impl.version;
-}
+IMPLS.push(new Impl('Strict 2008', strict2008, UTS46_VERSION));
 
 // ********************************************************************************
 
 // dump out if run directly
 if (process.argv[1] === new URL(import.meta.url).pathname) {
-	let cols = ['#', 'name', 'slug', 'version'];
-	let rows = IMPLS.map((impl, i) => cols.map(key => {
-		if (key == '#') return String(i+1);
-		return impl[key];
-	}));
-	let maxs = cols.map((_, i) => rows.reduce((a, row) => Math.max(a, row[i].length), cols[i].length));
-	function format(v, pad = ' ', sep = ' | ') {
-		return cols.map((_, i) => String(v[i]).padEnd(maxs[i], pad)).join(sep);
-	}
-	console.log(format(cols));
-	console.log(format(cols.map(() => ''), '-', '-|-')); 
-	for (let row of rows) {
-		console.log(format(row));
-	}
+	print_table(
+		['#', 'Name', 'Slug', {name: 'Version', align: 'R', min: 0}], 
+		IMPLS.map((impl, i) => [i, impl.name, impl.slug, impl.version])
+	);
 }
