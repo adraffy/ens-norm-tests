@@ -69,29 +69,33 @@ create_disallowed_report(new URL('./disallowed.html', out_dir), disallowed);
 function create_disallowed_report(file, errors) {
 	let types = [...group_by(errors, x => x.error).entries()].map(([type, errors]) => {
 		let slug = type.slice(type.indexOf('{') + 1, -1);
-		return {type, slug, errors};
-	}).sort((a, b) => b.errors.length - a.errors.length);
+		let cp = parseInt(slug, 16);
+		return {type, slug, cp, errors};
+	}).sort((a, b) => {		
+		let c = b.errors.length - a.errors.length;
+		if (c == 0) c = a.cp - b.cp;
+		return c;
+	});
 	writeFileSync(file, `
-		${create_header(`Disallowed (${errors.length})`)}
+		${create_header(`Disallowed Characters (${errors.length})`)}
 		<h2>Characters (${types.length})</h2>
 		<div class="cloud">
 		${types.map(({type, slug, errors}) => {
 			return `<a href="#${slug}"><code>${type}</code> (${errors.length})</a>`;
 		}).join('\n')},
 		</div>
-		${types.map(({type, slug, errors}) => {
-			let cp0 = parseInt(slug, 16);
+		${types.map(({type, slug, cp, errors}) => {
 			return `
-				<h2><a name="${slug}"><code>${type}</code> ${UNICODE.get_name(cp0, true)} (${errors.length})</a></h2>
+				<h2><a name="${slug}"><code>${type}</code> ${UNICODE.get_name(cp, true)} (${errors.length})</a></h2>
 				<table>
 					<tr><th>#</th><th>Label</th><th>Hex</th></tr>
 					${errors.map(({label}, i) => {
 						return `<tr>
 							<td>${i+1}</td>
 							<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape(label)}</a></td>
-							<td class="hex"><div class="limit">${explode_cp(label).map(cp => {
-								let hex = hex_cp(cp);
-								if (cp === cp0) hex = `<span>${hex}</span>`;
+							<td class="hex"><div class="limit">${explode_cp(label).map(x => {
+								let hex = hex_cp(x);
+								if (x === cp) hex = `<span>${hex}</span>`;
 								return hex;
 							}).join(' ')}</div></td>
 						</tr>`;

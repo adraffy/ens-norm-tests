@@ -19,8 +19,7 @@ for (let j = 1; j < IMPLS.length; j++) {
 	}
 }
 */
-let a = require_impl('ens_normalize.git');
-
+let a = require_impl('ens_normalize.local');
 //let b = await impl_for_version('1.7.2');
 let b = require_impl('eth-ens-namehash');
 
