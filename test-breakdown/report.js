@@ -1,12 +1,12 @@
 import {import_ens_normalize} from '../impls.js';
-import LABELS from '../ens-labels/labels.js';
+import {read_labels} from '../ens-labels/labels.js';
 //import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 import {html_escape} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
-import {group_by, explode_cp, hex_cp} from '../ens-normalize.js/derive/utils.js';
+import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays} from '../ens-normalize.js/derive/utils.js';
 
-let {ens_normalize} = await import_ens_normalize('dev');
+let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev');
 
 let same = 0;
 let diff = [];
@@ -27,7 +27,8 @@ let tally = {
 	'invalid label extension': [],
 };
 
-for (let label of LABELS) {
+let labels = read_labels();
+for (let label of labels) {
 	try {
 		let norm = ens_normalize(label);
 		if (norm === label) {
@@ -57,13 +58,154 @@ for (let [type, bucket] of Object.entries(tally)) {
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-
 writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, ...tally}));
 create_whole_report(new URL('./wholes.html', out_dir), wholes);
 create_mixture_report(new URL('./mixtures.html', out_dir), mixture);
 create_placement_report(new URL('./placement.html', out_dir), placement);
 create_cm_report(new URL('./cm.html', out_dir), excess_cm);
 create_disallowed_report(new URL('./disallowed.html', out_dir), disallowed);
+create_diff_report(new URL('./diff.html', out_dir), diff);
+
+
+function create_diff_report(file, errors) {
+	// TODO: can we auto-derive this from chars-mapped.js with an extra annotation?
+	let cats = [
+		{name: 'Arabic', cps: '6F0..6F3 6F7..6F9'},
+		{name: 'Hyphen', cps: '2010..2015 2212 2043 FE58 23E4 23AF 2E3A 2E3B'},
+		{name: 'Apostrophe', cps: '27'},
+		{name: 'Negative Circled Digit', cps: '24FF 24EB..24F4'},
+		{name: 'Double Circled Digit', cps: '24F5..24FE'},
+		{name: 'Dingbat Negative Circled Digit', cps: '2776..277F'},
+		{name: 'Dingbat Circled Sans-serif Digit', cps: '1F10B 2780..2789'},
+		{name: 'Dingbat Negative Circled Sans-serif Digit', cps: '1F10C 278A..2793'},
+		{name: 'Dingbat Negative Circled Sans-serif Letter', cps: '1F150..1F169'},
+	];
+	let catchall = [];
+	let wrong_emoji = [];
+	for (let cat of cats) {
+		cat.set = new Set(parse_cps(cat.cps));
+		cat.errors = [];
+	}
+	for (let error of errors) {
+		let {label, norm} = error;
+		let tokens = error.tokens = ens_tokenize(label);
+		let normed = new Set(explode_cp(norm));		
+		let complement = [...new Set(explode_cp(label))].filter(cp => !normed.has(cp));
+		//let bC = [...b].filter(cp => !a.has(cp));
+		let matched = cats.filter(cat => complement.some(cp => cat.set.has(cp)));
+		if (matched.length === 1) {
+			matched[0].errors.push(error);
+		} else if (tokens.some(t => t.emoji && compare_arrays(t.input, t.cps)) && norm === String.fromCodePoint(...tokens.flatMap(t => t.emoji ? t.cps : (t.cps || t.cp)))) {
+			wrong_emoji.push(error);
+		} else {
+			catchall.push(error);
+		}
+	}
+	const EMOJI = 'Unnormalized Emoji';
+	cats.push({name: EMOJI, errors: wrong_emoji});
+	cats.push({name: 'Everything Else', errors: catchall});
+	for (let cat of cats) {		
+		cat.slug = cat.name.toLowerCase().replaceAll(' ', '_');
+	}
+	cats.sort((a, b) => b.errors.length - a.errors.length);
+
+	function hex_diff(tokens) {
+		return tokens.map(t => {
+			if (t.type === 'emoji' && compare_arrays(t.input, t.cps)) {
+				return `<span class="emoji">[${t.input.map(hex_cp).join(' ')} → ${t.cps.map(hex_cp).join(' ')}]</span>`;
+			} else if (t.type === 'nfc') {
+				return `<span class="nfc">${t.input.map(hex_cp).join(' ')} → ${t.cps.map(hex_cp).join(' ')}</span>`;
+			} else if (t.type === 'mapped') {
+				return `<span class="mapped">[${hex_cp(t.cp)} → ${t.cps.map(hex_cp).join(' ')}]</span>`;
+			} else if (t.type === 'ignored') {
+				return `<span class="ignored">[${hex_cp(t.cp)}]</span>`;
+			} else {
+				return t.cps.map(hex_cp).join(' ');
+			}
+		}).join(' ');
+	}
+
+	writeFileSync(file, `
+		${create_header(`Different Norm(${errors.length})`)}
+		<ul>
+		${cats.map(({name, slug, errors}) => {
+			return `<li><a href="#${slug}">${name} (${errors.length})</a></li>`;
+		}).join('\n')}
+		</ul>
+		${cats.map(({name, slug, set, errors}) => {	
+			let html;
+			if (set) {
+				html = `
+					<ol>
+						${[...set].map(cp => `<li><code>${hex_cp(cp)}</code> (${UNICODE.safe_str(cp)}) ${UNICODE.get_name(cp)}</li>`).join('\n')}
+					</ol>
+					<table>
+						<tr><th>#</th><th>Before</th><th>After</th><th>Hex Diff</th></tr>
+						${errors.map(({label, norm, tokens}, i) => {
+							return `<tr>
+								<td>${i+1}</td>
+								<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape_marked_tokens(tokens, set, false)}</a></td>
+								<td class="form"><a class="limit" data-name="${encodeURIComponent(norm)}">${html_escape_marked_tokens(tokens, set, true)}</a></td>
+								<td class="hex">${hex_diff(tokens)}</td>
+							</tr>`;
+						}).join('\n')}
+					</table>
+				`;
+			} else if (name === EMOJI) {
+				function mark_emoji(tokens, norm) {
+					return tokens.map(t => {
+						if (t.emoji && compare_arrays(t.input, t.cps)) {
+							return `<span>${(norm ? t.cps : t.input).map(hex_cp).join(' ')}</span>`;
+						} else {
+							return (t.cps ?? [t.cp]).map(hex_cp).join(' ');
+						}
+					}).join(' ');
+				}
+				html = `<table>
+					<tr><th>#</th><th>Form</th><th>Hex Diff</th></tr>
+					${errors.map(({label, tokens}, i) => {
+						return `<tr>
+							<td>${i+1}</td>
+							<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape(label)}</a></td>	
+							<td class="hex">${hex_diff(tokens)}</td>
+						</tr>`;
+					}).join('\n')}
+				</table>`;
+			} else { 
+				html = `<table>
+					<tr><th>#</th><th>Before</th><th>After</th><th>Hex Diff</th></tr>
+					${errors.map(({label, norm, tokens}, i) => {
+						return `<tr>
+							<td>${i+1}</td>
+							<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape(label)}</a></td>	
+							<td class="form"><a class="limit" data-name="${encodeURIComponent(norm)}">${html_escape(norm)}</a></td>	
+							<td class="hex">${hex_diff(tokens)}</td>
+						</tr>`;
+					}).join('\n')}
+				</table>`;
+			}
+			return `<h2><a name="${slug}">${name} (${errors.length})</a></h2>${html}`;
+		}).join('\n')}
+		<script>
+		for (let a of document.querySelectorAll('a[data-name]')) {
+			a.target = '_blank';
+			a.href = 'https://adraffy.github.io/ens-normalize.js/test/resolver.html#' + a.dataset.name;
+		}
+		</script>
+		</body>
+		</html>
+	`);
+}
+
+function html_escape_marked_tokens(tokens, set, norm) {
+	return tokens.map(t => {
+		if (t.type === 'mapped' && set.has(t.cp)) {
+			return `<span>${html_escape(String.fromCodePoint(...(norm ? t.cps : [t.cp])))}</span>`;
+		} else {
+			return html_escape(String.fromCodePoint(...(t.cps ?? [t.cp])));
+		}	
+	}).join('');
+}
 
 
 function create_disallowed_report(file, errors) {
@@ -111,6 +253,7 @@ function create_disallowed_report(file, errors) {
 		}
 		</script>
 		</body>
+		</html>
 	`);
 }
 
@@ -141,11 +284,12 @@ function create_cm_report(file, errors) {
 		}
 		</script>
 		</body>
+		</html>
 	`);
 }
 
 function create_placement_report(file, errors) {
-	let types = [...group_by(errors, x => x.error).entries()].map(([type, errors]) => {
+	let types = [...group_by(errors, x => x.error.split(':', 2)[0]).entries()].map(([type, errors]) => {
 		return {type, slug: type.replace(/\s+/, '_'), errors};
 	}).sort((a, b) => b.errors.length - a.errors.length);
 	writeFileSync(file, `
@@ -172,6 +316,7 @@ function create_placement_report(file, errors) {
 		}
 		</script>
 		</body>
+		</html>
 	`);
 }
 
@@ -199,6 +344,7 @@ function create_mixture_report(file, errors) {
 		}
 		</script>
 		</body>
+		</html>
 	`);
 }
 
@@ -226,6 +372,7 @@ function create_whole_report(file, errors) {
 		}
 		</script>
 		</body>
+		</html>
 	`);
 }
 
@@ -262,6 +409,7 @@ function create_header(title) {
 		}
 		table a {
 			text-decoration: none;
+			color: #000;
 		}
 		table a:hover {
 			text-decoration: underline;
@@ -290,12 +438,21 @@ function create_header(title) {
 		td.form {
 			font-size: 20pt;
 		}
+		td span.emoji {
+			color: #00f;
+		}
+		td span.ignored {
+			color: #aaa;
+		}
+		td span.nfc {
+			color: #c80;
+		}
+		td span.mapped {
+			color: #66f;
+		}
 		td.hex {
 			text-align: left;
 			font: 10pt monospace;
-		}
-		td.hex span {
-			color: #d00;
 		}
 		td.error {
 			white-space: nowrap;
