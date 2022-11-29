@@ -142,7 +142,7 @@ function create_diff_report(file, errors) {
 			if (set) {
 				html = `
 					<ol>
-						${[...set].map(cp => `<li><code>${hex_cp(cp)}</code> (${UNICODE.safe_str(cp)}) ${UNICODE.get_name(cp)}</li>`).join('\n')}
+						${[...set].map(cp => `<li><code>${hex_cp(cp)}</code> (${UNICODE.safe_str(cp)}) ${UNICODE.get_name(cp, true)}</li>`).join('\n')}
 					</ol>
 					<table>
 						<tr><th>#</th><th>Before</th><th>After</th><th>Hex Diff</th></tr>
@@ -454,6 +454,9 @@ function create_header(title) {
 		}
 		td span.mapped {
 			color: #66f;
+		}
+		td span {
+			color: #d00;
 		}
 		td.hex {
 			text-align: left;
