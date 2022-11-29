@@ -76,9 +76,9 @@ function create_diff_report(file, errors) {
 		{name: 'Arabic', cps: '6F0..6F3 6F7..6F9'},
 		{name: 'Hyphen', cps: '2010..2015 2212 2043 FE58 23E4 23AF 2E3A 2E3B'},
 		{name: 'Apostrophe', cps: '27'},
-		{name: 'Negative Circled Digit', cps: '24FF 24EB..24F4'},
+		{name: 'Negative Circled Digit', cps: '24EB..24F4'},
 		{name: 'Double Circled Digit', cps: '24F5..24FE'},
-		{name: 'Dingbat Negative Circled Digit', cps: '2776..277F'},
+		{name: 'Dingbat Negative Circled Digit', cps: '24FF 2776..277F'},
 		{name: 'Dingbat Circled Sans-serif Digit', cps: '1F10B 2780..2789'},
 		{name: 'Dingbat Negative Circled Sans-serif Digit', cps: '1F10C 278A..2793'},
 		{name: 'Dingbat Negative Circled Sans-serif Letter', cps: '1F150..1F169'},
@@ -128,12 +128,12 @@ function create_diff_report(file, errors) {
 			}
 		}).join(' ');
 	}
-
+	let total = cats.reduce((a, cat) => a + cat.errors.length, 0);
 	writeFileSync(file, `
 		${create_header(`Different Norm(${errors.length})`)}
 		<ul>
 		${cats.map(({name, slug, errors}) => {
-			return `<li><a href="#${slug}">${name} (${errors.length})</a></li>`;
+			return `<li><a href="#${slug}">${name}</a> (${errors.length}) — <b>${(100 * errors.length / total).toFixed(2)}%</b></li>`;
 		}).join('\n')}
 		</ul>
 		${cats.map(({name, slug, set, errors}) => {	
