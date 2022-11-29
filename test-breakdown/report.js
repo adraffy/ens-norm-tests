@@ -9,6 +9,7 @@ import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays} from '../ens-no
 let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev');
 
 let same = 0;
+let diff_case = 0;
 let diff = [];
 let wholes = [];
 let mixture = [];
@@ -33,6 +34,8 @@ for (let label of labels) {
 		let norm = ens_normalize(label);
 		if (norm === label) {
 			same++;
+		} else if (label.toLowerCase() === norm) {
+			diff_case++;
 		} else {
 			diff.push({label, norm});
 		}
@@ -49,7 +52,7 @@ for (let label of labels) {
 	}
 }
 
-console.log('same', same);
+console.log({same, diff_case});
 for (let [type, bucket] of Object.entries(tally)) {
 	console.log(type, bucket.length);
 }
@@ -58,7 +61,7 @@ for (let [type, bucket] of Object.entries(tally)) {
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, ...tally}));
+writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, diff_case, ...tally}));
 create_whole_report(new URL('./wholes.html', out_dir), wholes);
 create_mixture_report(new URL('./mixtures.html', out_dir), mixture);
 create_placement_report(new URL('./placement.html', out_dir), placement);
@@ -79,6 +82,8 @@ function create_diff_report(file, errors) {
 		{name: 'Dingbat Circled Sans-serif Digit', cps: '1F10B 2780..2789'},
 		{name: 'Dingbat Negative Circled Sans-serif Digit', cps: '1F10C 278A..2793'},
 		{name: 'Dingbat Negative Circled Sans-serif Letter', cps: '1F150..1F169'},
+		{name: '[IDNA] Circled Letter', cps: '24D0..24E9'},
+		{name: '[IDNA] Demoji', cps: '2122 2139 24C2 3297 3299 1F201 1F202 1F21A 1F22F 1F232 1F233 1F234 1F235 1F236 1F237 1F238 1F239 1F23A 1F250 1F251'},
 	];
 	let catchall = [];
 	let wrong_emoji = [];
@@ -91,7 +96,6 @@ function create_diff_report(file, errors) {
 		let tokens = error.tokens = ens_tokenize(label);
 		let normed = new Set(explode_cp(norm));		
 		let complement = [...new Set(explode_cp(label))].filter(cp => !normed.has(cp));
-		//let bC = [...b].filter(cp => !a.has(cp));
 		let matched = cats.filter(cat => complement.some(cp => cat.set.has(cp)));
 		if (matched.length === 1) {
 			matched[0].errors.push(error);
