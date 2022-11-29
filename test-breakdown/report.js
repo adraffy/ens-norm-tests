@@ -82,6 +82,7 @@ function create_diff_report(file, errors) {
 		{name: 'Dingbat Circled Sans-serif Digit', cps: '1F10B 2780..2789'},
 		{name: 'Dingbat Negative Circled Sans-serif Digit', cps: '1F10C 278A..2793'},
 		{name: 'Dingbat Negative Circled Sans-serif Letter', cps: '1F150..1F169'},
+		{name: '[IDNA] Circled Digit', cps: '24EA 2460..2469'},
 		{name: '[IDNA] Circled Letter', cps: '24D0..24E9'},
 		{name: '[IDNA] Demoji', cps: '2122 2139 24C2 3297 3299 1F201 1F202 1F21A 1F22F 1F232 1F233 1F234 1F235 1F236 1F237 1F238 1F239 1F23A 1F250 1F251'},
 	];
