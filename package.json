@@ -31,7 +31,8 @@
 		"uts46": "node test-misc/uts46.js",
 		"quick": "node test-validation/quick.js",
 		"validate": "node test-validation/report.js",
-		"compare": "node test-compare/report.js"
+		"compare": "node test-compare/report.js",
+		"breakdown": "node test-breakdown/report.js"
 	},
 	"dependencies": {
 		"@adraffy/ens-norm-uts46": "^0.0.5",

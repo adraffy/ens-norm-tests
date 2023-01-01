@@ -1,5 +1,5 @@
 import {IMPLS, require_impl} from '../impls.js';
-import LABELS from '../ens-labels/labels.js';
+import {read_labels} from '../ens-labels/labels.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
@@ -7,6 +7,8 @@ import {html_escape} from '../utils.js';
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
+
+const LABELS = read_labels();
 
 // pairwise
 /*

@@ -1,6 +1,5 @@
 import {import_ens_normalize} from '../impls.js';
 import {read_labels} from '../ens-labels/labels.js';
-//import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 import {html_escape} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
@@ -56,8 +55,6 @@ console.log({same, diff_case});
 for (let [type, bucket] of Object.entries(tally)) {
 	console.log(type, bucket.length);
 }
-
-
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
