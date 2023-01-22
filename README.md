@@ -33,3 +33,4 @@
 * `npm run quick` — check validation status 
 * `npm run validate` — generate HTML reports for validation tests &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-validation/output/)
 * `npm run compare` — generate pair-wise HTML reports for registered labels &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-compare/output/)
+* `npm run breakdown` — generate HTML reports for normalization error types &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-breakdown/output/)

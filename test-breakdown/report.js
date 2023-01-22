@@ -1,34 +1,74 @@
 import {import_ens_normalize} from '../impls.js';
 import {read_labels} from '../ens-labels/labels.js';
-import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
+import {mkdirSync, writeFileSync} from 'node:fs';
 import {html_escape} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
-import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays} from '../ens-normalize.js/derive/utils.js';
+import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} from '../ens-normalize.js/derive/utils.js';
 
-let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev');
+// "dev" is raffy's local branch, switch to "latest"
+let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev'); 
 
+const LABELS = read_labels();
+
+// error storage
 let same = 0;
 let diff_case = 0;
-let diff = [];
-let wholes = [];
-let mixture = [];
-let disallowed = [];
-let placement = [];
-let excess_cm = [];
+const DIFF = [];
 
-let tally = {
-	'different norm': diff,
-	'whole-script confusable': wholes,
-	'illegal mixture': mixture,
-	'disallowed character': disallowed,
-	'illegal placement': placement,
-	'too many combining marks': excess_cm,
-	'underscore allowed only at start': [],
-	'invalid label extension': [],
+const INSERT_HTML = `<p><b>${LABELS.length}</b> labels  — Created <code>${new Date().toJSON()}</code></p>`;
+
+const REPORTS = {
+	'disallowed character': {
+		bucket: [], 
+		name: 'disallowed',
+		handler: create_disallowed_report,
+	},
+	'different norm': {
+		bucket: DIFF, 
+		name: 'diff',
+		handler: create_diff_report,
+	},
+	'illegal mixture': {
+		bucket: [], 
+		name: 'mixtures', 
+		handler: create_mixture_report,
+	},
+	'whole-script confusable': {
+		bucket: [], 
+		name: 'wholes', 
+		handler: create_whole_report,
+	},
+	'illegal placement': {
+		bucket: [],
+		name: 'placement',
+		handler: create_placement_report,
+	},
+	'too many combining marks': {
+		bucket: [],
+		name: 'cm',
+		handler: create_cm_report,
+	},
+	'underscore allowed only at start': {
+		bucket: [],
+	},
+	'invalid label extension': {
+		bucket: [],
+	},
+	'empty label': {
+		bucket: [],
+	},
 };
+function require_report_type(type) {
+	let report = REPORTS[type];
+	if (!report) throw new Error(`Expected tally bucket: ${type}`);
+	return report;
+}
+function add_error(type, data) {
+	require_report_type(type).bucket.push(data);
+}
 
-let labels = read_labels();
-for (let label of labels) {
+console.log(`${LABELS.length} labels`)
+for (let label of LABELS) {
 	try {
 		let norm = ens_normalize(label);
 		if (norm === label) {
@@ -36,36 +76,101 @@ for (let label of labels) {
 		} else if (label.toLowerCase() === norm) {
 			diff_case++;
 		} else {
-			diff.push({label, norm});
+			DIFF.push({label, norm});
 		}
 	} catch (err) {
 		let {message} = err;
 		let index = message.indexOf(':');
-		if (index == -1) {
-			tally[message].push(label);
+		if (index == -1) {			
+			add_error(message, label);
 		} else {
 			let type = message.slice(0, index);
 			let error = message.slice(index + 1).trim();
-			tally[type].push({label, error});
+			add_error(type, {label, error});
 		}
 	}
 }
 
+console.log();
+print_section('Errors');
 console.log({same, diff_case});
-for (let [type, bucket] of Object.entries(tally)) {
+for (let [type, {bucket}] of Object.entries(REPORTS)) {
 	console.log(type, bucket.length);
 }
 
+console.log();
+print_section('Reports');
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, diff_case, ...tally}));
-create_whole_report(new URL('./wholes.html', out_dir), wholes);
-create_mixture_report(new URL('./mixtures.html', out_dir), mixture);
-create_placement_report(new URL('./placement.html', out_dir), placement);
-create_cm_report(new URL('./cm.html', out_dir), excess_cm);
-create_disallowed_report(new URL('./disallowed.html', out_dir), disallowed);
-create_diff_report(new URL('./diff.html', out_dir), diff);
+writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, diff_case, ...REPORTS}));
 
+for (let {name, handler, bucket} of Object.values(REPORTS)) {
+	if (!name) continue;
+	let file = new URL(`./${name}.html`, out_dir);
+	try {
+		handler(file, bucket);
+		console.log(`Wrote report: ${name}`);
+	} catch (err) {
+		console.log(`Error writing report: ${name}`);
+		throw err;
+	}
+}
+
+/*
+create_whole_report(new URL('./wholes.html', out_dir), WHOLES);
+create_mixture_report(new URL('./mixtures.html', out_dir), MIXTURE);
+create_placement_report(new URL('./placement.html', out_dir), PLACEMENT);
+create_cm_report(new URL('./cm.html', out_dir), EXCESS_CM);
+create_disallowed_report(new URL('./disallowed.html', out_dir), DISALLOWED);
+create_diff_report(new URL('./diff.html', out_dir), DIFF)
+*/
+create_index_file(new URL('./index.html', out_dir));
+
+function create_index_file(file) {
+	const title = 'Breakdown Reports';
+	writeFileSync(file,`
+		<!doctype html>
+		<html>
+		<head>
+		<meta charset="utf-8">
+		<title>${title}</title>
+		<style>
+			body {
+				margin: 3rem;
+			}
+			ul {
+				font-size: 20pt;
+			}
+			li {
+				padding: 0.5rem;
+			}
+			li:hover {
+				background: #cff;
+			}
+			li a {
+				display: block;
+			}
+			code {
+				background: #ffc;
+			}
+		</style>
+		</head>
+		<body>
+		<h1>${title}</h1>
+		${INSERT_HTML}
+		<ul id="index">
+		${Object.entries(REPORTS).map(([prefix, {name, bucket}]) => {
+			let html =  `<code>${prefix}</code> (${bucket.length})`;
+			if (name) {
+				html = `<a href="${name}.html">${html}</a>`;
+			}
+			return `<li>${html}</li>`
+		}).join('')}
+		</ul>
+		</body>
+		</html>
+	`);
+}
 
 function create_diff_report(file, errors) {
 	// TODO: can we auto-derive this from chars-mapped.js with an extra annotation?
@@ -154,15 +259,6 @@ function create_diff_report(file, errors) {
 					</table>
 				`;
 			} else if (name === EMOJI) {
-				function mark_emoji(tokens, norm) {
-					return tokens.map(t => {
-						if (t.emoji && compare_arrays(t.input, t.cps)) {
-							return `<span>${(norm ? t.cps : t.input).map(hex_cp).join(' ')}</span>`;
-						} else {
-							return (t.cps ?? [t.cp]).map(hex_cp).join(' ');
-						}
-					}).join(' ');
-				}
 				html = `<table>
 					<tr><th>#</th><th>Form</th><th>Hex Diff</th></tr>
 					${errors.map(({label, tokens}, i) => {
@@ -465,5 +561,6 @@ function create_header(title) {
 	</style>
 	</head>
 	<body>
-	<h1>${title}</h1>`;
+	<h1>${title}</h1>
+	${INSERT_HTML}`;
 }
