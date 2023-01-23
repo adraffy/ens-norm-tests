@@ -15,7 +15,8 @@ let same = 0;
 let diff_case = 0;
 const DIFF = [];
 
-const INSERT_HTML = `<p><b>${LABELS.length}</b> labels  — Created <code>${new Date().toJSON()}</code></p>`;
+const DATE = new Date().toJSON();
+const INSERT_HTML = `<p><b>${LABELS.length}</b> labels  — Created <code>${DATE}</code></p>`;
 
 const REPORTS = {
 	'disallowed character': {
@@ -102,8 +103,11 @@ console.log();
 print_section('Reports');
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({same, diff_case, ...REPORTS}));
-
+writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({
+	created: DATE,
+	same, diff_case, 
+	...Object.fromEntries(Object.entries(REPORTS).map(([k, {bucket}]) => [k, bucket]))
+}));
 for (let {name, handler, bucket} of Object.values(REPORTS)) {
 	if (!name) continue;
 	let file = new URL(`./${name}.html`, out_dir);
@@ -115,15 +119,6 @@ for (let {name, handler, bucket} of Object.values(REPORTS)) {
 		throw err;
 	}
 }
-
-/*
-create_whole_report(new URL('./wholes.html', out_dir), WHOLES);
-create_mixture_report(new URL('./mixtures.html', out_dir), MIXTURE);
-create_placement_report(new URL('./placement.html', out_dir), PLACEMENT);
-create_cm_report(new URL('./cm.html', out_dir), EXCESS_CM);
-create_disallowed_report(new URL('./disallowed.html', out_dir), DISALLOWED);
-create_diff_report(new URL('./diff.html', out_dir), DIFF)
-*/
 create_index_file(new URL('./index.html', out_dir));
 
 function create_index_file(file) {
@@ -147,11 +142,14 @@ function create_index_file(file) {
 			li:hover {
 				background: #cff;
 			}
+			li code {
+				background: #ddd;
+			}
 			li a {
 				display: block;
 			}
-			code {
-				background: #ffc;
+			li a code {
+				background: #fcc;
 			}
 		</style>
 		</head>
