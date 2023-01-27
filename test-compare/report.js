@@ -22,8 +22,8 @@ for (let j = 1; j < IMPLS.length; j++) {
 }
 */
 let a = require_impl('ens_normalize.local');
-//let b = await impl_for_version('1.7.2');
-let b = require_impl('eth-ens-namehash');
+//let b = require_impl('eth-ens-namehash');
+let b = require_impl('UTS46');
 
 let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
 writeFileSync(out_file, create_html_report(a, b)); 
