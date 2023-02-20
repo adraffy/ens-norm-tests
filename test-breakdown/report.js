@@ -1,6 +1,6 @@
 import {import_ens_normalize} from '../impls.js';
 import {read_labels} from '../ens-labels/labels.js';
-import {mkdirSync, writeFileSync} from 'node:fs';
+import {mkdirSync, readdirSync, unlinkSync, writeFileSync} from 'node:fs';
 import {html_escape} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
 import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} from '../ens-normalize.js/derive/utils.js';
@@ -9,6 +9,7 @@ import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} 
 let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev'); 
 
 const LABELS = read_labels();
+console.log(`${LABELS.length} labels`)
 
 // error storage
 let same = 0;
@@ -44,10 +45,10 @@ const REPORTS = {
 		name: 'placement',
 		handler: create_placement_report,
 	},
-	'too many combining marks': {
+	'non-spacing marks': { 
 		bucket: [],
-		name: 'cm',
-		handler: create_cm_report,
+		name: 'nsm',
+		handler: create_nsm_report,
 	},
 	'underscore allowed only at start': {
 		bucket: [],
@@ -68,7 +69,6 @@ function add_error(type, data) {
 	require_report_type(type).bucket.push(data);
 }
 
-console.log(`${LABELS.length} labels`)
 for (let label of LABELS) {
 	try {
 		let norm = ens_normalize(label);
@@ -103,6 +103,9 @@ console.log();
 print_section('Reports');
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
+for (let name of readdirSync(out_dir)) {
+	unlinkSync(new URL(name, out_dir));
+}
 writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({
 	created: DATE,
 	same, diff_case, 
@@ -308,38 +311,86 @@ function create_disallowed_report(file, errors) {
 	let types = [...group_by(errors, x => x.error).entries()].map(([type, errors]) => {
 		let slug = type.slice(type.indexOf('{') + 1, -1);
 		let cp = parseInt(slug, 16);
-		return {type, slug, cp, errors};
+		let cm = UNICODE.cm.has(cp);
+		return {type, slug, cp, errors, cm};
 	}).sort((a, b) => {		
 		let c = b.errors.length - a.errors.length;
 		if (c == 0) c = a.cp - b.cp;
 		return c;
 	});
+	let cats = [
+		{name: 'Characters', types: types.filter(x => !x.cm)},
+		{name: 'Combining Marks', types: types.filter(x => x.cm)}
+	];
+	for (let cat of cats) {		
+		cat.slug = cat.name.toLowerCase().replaceAll(' ', '_');
+		cat.total = cat.types.reduce((a, x) => a + x.errors.length, 0);
+	}
 	writeFileSync(file, `
 		${create_header(`Disallowed Characters (${errors.length})`)}
-		<h2>Characters (${types.length})</h2>
-		<div class="cloud">
-		${types.map(({type, slug, errors}) => {
-			return `<a href="#${slug}"><code>${type}</code> (${errors.length})</a>`;
-		}).join('\n')},
-		</div>
-		${types.map(({type, slug, cp, errors}) => {
+		<ul>
+		${cats.map(({name, slug, types, total}) => {
+			return `<li><a href="#${slug}">${name}</a> (${types.length} chars in ${total} names) — <b>${(100 * total / errors.length).toFixed(2)}%</b></li>`;
+		}).join('\n')}
+		</ul>
+		${cats.map(({name, slug, types}) => {	
 			return `
-				<h2><a name="${slug}"><code>${type}</code> ${UNICODE.get_name(cp, true)} (${errors.length})</a></h2>
-				<table>
-					<tr><th>#</th><th>Label</th><th>Hex</th></tr>
-					${errors.map(({label}, i) => {
-						return `<tr>
-							<td>${i+1}</td>
-							<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape(label)}</a></td>
-							<td class="hex"><div class="limit">${explode_cp(label).map(x => {
-								let hex = hex_cp(x);
-								if (x === cp) hex = `<span>${hex}</span>`;
-								return hex;
-							}).join(' ')}</div></td>
-						</tr>`;
-					}).join('\n')}
-				</table>
+				<h2 id="${slug}">${name} (${types.length})</h2>
+				<div class="cloud">
+				${types.map(({type, slug, errors}) => {
+					return `<a href="#${slug}"><code>${type}</code> (${errors.length})</a>`;
+				}).join('\n')}
+				</div>
+				${types.map(({type, slug, cp, errors}) => {
+					return `
+						<h3 id="${slug}"><code>${type}</code> ${UNICODE.get_name(cp, true)} (${errors.length})</h2>
+						<table>
+							<tr><th>#</th><th>Label</th><th>Hex</th></tr>
+							${errors.map(({label}, i) => {
+								return `<tr>
+									<td>${i+1}</td>
+									<td class="form"><a class="limit" data-name="${encodeURIComponent(label)}">${html_escape(label)}</a></td>
+									<td class="hex"><div class="limit">${explode_cp(label).map(x => {
+										let hex = hex_cp(x);
+										if (x === cp) hex = `<span>${hex}</span>`;
+										return hex;
+									}).join(' ')}</div></td>
+								</tr>`;
+							}).join('\n')}
+						</table>
+					`;
+				}).join('\n')}
 			`;
+		}).join('\n')}
+		<script>
+		for (let a of document.querySelectorAll('a[data-name]')) {
+			a.target = '_blank';
+			a.href = 'https://adraffy.github.io/ens-normalize.js/test/resolver.html#' + a.dataset.name;
+		}
+		</script>
+		</body>
+		</html>
+	`);
+}
+
+function create_nsm_report(file, errors) {
+	for (let x of errors) {
+		x.group = x.error.split(' ', 2)[0];
+	}
+	writeFileSync(file, `
+		${create_header(`Non-spacing Marks (${errors.length})`)}
+		<table>
+		<tr>
+			<th>#</th>
+			<th>Label</th>
+			<th>Error</th>
+		</tr>
+		${errors.sort((a, b) => a.error.localeCompare(b.error)).map(({label, error, group}, i, v) => {
+			return `<tr${i > 0 && v[i-1].group === group ? '' : ' class="sep"'}>
+				<td class="idx">${i+1}</td>
+				<td class="form nsm"><a data-name="${encodeURIComponent(label)}">${[...label].map(html_escape).join('\xAD')}</a></td>
+				<td class="error">${error}</td>
+			</tr>`;
 		}).join('\n')}
 		</table>
 		<script>
@@ -533,6 +584,10 @@ function create_header(title) {
 		}
 		td.form {
 			font-size: 20pt;
+		}
+		td.form.nsm {
+			padding: 4rem 2rem;
+			overflow: hidden;
 		}
 		td span.emoji {
 			color: #00f;
