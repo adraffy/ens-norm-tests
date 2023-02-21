@@ -215,6 +215,7 @@ function create_diff_report(file, errors) {
 	for (let cat of cats) {		
 		cat.slug = cat.name.toLowerCase().replaceAll(' ', '_');
 	}
+	cats = cats.filter(x => x.errors.length > 0);
 	cats.sort((a, b) => b.errors.length - a.errors.length);
 
 	function hex_diff(tokens) {
