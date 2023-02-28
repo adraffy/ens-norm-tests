@@ -43,11 +43,18 @@ export function require_impl(name) {
 
 // ********************************************************************************
 
+import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
+IMPLS.push(new Impl('ethers', ethers, read_package_version('ethers')));
+
 import A from '@ensdomains/eth-ens-namehash';
 IMPLS.push(new Impl('eth-ens-namehash', A.normalize.bind(A), read_package_version('@ensdomains/eth-ens-namehash')));
 
-import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
-IMPLS.push(new Impl('ethers', ethers, read_package_version('ethers')));
+import B from '@ensdomains/ens-validation';
+IMPLS.push(new Impl('ens-validation', name => {
+	let norm = name.split('.').map(B.toUnicode).join('.');
+	if (!B.validate(norm)) throw new Error('invalid');
+	return norm;	
+}, read_package_version('@ensdomains/ens-validation')));
 
 // ********************************************************************************
 

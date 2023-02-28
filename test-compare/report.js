@@ -21,9 +21,11 @@ for (let j = 1; j < IMPLS.length; j++) {
 	}
 }
 */
-let a = require_impl('ens_normalize.git');
+let a = require_impl('eth-ens-namehash');
+//let a = require_impl('ens_normalize.git');
 //let a = require_impl('ens_normalize.local');
-let b = require_impl('eth-ens-namehash');
+//let b = require_impl('eth-ens-namehash');
+let b = require_impl('ens-validation');
 //let b = require_impl('UTS46');
 
 let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);

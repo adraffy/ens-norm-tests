@@ -1,15 +1,37 @@
-import {IMPLS} from '../impls.js';
+import {IMPLS, require_impl} from '../impls.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 import {html_escape, run_validation_tests} from '../utils.js';
 import {explode_cp, hex_cp} from '../ens-normalize.js/src/utils.js';
-import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
+import {ens_normalize, ens_emoji, safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
 
 let out_dir = new URL('./output/', import.meta.url);
 mkdirSync(out_dir, {recursive: true});
-for (let impl of IMPLS) {
-	if (impl.prior) continue; // dont generate old reports
-	writeFileSync(new URL(`./${impl.slug}.html`, out_dir), create_html_report(impl)); 
+
+switch (process.argv[2]) {
+	case 'ens-validation-emoji': {
+		let impl = require_impl('ens-validation');
+		writeFileSync(new URL(`./${impl.slug}-emoji.html`, out_dir), create_html_report(impl, ens_emoji().map(cps => {
+			let name = String.fromCodePoint(...cps);
+			return {name, norm: ens_normalize(name)};
+		})));
+		writeFileSync(new URL(`./${impl.slug}-emoji-norm.html`, out_dir), create_html_report(impl, ens_emoji().map(cps => {
+			let name = String.fromCodePoint(...cps.filter(x => x != 0xFE0F));
+			return {name, norm: ens_normalize(name)};
+		})));
+		break;
+	}
+	case undefined: {
+		// make all reports
+		for (let impl of IMPLS) {
+			if (impl.prior) continue; // dont generate old reports
+			writeFileSync(new URL(`./${impl.slug}.html`, out_dir), create_html_report(impl)); 
+		}
+
+	}
+	default: throw new Error(`unknown mode`);
 }
+
+// update index
 writeFileSync(new URL('./index.html', out_dir), create_html_index());
 
 function create_html_index() {
@@ -59,8 +81,8 @@ function error_tds(error) {
 	}
 }
 
-function create_html_report({name, fn, version}) {
-	let errors = run_validation_tests(fn);
+function create_html_report({name, fn, version}, tests) {
+	let errors = run_validation_tests(fn, tests);
 	let html;
 	if (errors.length == 0) {
 		html = `<div id="pass">0 Errors!</div>`
