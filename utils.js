@@ -27,3 +27,10 @@ export function split_on(v, x) {
 export function html_escape(s) {
 	return s.replaceAll(/[<>&]/gu, x => `&#${x.charCodeAt(0)};`);
 }
+
+export function datehash(date) {
+	let y = date.getFullYear().toString().padStart(4, '0');
+	let m = (1 + date.getMonth()).toString().padStart(2, '0');
+	let d = date.getDate().toString().padStart(2, '0');
+	return y+m+d;
+}

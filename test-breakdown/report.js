@@ -1,14 +1,26 @@
 import {import_ens_normalize} from '../impls.js';
 import {read_labels} from '../ens-labels/labels.js';
-import {mkdirSync, readdirSync, unlinkSync, writeFileSync} from 'node:fs';
-import {html_escape} from '../utils.js';
+import {mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync} from 'node:fs';
+import {html_escape, datehash} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
 import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} from '../ens-normalize.js/derive/utils.js';
 
 // "dev" is raffy's local branch, switch to "latest"
 let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev'); 
 
-const LABELS = read_labels();
+let out_dir, LABELS;
+if (process.argv[2] === 'active') {
+	let date = new Date();
+	date.setFullYear(2023, 4-1, 1);
+	date.setHours(0, 0, 0, 0);	
+	out_dir = new URL(`./active-${datehash(date)}/`, import.meta.url);
+	let t = Date.now()/1000|0;
+	LABELS = JSON.parse(readFileSync(new URL(`../../ens-registered/20230322.json`, import.meta.url))).flatMap(([name, exp]) => parseInt(exp) > t ? name : []);
+} else {
+	out_dir = new URL('./output/', import.meta.url);
+	LABELS = read_labels();
+}
+
 console.log(`${LABELS.length} labels`)
 
 // error storage
@@ -101,7 +113,7 @@ for (let [type, {bucket}] of Object.entries(REPORTS)) {
 
 console.log();
 print_section('Reports');
-let out_dir = new URL('./output/', import.meta.url);
+console.log(`Directory: ${out_dir}`);
 mkdirSync(out_dir, {recursive: true});
 for (let name of readdirSync(out_dir)) {
 	unlinkSync(new URL(name, out_dir));

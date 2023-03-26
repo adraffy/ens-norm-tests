@@ -1,0 +1,4044 @@
+
+		
+	<!doctype html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Illegal Mixtures (787)</title>
+	<style>
+		body {
+			margin: 3rem;
+		}
+		.cloud {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+		}
+		.cloud a {
+			background: #eee;
+			border: 1px solid #ccc;
+			padding: 2px 4px;
+			border-radius: 4px;
+			text-decoration: none;
+		}
+		.cloud a:hover {
+			cursor: pointer;
+			background: #cff;
+		}
+		table {
+			border-collapse: collapse;
+			border: 2px solid #888;
+		}
+		table a {
+			text-decoration: none;
+			color: #000;
+		}
+		table a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		tr.sep {
+			border-top: 2px solid #888;
+		}
+		tr:nth-child(odd) { 
+			background: #eee; 
+		}
+		th, td {
+			border: 1px solid #ccc;
+			padding: 2px 4px;
+			text-align: center;
+		}
+		.limit {
+			display: block;
+			max-height: 8rem;
+			overflow-y: auto;
+			overflow-wrap: anywhere;
+		}
+		td.idx {
+			color: #888;
+		}
+		td.form {
+			font-size: 20pt;
+		}
+		td.form.nsm {
+			padding: 4rem 2rem;
+			overflow: hidden;
+		}
+		td span.emoji {
+			color: #00f;
+		}
+		td span.ignored {
+			color: #aaa;
+		}
+		td span.nfc {
+			color: #c80;
+		}
+		td span.mapped {
+			color: #66f;
+		}
+		td span {
+			color: #d00;
+		}
+		td.hex {
+			text-align: left;
+			font: 10pt monospace;
+		}
+		td.error {
+			white-space: nowrap;
+		}
+	</style>
+	</head>
+	<body>
+	<h1>Illegal Mixtures (787)</h1>
+	<p><b>2219597</b> labels  — Created <code>2023-03-24T07:28:40.395Z</code></p>
+		<table>
+		<tr>
+			<th>#</th>
+			<th>Label</th>
+			<th>Error</th>
+		</tr>
+		<tr class="sep">
+				<td class="idx">1</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%84%DB%81">اللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">2</td>
+				<td class="form"><a data-name="%D8%AD%D9%85%D8%B2%DB%81">حمزہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">3</td>
+				<td class="form"><a data-name="%D8%A7%D9%86%DB%81%D8%AA%D8%B1">انہتر</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">4</td>
+				<td class="form"><a data-name="%D8%AA%DB%81%D8%B1%D8%A7%D9%86">تہران</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">5</td>
+				<td class="form"><a data-name="%D8%AC%D9%88%D8%A7%DB%81%D8%B1">جواہر</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">6</td>
+				<td class="form"><a data-name="%D8%B9%D8%A7%D8%A6%D8%B4%DB%81">عائشہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">7</td>
+				<td class="form"><a data-name="%D9%84%D8%A7%DB%81%D9%88%D8%B1">لاہور</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">8</td>
+				<td class="form"><a data-name="%D9%86%D8%A8%DB%8C%D9%84%DB%81">نبیلہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">9</td>
+				<td class="form"><a data-name="%D9%86%D9%85%D9%88%D9%86%DB%81">نمونہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">10</td>
+				<td class="form"><a data-name="%DA%AF%DB%8C%D8%A7%D8%B1%DB%81">گیارہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">11</td>
+				<td class="form"><a data-name="%DB%8C%D8%A7%D9%84%D9%84%DB%81">یاللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">12</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%DB%81%D9%84%DB%81%D9%87">الہلہه</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">13</td>
+				<td class="form"><a data-name="%D8%B3%D8%B9%D9%88%D8%AF%DB%8C%DB%81">سعودیہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">14</td>
+				<td class="form"><a data-name="%D8%B4%D9%85%D8%A7%D8%A6%D9%84%DB%81">شمائلہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">15</td>
+				<td class="form"><a data-name="%DB%8C%D8%A7%D8%A7%D9%84%D9%84%DB%81">یااللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">16</td>
+				<td class="form"><a data-name="%D8%A7%D8%A8%D8%B1%D8%A7%DB%81%DB%8C%D9%85">ابراہیم</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">17</td>
+				<td class="form"><a data-name="%D9%85%D8%A7%D8%B4%D8%A7%D8%A7%D9%84%D9%84%DB%81">ماشااللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">18</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D8%AD%D9%85%D8%AF%D8%A7%D9%84%D9%84%DB%81">الحمداللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">19</td>
+				<td class="form"><a data-name="%D8%A7%D9%86%D8%B4%D8%A7%D8%A1%D8%A7%D9%84%D9%84%DB%81">انشاءاللہ</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr>
+				<td class="idx">20</td>
+				<td class="form"><a data-name="%D9%85%D8%AD%D9%85%D8%AF%DB%81%D9%85%D8%AF%D8%A7%D9%86">محمدہمدان</a></td>
+				<td class="error">Arabic + "ہ"‎ {6C1}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">21</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%84%DB%95%D8%A7%D9%83%D8%A8%D8%B1">اللەاكبر</a></td>
+				<td class="error">Arabic + "ە"‎ {6D5}</td>
+			</tr>
+<tr>
+				<td class="idx">22</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%84%DB%95%D9%8A%D8%B3%D9%84%D9%85%D9%83">اللەيسلمك</a></td>
+				<td class="error">Arabic + "ە"‎ {6D5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">23</td>
+				<td class="form"><a data-name="%D8%A1%E0%A4%95%E0%A4%82%D8%A1---------------------------------%D8%A1">ءकंء---------------------------------ء</a></td>
+				<td class="error">Arabic + Devanagari "क"‎ {915}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">24</td>
+				<td class="form"><a data-name="%D9%A8%D9%A8%D9%A8%D9%A8%E2%80%99s">٨٨٨٨’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">25</td>
+				<td class="form"><a data-name="%D9%A0%D9%A0%D9%A7%E2%80%99s">٠٠٧’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">26</td>
+				<td class="form"><a data-name="%D9%A0%D9%A1%D9%A0%E2%80%99s">٠١٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">27</td>
+				<td class="form"><a data-name="%D9%A1%D9%A0%D9%A0%E2%80%99s">١٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">28</td>
+				<td class="form"><a data-name="%D9%A1%D9%A1%D9%A0%E2%80%99s">١١٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">29</td>
+				<td class="form"><a data-name="%D9%A1%D9%A1%D9%A1%E2%80%99s">١١١’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">30</td>
+				<td class="form"><a data-name="%D9%A2%D9%A0%D9%A0%E2%80%99s">٢٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">31</td>
+				<td class="form"><a data-name="%D9%A2%D9%A2%D9%A0%E2%80%99s">٢٢٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">32</td>
+				<td class="form"><a data-name="%D9%A2%D9%A2%D9%A2%E2%80%99s">٢٢٢’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">33</td>
+				<td class="form"><a data-name="%D9%A3%D9%A0%D9%A0%E2%80%99s">٣٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">34</td>
+				<td class="form"><a data-name="%D9%A3%D9%A3%D9%A3%E2%80%99s">٣٣٣’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">35</td>
+				<td class="form"><a data-name="%D9%A4%D9%A0%D9%A0%E2%80%99s">٤٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">36</td>
+				<td class="form"><a data-name="%D9%A4%D9%A4%D9%A4%E2%80%99s">٤٤٤’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">37</td>
+				<td class="form"><a data-name="%D9%A5%D9%A0%D9%A0%E2%80%99s">٥٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">38</td>
+				<td class="form"><a data-name="%D9%A5%D9%A3%D9%A5%E2%80%99s">٥٣٥’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">39</td>
+				<td class="form"><a data-name="%D9%A5%D9%A5%D9%A5%E2%80%99s">٥٥٥’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">40</td>
+				<td class="form"><a data-name="%D9%A6%D9%A0%D9%A0%E2%80%99s">٦٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">41</td>
+				<td class="form"><a data-name="%D9%A6%D9%A6%D9%A0%E2%80%99s">٦٦٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">42</td>
+				<td class="form"><a data-name="%D9%A6%D9%A6%D9%A6%E2%80%99s">٦٦٦’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">43</td>
+				<td class="form"><a data-name="%D9%A7%D9%A0%D9%A0%E2%80%99s">٧٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">44</td>
+				<td class="form"><a data-name="%D9%A7%D9%A7%D9%A7%E2%80%99s">٧٧٧’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">45</td>
+				<td class="form"><a data-name="%D9%A8%D9%A0%D9%A0%E2%80%99s">٨٠٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">46</td>
+				<td class="form"><a data-name="%D9%A8%D9%A8%D9%A0%E2%80%99s">٨٨٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">47</td>
+				<td class="form"><a data-name="%D9%A8%D9%A8%D9%A8%E2%80%99s">٨٨٨’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">48</td>
+				<td class="form"><a data-name="%D9%A9%D9%A6%D9%A6%E2%80%99s">٩٦٦’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">49</td>
+				<td class="form"><a data-name="%D9%A9%D9%A9%D9%A0%E2%80%99s">٩٩٠’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">50</td>
+				<td class="form"><a data-name="%D9%A9%D9%A9%D9%A9%E2%80%99s">٩٩٩’s</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr>
+				<td class="idx">51</td>
+				<td class="form"><a data-name="%D9%A9%D9%A9%D9%A9%E2%80%99sclub">٩٩٩’sclub</a></td>
+				<td class="error">Arabic + Latin "’"‎ {2019}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">52</td>
+				<td class="form"><a data-name="%D9%A0%D9%A01">٠٠1</a></td>
+				<td class="error">Arabic + Latin "1"‎ {31}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">53</td>
+				<td class="form"><a data-name="%D9%85%D9%8F%D8%AD%D9%8E%D9%85%D9%8E%D9%91%D8%AF786">مُحَمَّد786</a></td>
+				<td class="error">Arabic + Latin "7"‎ {37}</td>
+			</tr>
+<tr>
+				<td class="idx">54</td>
+				<td class="form"><a data-name="%D9%85%D8%AD%D9%85%D8%AF786">محمد786</a></td>
+				<td class="error">Arabic + Latin "7"‎ {37}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">55</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D8%AC%D8%B2%D9%8A%D8%B1%D8%A9%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9eth">الجزيرةالعربيةeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">56</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%85%D9%84%D9%83%D8%A9%D8%A8%D9%84%D9%82%D9%8A%D8%B3eth">الملكةبلقيسeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">57</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D8%A8%D9%8A%D8%B6%D8%A7%D8%A1eth">البيضاءeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">58</td>
+				<td class="form"><a data-name="%D8%B3%D8%AF%D9%85%D8%A7%D8%B1%D8%A8eth">سدماربeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">59</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D8%AC%D9%88%D9%81eth">الجوفeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">60</td>
+				<td class="form"><a data-name="%D8%B5%D9%8A%D8%A7%D8%AF%D9%8Aeth">صياديeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">61</td>
+				<td class="form"><a data-name="%D8%B1%D8%AF%D8%A7%D8%B9eth">رداعeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">62</td>
+				<td class="form"><a data-name="%D9%85%D8%A7%D8%B1%D8%A8eth">ماربeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">63</td>
+				<td class="form"><a data-name="%D8%AA%D8%B9%D8%B2eth">تعزeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">64</td>
+				<td class="form"><a data-name="%D8%B9%D8%AF%D9%86eth">عدنeth</a></td>
+				<td class="error">Arabic + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">65</td>
+				<td class="form"><a data-name="%D9%A0%D9%A0h%D9%A0%D9%A0">٠٠h٠٠</a></td>
+				<td class="error">Arabic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">66</td>
+				<td class="form"><a data-name="%D9%A1%D9%A1h%D9%A1%D9%A1">١١h١١</a></td>
+				<td class="error">Arabic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">67</td>
+				<td class="form"><a data-name="%D9%A2%D9%A3h%D9%A5%D9%A9">٢٣h٥٩</a></td>
+				<td class="error">Arabic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">68</td>
+				<td class="form"><a data-name="%D9%A2%D9%A4h%D9%A2%D9%A4">٢٤h٢٤</a></td>
+				<td class="error">Arabic + Latin "h"‎ {68}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">69</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D8%AC%D9%86%D8%B3sex">الجنسsex</a></td>
+				<td class="error">Arabic + Latin "s"‎ {73}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">70</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86x0">القرآنx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">71</td>
+				<td class="form"><a data-name="%D8%AD%D8%A8%D9%8A%D8%A8%D9%8Ax0">حبيبيx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">72</td>
+				<td class="form"><a data-name="%D8%A7%D9%84%D9%84%D9%87x0">اللهx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">73</td>
+				<td class="form"><a data-name="%D9%85%D8%AD%D9%85%D8%AFx0">محمدx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">74</td>
+				<td class="form"><a data-name="%D8%AD%D9%88%D8%AAx0">حوتx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">75</td>
+				<td class="form"><a data-name="%D8%B4%D9%8A%D8%AEx0">شيخx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">76</td>
+				<td class="form"><a data-name="%D8%B9%D9%84%D9%8Ax0">عليx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr>
+				<td class="idx">77</td>
+				<td class="form"><a data-name="%D8%B9%D9%85%D8%B1x0">عمرx0</a></td>
+				<td class="error">Arabic + Latin "x"‎ {78}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">78</td>
+				<td class="form"><a data-name="%D9%A0%E0%B9%90%EC%98%81%E9%9B%B6%E0%A5%A6">٠๐영零०</a></td>
+				<td class="error">Arabic + Thai "๐"‎ {E50}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">79</td>
+				<td class="form"><a data-name="%D5%B8ft">ոft</a></td>
+				<td class="error">Armenian + Latin "f"‎ {66}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">80</td>
+				<td class="form"><a data-name="%D6%85pensea">օpensea</a></td>
+				<td class="error">Armenian + Latin "p"‎ {70}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">81</td>
+				<td class="form"><a data-name="%E5%8D%A9%E3%84%A9%E5%87%A0%D2%9D">卩ㄩ几ҝ</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr>
+				<td class="idx">82</td>
+				<td class="form"><a data-name="%E5%8D%A9%E3%84%96%D2%9D%E4%B9%87%E7%88%AA%E3%84%96%E5%87%A0">卩ㄖҝ乇爪ㄖ几</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr>
+				<td class="idx">83</td>
+				<td class="form"><a data-name="%E5%B0%BA%E3%84%96%E5%8C%9A%D2%9D%E4%B8%82%E3%84%92%E5%8D%82%E5%B0%BA">尺ㄖ匚ҝ丂ㄒ卂尺</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr>
+				<td class="idx">84</td>
+				<td class="form"><a data-name="%E4%B9%83%E3%84%A5%E5%8D%82%E5%8C%9A%D2%9D%E5%8D%84%E3%84%96%E3%84%A5%E4%B9%87">乃ㄥ卂匚ҝ卄ㄖㄥ乇</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr>
+				<td class="idx">85</td>
+				<td class="form"><a data-name="%E5%8C%9A%E5%B0%BA%E3%84%9A%E5%8D%A9%E3%84%92%E3%84%96%E5%8D%A9%E3%84%A9%E5%87%A0%D2%9D">匚尺ㄚ卩ㄒㄖ卩ㄩ几ҝ</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr>
+				<td class="idx">86</td>
+				<td class="form"><a data-name="%E5%8C%9A%E5%B0%BA%E3%84%9A%E5%8D%A9%E3%84%92%E3%84%96%D2%9D%E4%B8%A8%E3%84%92%E3%84%92%E4%B8%A8%E4%B9%87%E4%B8%82">匚尺ㄚ卩ㄒㄖҝ丨ㄒㄒ丨乇丂</a></td>
+				<td class="error">Bopomofo + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">87</td>
+				<td class="form"><a data-name="%E3%84%90%D7%81%D7%812%D6%BC">ㄐׁׁ2ּ</a></td>
+				<td class="error">Bopomofo + Hebrew "◌ׁ"‎ {5C1}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">88</td>
+				<td class="form"><a data-name="%E4%B9%83%E3%84%A5%E2%9D%80%E2%9D%80%E7%88%AA">乃ㄥ❀❀爪</a></td>
+				<td class="error">Bopomofo + Latin "❀"‎ {2740}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">89</td>
+				<td class="form"><a data-name="%E7%88%AA%E4%B9%87%E3%84%92%E5%8D%82%E1%90%AF%E4%B9%87%E5%B0%BA%E4%B8%82%E4%B9%87">爪乇ㄒ卂ᐯ乇尺丂乇</a></td>
+				<td class="error">Bopomofo + Restricted[Cans] "ᐯ"‎ {142F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">90</td>
+				<td class="form"><a data-name="%E4%B9%83%E3%84%96%E5%B0%BA%E4%B9%87%E1%97%AA%E5%8D%82%E5%8D%A9%E4%B9%87">乃ㄖ尺乇ᗪ卂卩乇</a></td>
+				<td class="error">Bopomofo + Restricted[Cans] "ᗪ"‎ {15EA}</td>
+			</tr>
+<tr>
+				<td class="idx">91</td>
+				<td class="form"><a data-name="%E3%84%96%E3%84%92%E5%8D%84%E4%B9%87%E5%B0%BA%E4%B8%82%E4%B8%A8%E1%97%AA%E4%B9%87">ㄖㄒ卄乇尺丂丨ᗪ乇</a></td>
+				<td class="error">Bopomofo + Restricted[Cans] "ᗪ"‎ {15EA}</td>
+			</tr>
+<tr>
+				<td class="idx">92</td>
+				<td class="form"><a data-name="%E4%B9%83%E3%84%96%E5%B0%BA%E4%B9%87%E1%97%AA%E5%8D%82%E5%8D%A9%E4%B9%87%E3%84%9A%E5%8D%82%E5%8C%9A%E5%8D%84%E3%84%92%E5%8C%9A%E3%84%A5%E3%84%A9%E4%B9%83">乃ㄖ尺乇ᗪ卂卩乇ㄚ卂匚卄ㄒ匚ㄥㄩ乃</a></td>
+				<td class="error">Bopomofo + Restricted[Cans] "ᗪ"‎ {15EA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">93</td>
+				<td class="form"><a data-name="%D0%B0%CC%81%D0%B0%CC%81">а́а́</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr>
+				<td class="idx">94</td>
+				<td class="form"><a data-name="%D0%B0%CC%81%D0%B0%CC%81%D0%B0%CC%81">а́а́а́</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr>
+				<td class="idx">95</td>
+				<td class="form"><a data-name="%D0%BF%D0%B8%CC%81%D1%82%D0%B5%D1%80">пи́тер</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr>
+				<td class="idx">96</td>
+				<td class="form"><a data-name="%D0%B7%D0%B8%CC%81%D0%BC%D0%BD%D0%B8%D0%B9">зи́мний</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr>
+				<td class="idx">97</td>
+				<td class="form"><a data-name="%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%CC%81">москва́</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr>
+				<td class="idx">98</td>
+				<td class="form"><a data-name="%D0%B7%D0%B8%CC%81%D0%BC%D0%BD%D0%B8%D0%B9%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%CC%81%D1%86">зи́мнийдворе́ц</a></td>
+				<td class="error">Cyrillic + "◌́"‎ {301}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">99</td>
+				<td class="form"><a data-name="%D2%9D%E5%8D%82%E5%B0%BA%E5%8D%82%E5%8D%83%E3%84%A9%E5%B0%BA%E3%84%A9">ҝ卂尺卂千ㄩ尺ㄩ</a></td>
+				<td class="error">Cyrillic + Han "卂"‎ {5342}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">100</td>
+				<td class="form"><a data-name="%D0%B0aa">аaa</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">101</td>
+				<td class="form"><a data-name="%D1%95akamoto">ѕakamoto</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">102</td>
+				<td class="form"><a data-name="%D1%95amo">ѕamo</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">103</td>
+				<td class="form"><a data-name="%D1%81anada">сanada</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">104</td>
+				<td class="form"><a data-name="%D0%B2anksy">вanksy</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">105</td>
+				<td class="form"><a data-name="%D1%80aradigm">рaradigm</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">106</td>
+				<td class="form"><a data-name="%D1%95atoshi">ѕatoshi</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">107</td>
+				<td class="form"><a data-name="%D0%BCayday">мayday</a></td>
+				<td class="error">Cyrillic + Latin "a"‎ {61}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">108</td>
+				<td class="form"><a data-name="%D0%B0bc">аbc</a></td>
+				<td class="error">Cyrillic + Latin "b"‎ {62}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">109</td>
+				<td class="form"><a data-name="%D0%BFe%D0%BD%D0%B8%D1%81">пeнис</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">110</td>
+				<td class="form"><a data-name="%D1%80enis">рenis</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">111</td>
+				<td class="form"><a data-name="%D1%82erminal">тerminal</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">112</td>
+				<td class="form"><a data-name="%D1%82erminator">тerminator</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">113</td>
+				<td class="form"><a data-name="%D2%BBero">һero</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">114</td>
+				<td class="form"><a data-name="%D1%83es">уes</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">115</td>
+				<td class="form"><a data-name="%D1%82esla">тesla</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">116</td>
+				<td class="form"><a data-name="%D0%BCetamask">мetamask</a></td>
+				<td class="error">Cyrillic + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">117</td>
+				<td class="form"><a data-name="%D1%81hampagne">сhampagne</a></td>
+				<td class="error">Cyrillic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">118</td>
+				<td class="form"><a data-name="%D1%81hef">сhef</a></td>
+				<td class="error">Cyrillic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">119</td>
+				<td class="form"><a data-name="%D1%82hor">тhor</a></td>
+				<td class="error">Cyrillic + Latin "h"‎ {68}</td>
+			</tr>
+<tr>
+				<td class="idx">120</td>
+				<td class="form"><a data-name="%D1%81hrist">сhrist</a></td>
+				<td class="error">Cyrillic + Latin "h"‎ {68}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">121</td>
+				<td class="form"><a data-name="%D0%B0irdrop">аirdrop</a></td>
+				<td class="error">Cyrillic + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">122</td>
+				<td class="form"><a data-name="%D1%81ities">сities</a></td>
+				<td class="error">Cyrillic + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">123</td>
+				<td class="form"><a data-name="%D0%B2it%D1%81oin">вitсoin</a></td>
+				<td class="error">Cyrillic + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">124</td>
+				<td class="form"><a data-name="%D1%80izza">рizza</a></td>
+				<td class="error">Cyrillic + Latin "i"‎ {69}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">125</td>
+				<td class="form"><a data-name="%D0%B0%D1%80%D1%80l%D0%B5">аррlе</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">126</td>
+				<td class="form"><a data-name="%D1%80layer">рlayer</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">127</td>
+				<td class="form"><a data-name="%D0%B0%D1%80%D1%80le">аррle</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">128</td>
+				<td class="form"><a data-name="%D1%80lease">рlease</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">129</td>
+				<td class="form"><a data-name="%D0%B5l%D0%BEnmu%D1%95k">еlоnmuѕk</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">130</td>
+				<td class="form"><a data-name="%D0%B5l%D0%BEnmusk">еlоnmusk</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">131</td>
+				<td class="form"><a data-name="%D0%B5l%D0%BEn%D0%BCus%D0%BA">еlоnмusк</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">132</td>
+				<td class="form"><a data-name="%D0%B5lon">еlon</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr>
+				<td class="idx">133</td>
+				<td class="form"><a data-name="%D0%B0lpha">аlpha</a></td>
+				<td class="error">Cyrillic + Latin "l"‎ {6C}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">134</td>
+				<td class="form"><a data-name="%D0%B0mex">аmex</a></td>
+				<td class="error">Cyrillic + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">135</td>
+				<td class="form"><a data-name="%D0%B0m%D0%B0zon">аmаzon</a></td>
+				<td class="error">Cyrillic + Latin "m"‎ {6D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">136</td>
+				<td class="form"><a data-name="%D1%96nternet">іnternet</a></td>
+				<td class="error">Cyrillic + Latin "n"‎ {6E}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">137</td>
+				<td class="form"><a data-name="%D1%81oinbase">сoinbase</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">138</td>
+				<td class="form"><a data-name="%D1%81oins">сoins</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">139</td>
+				<td class="form"><a data-name="%D1%82om">тom</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">140</td>
+				<td class="form"><a data-name="%D0%B7o%D0%B7o">зoзo</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">141</td>
+				<td class="form"><a data-name="%D0%BEo%D0%BEo%D0%BE">оoоoо</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">142</td>
+				<td class="form"><a data-name="%D1%82op">тop</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">143</td>
+				<td class="form"><a data-name="%D1%80ornhub">рornhub</a></td>
+				<td class="error">Cyrillic + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">144</td>
+				<td class="form"><a data-name="%D0%BEpense%D0%B0">оpenseа</a></td>
+				<td class="error">Cyrillic + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">145</td>
+				<td class="form"><a data-name="%D0%B0%D1%80ple">арple</a></td>
+				<td class="error">Cyrillic + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">146</td>
+				<td class="form"><a data-name="%D1%98pmorgan">јpmorgan</a></td>
+				<td class="error">Cyrillic + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">147</td>
+				<td class="form"><a data-name="%D0%B0ppl%D0%B5">аpplе</a></td>
+				<td class="error">Cyrillic + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">148</td>
+				<td class="form"><a data-name="%D0%B0pple">аpple</a></td>
+				<td class="error">Cyrillic + Latin "p"‎ {70}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">149</td>
+				<td class="form"><a data-name="%D0%B0ramis">аramis</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">150</td>
+				<td class="form"><a data-name="%D1%82ravis">тravis</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">151</td>
+				<td class="form"><a data-name="%D0%B2%D0%BEred%D0%B0%D1%80e">воredарe</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">152</td>
+				<td class="form"><a data-name="%D0%BC%D0%B0ria">маria</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">153</td>
+				<td class="form"><a data-name="%D1%80%D0%BErnhub">роrnhub</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">154</td>
+				<td class="form"><a data-name="%D1%81r%D1%83pto">сrуpto</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">155</td>
+				<td class="form"><a data-name="%D1%81r%D1%83%D1%80t%D0%BE">сrурtо</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">156</td>
+				<td class="form"><a data-name="%D1%81rypt%D0%BE">сryptо</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">157</td>
+				<td class="form"><a data-name="%D1%81rypto">сrypto</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">158</td>
+				<td class="form"><a data-name="%D1%81ryptocurrency">сryptocurrency</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">159</td>
+				<td class="form"><a data-name="%D1%81ry%D1%80t%D0%BE">сryрtо</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr>
+				<td class="idx">160</td>
+				<td class="form"><a data-name="%D1%81ry%D1%80to">сryрto</a></td>
+				<td class="error">Cyrillic + Latin "r"‎ {72}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">161</td>
+				<td class="form"><a data-name="%D0%B0%D1%80%D0%B5s">ареs</a></td>
+				<td class="error">Cyrillic + Latin "s"‎ {73}</td>
+			</tr>
+<tr>
+				<td class="idx">162</td>
+				<td class="form"><a data-name="%D1%96%E2%9D%A4sex">і❤sex</a></td>
+				<td class="error">Cyrillic + Latin "s"‎ {73}</td>
+			</tr>
+<tr>
+				<td class="idx">163</td>
+				<td class="form"><a data-name="%D1%82-shirts">т-shirts</a></td>
+				<td class="error">Cyrillic + Latin "s"‎ {73}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">164</td>
+				<td class="form"><a data-name="%D0%B5t%D2%BB">еtһ</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">165</td>
+				<td class="form"><a data-name="%D1%94th">єth</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">166</td>
+				<td class="form"><a data-name="%D0%B5than">еthan</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">167</td>
+				<td class="form"><a data-name="%D1%94thereum">єthereum</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">168</td>
+				<td class="form"><a data-name="%D0%BEtherside">оtherside</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">169</td>
+				<td class="form"><a data-name="%D0%B5therum">еtherum</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">170</td>
+				<td class="form"><a data-name="%D0%B5th%D0%B5reum">еthеreum</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">171</td>
+				<td class="form"><a data-name="%D0%B5th%D0%B5r%D0%B5um">еthеrеum</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">172</td>
+				<td class="form"><a data-name="%D2%BBttps">һttps</a></td>
+				<td class="error">Cyrillic + Latin "t"‎ {74}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">173</td>
+				<td class="form"><a data-name="%D0%B0ugust">аugust</a></td>
+				<td class="error">Cyrillic + Latin "u"‎ {75}</td>
+			</tr>
+<tr>
+				<td class="idx">174</td>
+				<td class="form"><a data-name="%D1%80unks">рunks</a></td>
+				<td class="error">Cyrillic + Latin "u"‎ {75}</td>
+			</tr>
+<tr>
+				<td class="idx">175</td>
+				<td class="form"><a data-name="%D1%82urbo">тurbo</a></td>
+				<td class="error">Cyrillic + Latin "u"‎ {75}</td>
+			</tr>
+<tr>
+				<td class="idx">176</td>
+				<td class="form"><a data-name="%D1%81urrency">сurrency</a></td>
+				<td class="error">Cyrillic + Latin "u"‎ {75}</td>
+			</tr>
+<tr>
+				<td class="idx">177</td>
+				<td class="form"><a data-name="%D1%96%E2%9D%A4usa">і❤usa</a></td>
+				<td class="error">Cyrillic + Latin "u"‎ {75}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">178</td>
+				<td class="form"><a data-name="%D0%B0v%D0%B0%D1%85">аvах</a></td>
+				<td class="error">Cyrillic + Latin "v"‎ {76}</td>
+			</tr>
+<tr>
+				<td class="idx">179</td>
+				<td class="form"><a data-name="%D1%96vysaur">іvysaur</a></td>
+				<td class="error">Cyrillic + Latin "v"‎ {76}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">180</td>
+				<td class="form"><a data-name="%D0%B016z">а16z</a></td>
+				<td class="error">Cyrillic + Latin "z"‎ {7A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">181</td>
+				<td class="form"><a data-name="%E0%A4%B2%E0%A5%87%E0%A4%A8-%E0%A4%A6%E0%A5%87%E0%A4%A8">लेन-देन</a></td>
+				<td class="error">Devanagari + Latin "-"‎ {2D}</td>
+			</tr>
+<tr>
+				<td class="idx">182</td>
+				<td class="form"><a data-name="%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B0%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A4%BF%E0%A4%A4-%E0%A4%A6%E0%A4%BF%E0%A4%97%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%B0-%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%B2%E0%A4%A6%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%B8%E0%A5%81%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%B8-%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%81-%E0%A4%B8%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%B0-%E0%A4%98%E0%A4%A8%E0%A4%BE%E0%A4%98%E0%A4%A8-%E0%A4%B5%E0%A5%83%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%B8%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B9%E0%A4%95%E0%A4%B0-%E0%A4%B8%E0%A5%8D%E0%A4%AF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%AE%E0%A4%BE%E0%A4%A8-%E0%A4%AE%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%81-%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%81%E0%A4%B0%E0%A4%A4%E0%A4%B0-%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%A4%E0%A4%B0%E0%A5%81-%E0%A4%95%E0%A5%81%E0%A4%B2-%E0%A4%A4%E0%A4%B2%E0%A5%8D%E0%A4%AA-%E0%A4%95%E0%A4%B2%E0%A5%8D%E0%A4%AA-%E0%A4%AE%E0%A5%83%E0%A4%A6%E0%A5%81%E0%A4%B2-%E0%A4%B8%E0%A4%BF%E0%A4%95%E0%A4%A4%E0%A4%BE-%E0%A4%9C%E0%A4%BE%E0%A4%B2-%E0%A4%9C%E0%A4%9F%E0%A4%BF%E0%A4%B2-%E0%A4%AE%E0%A5%82%E0%A4%B2-%E0%A4%A4%E0%A4%B2-%E0%A4%AE%E0%A4%B0%E0%A5%81%E0%A4%B5%E0%A4%95-%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A4%A6%E0%A4%B2%E0%A4%98%E0%A5%81-%E0%A4%B2%E0%A4%98%E0%A5%81-%E0%A4%B2%E0%A4%AF-%E0%A4%95%E0%A4%B2%E0%A4%BF%E0%A4%A4-%E0%A4%B0%E0%A4%AE%E0%A4%A3%E0%A5%80%E0%A4%AF-%E0%A4%AA%E0%A4%BE%E0%A4%A8%E0%A5%80%E0%A4%AF-%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A4%AC%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B0-%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%97%E0%A4%B2%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A4%BE-%E0%A4%97%E0%A4%B2%E0%A4%A6%E0%A5%87%E0%A4%B2%E0%A4%BE-%E0%A4%B2%E0%A4%B5%E0%A4%99%E0%A5%8D%E0%A4%97-%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A4%B2-%E0%A4%98%E0%A4%A8%E0%A4%B8%E0%A4%BE%E0%A4%B0-%E0%A4%95%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%82%E0%A4%B0%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%A4%E0%A4%BF%E0%A4%B8%E0%A5%8C%E0%A4%B0%E0%A4%AD-%E0%A4%AE%E0%A5%87%E0%A4%A6%E0%A5%81%E0%A4%B0-%E0%A4%B2%E0%A4%98%E0%A5%81%E0%A4%A4%E0%A4%B0-%E0%A4%AE%E0%A4%A7%E0%A5%81%E0%A4%B0-%E0%A4%B6%E0%A5%80%E0%A4%A4%E0%A4%B2%E0%A4%A4%E0%A4%B0-%E0%A4%B8%E0%A4%B2%E0%A4%BF%E0%A4%B2%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%BE-%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A4%BF%E0%A4%B7%E0%A5%8D%E0%A4%A3%E0%A5%81-%E0%A4%A4%E0%A4%A6%E0%A5%80%E0%A4%AF-%E0%A4%B5%E0%A4%BF%E0%A4%AE%E0%A4%B2-%E0%A4%B5%E0%A4%BF%E0%A4%B2%E0%A5%8B%E0%A4%9A%E0%A4%A8-%E0%A4%AE%E0%A4%AF%E0%A5%82%E0%A4%96-%E0%A4%B0%E0%A5%87%E0%A4%96%E0%A4%BE%E0%A4%AA%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%BF%E0%A4%A4-%E0%A4%AA%E0%A4%BF%E0%A4%AA%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%AF%E0%A4%BE%E0%A4%B8-%E0%A4%AA%E0%A4%A5%E0%A4%BF%E0%A4%95-%E0%A4%B2%E0%A5%8B%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%8D">निरन्तरान्धकारित-दिगन्तर-कन्दलदमन्द-सुधारस-बिन्दु-सान्द्रतर-घनाघन-वृन्द-सन्देहकर-स्यन्दमान-मकरन्द-बिन्दु-बन्धुरतर-माकन्द-तरु-कुल-तल्प-कल्प-मृदुल-सिकता-जाल-जटिल-मूल-तल-मरुवक-मिलदलघु-लघु-लय-कलित-रमणीय-पानीय-शालिका-बालिका-करार-विन्द-गलन्तिका-गलदेला-लवङ्ग-पाटल-घनसार-कस्तूरिकातिसौरभ-मेदुर-लघुतर-मधुर-शीतलतर-सलिलधारा-निराकरिष्णु-तदीय-विमल-विलोचन-मयूख-रेखापसारित-पिपासायास-पथिक-लोकान्</a></td>
+				<td class="error">Devanagari + Latin "-"‎ {2D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">183</td>
+				<td class="form"><a data-name="%CE%BAappa">κappa</a></td>
+				<td class="error">Greek + Latin "a"‎ {61}</td>
+			</tr>
+<tr>
+				<td class="idx">184</td>
+				<td class="form"><a data-name="%CE%BDampire">νampire</a></td>
+				<td class="error">Greek + Latin "a"‎ {61}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">185</td>
+				<td class="form"><a data-name="%CE%B1bc">αbc</a></td>
+				<td class="error">Greek + Latin "b"‎ {62}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">186</td>
+				<td class="form"><a data-name="%CF%89dao">ωdao</a></td>
+				<td class="error">Greek + Latin "d"‎ {64}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">187</td>
+				<td class="form"><a data-name="%CE%B2eta">βeta</a></td>
+				<td class="error">Greek + Latin "e"‎ {65}</td>
+			</tr>
+<tr>
+				<td class="idx">188</td>
+				<td class="form"><a data-name="%CE%BCeth">μeth</a></td>
+				<td class="error">Greek + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">189</td>
+				<td class="form"><a data-name="%CF%89%CE%B1gmi">ωαgmi</a></td>
+				<td class="error">Greek + Latin "g"‎ {67}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">190</td>
+				<td class="form"><a data-name="%CE%B2inance">βinance</a></td>
+				<td class="error">Greek + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">191</td>
+				<td class="form"><a data-name="%CE%BDictory">νictory</a></td>
+				<td class="error">Greek + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">192</td>
+				<td class="form"><a data-name="%CF%83igma">σigma</a></td>
+				<td class="error">Greek + Latin "i"‎ {69}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">193</td>
+				<td class="form"><a data-name="%CE%B1lf%CE%B1d%CE%B1o">αlfαdαo</a></td>
+				<td class="error">Greek + Latin "l"‎ {6C}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">194</td>
+				<td class="form"><a data-name="%CE%B1merica">αmerica</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">195</td>
+				<td class="form"><a data-name="%CE%B1merican">αmerican</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">196</td>
+				<td class="form"><a data-name="%CE%B1museum">αmuseum</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">197</td>
+				<td class="form"><a data-name="%CE%BFmicron">οmicron</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">198</td>
+				<td class="form"><a data-name="%CF%83male">σmale</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">199</td>
+				<td class="form"><a data-name="%CF%83male%CF%83">σmaleσ</a></td>
+				<td class="error">Greek + Latin "m"‎ {6D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">200</td>
+				<td class="form"><a data-name="%CE%B1ngle">αngle</a></td>
+				<td class="error">Greek + Latin "n"‎ {6E}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">201</td>
+				<td class="form"><a data-name="%CF%81olygon">ρolygon</a></td>
+				<td class="error">Greek + Latin "o"‎ {6F}</td>
+			</tr>
+<tr>
+				<td class="idx">202</td>
+				<td class="form"><a data-name="%CF%89%CE%B8%CE%B5os">ωθεos</a></td>
+				<td class="error">Greek + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">203</td>
+				<td class="form"><a data-name="%CE%B1pple">αpple</a></td>
+				<td class="error">Greek + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">204</td>
+				<td class="form"><a data-name="%CE%B1pples">αpples</a></td>
+				<td class="error">Greek + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">205</td>
+				<td class="form"><a data-name="%CE%B1pril">αpril</a></td>
+				<td class="error">Greek + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">206</td>
+				<td class="form"><a data-name="%CE%B1p%CE%B5">αpε</a></td>
+				<td class="error">Greek + Latin "p"‎ {70}</td>
+			</tr>
+<tr>
+				<td class="idx">207</td>
+				<td class="form"><a data-name="%CE%BFpensea">οpensea</a></td>
+				<td class="error">Greek + Latin "p"‎ {70}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">208</td>
+				<td class="form"><a data-name="%CE%B2%CE%BFr%CE%B5d%CE%B1%CF%80%CE%B5">βοrεdαπε</a></td>
+				<td class="error">Greek + Latin "r"‎ {72}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">209</td>
+				<td class="form"><a data-name="%CE%B1-squared">α-squared</a></td>
+				<td class="error">Greek + Latin "s"‎ {73}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">210</td>
+				<td class="form"><a data-name="%CE%B4-9-thc">δ-9-thc</a></td>
+				<td class="error">Greek + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">211</td>
+				<td class="form"><a data-name="%CE%B4-9thc">δ-9thc</a></td>
+				<td class="error">Greek + Latin "t"‎ {74}</td>
+			</tr>
+<tr>
+				<td class="idx">212</td>
+				<td class="form"><a data-name="%CE%B49thc">δ9thc</a></td>
+				<td class="error">Greek + Latin "t"‎ {74}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">213</td>
+				<td class="form"><a data-name="%CE%B1udrey">αudrey</a></td>
+				<td class="error">Greek + Latin "u"‎ {75}</td>
+			</tr>
+<tr>
+				<td class="idx">214</td>
+				<td class="form"><a data-name="%CE%B1ugust">αugust</a></td>
+				<td class="error">Greek + Latin "u"‎ {75}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">215</td>
+				<td class="form"><a data-name="%CE%B1venture">αventure</a></td>
+				<td class="error">Greek + Latin "v"‎ {76}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">216</td>
+				<td class="form"><a data-name="%CE%B4y%CE%B4x">δyδx</a></td>
+				<td class="error">Greek + Latin "y"‎ {79}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">217</td>
+				<td class="form"><a data-name="%E0%A9%B4%D9%88%D8%A7%D8%AD%D8%AF">ੴواحد</a></td>
+				<td class="error">Gurmukhi + Arabic "و"‎ {648}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">218</td>
+				<td class="form"><a data-name="%E5%87%B8%E2%80%A2%CC%80%E2%80%A2%CC%81%E5%87%B8">凸•̀•́凸</a></td>
+				<td class="error">Han + "◌̀"‎ {300}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">219</td>
+				<td class="form"><a data-name="%E4%B9%9D%D8%AA%D8%B3%D8%B9%D8%A9%EA%B5%AC">九تسعة구</a></td>
+				<td class="error">Han + Arabic "ت"‎ {62A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">220</td>
+				<td class="form"><a data-name="%E9%9B%B6%D8%B5%D9%81%D8%B17">零صفر7</a></td>
+				<td class="error">Han + Arabic "ص"‎ {635}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">221</td>
+				<td class="form"><a data-name="-%E4%B8%80%E4%B8%80%E4%B8%80%E3%84%A7">-一一一ㄧ</a></td>
+				<td class="error">Han + Bopomofo "ㄧ"‎ {3127}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">222</td>
+				<td class="form"><a data-name="%E5%8D%84%E5%8D%82%E5%8C%9A%D2%9D%E4%B9%87%E5%B0%BA">卄卂匚ҝ乇尺</a></td>
+				<td class="error">Han + Cyrillic "ҝ"‎ {49D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">223</td>
+				<td class="form"><a data-name="%E5%9C%86%E5%91%A8%E7%8E%87%CF%80%CF%80">圆周率ππ</a></td>
+				<td class="error">Han + Greek "π"‎ {3C0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">224</td>
+				<td class="form"><a data-name="l%E7%BD%92%CF%89%E7%BD%92l">l罒ω罒l</a></td>
+				<td class="error">Han + Greek "ω"‎ {3C9}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">225</td>
+				<td class="form"><a data-name="%E5%87%B8%E0%B2%A0-%E0%B2%A0%E5%87%B8">凸ಠ-ಠ凸</a></td>
+				<td class="error">Han + Kannada "ಠ"‎ {CA0}</td>
+			</tr>
+<tr>
+				<td class="idx">226</td>
+				<td class="form"><a data-name="%E5%87%B8%E0%B2%A0%E7%9B%8A%E0%B2%A0%E5%87%B8">凸ಠ益ಠ凸</a></td>
+				<td class="error">Han + Kannada "ಠ"‎ {CA0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">227</td>
+				<td class="form"><a data-name="%E5%8D%A9%E5%8D%82%E5%B0%BA%E5%8D%82%E1%97%AA%E4%B8%A8%E1%8E%B6%E7%88%AA">卩卂尺卂ᗪ丨Ꮆ爪</a></td>
+				<td class="error">Han + Restricted[Cans] "ᗪ"‎ {15EA}</td>
+			</tr>
+<tr>
+				<td class="idx">228</td>
+				<td class="form"><a data-name="%E5%B0%BA%E4%B9%87%E1%97%AA%E5%B1%B1%E5%8D%82%E5%B0%BA%E5%B0%BA%E4%B8%A8%E3%84%96%E5%B0%BA">尺乇ᗪ山卂尺尺丨ㄖ尺</a></td>
+				<td class="error">Han + Restricted[Cans] "ᗪ"‎ {15EA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">229</td>
+				<td class="form"><a data-name="%E4%BA%AC%E1%8E%AA88888">京Ꭺ88888</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr>
+				<td class="idx">230</td>
+				<td class="form"><a data-name="%E5%B7%9D%E1%8E%AA88888">川Ꭺ88888</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr>
+				<td class="idx">231</td>
+				<td class="form"><a data-name="%E6%B8%9D%E1%8E%AA88888">渝Ꭺ88888</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr>
+				<td class="idx">232</td>
+				<td class="form"><a data-name="%E4%BA%AC%E1%8E%AA888888">京Ꭺ888888</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr>
+				<td class="idx">233</td>
+				<td class="form"><a data-name="%E4%BA%AC%E1%8E%AA999">京Ꭺ999</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr>
+				<td class="idx">234</td>
+				<td class="form"><a data-name="%E4%BA%AC%E1%8E%AA99999">京Ꭺ99999</a></td>
+				<td class="error">Han + Restricted[Cher] "Ꭺ"‎ {13AA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">235</td>
+				<td class="form"><a data-name="%D7%91%D7%9F-%D7%93%D7%95%D7%93">בן-דוד</a></td>
+				<td class="error">Hebrew + Latin "-"‎ {2D}</td>
+			</tr>
+<tr>
+				<td class="idx">236</td>
+				<td class="form"><a data-name="%D7%AA%D7%9C-%D7%90%D7%91%D7%99%D7%91">תל-אביב</a></td>
+				<td class="error">Hebrew + Latin "-"‎ {2D}</td>
+			</tr>
+<tr>
+				<td class="idx">237</td>
+				<td class="form"><a data-name="%D7%A7%D7%95%D7%94%D7%9F-%D7%9B%D7%94%D7%9F">קוהן-כהן</a></td>
+				<td class="error">Hebrew + Latin "-"‎ {2D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">238</td>
+				<td class="form"><a data-name="%D7%90eth%D7%90">אethא</a></td>
+				<td class="error">Hebrew + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">239</td>
+				<td class="form"><a data-name="%D7%90violet">אviolet</a></td>
+				<td class="error">Hebrew + Latin "v"‎ {76}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">240</td>
+				<td class="form"><a data-name="%E0%B2%A0%E7%9B%8A%E0%B2%A0">ಠ益ಠ</a></td>
+				<td class="error">Kannada + Han "益"‎ {76CA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">241</td>
+				<td class="form"><a data-name="%E0%B2%A0-%E0%B2%A0">ಠ-ಠ</a></td>
+				<td class="error">Kannada + Latin "-"‎ {2D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">242</td>
+				<td class="form"><a data-name="%E0%B2%A0%E2%81%94%E0%B2%B0%E0%B3%83%E0%BC%BC%E2%98%89">ಠ⁔ರೃ༼☉</a></td>
+				<td class="error">Kannada + Latin "⁔"‎ {2054}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">243</td>
+				<td class="form"><a data-name="nft%F0%9F%87%AF%F0%9F%87%B51%E4%BA%8C%EC%84%B8%D8%A3%D8%B1%D8%A8%D8%B9%D8%A9%CF%80%CE%AD%CE%BD%CF%84%CE%B5">nft🇯🇵1二세أربعةπέντε</a></td>
+				<td class="error">Korean + Arabic "أ"‎ {623}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">244</td>
+				<td class="form"><a data-name="1%CC%86%CC%882%CC%86%CC%883%CC%86%CC%88">1̆̈2̆̈3̆̈</a></td>
+				<td class="error">Latin + "◌̆"‎ {306}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">245</td>
+				<td class="form"><a data-name="aci%CC%87">aci̇</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">246</td>
+				<td class="form"><a data-name="bi%CC%87tcoin">bi̇tcoin</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">247</td>
+				<td class="form"><a data-name="epi%CC%87a%C5%9F">epi̇aş</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">248</td>
+				<td class="form"><a data-name="fi%CC%87fa">fi̇fa</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">249</td>
+				<td class="form"><a data-name="i%CC%87brahim">i̇brahim</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">250</td>
+				<td class="form"><a data-name="i%CC%87hsan">i̇hsan</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">251</td>
+				<td class="form"><a data-name="i%CC%87mmutablex">i̇mmutablex</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">252</td>
+				<td class="form"><a data-name="i%CC%87stanbul">i̇stanbul</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">253</td>
+				<td class="form"><a data-name="i%CC%87zmir">i̇zmir</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">254</td>
+				<td class="form"><a data-name="juli%CC%87en">juli̇en</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">255</td>
+				<td class="form"><a data-name="pari%CC%87s">pari̇s</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">256</td>
+				<td class="form"><a data-name="twi%CC%87tter">twi̇tter</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr>
+				<td class="idx">257</td>
+				<td class="form"><a data-name="vi%CC%87tali%CC%87k">vi̇tali̇k</a></td>
+				<td class="error">Latin + "◌̇"‎ {307}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">258</td>
+				<td class="form"><a data-name="%E2%98%9E%E3%82%9A%E3%83%AE%E3%82%9A">☞゚ヮ゚</a></td>
+				<td class="error">Latin + "◌゚"‎ {309A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">259</td>
+				<td class="form"><a data-name="7777%D9%8B">7777ً</a></td>
+				<td class="error">Latin + Arabic "◌ً"‎ {64B}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">260</td>
+				<td class="form"><a data-name="h%D9%8Eu%D9%8Et%D9%8Ea%D9%8Eo%D9%8E">hَuَtَaَoَ</a></td>
+				<td class="error">Latin + Arabic "◌َ"‎ {64E}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">261</td>
+				<td class="form"><a data-name="11%D9%901">11ِ1</a></td>
+				<td class="error">Latin + Arabic "◌ِ"‎ {650}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">262</td>
+				<td class="form"><a data-name="_%D9%A0%D9%A0%D9%A0%D9%A0">_٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">263</td>
+				<td class="form"><a data-name="_%D9%A0%D9%A0%D9%A0%D9%A1">_٠٠٠١</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">264</td>
+				<td class="form"><a data-name="_%D9%A0%D9%A0%D9%A0%D9%A2">_٠٠٠٢</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">265</td>
+				<td class="form"><a data-name="_%D9%A0%D9%A7%D9%A7%D9%A7">_٠٧٧٧</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">266</td>
+				<td class="form"><a data-name="_%D9%A0%D9%A7%D9%A8%D9%A6">_٠٧٨٦</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">267</td>
+				<td class="form"><a data-name="0x%D9%A0%D9%A0%D9%A0">0x٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">268</td>
+				<td class="form"><a data-name="0x%D9%A0%D9%A0%D9%A2">0x٠٠٢</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">269</td>
+				<td class="form"><a data-name="apes%D9%A0">apes٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">270</td>
+				<td class="form"><a data-name="gg%D9%A0com">gg٠com</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">271</td>
+				<td class="form"><a data-name="vitalik%D9%A0">vitalik٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">272</td>
+				<td class="form"><a data-name="%CE%BE%D9%A0%D9%A0%D9%A0%D9%A0">ξ٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">273</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A1%D9%A0">$٠١٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">274</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%DB%B0">$۰۰۰</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">275</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%D9%A0">$٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">276</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%D9%A4">$٠٠٠٤</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">277</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%D9%A7">$٠٠٠٧</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">278</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A1%D9%A1">$٠٠١١</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">279</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A8%D9%A8">$٠٠٨٨</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">280</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A1%D9%A1%D9%A0">$٠١١٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">281</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A1%D9%A1%D9%A1">$٠١١١</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">282</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A2%D9%A2%D9%A0">$٠٢٢٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">283</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A2%D9%A2%D9%A2">$٠٢٢٢</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">284</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A3%D9%A3%D9%A0">$٠٣٣٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">285</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A4%D9%A4%D9%A0">$٠٤٤٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">286</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A5%D9%A5%D9%A0">$٠٥٥٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">287</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A5%D9%A5%D9%A5">$٠٥٥٥</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">288</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A6%D9%A6%D9%A0">$٠٦٦٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">289</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A6%D9%A6%D9%A6">$٠٦٦٦</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">290</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A7%D9%A7%D9%A0">$٠٧٧٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">291</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A8%D9%A8%D9%A0">$٠٨٨٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">292</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A8%D9%A8%D9%A8">$٠٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">293</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A9%D9%A9%D9%A0">$٠٩٩٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">294</td>
+				<td class="form"><a data-name="%24%DB%B0%D9%A7%D9%A8%D9%A6">$۰٧٨٦</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">295</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%D9%A6%D9%A9">$۰۰٦٩</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">296</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%DB%B0%DB%B0">$۰۰۰۰</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">297</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%DB%B0%DB%B1">$۰۰۰۱</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">298</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B7%DB%B8%D9%A6">$۰۷۸٦</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">299</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%D9%A0%D9%A0">$٠٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">300</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A1%D9%A3%D9%A3%D9%A7">$٠١٣٣٧</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">301</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%DB%B0%DB%B0%DB%B0">$۰۰۰۰۰</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">302</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%D9%A0%D9%A0%D9%A0">$٠٠٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">303</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A1%D9%A2%D9%A3%D9%A4%D9%A5%D9%A6%D9%A7%D9%A8%D9%A9">$٠١٢٣٤٥٦٧٨٩</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">304</td>
+				<td class="form"><a data-name="%24%DB%B0%DB%B0%DB%B0%24">$۰۰۰$</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr>
+				<td class="idx">305</td>
+				<td class="form"><a data-name="%24%D9%A0%D9%A0%D9%A0%E2%80%99s">$٠٠٠’s</a></td>
+				<td class="error">Latin + Arabic "٠"‎ {660}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">306</td>
+				<td class="form"><a data-name="_%D9%A1%D9%A0%D9%A0%D9%A0">_١٠٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">307</td>
+				<td class="form"><a data-name="_%D9%A1%D9%A0%D9%A0%D9%A1">_١٠٠١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">308</td>
+				<td class="form"><a data-name="_%D9%A1%D9%A2%D9%A2%D9%A1">_١٢٢١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">309</td>
+				<td class="form"><a data-name="0x%D9%A1%D9%A1%D9%A1">0x١١١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">310</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A0%D9%A0%D9%A1">$١٠٠١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">311</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A1%D9%A0%D9%A0">$١١٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">312</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A1%D9%A1%D9%A1">$١١١١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">313</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A2%D9%A0%D9%A0">$١٢٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">314</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A2%D9%A3%D9%A4">$١٢٣٤</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">315</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A3%D9%A0%D9%A0">$١٣٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">316</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A3%D9%A3%D9%A7">$١٣٣٧</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">317</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A4%D9%A0%D9%A0">$١٤٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">318</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A4%D9%A4%D9%A4">$١٤٤٤</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">319</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A5%D9%A0%D9%A0">$١٥٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">320</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A5%D9%A5%D9%A5">$١٥٥٥</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">321</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A5%D9%A7%D9%A4">$١٥٧٤</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">322</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A6%D9%A0%D9%A0">$١٦٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">323</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A6%D9%A6%D9%A6">$١٦٦٦</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">324</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A7%D9%A0%D9%A0">$١٧٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">325</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A7%D9%A7%D9%A7">$١٧٧٧</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">326</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A8%D9%A0%D9%A0">$١٨٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">327</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A8%D9%A8%D9%A8">$١٨٨٨</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">328</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A9%D9%A0%D9%A0">$١٩٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">329</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A9%D9%A9%D9%A9">$١٩٩٩</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">330</td>
+				<td class="form"><a data-name="%24%DB%B1%DB%B2%DB%B3%D9%A4">$۱۲۳٤</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">331</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A0%D9%A0%D9%A0%D9%A0">$١٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">332</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A1%D9%A1%D9%A1%D9%A1">$١١١١١</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">333</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A0%D9%A0%D9%A0%D9%A0%D9%A0">$١٠٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">334</td>
+				<td class="form"><a data-name="%24%DB%B1%DB%B1%DB%B1%24">$۱۱۱$</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">335</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A0%D9%A0%E2%80%99s">$١٠٠’s</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">336</td>
+				<td class="form"><a data-name="%24%D9%A1%D9%A1%D9%A1%E2%80%99s">$١١١’s</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr>
+				<td class="idx">337</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A1%D9%A1%D9%A1%E2%80%A2">•١١١•</a></td>
+				<td class="error">Latin + Arabic "١"‎ {661}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">338</td>
+				<td class="form"><a data-name="_%D9%A2%D9%A2%D9%A2%D9%A2">_٢٢٢٢</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">339</td>
+				<td class="form"><a data-name="0x%D9%A2%D9%A2%D9%A2">0x٢٢٢</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">340</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A0%D9%A2%D9%A2">$٢٠٢٢</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">341</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A0%D9%A2%D9%A3">$٢٠٢٣</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">342</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A2%D9%A0%D9%A0">$٢٢٠٠</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">343</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A2%D9%A2%D9%A2">$٢٢٢٢</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">344</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A8%D9%A0%D9%A0">$٢٨٠٠</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">345</td>
+				<td class="form"><a data-name="%24%DB%B2%DB%B0%DB%B2%DB%B0">$۲۰۲۰</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">346</td>
+				<td class="form"><a data-name="%24%DB%B2%DB%B0%DB%B2%DB%B2">$۲۰۲۲</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">347</td>
+				<td class="form"><a data-name="%24%DB%B2%DB%B2%D9%A6%DB%B9">$۲۲٦۹</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">348</td>
+				<td class="form"><a data-name="%24%DB%B2%DB%B2%DB%B2%DB%B2">$۲۲۲۲</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">349</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A0%D9%A0%D9%A0%D9%A0">$٢٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">350</td>
+				<td class="form"><a data-name="%24%D9%A2%D9%A2%D9%A2%D9%A2%D9%A2">$٢٢٢٢٢</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr>
+				<td class="idx">351</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A2%D9%A2%D9%A2%E2%80%A2">•٢٢٢•</a></td>
+				<td class="error">Latin + Arabic "٢"‎ {662}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">352</td>
+				<td class="form"><a data-name="0x%D9%A3%D9%A3%D9%A3">0x٣٣٣</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">353</td>
+				<td class="form"><a data-name="_web%D9%A3">_web٣</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">354</td>
+				<td class="form"><a data-name="%24%D9%A3%D9%A3%D9%A0%D9%A0">$٣٣٠٠</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">355</td>
+				<td class="form"><a data-name="%24%D9%A3%D9%A3%D9%A3%D9%A3">$٣٣٣٣</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">356</td>
+				<td class="form"><a data-name="%24%D9%A3%D9%A0%D9%A0%D9%A0%D9%A0">$٣٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">357</td>
+				<td class="form"><a data-name="%24%D9%A3%D9%A3%D9%A3%D9%A3%D9%A3">$٣٣٣٣٣</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">358</td>
+				<td class="form"><a data-name="%24web%D9%A3">$web٣</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr>
+				<td class="idx">359</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A3%D9%A3%D9%A3%E2%80%A2">•٣٣٣•</a></td>
+				<td class="error">Latin + Arabic "٣"‎ {663}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">360</td>
+				<td class="form"><a data-name="0x%D9%A4%D9%A4%D9%A4">0x٤٤٤</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">361</td>
+				<td class="form"><a data-name="_web%D9%A4">_web٤</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">362</td>
+				<td class="form"><a data-name="%24%D9%A4%D9%A4%D9%A0%D9%A0">$٤٤٠٠</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">363</td>
+				<td class="form"><a data-name="%24%D9%A4%D9%A4%D9%A4%D9%A4">$٤٤٤٤</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">364</td>
+				<td class="form"><a data-name="%24%D9%A4%D9%A0%D9%A0%D9%A0%D9%A0">$٤٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">365</td>
+				<td class="form"><a data-name="%24%D9%A4%D9%A4%D9%A4%D9%A4%D9%A4">$٤٤٤٤٤</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr>
+				<td class="idx">366</td>
+				<td class="form"><a data-name="%24web%D9%A4">$web٤</a></td>
+				<td class="error">Latin + Arabic "٤"‎ {664}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">367</td>
+				<td class="form"><a data-name="0x%D9%A5%D9%A5%D9%A5">0x٥٥٥</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr>
+				<td class="idx">368</td>
+				<td class="form"><a data-name="%24%D9%A5%D9%A5%D9%A0%D9%A0">$٥٥٠٠</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr>
+				<td class="idx">369</td>
+				<td class="form"><a data-name="%24%D9%A5%D9%A5%D9%A5%D9%A5">$٥٥٥٥</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr>
+				<td class="idx">370</td>
+				<td class="form"><a data-name="%24%D9%A5%D9%A0%D9%A0%D9%A0%D9%A0">$٥٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr>
+				<td class="idx">371</td>
+				<td class="form"><a data-name="%24%D9%A5%D9%A5%D9%A5%D9%A5%D9%A5">$٥٥٥٥٥</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr>
+				<td class="idx">372</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A5%D9%A5%D9%A5%E2%80%A2">•٥٥٥•</a></td>
+				<td class="error">Latin + Arabic "٥"‎ {665}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">373</td>
+				<td class="form"><a data-name="0x%D9%A6%D9%A6%D9%A6">0x٦٦٦</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">374</td>
+				<td class="form"><a data-name="%24%D9%A6%D9%A6%D9%A0%D9%A0">$٦٦٠٠</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">375</td>
+				<td class="form"><a data-name="%24%D9%A6%D9%A6%D9%A6%D9%A6">$٦٦٦٦</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">376</td>
+				<td class="form"><a data-name="%24%D9%A6%D9%A9%D9%A6%D9%A9">$٦٩٦٩</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">377</td>
+				<td class="form"><a data-name="%24%D9%A6%DB%B9%D9%A6%DB%B9">$٦۹٦۹</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">378</td>
+				<td class="form"><a data-name="%24%D9%A6%D9%A0%D9%A0%D9%A0%D9%A0">$٦٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">379</td>
+				<td class="form"><a data-name="%24%D9%A6%D9%A6%D9%A6%D9%A6%D9%A6">$٦٦٦٦٦</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr>
+				<td class="idx">380</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A6%D9%A6%D9%A6%E2%80%A2">•٦٦٦•</a></td>
+				<td class="error">Latin + Arabic "٦"‎ {666}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">381</td>
+				<td class="form"><a data-name="0x%D9%A7%D9%A7%D9%A7">0x٧٧٧</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">382</td>
+				<td class="form"><a data-name="0x%D9%A7%D9%A8%D9%A6">0x٧٨٦</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">383</td>
+				<td class="form"><a data-name="%24%D9%A7%D9%A0%D9%A0%D9%A0">$٧٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">384</td>
+				<td class="form"><a data-name="%24%D9%A7%D9%A7%D9%A0%D9%A0">$٧٧٠٠</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">385</td>
+				<td class="form"><a data-name="%24%D9%A7%D9%A7%D9%A7%D9%A7">$٧٧٧٧</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">386</td>
+				<td class="form"><a data-name="%24%DB%B7%DB%B7%DB%B7%DB%B7">$۷۷۷۷</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">387</td>
+				<td class="form"><a data-name="%24%D9%A7%D9%A0%D9%A0%D9%A0%D9%A0">$٧٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">388</td>
+				<td class="form"><a data-name="%24%D9%A7%D9%A7%D9%A7%D9%A7%D9%A7">$٧٧٧٧٧</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr>
+				<td class="idx">389</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A7%D9%A7%D9%A7%E2%80%A2">•٧٧٧•</a></td>
+				<td class="error">Latin + Arabic "٧"‎ {667}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">390</td>
+				<td class="form"><a data-name="0x%D9%A8%D9%A8%D9%A8">0x٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">391</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A0%D9%A0%D9%A0">$٨٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">392</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A0%D9%A0">$٨٨٠٠</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">393</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A8%D9%A8">$٨٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">394</td>
+				<td class="form"><a data-name="%24%DB%B8%DB%B8%DB%B8%DB%B8">$۸۸۸۸</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">395</td>
+				<td class="form"><a data-name="%24%DB%B8%DB%B9%DB%B8%DB%B9">$۸۹۸۹</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">396</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A0%D9%A0%D9%A0%D9%A0">$٨٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">397</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A7%D9%A8%D9%A8">$٨٨٧٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">398</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A8%D9%A8%D9%A8">$٨٨٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">399</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A8%D9%A8%D9%A8%D9%A8">$٨٨٨٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">400</td>
+				<td class="form"><a data-name="%24%D9%A8%D9%A8%D9%A8%E2%80%99s">$٨٨٨’s</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">401</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A8%D9%A8%D9%A8%D9%A8">•٨٨٨٨</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr>
+				<td class="idx">402</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A8%D9%A8%D9%A8%E2%80%A2">•٨٨٨•</a></td>
+				<td class="error">Latin + Arabic "٨"‎ {668}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">403</td>
+				<td class="form"><a data-name="_%D9%A9%D9%A9%D9%A6%D9%A6">_٩٩٦٦</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">404</td>
+				<td class="form"><a data-name="_%D9%A9%D9%A9%D9%A8%D9%A8">_٩٩٨٨</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">405</td>
+				<td class="form"><a data-name="0x%D9%A9%D9%A9%D9%A9">0x٩٩٩</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">406</td>
+				<td class="form"><a data-name="%24%D9%A9%D9%A9%D9%A9">$٩٩٩</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">407</td>
+				<td class="form"><a data-name="%24%D9%A9%D9%A9%D9%A0%D9%A0">$٩٩٠٠</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">408</td>
+				<td class="form"><a data-name="%24%D9%A9%D9%A9%D9%A9%D9%A9">$٩٩٩٩</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">409</td>
+				<td class="form"><a data-name="%24%DB%B9%DB%B9%DB%B8%DB%B8">$۹۹۸۸</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">410</td>
+				<td class="form"><a data-name="%24%DB%B9%DB%B9%DB%B9%DB%B9">$۹۹۹۹</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">411</td>
+				<td class="form"><a data-name="%24%D9%A9%D9%A0%D9%A0%D9%A0%D9%A0">$٩٠٠٠٠</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">412</td>
+				<td class="form"><a data-name="%24%D9%A9%D9%A9%D9%A9%D9%A9%D9%A9">$٩٩٩٩٩</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr>
+				<td class="idx">413</td>
+				<td class="form"><a data-name="%E2%80%A2%D9%A9%D9%A9%D9%A9%E2%80%A2">•٩٩٩•</a></td>
+				<td class="error">Latin + Arabic "٩"‎ {669}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">414</td>
+				<td class="form"><a data-name="_%D8%A3%D8%AD%D9%85%D8%AF">_أحمد</a></td>
+				<td class="error">Latin + Arabic "أ"‎ {623}</td>
+			</tr>
+<tr>
+				<td class="idx">415</td>
+				<td class="form"><a data-name="_%D8%A3%D8%B1%D8%A8%D8%B9%D8%A9">_أربعة</a></td>
+				<td class="error">Latin + Arabic "أ"‎ {623}</td>
+			</tr>
+<tr>
+				<td class="idx">416</td>
+				<td class="form"><a data-name="gwe%D8%A3">gweأ</a></td>
+				<td class="error">Latin + Arabic "أ"‎ {623}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">417</td>
+				<td class="form"><a data-name="_%D8%A5%D8%B1%D9%8A%D9%83">_إريك</a></td>
+				<td class="error">Latin + Arabic "إ"‎ {625}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">418</td>
+				<td class="form"><a data-name="_%D8%A7%D9%84%D9%85%D9%84%D9%83">_الملك</a></td>
+				<td class="error">Latin + Arabic "ا"‎ {627}</td>
+			</tr>
+<tr>
+				<td class="idx">419</td>
+				<td class="form"><a data-name="0x%D8%A7%D9%84%D9%84%D9%87">0xالله</a></td>
+				<td class="error">Latin + Arabic "ا"‎ {627}</td>
+			</tr>
+<tr>
+				<td class="idx">420</td>
+				<td class="form"><a data-name="0x%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86">0xالقرآن</a></td>
+				<td class="error">Latin + Arabic "ا"‎ {627}</td>
+			</tr>
+<tr>
+				<td class="idx">421</td>
+				<td class="form"><a data-name="%24%D8%A7%D9%84%D9%84%D9%87">$الله</a></td>
+				<td class="error">Latin + Arabic "ا"‎ {627}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">422</td>
+				<td class="form"><a data-name="%E2%9C%BF%DA%BF%DA%B0%DB%A3-">✿ڿڰۣ-</a></td>
+				<td class="error">Latin + Arabic "ڿ"‎ {6BF}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">423</td>
+				<td class="form"><a data-name="0x%D8%AD%D9%88%D8%AA">0xحوت</a></td>
+				<td class="error">Latin + Arabic "ح"‎ {62D}</td>
+			</tr>
+<tr>
+				<td class="idx">424</td>
+				<td class="form"><a data-name="0x%D8%AD%D8%A8%D9%8A%D8%A8%D9%8A">0xحبيبي</a></td>
+				<td class="error">Latin + Arabic "ح"‎ {62D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">425</td>
+				<td class="form"><a data-name="_%D8%AE%D9%85%D8%B3%D8%A9">_خمسة</a></td>
+				<td class="error">Latin + Arabic "خ"‎ {62E}</td>
+			</tr>
+<tr>
+				<td class="idx">426</td>
+				<td class="form"><a data-name="_%D8%AE%D9%84%D9%8A%D9%81%D8%A9">_خليفة</a></td>
+				<td class="error">Latin + Arabic "خ"‎ {62E}</td>
+			</tr>
+<tr>
+				<td class="idx">427</td>
+				<td class="form"><a data-name="_%D8%AE%D9%84%D9%8A%D9%81%D9%87">_خليفه</a></td>
+				<td class="error">Latin + Arabic "خ"‎ {62E}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">428</td>
+				<td class="form"><a data-name="_%D8%B1%D8%A7%D8%B4%D8%AF">_راشد</a></td>
+				<td class="error">Latin + Arabic "ر"‎ {631}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">429</td>
+				<td class="form"><a data-name="_%D8%B3%D8%A8%D8%B9%D8%A9">_سبعة</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr>
+				<td class="idx">430</td>
+				<td class="form"><a data-name="_%D8%B3%D8%B9%D9%88%D8%AF">_سعود</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr>
+				<td class="idx">431</td>
+				<td class="form"><a data-name="_%D8%B3%D8%B9%D9%88%D8%AF%D9%8A">_سعودي</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr>
+				<td class="idx">432</td>
+				<td class="form"><a data-name="_%D8%B3%D9%84%D8%B7%D8%A7%D9%86">_سلطان</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr>
+				<td class="idx">433</td>
+				<td class="form"><a data-name="_%D8%B3%D9%84%D9%85%D8%A7%D9%86">_سلمان</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr>
+				<td class="idx">434</td>
+				<td class="form"><a data-name="%24%D8%B3%D9%84%D8%B7%D8%A7%D9%86">$سلطان</a></td>
+				<td class="error">Latin + Arabic "س"‎ {633}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">435</td>
+				<td class="form"><a data-name="0x%D8%B4%D9%8A%D8%AE">0xشيخ</a></td>
+				<td class="error">Latin + Arabic "ش"‎ {634}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">436</td>
+				<td class="form"><a data-name="_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87">_عبدالله</a></td>
+				<td class="error">Latin + Arabic "ع"‎ {639}</td>
+			</tr>
+<tr>
+				<td class="idx">437</td>
+				<td class="form"><a data-name="_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2">_عبدالعزيز</a></td>
+				<td class="error">Latin + Arabic "ع"‎ {639}</td>
+			</tr>
+<tr>
+				<td class="idx">438</td>
+				<td class="form"><a data-name="0x%D8%B9%D9%84%D9%8A">0xعلي</a></td>
+				<td class="error">Latin + Arabic "ع"‎ {639}</td>
+			</tr>
+<tr>
+				<td class="idx">439</td>
+				<td class="form"><a data-name="0x%D8%B9%D9%85%D8%B1">0xعمر</a></td>
+				<td class="error">Latin + Arabic "ع"‎ {639}</td>
+			</tr>
+<tr>
+				<td class="idx">440</td>
+				<td class="form"><a data-name="la%D8%B9eeb">laعeeb</a></td>
+				<td class="error">Latin + Arabic "ع"‎ {639}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">441</td>
+				<td class="form"><a data-name="_%D9%85%D8%A7%D8%AC%D8%AF">_ماجد</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">442</td>
+				<td class="form"><a data-name="_%D9%85%D8%AD%D8%B3%D9%86">_محسن</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">443</td>
+				<td class="form"><a data-name="_%D9%85%D8%AD%D9%85%D8%AF">_محمد</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">444</td>
+				<td class="form"><a data-name="_%D9%85%D8%AD%D9%81%D8%B8%D8%A9">_محفظة</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">445</td>
+				<td class="form"><a data-name="0x%D9%85%D8%AD%D9%85%D8%AF">0xمحمد</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">446</td>
+				<td class="form"><a data-name="%24%D9%85%D8%AD%D9%85%D8%AF">$محمد</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">447</td>
+				<td class="form"><a data-name="%24%D9%85%D8%AD%D9%81%D8%B8%D8%A9">$محفظة</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr>
+				<td class="idx">448</td>
+				<td class="form"><a data-name="%24%D9%85%D9%86%D8%B5%D9%88%D8%B1">$منصور</a></td>
+				<td class="error">Latin + Arabic "م"‎ {645}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">449</td>
+				<td class="form"><a data-name="_%D9%86%D8%A7%D8%B5%D8%B1">_ناصر</a></td>
+				<td class="error">Latin + Arabic "ن"‎ {646}</td>
+			</tr>
+<tr>
+				<td class="idx">450</td>
+				<td class="form"><a data-name="_%D9%86%D9%88%D8%A7%D9%81">_نواف</a></td>
+				<td class="error">Latin + Arabic "ن"‎ {646}</td>
+			</tr>
+<tr>
+				<td class="idx">451</td>
+				<td class="form"><a data-name="_%D9%86%D9%88%D8%B1%D9%87">_نوره</a></td>
+				<td class="error">Latin + Arabic "ن"‎ {646}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">452</td>
+				<td class="form"><a data-name="nike%D6%8D">nike֍</a></td>
+				<td class="error">Latin + Armenian "֍"‎ {58D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">453</td>
+				<td class="form"><a data-name="elo%D5%B8mu%D1%95k">eloոmuѕk</a></td>
+				<td class="error">Latin + Armenian "ո"‎ {578}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">454</td>
+				<td class="form"><a data-name="crypt%D6%85">cryptօ</a></td>
+				<td class="error">Latin + Armenian "օ"‎ {585}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">455</td>
+				<td class="form"><a data-name="88%E3%84%A3hutz%E3%84%A3taffel">88ㄣhutzㄣtaffel</a></td>
+				<td class="error">Latin + Bopomofo "ㄣ"‎ {3123}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">456</td>
+				<td class="form"><a data-name="adid%D0%B0s">adidаs</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">457</td>
+				<td class="form"><a data-name="am%D0%B0z%D0%BEn">amаzоn</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">458</td>
+				<td class="form"><a data-name="am%D0%B0zon">amаzon</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">459</td>
+				<td class="form"><a data-name="baycmet%D0%B0verse">baycmetаverse</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">460</td>
+				<td class="form"><a data-name="bin%D0%B0nc%D0%B5">binаncе</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">461</td>
+				<td class="form"><a data-name="bin%D0%B0nce">binаnce</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">462</td>
+				<td class="form"><a data-name="bl%D0%B0ckrock">blаckrock</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">463</td>
+				<td class="form"><a data-name="bl%D0%B0%D1%81k">blасk</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">464</td>
+				<td class="form"><a data-name="b%D0%B0nks">bаnks</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">465</td>
+				<td class="form"><a data-name="b%D0%B0nksy">bаnksy</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">466</td>
+				<td class="form"><a data-name="bof%D0%B0">bofа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">467</td>
+				<td class="form"><a data-name="bored%D0%B0pe">boredаpe</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">468</td>
+				<td class="form"><a data-name="chin%D0%B0">chinа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">469</td>
+				<td class="form"><a data-name="ch%D0%B0inlink">chаinlink</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">470</td>
+				<td class="form"><a data-name="cloudfl%D0%B0re">cloudflаre</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">471</td>
+				<td class="form"><a data-name="coinb%D0%B0s%D0%B5">coinbаsе</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">472</td>
+				<td class="form"><a data-name="depositcontr%D0%B0ct">depositcontrаct</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">473</td>
+				<td class="form"><a data-name="d%D0%B0niel">dаniel</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">474</td>
+				<td class="form"><a data-name="d%D0%B0rkm%D0%B0rk%D0%B5t">dаrkmаrkеt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">475</td>
+				<td class="form"><a data-name="f%D0%B0%D1%81%D0%B5b%D0%BE%D0%BEk">fасеbооk</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">476</td>
+				<td class="form"><a data-name="f%D0%B0c%D0%B5book">fаcеbook</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">477</td>
+				<td class="form"><a data-name="f%D0%B0ceb%D0%BE%D0%BEk">fаcebооk</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">478</td>
+				<td class="form"><a data-name="f%D0%B0%D1%81ebook">fасebook</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">479</td>
+				<td class="form"><a data-name="ferr%D0%B0ri">ferrаri</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">480</td>
+				<td class="form"><a data-name="g%D0%B0me">gаme</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">481</td>
+				<td class="form"><a data-name="h%D0%B0cker">hаcker</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">482</td>
+				<td class="form"><a data-name="h%D0%B0rry">hаrry</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">483</td>
+				<td class="form"><a data-name="j%D0%B0c%D0%BEb">jаcоb</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">484</td>
+				<td class="form"><a data-name="j%D0%B0ckq%D0%B0%D1%81k">jаckqасk</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">485</td>
+				<td class="form"><a data-name="j%D0%B0cob">jаcob</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">486</td>
+				<td class="form"><a data-name="j%D0%B0mes">jаmes</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">487</td>
+				<td class="form"><a data-name="jpmorg%D0%B0n">jpmorgаn</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">488</td>
+				<td class="form"><a data-name="masterc%D0%B0rd">mastercаrd</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">489</td>
+				<td class="form"><a data-name="meth%D0%B0ne">methаne</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">490</td>
+				<td class="form"><a data-name="met%D0%B0mask">metаmask</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">491</td>
+				<td class="form"><a data-name="met%D0%B0verse">metаverse</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">492</td>
+				<td class="form"><a data-name="m%D0%B0stercard">mаstercard</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">493</td>
+				<td class="form"><a data-name="m%D0%B0sterc%D0%B0rd">mаstercаrd</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">494</td>
+				<td class="form"><a data-name="m%D0%B0st%D0%B5rcard">mаstеrcard</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">495</td>
+				<td class="form"><a data-name="m%D0%B0st%D0%B5rc%D0%B0rd">mаstеrcаrd</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">496</td>
+				<td class="form"><a data-name="mut%D0%B0nt">mutаnt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">497</td>
+				<td class="form"><a data-name="n%D0%B0mes">nаmes</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">498</td>
+				<td class="form"><a data-name="opense%D0%B0">openseа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">499</td>
+				<td class="form"><a data-name="prad%D0%B0">pradа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">500</td>
+				<td class="form"><a data-name="priv%D0%B0t%D0%B5j%D0%B5t">privаtеjеt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">501</td>
+				<td class="form"><a data-name="p%D0%B0yp%D0%B0l">pаypаl</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">502</td>
+				<td class="form"><a data-name="s%D0%B0msung">sаmsung</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">503</td>
+				<td class="form"><a data-name="sp%D0%B0ce">spаce</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">504</td>
+				<td class="form"><a data-name="s%D0%B0toshi">sаtoshi</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">505</td>
+				<td class="form"><a data-name="tesl%D0%B0">teslа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">506</td>
+				<td class="form"><a data-name="vis%D0%B0">visа</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">507</td>
+				<td class="form"><a data-name="v%D0%B0ult">vаult</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">508</td>
+				<td class="form"><a data-name="walm%D0%B0rt">walmаrt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">509</td>
+				<td class="form"><a data-name="w%D0%B0gmi">wаgmi</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">510</td>
+				<td class="form"><a data-name="wh%D0%B0le">whаle</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">511</td>
+				<td class="form"><a data-name="w%D0%B0llet">wаllet</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">512</td>
+				<td class="form"><a data-name="w%D0%B0ll%D0%B5t">wаllеt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">513</td>
+				<td class="form"><a data-name="w%D0%B0lm%D0%B0rt">wаlmаrt</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr>
+				<td class="idx">514</td>
+				<td class="form"><a data-name="yit%D0%B0if%D0%B0ng">yitаifаng</a></td>
+				<td class="error">Latin + Cyrillic "а"‎ {430}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">515</td>
+				<td class="form"><a data-name="ether%D3%99um">etherәum</a></td>
+				<td class="error">Latin + Cyrillic "ә"‎ {4D9}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">516</td>
+				<td class="form"><a data-name="0x%D0%B1%D0%B1%D0%B1%D0%B1">0xбббб</a></td>
+				<td class="error">Latin + Cyrillic "б"‎ {431}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">517</td>
+				<td class="form"><a data-name="0x%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0">0xводка</a></td>
+				<td class="error">Latin + Cyrillic "в"‎ {432}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">518</td>
+				<td class="form"><a data-name="ap%D0%B5">apе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">519</td>
+				<td class="form"><a data-name="appl%D0%B5">applе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">520</td>
+				<td class="form"><a data-name="bank%D0%B5r">bankеr</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">521</td>
+				<td class="form"><a data-name="binanc%D0%B5">binancе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">522</td>
+				<td class="form"><a data-name="b%D0%B5n">bеn</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">523</td>
+				<td class="form"><a data-name="boredap%D0%B5">boredapе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">524</td>
+				<td class="form"><a data-name="b%D0%B5%D0%B5r">bееr</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">525</td>
+				<td class="form"><a data-name="che%D0%B5tah">cheеtah</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">526</td>
+				<td class="form"><a data-name="cryptocurr%D0%B5ncy">cryptocurrеncy</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">527</td>
+				<td class="form"><a data-name="d%D0%B5fi">dеfi</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">528</td>
+				<td class="form"><a data-name="d%D0%B5gen">dеgen</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">529</td>
+				<td class="form"><a data-name="d%D0%B5positcontract">dеpositcontract</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">530</td>
+				<td class="form"><a data-name="drak%D0%B5">drakе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">531</td>
+				<td class="form"><a data-name="ether%D0%B5um">etherеum</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">532</td>
+				<td class="form"><a data-name="eth%D0%B5reum">ethеreum</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">533</td>
+				<td class="form"><a data-name="eth%D0%B5r%D0%B5um">ethеrеum</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">534</td>
+				<td class="form"><a data-name="fac%D0%B5book">facеbook</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">535</td>
+				<td class="form"><a data-name="gam%D0%B5">gamе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">536</td>
+				<td class="form"><a data-name="garyv%D0%B5%D0%B5">garyvее</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">537</td>
+				<td class="form"><a data-name="g%D0%B5nesis">gеnesis</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">538</td>
+				<td class="form"><a data-name="googl%D0%B5">googlе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">539</td>
+				<td class="form"><a data-name="hack%D0%B5r">hackеr</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">540</td>
+				<td class="form"><a data-name="hitl%D0%B5r">hitlеr</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">541</td>
+				<td class="form"><a data-name="iphon%D0%B5">iphonе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">542</td>
+				<td class="form"><a data-name="k%D0%B5vin">kеvin</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">543</td>
+				<td class="form"><a data-name="mark%D0%B5t">markеt</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">544</td>
+				<td class="form"><a data-name="mast%D0%B5r">mastеr</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">545</td>
+				<td class="form"><a data-name="mast%D0%B5rcard">mastеrcard</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">546</td>
+				<td class="form"><a data-name="mast%D0%B5rc%D0%B0rd">mastеrcаrd</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">547</td>
+				<td class="form"><a data-name="m%D0%B5tav%D0%B5rse">mеtavеrse</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">548</td>
+				<td class="form"><a data-name="nestl%D0%B5">nestlе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">549</td>
+				<td class="form"><a data-name="nik%D0%B5">nikе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">550</td>
+				<td class="form"><a data-name="n%D0%B5stl%D0%B5">nеstlе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">551</td>
+				<td class="form"><a data-name="n%D0%B5stle">nеstle</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">552</td>
+				<td class="form"><a data-name="n%D0%B5tflix">nеtflix</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">553</td>
+				<td class="form"><a data-name="nys%D0%B5">nysе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">554</td>
+				<td class="form"><a data-name="op%D0%B5ns%D0%B5a">opеnsеa</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">555</td>
+				<td class="form"><a data-name="oth%D0%B5r%D1%95%D1%96d%D0%B5">othеrѕіdе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">556</td>
+				<td class="form"><a data-name="paym%D0%B5">paymе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">557</td>
+				<td class="form"><a data-name="p%D0%B5psi">pеpsi</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">558</td>
+				<td class="form"><a data-name="r%D0%B5fl%D0%B5xivity">rеflеxivity</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">559</td>
+				<td class="form"><a data-name="scop%D0%B5">scopе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">560</td>
+				<td class="form"><a data-name="s%D0%B5nd">sеnd</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">561</td>
+				<td class="form"><a data-name="trad%D0%B5">tradе</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">562</td>
+				<td class="form"><a data-name="t%D0%B5sl%D0%B0">tеslа</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">563</td>
+				<td class="form"><a data-name="t%D0%B5sla">tеsla</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">564</td>
+				<td class="form"><a data-name="twitt%D0%B5%D0%B3">twittег</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">565</td>
+				<td class="form"><a data-name="vitalikbut%D0%B5rin-onlyfans">vitalikbutеrin-onlyfans</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr>
+				<td class="idx">566</td>
+				<td class="form"><a data-name="wall%D0%B5t">wallеt</a></td>
+				<td class="error">Latin + Cyrillic "е"‎ {435}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">567</td>
+				<td class="form"><a data-name="l%D1%91xa">lёxa</a></td>
+				<td class="error">Latin + Cyrillic "ё"‎ {451}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">568</td>
+				<td class="form"><a data-name="0x420%D1%94">0x420є</a></td>
+				<td class="error">Latin + Cyrillic "є"‎ {454}</td>
+			</tr>
+<tr>
+				<td class="idx">569</td>
+				<td class="form"><a data-name="s%D1%94x">sєx</a></td>
+				<td class="error">Latin + Cyrillic "є"‎ {454}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">570</td>
+				<td class="form"><a data-name="oo%D0%B7">ooз</a></td>
+				<td class="error">Latin + Cyrillic "з"‎ {437}</td>
+			</tr>
+<tr>
+				<td class="idx">571</td>
+				<td class="form"><a data-name="ooo%D0%B7">oooз</a></td>
+				<td class="error">Latin + Cyrillic "з"‎ {437}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">572</td>
+				<td class="form"><a data-name="alica%D1%95chmidt">alicaѕchmidt</a></td>
+				<td class="error">Latin + Cyrillic "ѕ"‎ {455}</td>
+			</tr>
+<tr>
+				<td class="idx">573</td>
+				<td class="form"><a data-name="patriot%D1%95">patriotѕ</a></td>
+				<td class="error">Latin + Cyrillic "ѕ"‎ {455}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">574</td>
+				<td class="form"><a data-name="ad%D1%96das">adіdas</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">575</td>
+				<td class="form"><a data-name="a%D1%96rdrop">aіrdrop</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">576</td>
+				<td class="form"><a data-name="a%D1%96rdrops">aіrdrops</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">577</td>
+				<td class="form"><a data-name="b%D1%96n%D0%B0nce">bіnаnce</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">578</td>
+				<td class="form"><a data-name="b%D1%96tcoin">bіtcoin</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">579</td>
+				<td class="form"><a data-name="b%D1%96tco%D1%96n">bіtcoіn</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">580</td>
+				<td class="form"><a data-name="bull%D1%96sh">bullіsh</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">581</td>
+				<td class="form"><a data-name="czb%D1%96nan%D1%81e">czbіnanсe</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">582</td>
+				<td class="form"><a data-name="depos%D1%96tcontract">deposіtcontract</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">583</td>
+				<td class="form"><a data-name="m%D1%96crosoft">mіcrosoft</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">584</td>
+				<td class="form"><a data-name="mess%D1%96">messі</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">585</td>
+				<td class="form"><a data-name="m%D1%96ner">mіner</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">586</td>
+				<td class="form"><a data-name="parad%D1%96gm">paradіgm</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">587</td>
+				<td class="form"><a data-name="p%D1%96kachu">pіkachu</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr>
+				<td class="idx">588</td>
+				<td class="form"><a data-name="v%D1%96talik">vіtalik</a></td>
+				<td class="error">Latin + Cyrillic "і"‎ {456}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">589</td>
+				<td class="form"><a data-name="ukra%D1%97na">ukraїna</a></td>
+				<td class="error">Latin + Cyrillic "ї"‎ {457}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">590</td>
+				<td class="form"><a data-name="elonmus%D0%BA">elonmusк</a></td>
+				<td class="error">Latin + Cyrillic "к"‎ {43A}</td>
+			</tr>
+<tr>
+				<td class="idx">591</td>
+				<td class="form"><a data-name="vitali%D0%BA">vitaliк</a></td>
+				<td class="error">Latin + Cyrillic "к"‎ {43A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">592</td>
+				<td class="form"><a data-name="ipo%D0%BCene">ipoмene</a></td>
+				<td class="error">Latin + Cyrillic "м"‎ {43C}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">593</td>
+				<td class="form"><a data-name="b%D0%BEf%D0%B0">bоfа</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">594</td>
+				<td class="form"><a data-name="b%D0%BEfa">bоfa</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">595</td>
+				<td class="form"><a data-name="bitc%D0%BEin">bitcоin</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">596</td>
+				<td class="form"><a data-name="blackr%D0%BEck">blackrоck</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">597</td>
+				<td class="form"><a data-name="bl%D0%BEck">blоck</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">598</td>
+				<td class="form"><a data-name="b%D0%BEnus">bоnus</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">599</td>
+				<td class="form"><a data-name="b%D0%BEred%F0%9F%90%B5">bоred🐵</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">600</td>
+				<td class="form"><a data-name="casin%D0%BE">casinо</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">601</td>
+				<td class="form"><a data-name="crypt%D0%BE">cryptо</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">602</td>
+				<td class="form"><a data-name="crypt%D0%BEpunk">cryptоpunk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">603</td>
+				<td class="form"><a data-name="crypt%D0%BEpunks">cryptоpunks</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">604</td>
+				<td class="form"><a data-name="d%D0%BEge">dоge</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">605</td>
+				<td class="form"><a data-name="d%D0%BEgecoin">dоgecoin</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">606</td>
+				<td class="form"><a data-name="d%D0%BEge%D1%81oin">dоgeсoin</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">607</td>
+				<td class="form"><a data-name="d%D0%BEmain">dоmain</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">608</td>
+				<td class="form"><a data-name="d%D0%BE%D0%BEmguy">dооmguy</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">609</td>
+				<td class="form"><a data-name="el%D0%BEnmask">elоnmask</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">610</td>
+				<td class="form"><a data-name="el%D0%BEnmu%D1%95k">elоnmuѕk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">611</td>
+				<td class="form"><a data-name="el%D0%BEnmus%D0%BA">elоnmusк</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">612</td>
+				<td class="form"><a data-name="el%D0%BEnmusk">elоnmusk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">613</td>
+				<td class="form"><a data-name="el%D0%BEn%D0%BCusk">elоnмusk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">614</td>
+				<td class="form"><a data-name="faceb%D0%BE%D0%BEk">facebооk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">615</td>
+				<td class="form"><a data-name="faceb%D0%BEok">facebоok</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">616</td>
+				<td class="form"><a data-name="facebo%D0%BEk">faceboоk</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">617</td>
+				<td class="form"><a data-name="g%D0%BEd">gоd</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">618</td>
+				<td class="form"><a data-name="g%D0%BE%D0%BEgl%D0%B5">gооglе</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">619</td>
+				<td class="form"><a data-name="g%D0%BE%D0%BEgle">gооgle</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">620</td>
+				<td class="form"><a data-name="g%D0%BEogl%D0%B5">gоoglе</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">621</td>
+				<td class="form"><a data-name="h%D0%BEtels">hоtels</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">622</td>
+				<td class="form"><a data-name="jpm%D0%BErgan">jpmоrgan</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">623</td>
+				<td class="form"><a data-name="jumb%D0%BE">jumbо</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">624</td>
+				<td class="form"><a data-name="keat%D0%BEn">keatоn</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">625</td>
+				<td class="form"><a data-name="l%D0%BEveyou">lоveyou</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">626</td>
+				<td class="form"><a data-name="micros%D0%BEft">microsоft</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">627</td>
+				<td class="form"><a data-name="micr%D0%BEs%D0%BEft">micrоsоft</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">628</td>
+				<td class="form"><a data-name="m%D0%BE%D0%BEn">mооn</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">629</td>
+				<td class="form"><a data-name="p%D0%BErnhub">pоrnhub</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">630</td>
+				<td class="form"><a data-name="p%D0%BErno">pоrno</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">631</td>
+				<td class="form"><a data-name="sh%D0%BEpping">shоpping</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">632</td>
+				<td class="form"><a data-name="t%D0%BEken">tоken</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">633</td>
+				<td class="form"><a data-name="ukrainecrypt%D0%BEd%D0%BEnati%D0%BEn">ukrainecryptоdоnatiоn</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">634</td>
+				<td class="form"><a data-name="volv%D0%BE">volvо</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">635</td>
+				<td class="form"><a data-name="%F0%9F%96%95%F0%9F%8F%BBy%D0%BEu">🖕🏻yоu</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">636</td>
+				<td class="form"><a data-name="y%D0%BEuporn">yоuporn</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr>
+				<td class="idx">637</td>
+				<td class="form"><a data-name="y%D0%BEutube">yоutube</a></td>
+				<td class="error">Latin + Cyrillic "о"‎ {43E}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">638</td>
+				<td class="form"><a data-name="qd%D0%BF">qdп</a></td>
+				<td class="error">Latin + Cyrillic "п"‎ {43F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">639</td>
+				<td class="form"><a data-name="a%D1%80e">aрe</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">640</td>
+				<td class="form"><a data-name="a%D1%80%D1%80le">aррle</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">641</td>
+				<td class="form"><a data-name="a%D1%80pl%D0%B5">aрplе</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">642</td>
+				<td class="form"><a data-name="a%D1%80ple">aрple</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">643</td>
+				<td class="form"><a data-name="ap%D1%80le">apрle</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">644</td>
+				<td class="form"><a data-name="j%D1%80morgan">jрmorgan</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">645</td>
+				<td class="form"><a data-name="o%D1%80ensea">oрensea</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr>
+				<td class="idx">646</td>
+				<td class="form"><a data-name="q888%D1%80">q888р</a></td>
+				<td class="error">Latin + Cyrillic "р"‎ {440}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">647</td>
+				<td class="form"><a data-name="1in%D1%81h">1inсh</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">648</td>
+				<td class="form"><a data-name="bay%D1%81">bayс</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">649</td>
+				<td class="form"><a data-name="bit%D1%81%D0%BEin">bitсоin</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">650</td>
+				<td class="form"><a data-name="bit%D1%81oin">bitсoin</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">651</td>
+				<td class="form"><a data-name="blackro%D1%81k">blackroсk</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">652</td>
+				<td class="form"><a data-name="boredapeyacht%D1%81lub">boredapeyachtсlub</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">653</td>
+				<td class="form"><a data-name="guc%D1%81i">gucсi</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">654</td>
+				<td class="form"><a data-name="gu%D1%81%D1%81i">guссi</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">655</td>
+				<td class="form"><a data-name="musi%D1%81">musiс</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr>
+				<td class="idx">656</td>
+				<td class="form"><a data-name="ni%D1%81k">niсk</a></td>
+				<td class="error">Latin + Cyrillic "с"‎ {441}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">657</td>
+				<td class="form"><a data-name="me%D1%82a">meтa</a></td>
+				<td class="error">Latin + Cyrillic "т"‎ {442}</td>
+			</tr>
+<tr>
+				<td class="idx">658</td>
+				<td class="form"><a data-name="me%D1%82al">meтal</a></td>
+				<td class="error">Latin + Cyrillic "т"‎ {442}</td>
+			</tr>
+<tr>
+				<td class="idx">659</td>
+				<td class="form"><a data-name="me%D1%82amask">meтamask</a></td>
+				<td class="error">Latin + Cyrillic "т"‎ {442}</td>
+			</tr>
+<tr>
+				<td class="idx">660</td>
+				<td class="form"><a data-name="s%D1%82eel">sтeel</a></td>
+				<td class="error">Latin + Cyrillic "т"‎ {442}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">661</td>
+				<td class="form"><a data-name="ba%D1%83c">baуc</a></td>
+				<td class="error">Latin + Cyrillic "у"‎ {443}</td>
+			</tr>
+<tr>
+				<td class="idx">662</td>
+				<td class="form"><a data-name="b%D1%83tes">bуtes</a></td>
+				<td class="error">Latin + Cyrillic "у"‎ {443}</td>
+			</tr>
+<tr>
+				<td class="idx">663</td>
+				<td class="form"><a data-name="cr%D1%83pto">crуpto</a></td>
+				<td class="error">Latin + Cyrillic "у"‎ {443}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">664</td>
+				<td class="form"><a data-name="cr%D2%AFpto">crүpto</a></td>
+				<td class="error">Latin + Cyrillic "ү"‎ {4AF}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">665</td>
+				<td class="form"><a data-name="sex%D1%85">sexх</a></td>
+				<td class="error">Latin + Cyrillic "х"‎ {445}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">666</td>
+				<td class="form"><a data-name="et%D2%BBereum">etһereum</a></td>
+				<td class="error">Latin + Cyrillic "һ"‎ {4BB}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">667</td>
+				<td class="form"><a data-name="ethe%D1%8F">etheя</a></td>
+				<td class="error">Latin + Cyrillic "я"‎ {44F}</td>
+			</tr>
+<tr>
+				<td class="idx">668</td>
+				<td class="form"><a data-name="ethe%D1%8Feum">etheяeum</a></td>
+				<td class="error">Latin + Cyrillic "я"‎ {44F}</td>
+			</tr>
+<tr>
+				<td class="idx">669</td>
+				<td class="form"><a data-name="ha%D1%8Fley">haяley</a></td>
+				<td class="error">Latin + Cyrillic "я"‎ {44F}</td>
+			</tr>
+<tr>
+				<td class="idx">670</td>
+				<td class="form"><a data-name="ungove%D1%8Fnable">ungoveяnable</a></td>
+				<td class="error">Latin + Cyrillic "я"‎ {44F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">671</td>
+				<td class="form"><a data-name="e%D3%8Fon">eӏon</a></td>
+				<td class="error">Latin + Cyrillic "ӏ"‎ {4CF}</td>
+			</tr>
+<tr>
+				<td class="idx">672</td>
+				<td class="form"><a data-name="vita%D3%8Fik">vitaӏik</a></td>
+				<td class="error">Latin + Cyrillic "ӏ"‎ {4CF}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">673</td>
+				<td class="form"><a data-name="-%E0%A5%AA%E0%A5%A6%E0%A5%A6%E0%A5%A6">-४०००</a></td>
+				<td class="error">Latin + Devanagari "४"‎ {96A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">674</td>
+				<td class="form"><a data-name="senec%CE%AC">senecά</a></td>
+				<td class="error">Latin + Greek "ά"‎ {3AC}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">675</td>
+				<td class="form"><a data-name="awsb%CE%B1%CE%B242">awsbαβ42</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">676</td>
+				<td class="form"><a data-name="bij%CE%B1n">bijαn</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">677</td>
+				<td class="form"><a data-name="comet%CE%B1">cometα</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">678</td>
+				<td class="form"><a data-name="depositcontr%CE%B1ct">depositcontrαct</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">679</td>
+				<td class="form"><a data-name="fire%CE%B1">fireα</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">680</td>
+				<td class="form"><a data-name="m%CE%B1xime">mαxime</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">681</td>
+				<td class="form"><a data-name="seeking%CE%B1">seekingα</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr>
+				<td class="idx">682</td>
+				<td class="form"><a data-name="w%CE%B1gmi">wαgmi</a></td>
+				<td class="error">Latin + Greek "α"‎ {3B1}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">683</td>
+				<td class="form"><a data-name="m%CE%BEt%CE%B4v%CE%BErs%CE%BE">mξtδvξrsξ</a></td>
+				<td class="error">Latin + Greek "δ"‎ {3B4}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">684</td>
+				<td class="form"><a data-name="m%CE%B5ssi">mεssi</a></td>
+				<td class="error">Latin + Greek "ε"‎ {3B5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">685</td>
+				<td class="form"><a data-name="cos%CE%B8">cosθ</a></td>
+				<td class="error">Latin + Greek "θ"‎ {3B8}</td>
+			</tr>
+<tr>
+				<td class="idx">686</td>
+				<td class="form"><a data-name="fuck%CE%B8">fuckθ</a></td>
+				<td class="error">Latin + Greek "θ"‎ {3B8}</td>
+			</tr>
+<tr>
+				<td class="idx">687</td>
+				<td class="form"><a data-name="sin%CE%B8">sinθ</a></td>
+				<td class="error">Latin + Greek "θ"‎ {3B8}</td>
+			</tr>
+<tr>
+				<td class="idx">688</td>
+				<td class="form"><a data-name="tan%CE%B8">tanθ</a></td>
+				<td class="error">Latin + Greek "θ"‎ {3B8}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">689</td>
+				<td class="form"><a data-name="depos%CE%AFtcontract">deposίtcontract</a></td>
+				<td class="error">Latin + Greek "ί"‎ {3AF}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">690</td>
+				<td class="form"><a data-name="p%CE%BB%D1%8F%CE%BBdigm">pλяλdigm</a></td>
+				<td class="error">Latin + Greek "λ"‎ {3BB}</td>
+			</tr>
+<tr>
+				<td class="idx">691</td>
+				<td class="form"><a data-name="r%CE%BBz%CE%BEr">rλzξr</a></td>
+				<td class="error">Latin + Greek "λ"‎ {3BB}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">692</td>
+				<td class="form"><a data-name="louis%CE%BDuiton">louisνuiton</a></td>
+				<td class="error">Latin + Greek "ν"‎ {3BD}</td>
+			</tr>
+<tr>
+				<td class="idx">693</td>
+				<td class="form"><a data-name="meta%CE%BDerse">metaνerse</a></td>
+				<td class="error">Latin + Greek "ν"‎ {3BD}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">694</td>
+				<td class="form"><a data-name="bitc%CE%BFin">bitcοin</a></td>
+				<td class="error">Latin + Greek "ο"‎ {3BF}</td>
+			</tr>
+<tr>
+				<td class="idx">695</td>
+				<td class="form"><a data-name="crypt%CE%BF">cryptο</a></td>
+				<td class="error">Latin + Greek "ο"‎ {3BF}</td>
+			</tr>
+<tr>
+				<td class="idx">696</td>
+				<td class="form"><a data-name="g%CE%BF%CE%BFgle">gοοgle</a></td>
+				<td class="error">Latin + Greek "ο"‎ {3BF}</td>
+			</tr>
+<tr>
+				<td class="idx">697</td>
+				<td class="form"><a data-name="p%CE%BFrnhub">pοrnhub</a></td>
+				<td class="error">Latin + Greek "ο"‎ {3BF}</td>
+			</tr>
+<tr>
+				<td class="idx">698</td>
+				<td class="form"><a data-name="unt%CE%BFuchable">untοuchable</a></td>
+				<td class="error">Latin + Greek "ο"‎ {3BF}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">699</td>
+				<td class="form"><a data-name="boreda%CF%81e">boredaρe</a></td>
+				<td class="error">Latin + Greek "ρ"‎ {3C1}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">700</td>
+				<td class="form"><a data-name="bi%CF%84coin">biτcoin</a></td>
+				<td class="error">Latin + Greek "τ"‎ {3C4}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">701</td>
+				<td class="form"><a data-name="a%CF%85relius">aυrelius</a></td>
+				<td class="error">Latin + Greek "υ"‎ {3C5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">702</td>
+				<td class="form"><a data-name="0x111%CF%87">0x111χ</a></td>
+				<td class="error">Latin + Greek "χ"‎ {3C7}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">703</td>
+				<td class="form"><a data-name="toke%D7%90">tokeא</a></td>
+				<td class="error">Latin + Hebrew "א"‎ {5D0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">704</td>
+				<td class="form"><a data-name="l%E0%B2%A0%E2%80%BF%E0%B2%A0l">lಠ‿ಠl</a></td>
+				<td class="error">Latin + Kannada "ಠ"‎ {CA0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">705</td>
+				<td class="form"><a data-name="%E2%80%A2%E2%9D%89%E1%AF%BD%E2%9D%89%E2%80%A2">•❉᯽❉•</a></td>
+				<td class="error">Latin + Restricted[Batk] "᯽"‎ {1BFD}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">706</td>
+				<td class="form"><a data-name="%E2%9A%A0o%E1%AF%85o%E2%9A%A0">⚠oᯅo⚠</a></td>
+				<td class="error">Latin + Restricted[Batk] "ᯅ"‎ {1BC5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">707</td>
+				<td class="form"><a data-name="wifi%E1%AF%A4">wifiᯤ</a></td>
+				<td class="error">Latin + Restricted[Batk] "ᯤ"‎ {1BE4}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">708</td>
+				<td class="form"><a data-name="b%E1%8E%A5nance">bᎥnance</a></td>
+				<td class="error">Latin + Restricted[Cher] "Ꭵ"‎ {13A5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">709</td>
+				<td class="form"><a data-name="m%E2%B2%B7ta">mⲷta</a></td>
+				<td class="error">Latin + Restricted[Copt] "ⲷ"‎ {2CB7}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">710</td>
+				<td class="form"><a data-name="%E2%82%BF%E2%B2%93%E2%B2%A7%E2%B2%A5%E2%B2%9F%E2%B2%93%E2%B2%9B">₿ⲓⲧⲥⲟⲓⲛ</a></td>
+				<td class="error">Latin + Restricted[Copt] "ⲓ"‎ {2C93}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">711</td>
+				<td class="form"><a data-name="space%E2%B2%AD">spaceⲭ</a></td>
+				<td class="error">Latin + Restricted[Copt] "ⲭ"‎ {2CAD}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">712</td>
+				<td class="form"><a data-name="k1ng%F0%93%82%80">k1ng𓂀</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓂀"‎ {13080}</td>
+			</tr>
+<tr>
+				<td class="idx">713</td>
+				<td class="form"><a data-name="yxng%F0%93%82%80">yxng𓂀</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓂀"‎ {13080}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">714</td>
+				<td class="form"><a data-name="moby%F0%93%82%B8">moby𓂸</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓂸"‎ {130B8}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">715</td>
+				<td class="form"><a data-name="smol%F0%93%82%BA">smol𓂺</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓂺"‎ {130BA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">716</td>
+				<td class="form"><a data-name="%E2%82%BFitcoin%F0%93%84%80">₿itcoin𓄀</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓄀"‎ {13100}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">717</td>
+				<td class="form"><a data-name="6%F0%93%85%936%F0%93%85%936%F0%93%85%93">6𓅓6𓅓6𓅓</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓅓"‎ {13153}</td>
+			</tr>
+<tr>
+				<td class="idx">718</td>
+				<td class="form"><a data-name="bluejays%F0%93%85%93">bluejays𓅓</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓅓"‎ {13153}</td>
+			</tr>
+<tr>
+				<td class="idx">719</td>
+				<td class="form"><a data-name="drake%F0%93%85%93">drake𓅓</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓅓"‎ {13153}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">720</td>
+				<td class="form"><a data-name="p2e%F0%93%8D%9Dgame">p2e𓍝game</a></td>
+				<td class="error">Latin + Restricted[Egyp] "𓍝"‎ {1335D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">721</td>
+				<td class="form"><a data-name="goog%DF%8Ae">googߊe</a></td>
+				<td class="error">Latin + Restricted[Nkoo] "ߊ"‎ {7CA}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">722</td>
+				<td class="form"><a data-name="bitc%DF%8Bin">bitcߋin</a></td>
+				<td class="error">Latin + Restricted[Nkoo] "ߋ"‎ {7CB}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">723</td>
+				<td class="form"><a data-name="080%E1%B1%90">080᱐</a></td>
+				<td class="error">Latin + Restricted[Olck] "᱐"‎ {1C50}</td>
+			</tr>
+<tr>
+				<td class="idx">724</td>
+				<td class="form"><a data-name="52%E1%B1%90">52᱐</a></td>
+				<td class="error">Latin + Restricted[Olck] "᱐"‎ {1C50}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">725</td>
+				<td class="form"><a data-name="0x%F0%90%B1%85%F0%90%B0%87%F0%90%B0%BC%F0%90%B0%B0">0x𐱅𐰇𐰼𐰰</a></td>
+				<td class="error">Latin + Restricted[Orkh] "𐱅"‎ {10C45}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">726</td>
+				<td class="form"><a data-name="tha%E1%AE%B0%E1%AE%9D">tha᮰ᮝ</a></td>
+				<td class="error">Latin + Restricted[Sund] "᮰"‎ {1BB0}</td>
+			</tr>
+<tr>
+				<td class="idx">727</td>
+				<td class="form"><a data-name="the%E1%AE%B0%E1%AE%9D">the᮰ᮝ</a></td>
+				<td class="error">Latin + Restricted[Sund] "᮰"‎ {1BB0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">728</td>
+				<td class="form"><a data-name="the%E1%AE%99s">theᮙs</a></td>
+				<td class="error">Latin + Restricted[Sund] "ᮙ"‎ {1B99}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">729</td>
+				<td class="form"><a data-name="0x%E0%B8%81%E0%B8%B9kult">0xกูkult</a></td>
+				<td class="error">Latin + Thai "ก"‎ {E01}</td>
+			</tr>
+<tr>
+				<td class="idx">730</td>
+				<td class="form"><a data-name="1%E0%B8%81%E0%B8%811111">1กก1111</a></td>
+				<td class="error">Latin + Thai "ก"‎ {E01}</td>
+			</tr>
+<tr>
+				<td class="idx">731</td>
+				<td class="form"><a data-name="9%E0%B8%81%E0%B8%819999">9กก9999</a></td>
+				<td class="error">Latin + Thai "ก"‎ {E01}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">732</td>
+				<td class="form"><a data-name="f%E0%B8%99ll%C4%93r">fนllēr</a></td>
+				<td class="error">Latin + Thai "น"‎ {E19}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">733</td>
+				<td class="form"><a data-name="%E1%AF%A4wifi">ᯤwifi</a></td>
+				<td class="error">Restricted[Batk] + Latin "w"‎ {77}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">734</td>
+				<td class="form"><a data-name="%E1%97%AA%E3%84%96%E3%84%96%E1%97%AA%E3%84%A5%E4%B9%87">ᗪㄖㄖᗪㄥ乇</a></td>
+				<td class="error">Restricted[Cans] + Bopomofo "ㄖ"‎ {3116}</td>
+			</tr>
+<tr>
+				<td class="idx">735</td>
+				<td class="form"><a data-name="%E1%97%AA%E3%84%96%E3%84%96%E1%97%AA%E3%84%A5%E4%B9%87%E4%B8%82">ᗪㄖㄖᗪㄥ乇丂</a></td>
+				<td class="error">Restricted[Cans] + Bopomofo "ㄖ"‎ {3116}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">736</td>
+				<td class="form"><a data-name="%E1%97%AA%E4%B9%87%E5%8C%9A%E4%B9%87%E5%87%A0%E3%84%92%E5%B0%BA%E5%8D%82%E3%84%A5%E5%8D%82%E5%87%A0%E1%97%AA">ᗪ乇匚乇几ㄒ尺卂ㄥ卂几ᗪ</a></td>
+				<td class="error">Restricted[Cans] + Han "乇"‎ {4E47}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">737</td>
+				<td class="form"><a data-name="%E1%97%AA%E5%8D%82%E5%87%A0%E4%B8%A8%E4%B9%87%E3%84%A5">ᗪ卂几丨乇ㄥ</a></td>
+				<td class="error">Restricted[Cans] + Han "卂"‎ {5342}</td>
+			</tr>
+<tr>
+				<td class="idx">738</td>
+				<td class="form"><a data-name="%E1%97%AA%E5%8D%82%E5%B0%BA%D2%9D%E5%87%A0%E4%B9%87%E4%B8%82%E4%B8%8200">ᗪ卂尺ҝ几乇丂丂00</a></td>
+				<td class="error">Restricted[Cans] + Han "卂"‎ {5342}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">739</td>
+				<td class="form"><a data-name="%E1%97%AA%E5%B0%BA%E5%8D%82%E5%8C%9A%E3%84%A9%E3%84%A5%E5%8D%82">ᗪ尺卂匚ㄩㄥ卂</a></td>
+				<td class="error">Restricted[Cans] + Han "尺"‎ {5C3A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">740</td>
+				<td class="form"><a data-name="%E1%91%AD2egame">ᑭ2egame</a></td>
+				<td class="error">Restricted[Cans] + Latin "2"‎ {32}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">741</td>
+				<td class="form"><a data-name="%E1%97%AAegen">ᗪegen</a></td>
+				<td class="error">Restricted[Cans] + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">742</td>
+				<td class="form"><a data-name="%E1%91%95%E1%95%BC%E1%96%87i%E1%94%95">ᑕᕼᖇiᔕ</a></td>
+				<td class="error">Restricted[Cans] + Latin "i"‎ {69}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">743</td>
+				<td class="form"><a data-name="%E1%91%ADoke%E1%97%B0o%E1%91%8E">ᑭokeᗰoᑎ</a></td>
+				<td class="error">Restricted[Cans] + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">744</td>
+				<td class="form"><a data-name="%E1%96%AD%E0%BD%B2%E0%BC%8F%E1%96%AB%E0%BE%80">ᖭི༏ᖫྀ</a></td>
+				<td class="error">Restricted[Cans] + Tibetan "◌ི"‎ {F72}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">745</td>
+				<td class="form"><a data-name="%E1%8E%B6%E3%84%96%E3%84%96%E1%8E%B6%E3%84%A5%E4%B9%87">ᎶㄖㄖᎶㄥ乇</a></td>
+				<td class="error">Restricted[Cher] + Bopomofo "ㄖ"‎ {3116}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">746</td>
+				<td class="form"><a data-name="%E1%8E%B6%E3%84%A9%E3%84%A5%E5%8D%82%E1%8E%B6">Ꮆㄩㄥ卂Ꮆ</a></td>
+				<td class="error">Restricted[Cher] + Bopomofo "ㄩ"‎ {3129}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">747</td>
+				<td class="form"><a data-name="%E1%8F%94allet">Ꮤallet</a></td>
+				<td class="error">Restricted[Cher] + Latin "a"‎ {61}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">748</td>
+				<td class="form"><a data-name="%E1%8F%B0inance">Ᏸinance</a></td>
+				<td class="error">Restricted[Cher] + Latin "i"‎ {69}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">749</td>
+				<td class="form"><a data-name="%E1%8F%80oogle">Ꮐoogle</a></td>
+				<td class="error">Restricted[Cher] + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">750</td>
+				<td class="form"><a data-name="%E2%B2%85%E2%97%A8%E2%80%90%E2%97%A8">ⲅ◨‐◨</a></td>
+				<td class="error">Restricted[Copt] + Latin "◨"‎ {25E8}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">751</td>
+				<td class="form"><a data-name="%E2%B2%ADerosis">ⲭerosis</a></td>
+				<td class="error">Restricted[Copt] + Latin "e"‎ {65}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">752</td>
+				<td class="form"><a data-name="%CF%AFi%CF%AF%CF%AFies">ϯiϯϯies</a></td>
+				<td class="error">Restricted[Copt] + Latin "i"‎ {69}</td>
+			</tr>
+<tr>
+				<td class="idx">753</td>
+				<td class="form"><a data-name="%E2%B2%83itcoin">ⲃitcoin</a></td>
+				<td class="error">Restricted[Copt] + Latin "i"‎ {69}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">754</td>
+				<td class="form"><a data-name="%E2%B2%9Fpensea">ⲟpensea</a></td>
+				<td class="error">Restricted[Copt] + Latin "p"‎ {70}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">755</td>
+				<td class="form"><a data-name="%E2%B2%A3%F0%90%8C%B5%E2%B2%9B%E2%B2%95">ⲣ𐌵ⲛⲕ</a></td>
+				<td class="error">Restricted[Copt] + Restricted[Goth] "𐌵"‎ {10335}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">756</td>
+				<td class="form"><a data-name="%F0%93%83%B5goat">𓃵goat</a></td>
+				<td class="error">Restricted[Egyp] + Latin "g"‎ {67}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">757</td>
+				<td class="form"><a data-name="%F0%93%82%80myst%F0%93%82%80">𓂀myst𓂀</a></td>
+				<td class="error">Restricted[Egyp] + Latin "m"‎ {6D}</td>
+			</tr>
+<tr>
+				<td class="idx">758</td>
+				<td class="form"><a data-name="%F0%93%82%80mystic%F0%93%82%80">𓂀mystic𓂀</a></td>
+				<td class="error">Restricted[Egyp] + Latin "m"‎ {6D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">759</td>
+				<td class="form"><a data-name="%F0%90%8C%8Corgan">𐌌organ</a></td>
+				<td class="error">Restricted[Ital] + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">760</td>
+				<td class="form"><a data-name="%EA%93%ADoo%EA%93%ADs">ꓭooꓭs</a></td>
+				<td class="error">Restricted[Lisu] + Latin "o"‎ {6F}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">761</td>
+				<td class="form"><a data-name="%DF%80%DF%801">߀߀1</a></td>
+				<td class="error">Restricted[Nkoo] + Latin "1"‎ {31}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">762</td>
+				<td class="form"><a data-name="%E1%B1%BC0000">ᱼ0000</a></td>
+				<td class="error">Restricted[Olck] + Latin "0"‎ {30}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">763</td>
+				<td class="form"><a data-name="%E1%B1%90%E1%B1%90%E1%B1%90%E1%B1%901">᱐᱐᱐᱐1</a></td>
+				<td class="error">Restricted[Olck] + Latin "1"‎ {31}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">764</td>
+				<td class="form"><a data-name="%F0%92%90%AA%E2%AC%A242%E2%AC%A2%F0%92%90%AA">𒐪⬢42⬢𒐪</a></td>
+				<td class="error">Restricted[Xsux] + Latin "⬢"‎ {2B22}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">765</td>
+				<td class="form"><a data-name="%F0%92%90%B0%E2%9D%A4%E2%80%8D%F0%9F%94%A5777%E2%9D%A4%E2%80%8D%F0%9F%94%A5%F0%92%90%B0">𒐰❤‍🔥777❤‍🔥𒐰</a></td>
+				<td class="error">Restricted[Xsux] + Latin "7"‎ {37}</td>
+			</tr>
+<tr>
+				<td class="idx">766</td>
+				<td class="form"><a data-name="%F0%92%90%AA%F0%9F%94%A5777%F0%9F%94%A5%F0%92%90%AA">𒐪🔥777🔥𒐪</a></td>
+				<td class="error">Restricted[Xsux] + Latin "7"‎ {37}</td>
+			</tr>
+<tr>
+				<td class="idx">767</td>
+				<td class="form"><a data-name="%F0%92%90%B0%F0%9F%94%A5%F0%9F%94%A5777%F0%9F%94%A5%F0%9F%94%A5%F0%92%90%B0">𒐰🔥🔥777🔥🔥𒐰</a></td>
+				<td class="error">Restricted[Xsux] + Latin "7"‎ {37}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">768</td>
+				<td class="form"><a data-name="%E0%B6%9Eamogus">ඞamogus</a></td>
+				<td class="error">Sinhala + Latin "a"‎ {61}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">769</td>
+				<td class="form"><a data-name="%E0%B6%9Emogus">ඞmogus</a></td>
+				<td class="error">Sinhala + Latin "m"‎ {6D}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">770</td>
+				<td class="form"><a data-name="%E0%B6%9Esus%E0%B6%9E">ඞsusඞ</a></td>
+				<td class="error">Sinhala + Latin "s"‎ {73}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">771</td>
+				<td class="form"><a data-name="%E0%B9%8F%E0%B8%A2%D0%B3%E0%B9%8F%E0%B8%A3">๏ยг๏ร</a></td>
+				<td class="error">Thai + Cyrillic "г"‎ {433}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">772</td>
+				<td class="form"><a data-name="%E0%B8%85%E2%80%A2%CF%89%E2%80%A2%E0%B8%85">ฅ•ω•ฅ</a></td>
+				<td class="error">Thai + Latin "•"‎ {2022}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">773</td>
+				<td class="form"><a data-name="%E0%B9%91%E2%97%95%E2%80%BF%E2%80%BF%E2%97%95%E0%B9%91">๑◕‿‿◕๑</a></td>
+				<td class="error">Thai + Latin "◕"‎ {25D5}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">774</td>
+				<td class="form"><a data-name="%E0%B9%82%E0%B8%8A%E0%B8%84%E0%B8%94%E0%B8%B5777">โชคดี777</a></td>
+				<td class="error">Thai + Latin "7"‎ {37}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">775</td>
+				<td class="form"><a data-name="%E0%B8%A3%E0%B8%A7%E0%B8%A2888">รวย888</a></td>
+				<td class="error">Thai + Latin "8"‎ {38}</td>
+			</tr>
+<tr>
+				<td class="idx">776</td>
+				<td class="form"><a data-name="%E0%B8%A3%E0%B8%A7%E0%B8%A28888">รวย8888</a></td>
+				<td class="error">Thai + Latin "8"‎ {38}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">777</td>
+				<td class="form"><a data-name="%E0%B8%A3%E0%B8%A7%E0%B8%A29999">รวย9999</a></td>
+				<td class="error">Thai + Latin "9"‎ {39}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">778</td>
+				<td class="form"><a data-name="%E0%BC%BC%DD%93%E7%9B%8A%DD%93%E0%BC%BD">༼ݓ益ݓ༽</a></td>
+				<td class="error">Tibetan + Arabic "ݓ"‎ {753}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">779</td>
+				<td class="form"><a data-name="%E0%BC%BC%E3%81%A4%E2%97%95%E2%80%BF%E2%97%95%E0%BC%BD%E3%81%A4nfts">༼つ◕‿◕༽つnfts</a></td>
+				<td class="error">Tibetan + Japanese "つ"‎ {3064}</td>
+			</tr>
+<tr>
+				<td class="idx">780</td>
+				<td class="form"><a data-name="%E0%BC%BC%E3%81%A4%E2%97%95o%E2%97%95%E0%BC%BD%E3%81%A4">༼つ◕o◕༽つ</a></td>
+				<td class="error">Tibetan + Japanese "つ"‎ {3064}</td>
+			</tr>
+<tr>
+				<td class="idx">781</td>
+				<td class="form"><a data-name="%E0%BC%BC%E3%81%A4%E2%97%95%CF%89%E2%97%95%E0%BC%BD%E3%81%A4">༼つ◕ω◕༽つ</a></td>
+				<td class="error">Tibetan + Japanese "つ"‎ {3064}</td>
+			</tr>
+<tr>
+				<td class="idx">782</td>
+				<td class="form"><a data-name="%E0%BC%BC%E3%81%A4%E2%97%95%CF%89%E2%97%95%E0%BC%BD%E3%81%A4%F0%9F%8C%AE">༼つ◕ω◕༽つ🌮</a></td>
+				<td class="error">Tibetan + Japanese "つ"‎ {3064}</td>
+			</tr>
+<tr>
+				<td class="idx">783</td>
+				<td class="form"><a data-name="%E0%BC%BC%E3%81%A4%E2%97%95%CF%89%E2%97%95%E0%BC%BD%E3%81%A4crypto">༼つ◕ω◕༽つcrypto</a></td>
+				<td class="error">Tibetan + Japanese "つ"‎ {3064}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">784</td>
+				<td class="form"><a data-name="%E0%BC%BC%E0%B2%A0%E7%9B%8A%E0%B2%A0%E0%BC%BD">༼ಠ益ಠ༽</a></td>
+				<td class="error">Tibetan + Kannada "ಠ"‎ {CA0}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">785</td>
+				<td class="form"><a data-name="%E0%BC%BC%E0%BC%8E%E0%BA%B6%E0%B7%B4%E0%BC%8E%E0%BA%B6%E0%BC%BD">༼༎ຶ෴༎ຶ༽</a></td>
+				<td class="error">Tibetan + Lao "◌ຶ"‎ {EB6}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">786</td>
+				<td class="form"><a data-name="%E0%BC%BC%EA%89%BA%E0%B1%AA%EA%89%BA%E0%BC%BD">༼ꉺ౪ꉺ༽</a></td>
+				<td class="error">Tibetan + Restricted[Yiii] "ꉺ"‎ {A27A}</td>
+			</tr>
+<tr class="sep">
+				<td class="idx">787</td>
+				<td class="form"><a data-name="%E0%BC%BC%E0%B8%87%E0%B2%A0%E7%9B%8A%E0%B2%A0%E0%BC%BD%E0%B8%87">༼งಠ益ಠ༽ง</a></td>
+				<td class="error">Tibetan + Thai "ง"‎ {E07}</td>
+			</tr>
+		</table>
+		<script>
+		for (let a of document.querySelectorAll('a[data-name]')) {
+			a.target = '_blank';
+			a.href = 'https://adraffy.github.io/ens-normalize.js/test/resolver.html#' + a.dataset.name;
+		}
+		</script>
+		</body>
+		</html>
+	
