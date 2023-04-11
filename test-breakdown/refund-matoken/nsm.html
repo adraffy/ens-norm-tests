@@ -1,0 +1,119 @@
+
+		
+	<!doctype html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Non-spacing Marks (2)</title>
+	<style>
+		body {
+			margin: 3rem;
+		}
+		.cloud {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+		}
+		.cloud a {
+			background: #eee;
+			border: 1px solid #ccc;
+			padding: 2px 4px;
+			border-radius: 4px;
+			text-decoration: none;
+		}
+		.cloud a:hover {
+			cursor: pointer;
+			background: #cff;
+		}
+		table {
+			border-collapse: collapse;
+			border: 2px solid #888;
+		}
+		table a {
+			text-decoration: none;
+			color: #000;
+		}
+		table a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		tr.sep {
+			border-top: 2px solid #888;
+		}
+		tr:nth-child(odd) { 
+			background: #eee; 
+		}
+		th, td {
+			border: 1px solid #ccc;
+			padding: 2px 4px;
+			text-align: center;
+		}
+		.limit {
+			display: block;
+			max-height: 8rem;
+			overflow-y: auto;
+			overflow-wrap: anywhere;
+		}
+		td.idx {
+			color: #888;
+		}
+		td.form {
+			font-size: 20pt;
+		}
+		td.form.nsm {
+			padding: 4rem 2rem;
+			overflow: hidden;
+		}
+		td span.emoji {
+			color: #00f;
+		}
+		td span.ignored {
+			color: #aaa;
+		}
+		td span.nfc {
+			color: #c80;
+		}
+		td span.mapped {
+			color: #66f;
+		}
+		td span {
+			color: #d00;
+		}
+		td.hex {
+			text-align: left;
+			font: 10pt monospace;
+		}
+		td.error {
+			white-space: nowrap;
+		}
+	</style>
+	</head>
+	<body>
+	<h1>Non-spacing Marks (2)</h1>
+	<p><b>11764</b> labels  — Created <code>2023-04-11T05:36:19.291Z</code></p>
+		<table>
+		<tr>
+			<th>#</th>
+			<th>Label</th>
+			<th>Error</th>
+		</tr>
+		<tr class="sep">
+				<td class="idx">1</td>
+				<td class="form nsm"><a data-name="%E0%B8%94%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B8%94%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B8%94%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87">ด­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­ด­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­ด­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็</a></td>
+				<td class="error">repeated "◌้"‎ {E49}</td>
+			</tr>
+<tr>
+				<td class="idx">2</td>
+				<td class="form nsm"><a data-name="%E0%B8%94%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%89%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%87%E0%B9%89">ด­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­็­็­็­็­็­้­้­้­้­้­้­้­้­็­็­็­็­็­้</a></td>
+				<td class="error">repeated "◌้"‎ {E49}</td>
+			</tr>
+		</table>
+		<script>
+		for (let a of document.querySelectorAll('a[data-name]')) {
+			a.target = '_blank';
+			a.href = 'https://adraffy.github.io/ens-normalize.js/test/resolver.html#' + a.dataset.name;
+		}
+		</script>
+		</body>
+		</html>
+	

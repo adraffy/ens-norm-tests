@@ -9,13 +9,16 @@ import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} 
 let {ens_normalize, ens_tokenize} = await import_ens_normalize('dev'); 
 
 let out_dir, LABELS;
-if (process.argv[2] === 'active') {
+if (process.argv[2] === 'active') { // raffy's hack
 	let date = new Date();
 	date.setFullYear(2023, 4-1, 1);
 	date.setHours(0, 0, 0, 0);	
 	out_dir = new URL(`./active-${datehash(date)}/`, import.meta.url);
 	let t = Date.now()/1000|0;
 	LABELS = JSON.parse(readFileSync(new URL(`../../ens-registered/20230322.json`, import.meta.url))).flatMap(([name, exp]) => parseInt(exp) > t ? name : []);
+} else if (process.argv[2] === 'matoken') {
+	out_dir = new URL('./refund-matoken/', import.meta.url);
+	LABELS = JSON.parse(readFileSync(new URL(`./matoken.json`, import.meta.url)));
 } else {
 	out_dir = new URL('./output/', import.meta.url);
 	LABELS = read_labels();
@@ -30,6 +33,7 @@ const DIFF = [];
 
 const DATE = new Date().toJSON();
 const INSERT_HTML = `<p><b>${LABELS.length}</b> labels  — Created <code>${DATE}</code></p>`;
+const NOT_A_LABEL = 'not a label';
 
 const REPORTS = {
 	'disallowed character': {
@@ -71,6 +75,9 @@ const REPORTS = {
 	'empty label': {
 		bucket: [],
 	},
+	[NOT_A_LABEL]: {
+		bucket: []
+	}
 };
 function require_report_type(type) {
 	let report = REPORTS[type];
@@ -83,7 +90,11 @@ function add_error(type, data) {
 
 for (let label of LABELS) {
 	try {
-		let norm = ens_normalize(label);
+		if (label.includes('.')) {
+			add_error(NOT_A_LABEL, {label});
+			continue;
+		}
+		let norm = ens_normalize(label);		
 		if (norm === label) {
 			same++;
 		} else if (label.toLowerCase() === norm) {
@@ -94,7 +105,7 @@ for (let label of LABELS) {
 	} catch (err) {
 		let {message} = err;
 		let index = message.indexOf(':');
-		if (index == -1) {			
+		if (index == -1) {
 			add_error(message, label);
 		} else {
 			let type = message.slice(0, index);
