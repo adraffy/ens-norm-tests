@@ -32,7 +32,7 @@ let diff_case = 0;
 const DIFF = [];
 
 const DATE = new Date().toJSON();
-const INSERT_HTML = `<p><b>${LABELS.length}</b> labels  — Created <code>${DATE}</code></p>`;
+const INSERT_HTML = `<p><b>${LABELS.length}</b> labels — Created <code>${DATE}</code></p> — <a href="./tally.json">JSON</a>`;
 const NOT_A_LABEL = 'not a label';
 
 const REPORTS = {
