@@ -90,6 +90,7 @@ import {create_uts46} from '@adraffy/ens-norm-uts46';
 const UTS46_VERSION = read_package_version(`@adraffy/ens-norm-uts46`);
 export const uts46 = create_uts46({
 	version: 2003, 
+	use_STD3: true,
 	valid_deviations: true,
 	check_hyphens: true,
 	check_bidi: true,

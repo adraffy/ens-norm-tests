@@ -35,7 +35,7 @@
 		"breakdown": "node test-breakdown/report.js"
 	},
 	"dependencies": {
-		"@adraffy/ens-norm-uts46": "^0.0.5",
+		"@adraffy/ens-norm-uts46": "^0.0.7",
 		"@ensdomains/ens-validation": "^0.1.0",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
 		"ethers": "^5.7.0"
