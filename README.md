@@ -1,19 +1,19 @@
-# ENS Name Normalization Implementation Tests
+# ENSIP-15 Implementation Tests
 
-## Javascript Implementations
+🏛️ [ENSIP-15: ENS Name Normalization Standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard)
 
-* [adraffy/ens-normalize](https://github.com/adraffy/ens-normalize.js)
-* [adraffy/ens-norm-uts46](https://github.com/adraffy/ens-norm-uts46.js)
-	* UTS-46 According to Spec
-	* UTS-46 w/IDNA 2008
-	* ENS0 (ENSIP-1)
-* [ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
-* [ethers](https://github.com/ethers-io/ethers.js)
+## Implementations
 
-## Other Implementations 
-
-* [adraffy/ENSNormalize.cs](https://github.com/adraffy/ENSNormalize.cs)
-* [adraffy/ENSNormalize.java](https://github.com/adraffy/ENSNormalize.cs)
+* Javascript
+	* [adraffy/ens-normalize.js](https://github.com/adraffy/ens-normalize.js)
+	* [adraffy/ens-norm-uts46.js](https://github.com/adraffy/ens-norm-uts46.js)
+		* UTS-46 According to Spec
+		* UTS-46 w/IDNA 2008
+		* ENS0 (ENSIP-1)
+	* [ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
+	* [ethers-io/ethers](https://github.com/ethers-io/ethers.js)
+* C# — [adraffy/ENSNormalize.cs](https://github.com/adraffy/ENSNormalize.cs)
+* Java — [adraffy/ENSNormalize.java](https://github.com/adraffy/ENSNormalize.cs)
 	
 ## Build
 
