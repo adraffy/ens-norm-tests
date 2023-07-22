@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.json:json:20230618'
+    //implementation 'io.github.adraffy:ens-normalize:0.1.1'
+    implementation files('../../../../ENSNormalize.java/lib/build/libs/lib-0.1.2.jar')
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+application {
+    mainClass = 'adraffy.Main'
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': application.mainClass
+	}
+	from {
+   		configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  	}
+}
