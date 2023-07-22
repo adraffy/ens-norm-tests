@@ -1,20 +1,20 @@
 # ENS Name Normalization Implementation Tests
 
-*Work in Progress*
+## Javascript Implementations
 
-## Implementations
-
-* [@adraffy/ens-normalize](https://github.com/adraffy/ens-normalize.js)
-	* Latest Github Version
-	* Latest NPM Version
-	* Prior NPM Version
-* [@adraffy/ens-norm-uts46](https://github.com/adraffy/ens-norm-uts46.js)
+* [adraffy/ens-normalize](https://github.com/adraffy/ens-normalize.js)
+* [adraffy/ens-norm-uts46](https://github.com/adraffy/ens-norm-uts46.js)
 	* UTS-46 According to Spec
 	* UTS-46 w/IDNA 2008
-	* ENS0
-* [@ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
+	* ENS0 (ENSIP-1)
+* [ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
 * [ethers](https://github.com/ethers-io/ethers.js)
 
+## Other Implementations 
+
+* [adraffy/ENSNormalize.cs](https://github.com/adraffy/ENSNormalize.cs)
+* [adraffy/ENSNormalize.java](https://github.com/adraffy/ENSNormalize.cs)
+	
 ## Build
 
 1. `git clone --recurse-submodules` this repo

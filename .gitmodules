@@ -4,3 +4,9 @@
 [submodule "ens-labels"]
 	path = ens-labels
 	url = https://github.com/adraffy/ens-labels
+[submodule "ENSNormalize.cs"]
+	path = ENSNormalize.cs
+	url = https://github.com/adraffy/ENSNormalize.cs
+[submodule "ENSNormalize.java"]
+	path = ENSNormalize.java
+	url = https://github.com/adraffy/ENSNormalize.java

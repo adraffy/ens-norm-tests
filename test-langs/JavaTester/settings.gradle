@@ -5,3 +5,6 @@ plugins {
 
 rootProject.name = 'JavaTester'
 include('app')
+
+include(':lib')
+project(':lib').projectDir = new File(settingsDir, "../../ENSNormalize.java/lib")\

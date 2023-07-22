@@ -8,8 +8,12 @@ repositories {
 
 dependencies {
     implementation 'org.json:json:20230618'
+
+    // use maven central repo
     //implementation 'io.github.adraffy:ens-normalize:0.1.1'
-    implementation files('../../../../ENSNormalize.java/lib/build/libs/lib-0.1.2.jar')
+
+    // use local build (default)
+    implementation project(':lib')
 }
 
 java {
@@ -20,13 +24,4 @@ java {
 
 application {
     mainClass = 'adraffy.Main'
-}
-
-jar {
-	manifest {
-		attributes 'Main-Class': application.mainClass
-	}
-	from {
-   		configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-  	}
 }

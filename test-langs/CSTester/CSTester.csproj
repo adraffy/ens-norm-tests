@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ENS">
-      <HintPath>..\..\..\ENSNormalize.cs\ENSNormalize\bin\Release\net5.0\ADRaffy.ENSNormalize.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\ENSNormalize.cs\ENSNormalize\ADRaffy.ENSNormalize.csproj" />
   </ItemGroup>
 
 </Project>
