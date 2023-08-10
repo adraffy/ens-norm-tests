@@ -27,7 +27,7 @@ const LATN = UNICODE.require_script('Latn');
 
 const SPEC = read_spec();
 
-const SMALL_CAPS = new Set(explode_cp('ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘꞯʀꜱᴛᴜᴠᴡʏᴢ')); // x?
+const SMALL_CAPS = new Set(explode_cp('ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘꞯʀꜱᴛᴜᴠᴡxʏᴢ')); // x?
 const ARABIC_AN = new Set([...parse_cp_range('6F0..6F9'), ...parse_cp_range('660..669')]);
 
 let is_valid = new Set(SPEC.groups.flatMap(g => [...g.primary, ...g.secondary]));
