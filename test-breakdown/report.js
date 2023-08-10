@@ -1,7 +1,7 @@
 import {import_ens_normalize} from '../impls.js';
 import {read_labels} from '../ens-labels/labels.js';
 import {mkdirSync, readdirSync, readFileSync, unlinkSync, writeFileSync} from 'node:fs';
-import {html_escape, datehash} from '../utils.js';
+import {html_escape, datehash, read_csv} from '../utils.js';
 import {UNICODE} from '../ens-normalize.js/derive/unicode-version.js';
 import {group_by, explode_cp, hex_cp, parse_cps, compare_arrays, print_section} from '../ens-normalize.js/derive/utils.js';
 
@@ -18,7 +18,7 @@ if (process.argv[2] === 'active') { // raffy's hack
 	LABELS = JSON.parse(readFileSync(new URL(`../../ens-registered/20230322.json`, import.meta.url))).flatMap(([name, exp]) => parseInt(exp) > t ? name : []);
 } else if (process.argv[2] === 'matoken') {
 	out_dir = new URL('./refund-matoken/', import.meta.url);
-	LABELS = JSON.parse(readFileSync(new URL(`./matoken.json`, import.meta.url)));
+	LABELS = read_csv(new URL(`../refund-proposal/no-refund/20230404_refund_names.csv`, import.meta.url)).map(x => x.fulllabel);
 } else {
 	out_dir = new URL('./output/', import.meta.url);
 	LABELS = read_labels();

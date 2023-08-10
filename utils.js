@@ -34,3 +34,17 @@ export function datehash(date) {
 	let d = date.getDate().toString().padStart(2, '0');
 	return y+m+d;
 }
+
+export function quoted_split(line, sep = ',') {
+	if (line.includes('"')) throw new Error('nyi'); // teehee
+	return line.split(sep);
+}
+
+export function read_csv(src) {
+	let lines = readFileSync(src, {encoding: 'utf8'}).split('\n');
+	let header = quoted_split(lines.shift());
+	return lines.map(line => {
+		let v = quoted_split(line);
+		return Object.fromEntries(header.map((k, i) => [k, v[i]]));
+	});
+}
