@@ -21,7 +21,7 @@ function is_ensip15(s) {
 	}
 }
 
-// const LATN = UNICODE.require_script('Latn');
+const LATN = UNICODE.require_script('Latn');
 // const CYRL = UNICODE.require_script('Cyrl');
 // const GREK = UNICODE.require_script('Grek');
 
@@ -39,15 +39,18 @@ let arabic_an = [];
 let single_script = [];
 let latin_like = [];
 let all_invalid = [];
+let braille_spacer = [];
 let unknown = [];
 
 const stores = {
 	not_ensip1,
 	wrong_pure_emoji,
+	braille_spacer,
 	small_caps,
 	arabic_an,
 	single_script,
 	latin_like,
+	all_invalid,
 	unknown,
 };
 
@@ -68,11 +71,15 @@ for (let {fulllabel} of read_csv(new URL('./20230809_refund_names.csv', import.m
 		continue;
 	}
 	let cps = explode_cp(text);
+	if (cps.includes(0x2800)) {
+		braille_spacer.push(fulllabel);
+		continue;
+	}
 	let valid = cps.map(cp => is_valid.has(cp));
 	let chars = [...new Set(cps.map(cp => UNICODE.require_char(cp)))];
-	let scripts = [...new Set(chars.map(x => x.script))];
+	let scripts = [...new Set(chars.map(x => x.cp < 0x80 ? LATN : x.script))];
 
-	if (scripts.every(x => x.abbr === 'Latn' || x.abbr === 'Grek' || x.abbr === 'Cyrl') && scripts.length > 1) {
+	if (scripts.length > 1 && scripts.every(x => x.abbr === 'Latn' || x.abbr === 'Grek' || x.abbr === 'Cyrl')) {
 		latin_like.push(fulllabel);
 		continue;
 	}
