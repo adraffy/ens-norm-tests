@@ -1,6 +1,9 @@
 import {readFileSync} from 'node:fs';
 import {print_table} from './ens-normalize.js/derive/utils.js';
 
+export const ENS_NORMALIZE_DEV = new URL('../ens-normalize.js/', import.meta.url); // local install, sibling of root
+export const ENS_NORMALIZE_GIT = new URL('./ens-normalize.js/', import.meta.url); // installed via submodule
+
 function read_package_version(path) {
 	if (typeof path === 'string') {
 		path = new URL(`./node_modules/${path}/package.json`, import.meta.url);
@@ -9,10 +12,10 @@ function read_package_version(path) {
 }
 
 export async function import_ens_normalize(version) {
-	if (!version || version === 'latest') {
-		return import('./ens-normalize.js/src/lib.js');
+	if (!version || version === 'latest' || version === 'git') {
+		return import(new URL('./src/lib.js', ENS_NORMALIZE_GIT));
 	} else if (version === 'dev') {
-		return import('../ens-normalize.js/src/lib.js');
+		return import(new URL('./src/lib.js', ENS_NORMALIZE_DEV));
 	} else {
 		return import(`./old-versions/${version}.js`);
 	}
@@ -30,6 +33,9 @@ class Impl {
 	}
 	get slug() {
 		return this.name.replace(/\s+/, '').toLowerCase() + '_' + this.version;
+	}
+	toString() {
+		return `${this.name} (${this.version})`;
 	}
 }
 
@@ -56,33 +62,21 @@ IMPLS.push(new Impl('ens-validation', name => {
 	return norm;	
 }, read_package_version('@ensdomains/ens-validation')));
 
-// ********************************************************************************
-
 /*
-import {ens_normalize} from '@adraffy/ens-normalize';
-IMPLS.push({
-	name: 'ens_normalize', 
-	fn: ens_normalize, 
-	version: read_package_version(`@adraffy/ens-normalize`),
-	primary: true
-});
-
-import {ens_normalize as prior} from 'prior_ens_norm';
-IMPLS.push({
-	name: 'ens_normalize', 
-	fn: prior, 
-	version: read_package_version('prior_ens_norm'),
-	prior: true
-});
+// frozen ENSIP-1 ESM build
+const {normalize: normalize_2_0_15} = await import(new URL('./test/eth-ens-namehash@2.0.15.min.js', ENS_NORMALIZE_GIT));
+IMPLS.push(new Impl('eth-ens-namehash', normalize_2_0_15, '2.0.15'));
 */
 
+// ********************************************************************************
+
 // git branch instead
-import {ens_normalize} from './ens-normalize.js/src/lib.js';
-IMPLS.push(new Impl('ens_normalize.git', ens_normalize, JSON.parse(readFileSync(new URL('./ens-normalize.js/package.json', import.meta.url))).version));
+const {ens_normalize: ens_normalize_git} = await import_ens_normalize('git');
+IMPLS.push(new Impl('ens_normalize.git', ens_normalize_git, read_package_version(new URL('./package.json', ENS_NORMALIZE_GIT))));
 
 // raffy's local branch
-import {ens_normalize as ens_normalize_dev} from '../ens-normalize.js/src/lib.js';
-IMPLS.push(new Impl('ens_normalize.local', ens_normalize_dev, JSON.parse(readFileSync(new URL('../ens-normalize.js/package.json', import.meta.url))).version));
+const {ens_normalize: ens_normalize_dev} = await import_ens_normalize('dev');
+IMPLS.push(new Impl('ens_normalize.dev', ens_normalize_dev, read_package_version(new URL('./package.json', ENS_NORMALIZE_DEV))));
 
 // ********************************************************************************
 
@@ -124,7 +118,7 @@ IMPLS.push(new Impl('Strict 2008', strict2008, UTS46_VERSION));
 // dump out if run directly
 if (process.argv[1] === new URL(import.meta.url).pathname) {
 	print_table(
-		['#', 'Name', 'Slug', {name: 'Version', align: 'R', min: 0}], 
+		['#', 'Name', 'Slug', 'Version'], 
 		IMPLS.map((impl, i) => [i, impl.name, impl.slug, impl.version])
 	);
 }

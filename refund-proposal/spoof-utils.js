@@ -1,4 +1,8 @@
-import {ens_tokenize} from '../ens-normalize.js/src/lib.js';
+import {ENS_NORMALIZE_DEV, ENS_NORMALIZE_SUB} from '../impls.js';
+
+export const ENS_NORMALIZE = ENS_NORMALIZE_DEV; // ENS_NORMALIZE_SUB
+
+const {ens_tokenize} = await import(new URL('./src/lib.js', ENS_NORMALIZE)); 
 
 // see: https://github.com/adraffy/ens-normalize.js/blob/main/derive/rules/emoji.js#L116
 let non_rgi = [];

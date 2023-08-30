@@ -1,34 +1,12 @@
-import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {read_labels} from '../ens-labels/labels.js';
 import {require_impl} from '../impls.js';
 
-
-let c = require_impl('ENS0');
-//let c = require_impl('ens-validation');
-
-let v = [
-	'℞drug.eth',
-	'latin♛.eth',
-	'mcdonald’s🍔️.eth',
-	'mcdonald’s🍟️.eth',
-];
-for (let name of v) {
-	let ret;
-	try {
-		ret = c.fn(name) === name
-	} catch (err) {
-		ret = err.message;
-	}
-	console.log(name, ret);
-}
-
-
-
-/*
 const LABELS = read_labels();
 
-let a = require_impl('eth-ens-namehash');
-let b = require_impl('ens_normalize.local');
+let a = require_impl('ens_normalize.dev');
+let b = require_impl('ens_normalize.git');
+
+console.log(`${a} vs ${b}`);
 
 let found = [];
 
@@ -57,4 +35,3 @@ for (let x of found) {
 		console.log(x.error);
 	}
 }
-*/

@@ -1,11 +1,15 @@
 import {writeFileSync} from 'node:fs';
 import {read_csv} from '../../utils.js';
-import {ens_normalize} from '../../ens-normalize.js/src/lib.js';
 import eth_ens_namehash from '../../ens-normalize.js/test/eth-ens-namehash@2.0.15.min.js';
-import {explode_cp, parse_cp_range} from '../../ens-normalize.js/derive/utils.js';
-import {UNICODE} from '../../ens-normalize.js/derive/unicode-version.js';
-import {read_spec} from '../../ens-normalize.js/validate/data.js';
-import {is_invis_spoof, filter_emoji} from '../spoof-utils.js';
+import {ENS_NORMALIZE, is_invis_spoof, filter_emoji} from '../spoof-utils.js';
+
+const {ens_normalize} = await import(new URL('./src/lib.js', ENS_NORMALIZE));
+const {version, unicode, spec_hash} = await import(new URL('./src/include-versions.js', ENS_NORMALIZE));
+const {explode_cp, parse_cp_range} = await import(new URL('./derive/utils.js', ENS_NORMALIZE));
+const {UNICODE} = await import(new URL('./derive/unicode-version.js', ENS_NORMALIZE));
+const {read_spec} = await import(new URL('./validate/data.js', ENS_NORMALIZE));
+
+console.log({version, unicode, spec_hash});
 
 function is_ensip1(s) {
 	try {
@@ -21,11 +25,11 @@ function is_ensip15(s) {
 	}
 }
 
+const SPEC = read_spec();
+
 const LATN = UNICODE.require_script('Latn');
 // const CYRL = UNICODE.require_script('Cyrl');
 // const GREK = UNICODE.require_script('Grek');
-
-const SPEC = read_spec();
 
 const SMALL_CAPS = new Set(explode_cp('ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘꞯʀꜱᴛᴜᴠᴡxʏᴢ')); // x?
 const ARABIC_AN = new Set([...parse_cp_range('6F0..6F9'), ...parse_cp_range('660..669')]);
