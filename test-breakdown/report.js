@@ -20,7 +20,7 @@ if (process.argv[2] === 'active') { // raffy's hack
 	out_dir = new URL('./refund-matoken/', import.meta.url);
 	LABELS = read_csv(new URL(`../refund-proposal/no-refund/20230404_refund_names.csv`, import.meta.url)).map(x => x.fulllabel);
 } else {
-	out_dir = new URL('./output/', import.meta.url);
+	out_dir = new URL(`./output-${datehash(new Date())}/`, import.meta.url);
 	LABELS = read_labels();
 }
 
@@ -32,56 +32,68 @@ let diff_case = 0;
 const DIFF = [];
 
 const DATE = new Date().toJSON();
-const INSERT_HTML = `<p><b>${LABELS.length}</b> labels — Created <code>${DATE}</code></p> — <a href="./tally.json">JSON</a>`;
+const INSERT_HTML = `<p><b>${LABELS.length}</b> labels — Created <code>${DATE}</code> — <a href="./tally.json">JSON</a></p>`;
 const NOT_A_LABEL = 'not a label';
 
-const REPORTS = {
-	'disallowed character': {
-		bucket: [], 
+const REPORTS = [
+	{
+		test: 'disallowed character',
 		name: 'disallowed',
 		handler: create_disallowed_report,
 	},
-	'different norm': {
+	{
+		test: 'different norm',
 		bucket: DIFF, 
 		name: 'diff',
 		handler: create_diff_report,
 	},
-	'illegal mixture': {
-		bucket: [], 
+	{
+		test: 'illegal mixture',
 		name: 'mixtures', 
 		handler: create_mixture_report,
 	},
-	'whole-script confusable': {
-		bucket: [], 
+	{
+		test: 'whole-script confusable',
 		name: 'wholes', 
 		handler: create_whole_report,
 	},
-	'illegal placement': {
-		bucket: [],
+	{
+		test: 'illegal placement',
 		name: 'placement',
 		handler: create_placement_report,
 	},
-	'non-spacing marks': { 
-		bucket: [],
+	{
+		title: 'non-spacing marks',
+		test: [
+			'duplicate non-spacing marks',
+			'excessive non-spacing marks',
+		],
 		name: 'nsm',
 		handler: create_nsm_report,
 	},
-	'underscore allowed only at start': {
-		bucket: [],
+	{
+		test: 'underscore allowed only at start',
 	},
-	'invalid label extension': {
-		bucket: [],
+	{
+		test: 'invalid label extension',
 	},
-	'empty label': {
-		bucket: [],
+	{
+		test: 'empty label',
 	},
-	[NOT_A_LABEL]: {
-		bucket: []
+	{
+		test: NOT_A_LABEL,
 	}
-};
+];
+const REPORT_MAP = REPORTS.reduce((a, x) => {
+	if (!x.bucket) x.bucket = [];
+	if (!Array.isArray(x.test)) x.test = [x.test];
+	if (!x.title) x.title = x.test[0];
+	for (let key of x.test) a[key] = x;
+	return a;
+}, {});
 function require_report_type(type) {
-	let report = REPORTS[type];
-	if (!report) throw new Error(`Expected tally bucket: ${type}`);
+	let report = REPORT_MAP[type];
+	if (!report) throw new Error(`Expected report type: ${type}`);
 	return report;
 }
 function add_error(type, data) {
@@ -118,8 +130,8 @@ for (let label of LABELS) {
 console.log();
 print_section('Errors');
 console.log({same, diff_case});
-for (let [type, {bucket}] of Object.entries(REPORTS)) {
-	console.log(type, bucket.length);
+for (let x of REPORTS) {
+	console.log(x.title, x.bucket.length);
 }
 
 console.log();
@@ -132,9 +144,9 @@ for (let name of readdirSync(out_dir)) {
 writeFileSync(new URL('./tally.json', out_dir), JSON.stringify({
 	created: DATE,
 	same, diff_case, 
-	...Object.fromEntries(Object.entries(REPORTS).map(([k, {bucket}]) => [k, bucket]))
+	...Object.fromEntries(REPORTS.map(x => [x.title, x.bucket]))
 }));
-for (let {name, handler, bucket} of Object.values(REPORTS)) {
+for (let {name, handler, bucket} of REPORTS) {
 	if (!name) continue;
 	let file = new URL(`./${name}.html`, out_dir);
 	try {
@@ -183,10 +195,10 @@ function create_index_file(file) {
 		<h1>${title}</h1>
 		${INSERT_HTML}
 		<ul id="index">
-		${Object.entries(REPORTS).map(([prefix, {name, bucket}]) => {
-			let html =  `<code>${prefix}</code> (${bucket.length})`;
-			if (name) {
-				html = `<a href="${name}.html">${html}</a>`;
+		${REPORTS.map(x => {
+			let html = `<code>${x.title}</code> (${x.bucket.length})`;
+			if (x.name) {
+				html = `<a href="${x.name}.html">${html}</a>`;
 			}
 			return `<li>${html}</li>`
 		}).join('')}
