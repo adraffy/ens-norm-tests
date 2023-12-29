@@ -85,7 +85,7 @@ const UTS46_VERSION = read_package_version(`@adraffy/ens-norm-uts46`);
 export const uts46 = create_uts46({
 	version: 2003, 
 	use_STD3: true,
-	valid_deviations: true,
+	valid_deviations: true, // 20231228: always true with 15.1
 	check_hyphens: true,
 	check_bidi: true,
 	contextJ: true,
@@ -96,14 +96,16 @@ IMPLS.push(new Impl('UTS46', uts46, UTS46_VERSION));
 
 export const ens0 = create_uts46({
 	version: 2003,
+	use_STD3: true,        // 20231228: why was this missing?
 	valid_deviations: true,
-	check_hyphens: false, // 20220918: i had these as true
-	punycode: false,      // they probably should be false
+	check_hyphens: false,  // 20220918: i had these as true
+	punycode: false,       // probably should be false
 });
 IMPLS.push(new Impl('ENS0', ens0, UTS46_VERSION));
 
 export const strict2008 = create_uts46({
 	version: 2008, 
+	use_STD3: true,        // 20231228: why was this missing?
 	check_hyphens: true,
 	check_bidi: true,
 	contextJ: true,

@@ -36,7 +36,7 @@
 		"langs": "node test-langs/compare.js"
 	},
 	"dependencies": {
-		"@adraffy/ens-norm-uts46": "^0.0.7",
+		"@adraffy/ens-norm-uts46": "^0.1.0",
 		"@ensdomains/ens-validation": "^0.1.0",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
 		"ethers": "^5.7.0"
