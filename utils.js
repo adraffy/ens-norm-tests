@@ -11,6 +11,11 @@ export function run_validation_tests(fn, tests) {
 	return run_tests(fn, tests);
 }
 
+export function read_labels() {
+	const file = new URL('./ens-labels/labels.json', import.meta.url);
+	return JSON.parse(readFileSync(file));
+}
+
 export function split_on(v, x) {
 	let ret = [];
 	let pos = 0;

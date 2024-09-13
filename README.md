@@ -1,20 +1,23 @@
 # ENSIP-15 Implementation Tests
 
-[ENS Name Normalization Standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard)
+🏛️ [**ENSIP-15**: ENS Name Normalization Standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard)
 
-## Implementations
+## Javascript Implementations
 
-* Javascript
-	* [adraffy/ens-normalize.js](https://github.com/adraffy/ens-normalize.js)
-	* [adraffy/ens-norm-uts46.js](https://github.com/adraffy/ens-norm-uts46.js)
-		* UTS-46 According to Spec
-		* UTS-46 w/IDNA 2008
-		* ENS0 (ENSIP-1)
-	* [ensdomains/eth-ens-namehash](https://github.com/ensdomains/eth-ens-namehash)
-	* [ethers-io/ethers](https://github.com/ethers-io/ethers.js)
-* C# — [adraffy/ENSNormalize.cs](https://github.com/adraffy/ENSNormalize.cs)
-* Java — [adraffy/ENSNormalize.java](https://github.com/adraffy/ENSNormalize.cs)
-	
+* [adraffy/**ens-normalize.js**](https://github.com/adraffy/ens-normalize.js)
+* [adraffy/**ens-norm-uts46.js**](https://github.com/adraffy/ens-norm-uts46.js)
+	* UTS-46 According to Spec
+	* UTS-46 w/IDNA 2008
+	* ENS0 (ENSIP-1)
+* [ensdomains/**eth-ens-namehash**](https://github.com/ensdomains/eth-ens-namehash)
+* [ethers-io/**ethers**](https://github.com/ethers-io/ethers.js)
+
+## Other Implementations
+
+* [adraffy/**ENSNormalize.java**](https://github.com/adraffy/ENSNormalize.java)
+* [adraffy/**ENSNormalize.cs**](https://github.com/adraffy/ENSNormalize.cs)
+* [adraffy/**ENSNormalize.go**](https://github.com/adraffy/ENSNormalize.go)
+
 ## Build
 
 1. `git clone --recurse-submodules` this repo
@@ -22,7 +25,7 @@
 
 ### Update to Latest
 
-* `git submodule foreach git pull`
+* `npm run gitpull`
 
 ## Commands
 
@@ -35,3 +38,9 @@
 * `npm run compare` — generate pair-wise HTML reports for registered labels &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-compare/output/)
 * `npm run breakdown` — generate HTML reports for normalization error types &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-breakdown/output-20230226/)
 * `npm run langs` — check that JS, CS, and Java implementations match on all known labels
+
+#### NPM Configuration
+```sh
+npm i ethers@npm:ethers@latest
+npm i ethers5@npm:ethers@5 --no-audit
+```

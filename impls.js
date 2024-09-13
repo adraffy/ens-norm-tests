@@ -14,7 +14,7 @@ function read_package_version(path) {
 export async function import_ens_normalize(version) {
 	if (!version || version === 'latest' || version === 'git') {
 		return import(new URL('./src/lib.js', ENS_NORMALIZE_GIT));
-	} else if (version === 'dev') {
+	} else if (version === 'dev') { // NOTE: this only works for raffy
 		return import(new URL('./src/lib.js', ENS_NORMALIZE_DEV));
 	} else {
 		return import(`./old-versions/${version}.js`);
@@ -49,8 +49,11 @@ export function require_impl(name) {
 
 // ********************************************************************************
 
-import {ens_normalize as ethers} from '@ethersproject/hash/lib/ens-normalize/lib.js';
-IMPLS.push(new Impl('ethers', ethers, read_package_version('ethers')));
+import {ens_normalize as ethers5} from '@ethersproject/hash/lib/ens-normalize/lib.js';
+IMPLS.push(new Impl('ethers5', ethers5, read_package_version('ethers5')));
+
+import {ensNormalize as ethers6} from 'ethers';
+IMPLS.push(new Impl('ethers', ethers6, read_package_version('ethers')));
 
 import A from '@ensdomains/eth-ens-namehash';
 IMPLS.push(new Impl('eth-ens-namehash', A.normalize.bind(A), read_package_version('@ensdomains/eth-ens-namehash')));

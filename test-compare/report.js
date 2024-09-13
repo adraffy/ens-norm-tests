@@ -1,5 +1,5 @@
-import {IMPLS, require_impl} from '../impls.js';
-import {read_labels} from '../ens-labels/labels.js';
+import {IMPLS, require_impl, impl_for_version} from '../impls.js';
+import {read_labels} from '../utils.js';
 import {mkdirSync, writeFileSync, readdirSync} from 'node:fs';
 import {explode_cp} from '../ens-normalize.js/src/utils.js';
 import {safe_str_from_cps} from '../ens-normalize.js/src/lib.js';
@@ -22,13 +22,17 @@ for (let j = 1; j < IMPLS.length; j++) {
 }
 */
 //let a = require_impl('eth-ens-namehash');
-let a = require_impl('ens_normalize.git');
+//let a = require_impl('ens_normalize.git');
 //let a = require_impl('ens_normalize.local');
 //let b = require_impl('eth-ens-namehash');
 //let b = require_impl('ens-validation');
-let b = require_impl('UTS46');
+//let b = require_impl('UTS46');
+
+let a = await impl_for_version('1.10.1');
+let b = require_impl('ens_normalize.dev');
 
 let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
+//let out_file = new URL(`./${a.version}_vs_${b.version}.html`, out_dir);
 writeFileSync(out_file, create_html_report(a, b)); 
 
 /*

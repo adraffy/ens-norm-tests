@@ -1,6 +1,6 @@
 {
 	"name": "@adraffy/ens-norm-tests",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "ENS Name Normalization Tests",
 	"keywords": [
 		"ENS",
@@ -33,12 +33,14 @@
 		"validate": "node test-validation/report.js",
 		"compare": "node test-compare/report.js",
 		"breakdown": "node test-breakdown/report.js",
-		"langs": "node test-langs/compare.js"
+		"langs": "node test-langs/compare.js",
+		"gitpull": "git submodule foreach git pull"
 	},
 	"dependencies": {
-		"@adraffy/ens-norm-uts46": "^0.1.0",
+		"@adraffy/ens-norm-uts46": "^0.1.1",
 		"@ensdomains/ens-validation": "^0.1.0",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
-		"ethers": "^5.7.0"
+		"ethers": "^6.13.2",
+		"ethers5": "npm:ethers@^5.7.2"
 	}
 }
