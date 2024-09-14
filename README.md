@@ -1,6 +1,6 @@
 # ENSIP-15 Implementation Tests
 
-🏛️ [**ENSIP-15**: ENS Name Normalization Standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard)
+🏛️ [**ENSIP-15**: ENS Name Normalization Standard](https://docs.ens.domains/ensip/15)
 
 ## Javascript Implementations
 
