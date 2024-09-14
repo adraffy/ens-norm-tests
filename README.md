@@ -16,11 +16,11 @@
 
 * [adraffy/**ENSNormalize.java**](https://github.com/adraffy/ENSNormalize.java)
 * [adraffy/**ENSNormalize.cs**](https://github.com/adraffy/ENSNormalize.cs)
-* [adraffy/**ENSNormalize.go**](https://github.com/adraffy/ENSNormalize.go)
+* [adraffy/**go-ens-normalize**](https://github.com/adraffy/go-ens-normalize)
 
 ## Build
 
-1. `git clone --recurse-submodules` this repo
+1. `git clone --recurse-submodules`
 1. `npm install`
 
 ### Update to Latest
@@ -37,7 +37,7 @@
 * `npm run validate` — generate HTML reports for validation tests &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-validation/output/)
 * `npm run compare` — generate pair-wise HTML reports for registered labels &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-compare/output/)
 * `npm run breakdown` — generate HTML reports for normalization error types &rarr; [html](https://adraffy.github.io/ens-norm-tests/test-breakdown/output-20230226/)
-* `npm run langs` — check that JS, CS, and Java implementations match on all known labels
+* `npm run langs` — check that JS, CS, Java, and Go implementations match on all known labels
 
 #### NPM Configuration
 ```sh

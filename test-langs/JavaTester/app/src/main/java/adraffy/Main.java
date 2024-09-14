@@ -16,6 +16,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         JSONArray recs = new JSONArray();
+        System.out.println(ENSNormalize.NF.unicodeVersion);
         for (Object temp: new JSONArray(new String(Files.readAllBytes(Paths.get("../../../ens-labels/labels.json")), StandardCharsets.UTF_8))) {
             JSONObject rec = new JSONObject();
             String name = temp.toString();

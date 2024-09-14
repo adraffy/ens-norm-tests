@@ -10,3 +10,6 @@
 [submodule "ENSNormalize.java"]
 	path = ENSNormalize.java
 	url = https://github.com/adraffy/ENSNormalize.java
+[submodule "go-ens-normalize"]
+	path = go-ens-normalize
+	url = https://github.com/adraffy/go-ens-normalize

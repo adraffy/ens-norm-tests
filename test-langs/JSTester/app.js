@@ -1,8 +1,8 @@
-import {read_labels} from '../../ens-labels/labels.js';
+import {read_labels} from '../../utils.js';
 import {import_ens_normalize} from '../../impls.js';
 import {writeFileSync} from 'node:fs';
 
-const {ens_normalize} = await import_ens_normalize();
+const {ens_normalize} = await import_ens_normalize('dev');
 
 writeFileSync(new URL('../output/js.json', import.meta.url), JSON.stringify(read_labels().map(name => {
 	try {
