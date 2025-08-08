@@ -27,8 +27,9 @@ for (let j = 1; j < IMPLS.length; j++) {
 //let b = require_impl('eth-ens-namehash');
 //let b = require_impl('ens-validation');
 //let b = require_impl('UTS46');
+// let a = await impl_for_version('1.10.1');
 
-let a = await impl_for_version('1.10.1');
+let a = await impl_for_version('1.11.0');
 let b = require_impl('ens_normalize.dev');
 
 let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);

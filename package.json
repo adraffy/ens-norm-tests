@@ -40,7 +40,7 @@
 		"@adraffy/ens-norm-uts46": "^0.1.1",
 		"@ensdomains/ens-validation": "^0.1.0",
 		"@ensdomains/eth-ens-namehash": "^2.0.15",
-		"ethers": "^6.13.2",
+		"ethers": "^6.15.0",
 		"ethers5": "npm:ethers@^5.7.2"
 	}
 }

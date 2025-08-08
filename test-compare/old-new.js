@@ -5,8 +5,9 @@ const LABELS = read_labels();
 
 // let a = require_impl('ens_normalize.dev');
 // let b = require_impl('ens_normalize.git');
+// let a = await impl_for_version('1.11.0');
 
-let a = await impl_for_version('1.10.1');
+let a = require_impl('ens_normalize.git');
 let b = require_impl('ens_normalize.dev');
 
 console.log(`${a} vs ${b}`);
