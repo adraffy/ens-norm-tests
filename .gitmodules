@@ -13,3 +13,6 @@
 [submodule "go-ens-normalize"]
 	path = go-ens-normalize
 	url = https://github.com/adraffy/go-ens-normalize
+[submodule "ENSNormalize.swift"]
+	path = ENSNormalize.swift
+	url = https://github.com/adraffy/ENSNormalize.swift

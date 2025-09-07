@@ -17,6 +17,7 @@
 * [adraffy/**ENSNormalize.java**](https://github.com/adraffy/ENSNormalize.java)
 * [adraffy/**ENSNormalize.cs**](https://github.com/adraffy/ENSNormalize.cs)
 * [adraffy/**go-ens-normalize**](https://github.com/adraffy/go-ens-normalize)
+* [adraffy/**ENSNormalize.swift**](https://github.com/adraffy/ENSNormalize.swift)
 
 ## Build
 
@@ -41,6 +42,6 @@
 
 #### NPM Configuration
 ```sh
-npm i ethers@npm:ethers@latest
+npm i ethers@latest
 npm i ethers5@npm:ethers@5 --no-audit
 ```

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ensnormalize.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adraffy/ENSNormalize.swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f4ee9f44ed4169e8308e0f7a94d21d3122b2fa9d"
+      }
+    }
+  ],
+  "version" : 2
+}
