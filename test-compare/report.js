@@ -10,6 +10,8 @@ mkdirSync(out_dir, {recursive: true});
 
 const LABELS = read_labels();
 
+console.log(`Labels: ${LABELS.length}`);
+
 // pairwise
 /*
 for (let j = 1; j < IMPLS.length; j++) {
@@ -29,8 +31,8 @@ for (let j = 1; j < IMPLS.length; j++) {
 //let b = require_impl('UTS46');
 // let a = await impl_for_version('1.10.1');
 
-let a = await impl_for_version('1.11.0');
-let b = require_impl('ens_normalize.dev');
+let a = await impl_for_version('1.11.1');
+let b = require_impl('z-ens-normalize');
 
 let out_file = new URL(`./${a.slug}_vs_${b.slug}.html`, out_dir);
 //let out_file = new URL(`./${a.version}_vs_${b.version}.html`, out_dir);
@@ -77,8 +79,11 @@ function create_html_index() {
 
 function create_html_report(A, B) {
 	//let same_lib = A.name === B.name;
-	let buckets = {};
-	for (let label of LABELS) {
+	const buckets = {};
+	const t0 = Date.now();
+	const PER = 10000;
+	for (let i = 0; i < LABELS.length; i++) {
+		const label = LABELS[i];
 		let a_norm, a_error;
 		try {
 			a_norm = A.fn(label);
@@ -115,6 +120,9 @@ function create_html_report(A, B) {
 		let bucket = buckets[type];
 		if (!bucket) buckets[type] = bucket = [];
 		bucket.push(ret);
+		if (i && (i % PER) === 0) {
+			console.log(`[${i}] ${Date.now() - t0}ms`);
+		}
 	}
 	
 	let title = `${A.name} (${A.version}) vs ${B.name} (${B.version}) [${LABELS.length} labels] @ ${new Date().toJSON()}`;

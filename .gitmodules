@@ -16,3 +16,6 @@
 [submodule "ENSNormalize.swift"]
 	path = ENSNormalize.swift
 	url = https://github.com/adraffy/ENSNormalize.swift
+[submodule "z-ens-normalize"]
+	path = z-ens-normalize
+	url = https://github.com/mdtanrikulu/z-ens-normalize

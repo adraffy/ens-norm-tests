@@ -18,6 +18,7 @@
 * [adraffy/**ENSNormalize.cs**](https://github.com/adraffy/ENSNormalize.cs)
 * [adraffy/**go-ens-normalize**](https://github.com/adraffy/go-ens-normalize)
 * [adraffy/**ENSNormalize.swift**](https://github.com/adraffy/ENSNormalize.swift)
+* [evmts/**z-ens-normalize**](https://github.com/mdtanrikulu/z-ens-normalize) (fork)
 
 ## Build
 

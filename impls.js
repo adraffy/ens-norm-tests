@@ -71,6 +71,9 @@ const {normalize: normalize_2_0_15} = await import(new URL('./test/eth-ens-nameh
 IMPLS.push(new Impl('eth-ens-namehash', normalize_2_0_15, '2.0.15'));
 */
 
+import {zig_normalize} from './z-ens-normalize.js';
+IMPLS.push(new Impl('z-ens-normalize', zig_normalize, '0.0.0-fork'));
+
 // ********************************************************************************
 
 // git branch instead
